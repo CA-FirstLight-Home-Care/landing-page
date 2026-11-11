@@ -9,6 +9,7 @@ Regional landing website for the Southern California Alliance of FirstLight Home
   - `services.html`: Accessible comparison table of the seven core non-medical services and scheduling caveats.
   - `locations.html`: 15 participating offices directory with search/ZIP filtering, maps links, and verified contact links.
   - `faqs.html`: 13 single-column FAQs with local search and expand/collapse controls.
+- **Page assets**: Page-specific JavaScript lives in `assets/`. Sass source styles live in `styles/`, with shared theme colors in `styles/_tokens.scss`; compiled CSS and the shared font are in `assets/`. Edit the root HTML, JavaScript, or Sass sources. Run `npm run build:css` to compile styles, or `npm run prepare:publish` to compile and refresh the Cloudflare publish output.
 - **Configurations (`config/`)**:
   - `config/quiz.yaml`: Quiz questions, options, and branching keys.
   - `config/offices.yaml`: Participating office list, coverage ZIP mapping, addresses, and verified socials.
@@ -53,7 +54,7 @@ GitHub Pages is served at: **https://ca-firstlight-home-care.github.io/landing-p
 Whenever publishing to Cloudflare Pages:
 
 ```bash
-python3 tools/prepare-publish.py
+npm run prepare:publish
 npx wrangler pages deploy publish --project-name firstlight-socal --branch main
 ```
 

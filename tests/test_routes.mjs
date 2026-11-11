@@ -29,6 +29,14 @@ for (const [path, file] of Object.entries(pages)) {
   check("Allowed page matches local " + path, () => {
     assert.equal(response.status, 200);
     assert.equal(body, local);
+    assert.match(
+      local,
+      new RegExp(
+        `<link href="assets/${file.replace(".html", ".css")}" rel="stylesheet"`,
+      ),
+    );
+    assert.doesNotMatch(local, /<style(?:\s|>)/);
+    assert.doesNotMatch(local, /<script(?:\s[^>]*)?>\s*[^<\s]/);
     assert.match(response.headers.get("Content-Type"), /text\/html/);
     assert.match(
       response.headers.get("Content-Security-Policy"),
@@ -40,6 +48,35 @@ for (const [path, file] of Object.entries(pages)) {
     new Request("https://example.test" + path, { method: "HEAD" }),
   );
   check("HEAD is empty " + path, () => {
+    assert.equal(head.status, 200);
+  });
+  assert.equal(await head.text(), "");
+}
+const assets = {
+  "/assets/index.css": ["index.css", /text\/css/],
+  "/assets/services.css": ["services.css", /text\/css/],
+  "/assets/locations.css": ["locations.css", /text\/css/],
+  "/assets/faqs.css": ["faqs.css", /text\/css/],
+  "/assets/index.js": ["index.js", /javascript/],
+  "/assets/locations.js": ["locations.js", /javascript/],
+  "/assets/faqs.js": ["faqs.js", /javascript/],
+  "/assets/manrope-subset.woff": ["manrope-subset.woff", /font\/woff/],
+};
+for (const [path, [file, contentType]] of Object.entries(assets)) {
+  const response = await worker.fetch(
+    new Request("https://example.test" + path),
+  );
+  const body = Buffer.from(await response.arrayBuffer());
+  const local = await readFile(resolve(root, "assets", file));
+  check("Published asset matches local " + path, () => {
+    assert.equal(response.status, 200);
+    assert.deepEqual(body, local);
+    assert.match(response.headers.get("Content-Type"), contentType);
+  });
+  const head = await worker.fetch(
+    new Request("https://example.test" + path, { method: "HEAD" }),
+  );
+  check("HEAD asset is empty " + path, () => {
     assert.equal(head.status, 200);
   });
   assert.equal(await head.text(), "");

@@ -32,17 +32,23 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Install dependencies and build styles
+        run: |
+          npm ci
+          npm run build:css
+
+      - name: Verify lint and offline routes
+        run: |
+          npm run lint
+          node tests/test_routes.mjs
+
       - name: Prepare site directory
         run: |
           mkdir -p _site
           cp index.html services.html locations.html faqs.html _site/
+          cp -R assets _site/assets
           # Copy .nojekyll so Jekyll does not ignore files
           touch _site/.nojekyll
-
-      - name: Verify offline routes
-        run: |
-          npm ci || npm install
-          node tests/test_routes.mjs
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
