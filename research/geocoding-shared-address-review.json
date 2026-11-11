@@ -1,0 +1,130 @@
+[
+  {
+    "name": "census-abbreviated",
+    "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=450+N+Brand+Blvd%2C+Glendale%2C+CA+91203&benchmark=Public_AR_Current&format=json",
+    "status": 200,
+    "data": {
+      "result": {
+        "input": {
+          "address": {
+            "address": "450 N Brand Blvd, Glendale, CA 91203"
+          },
+          "benchmark": {
+            "isDefault": true,
+            "benchmarkDescription": "Public Address Ranges - Current Benchmark",
+            "id": "4",
+            "benchmarkName": "Public_AR_Current"
+          }
+        },
+        "addressMatches": []
+      }
+    }
+  },
+  {
+    "name": "osm-street",
+    "url": "https://nominatim.openstreetmap.org/search?street=450+North+Brand+Boulevard&city=Glendale&state=California&country=USA&format=jsonv2&addressdetails=1&limit=3",
+    "status": 200,
+    "data": [
+      {
+        "place_id": 321502896,
+        "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 246220305,
+        "lat": "34.1526952",
+        "lon": "-118.2545802",
+        "category": "building",
+        "type": "commercial",
+        "place_rank": 30,
+        "importance": 6.73357747767913e-05,
+        "addresstype": "building",
+        "name": "",
+        "display_name": "450, North Brand Boulevard, Glendale City Center, Glendale, Los Angeles County, California, 91203, United States",
+        "address": {
+          "house_number": "450",
+          "road": "North Brand Boulevard",
+          "quarter": "Glendale City Center",
+          "city": "Glendale",
+          "county": "Los Angeles County",
+          "state": "California",
+          "ISO3166-2-lvl4": "US-CA",
+          "postcode": "91203",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "boundingbox": [
+          "34.1524757",
+          "34.1529101",
+          "-118.2548381",
+          "-118.2543231"
+        ]
+      },
+      {
+        "place_id": 422055820,
+        "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 14005715526,
+        "lat": "34.1525753",
+        "lon": "-118.2546096",
+        "category": "office",
+        "type": "lawyer",
+        "place_rank": 30,
+        "importance": 6.73357747767913e-05,
+        "addresstype": "office",
+        "name": "Law Offices of Rozsa Gyene",
+        "display_name": "Law Offices of Rozsa Gyene, 450, North Brand Boulevard, Glendale City Center, Glendale, Los Angeles County, California, 91203, United States",
+        "address": {
+          "office": "Law Offices of Rozsa Gyene",
+          "house_number": "450",
+          "road": "North Brand Boulevard",
+          "quarter": "Glendale City Center",
+          "city": "Glendale",
+          "county": "Los Angeles County",
+          "state": "California",
+          "ISO3166-2-lvl4": "US-CA",
+          "postcode": "91203",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "boundingbox": [
+          "34.1525253",
+          "34.1526253",
+          "-118.2546596",
+          "-118.2545596"
+        ]
+      },
+      {
+        "place_id": 414499323,
+        "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 405500714,
+        "lat": "34.1523270",
+        "lon": "-118.2551805",
+        "category": "place",
+        "type": "house",
+        "place_rank": 30,
+        "importance": 9.99999999995449e-06,
+        "addresstype": "place",
+        "name": "",
+        "display_name": "450, North Brand Boulevard, Glendale City Center, Glendale, Los Angeles County, California, 91203, United States",
+        "address": {
+          "house_number": "450",
+          "road": "North Brand Boulevard",
+          "quarter": "Glendale City Center",
+          "city": "Glendale",
+          "county": "Los Angeles County",
+          "state": "California",
+          "ISO3166-2-lvl4": "US-CA",
+          "postcode": "91203",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "boundingbox": [
+          "34.1522770",
+          "34.1523770",
+          "-118.2552305",
+          "-118.2551305"
+        ]
+      }
+    ]
+  }
+]

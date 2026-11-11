@@ -1,0 +1,58 @@
+[
+  {
+    "id": "companion-care",
+    "name": "Companion care",
+    "what_it_is": "Practical and social support. If bathing, dressing or toileting requires hands-on help, include personal care in the plan.",
+    "who_it_is_for": "For someone who wants company and help keeping everyday life on track.",
+    "typical_tasks": "Conversation, shared activities, meal preparation, light housekeeping, errands, transportation and medication reminders.",
+    "typical_schedule": "Part-time or full-time support, with visits agreed with your office."
+  },
+  {
+    "id": "personal-care",
+    "name": "Personal care",
+    "what_it_is": "Hands-on support, rather than companionship alone. It is not a replacement for nursing or medical treatment.",
+    "who_it_is_for": "For someone who needs hands-on help with daily personal tasks.",
+    "typical_tasks": "Help with bathing, dressing, grooming, eating, toileting, walking and getting in or out of a bed or chair, as agreed in the care plan.",
+    "typical_schedule": "Visits planned around the daily routines where help is needed."
+  },
+  {
+    "id": "memory-care",
+    "name": "Dementia & Alzheimer\u2019s care",
+    "what_it_is": "Companion and personal support adapted to the person\u2019s memory, preferences and routines. It does not diagnose or treat dementia.",
+    "who_it_is_for": "For a person living with dementia, and the family supporting them.",
+    "typical_tasks": "A personalized routine, familiar activities, reassurance, meals, reminders and help with personal tasks when needed.",
+    "typical_schedule": "Part-time, full-time or broader coverage, subject to a safe plan and local staffing."
+  },
+  {
+    "id": "respite-care",
+    "name": "Respite care",
+    "what_it_is": "The purpose is to give the family caregiver a break. It can include several kinds of care; it is not a separate medical service.",
+    "who_it_is_for": "For a family caregiver who needs time to rest, work or be away.",
+    "typical_tasks": "A caregiver steps in to provide the companion or personal support your loved one needs while you take a break.",
+    "typical_schedule": "A planned break or temporary coverage; visit length and minimums vary by office."
+  },
+  {
+    "id": "transitional-care",
+    "name": "Post-surgery & transitional care",
+    "what_it_is": "Everyday help during recovery or a move between care settings. Nursing, wound care and therapy require the appropriate licensed provider.",
+    "who_it_is_for": "For an adult returning home after a hospital stay, surgery, illness or injury.",
+    "typical_tasks": "Help settling into a daily routine: meals, light household tasks, mobility, transportation to follow-ups and medication reminders.",
+    "typical_schedule": "Hours and duration are based on recovery needs and reviewed with the local team."
+  },
+  {
+    "id": "veteran-care",
+    "name": "Veteran care",
+    "what_it_is": "The care can be the same daily support offered to other adults. Eligible veterans may have benefit options; approval is not automatic.",
+    "who_it_is_for": "For veterans and families who need support with everyday living.",
+    "typical_tasks": "Companion and personal care, including meals, household tasks, bathing, dressing and mobility support.",
+    "typical_schedule": "Based on assessed needs, office availability and any benefit authorization."
+  },
+  {
+    "id": "couples-care",
+    "name": "Couples care",
+    "what_it_is": "One caregiver supports two people in the same home when their individual needs can be safely met together.",
+    "who_it_is_for": "Two adults in the same home, such as a couple, who each need everyday support.",
+    "typical_tasks": "Agreed companion or personal-care tasks for each person. Each person needs a separate assessment; one caregiver may not be enough for simultaneous hands-on needs.",
+    "typical_schedule": "Visits agreed with the local office after assessing both people. Rates vary by local office."
+  }
+]

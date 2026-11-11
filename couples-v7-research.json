@@ -1,0 +1,26 @@
+{
+  "checkedAtPacific": "Nov 10, 2026 11:38:35 PM PST",
+  "ownerRequestedDefinition": "One caregiver supports two people in the same home.",
+  "officialSources": [
+    {
+      "url": "https://www.firstlighthomecare.com/home-healthcare-salem/2016/03/20/include-spouses-caregiving/",
+      "readWith": "WebFetch",
+      "supports": "FirstLight discusses working with couples, supporting each spouse and respecting individual needs. Does not establish a national one-caregiver-for-two policy."
+    },
+    {
+      "url": "https://www.firstlighthomecare.com/home-care-services/personal-care/",
+      "readWith": "WebFetch",
+      "supports": "Individually considered personal-care tasks and capacity; exact services vary by location and local assessment/pricing."
+    },
+    {
+      "url": "https://www.firstlighthomecare.com/?s=couples+care",
+      "readWith": "WebFetch",
+      "supports": "Official site search was checked in addition to several indexed searches. No exact national couples-care definition was located in these results."
+    }
+  ],
+  "publicWording": "One caregiver supports two people in the same home when their individual needs can be safely met together. Each person needs a separate assessment; one caregiver may not be enough for simultaneous hands-on needs. Rates vary by local office.",
+  "limitation": "The one-caregiver-for-two arrangement comes from the owner brief and is presented as conditional draft copy, not a confirmed national FirstLight service definition or a claim that every office offers it. Local staffing and availability require confirmation.",
+  "quiz": "New who=couple option; still eight questions. Remaining answers describe the person with greater needs; benefits reviewed individually.",
+  "table": "Seven service rows; visible caption; five column headers with scope=col; seven row headers with scope=row; explicit headers associations. Mobile rows stack with retained table roles.",
+  "faq": "Single-column layout at all widths."
+}

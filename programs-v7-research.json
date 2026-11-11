@@ -1,0 +1,178 @@
+{
+  "verifiedAtPacific": "Nov 10, 2026 11:20:12 PM PST",
+  "method": "Owner-authorized first-party WebSearch and WebFetch. Public curl fallback used for SCAN and the CMS workbook. DHCS direct fetches returned security-challenge HTML; high-level published facts were checked through official-domain indexed excerpts, not proposed-policy drafts.",
+  "sources": [
+    {
+      "id": "guide",
+      "url": "https://www.cms.gov/priorities/innovation/guide/faqs",
+      "facts": [
+        "Clinician-confirmed dementia; Original Medicare Parts A and B primary coverage, not Medicare Advantage or PACE.",
+        "Residence restrictions, no Medicare hospice election and no existing GUIDE alignment.",
+        "Contact participating team for assessment and consent; CMS confirms alignment.",
+        "Approved partner organizations may include non-Medicare-enrolled entities. Partner rosters are maintained by participants."
+      ],
+      "method": "WebFetch complete FAQ"
+    },
+    {
+      "id": "guide-model",
+      "url": "https://www.cms.gov/priorities/innovation/innovation-models/guide",
+      "facts": [
+        "Dementia care coordination, caregiver education/support and respite for qualifying caregivers."
+      ],
+      "method": "WebFetch"
+    },
+    {
+      "id": "guide-roster",
+      "url": "https://www.cms.gov/files/document/guide-participant-list.xlsx",
+      "facts": [
+        "Workbook says last updated October 2026. No FirstLight, First Light or MINGA string in any cell.",
+        "This does not identify every legal alias or nonpublic contracted partner. No FirstLight participation confirmed; do not claim absence of participation."
+      ],
+      "method": "curl 200, openpyxl all-cell search; evidence research/programs-v7/cms-participant-audit.json"
+    },
+    {
+      "id": "scan",
+      "url": "https://www.scanhealthplan.com/en/scan-members/member-benefit-materials-and-information/2026-supplemental-benefits/at-home-support",
+      "facts": [
+        "Medicare Advantage plan; plan-dependent in-home support and caregiver respite.",
+        "Member should check Evidence of Coverage and contact Member Services. No local FirstLight network status verified."
+      ],
+      "method": "WebSearch, WebFetch 403, public curl 200 with complete readable official HTML"
+    },
+    {
+      "id": "ihss",
+      "url": "https://www.cdss.ca.gov/in-home-supportive-services/ihss/apply-for-ihss",
+      "facts": [
+        "In-home assistance for eligible aged/blind/disabled Californians.",
+        "Medi-Cal determination, health certification and county assessment; county authorizes hours/tasks.",
+        "Approved recipients hire individual providers, with county-contracted/employee alternatives where offered."
+      ],
+      "method": "WebFetch"
+    },
+    {
+      "id": "community",
+      "url": "https://www.dhcs.ca.gov/wp-content/uploads/2025/10/DHCS-Community-Supports-Policy-Guide.pdf",
+      "facts": [
+        "Personal Care and Homemaker Services can address ADL/IADL support at home for eligible Medi-Cal managed care members.",
+        "Can bridge or supplement IHSS in specified circumstances, not replace it.",
+        "Caregiver respite is temporary non-medical caregiver relief, distinct from medical respite. Plan authorization and eligibility required."
+      ],
+      "method": "Official-domain WebSearch excerpts; direct HTTP security challenge, not a readable PDF"
+    },
+    {
+      "id": "community-july",
+      "url": "https://www.dhcs.ca.gov/wp-content/uploads/2026/07/Summary-of-Changes-July-2026-Policy-Guide-Volume-1.pdf",
+      "facts": [
+        "Published summary of July 2026 policy updates reviewed in official indexed search.",
+        "No numeric limits or proposed September changes used on page."
+      ],
+      "method": "Official-domain WebSearch excerpts; direct HTTP security challenge"
+    },
+    {
+      "id": "alw",
+      "url": "https://www.dhcs.ca.gov/wp-content/uploads/2025/10/ALW-Program-Descriptand-Elig-2024.pdf",
+      "facts": [
+        "Age at least 21, full-scope Medi-Cal without share of cost, nursing-facility-level care needs and other program rules.",
+        "Approved assisted living settings and some public subsidized housing arrangements; not a general private-home-care voucher.",
+        "Room and board not paid; Care Coordination Agency assessment; county, setting and availability requirements."
+      ],
+      "method": "Official-domain WebSearch excerpts, corroborated with official ALW informing notice/waiver; direct HTTP security challenge"
+    },
+    {
+      "id": "alw-notice",
+      "url": "https://www.dhcs.ca.gov/wp-content/uploads/2025/10/DHCS-0063-ALW-Informing-Notice-Form.pdf",
+      "facts": [
+        "ALW age, Medi-Cal and care-level eligibility requirements."
+      ],
+      "method": "Official-domain WebSearch"
+    },
+    {
+      "id": "alw-waiver",
+      "url": "https://www.dhcs.ca.gov/wp-content/uploads/2025/10/Application-for-1915c-HCBS-Waiver-CA0431R0400-March2024.pdf",
+      "facts": [
+        "Public subsidized housing arrangements and participant responsibility for room and board."
+      ],
+      "method": "Official-domain WebSearch"
+    },
+    {
+      "id": "va-pension",
+      "url": "https://www.va.gov/pension/aid-attendance-housebound/",
+      "facts": [
+        "Aid and Attendance adds to a qualifying VA pension for Veterans or survivors meeting care-related rules; medical examination and separate application."
+      ],
+      "method": "WebFetch, page updated May 8, 2026"
+    },
+    {
+      "id": "va-home-care",
+      "url": "https://www.va.gov/geriatrics/pages/Homemaker_and_Home_Health_Aide_Care.asp",
+      "facts": [
+        "Enrolled Veteran, community-care eligibility, clinical criteria and local availability.",
+        "VA-contracted organization, assessed services and possible copay; ask VA social worker."
+      ],
+      "method": "WebFetch"
+    },
+    {
+      "id": "ltc",
+      "url": "https://aging.ca.gov/Providers_and_Partners/Health_Insurance_Counseling_and_Advocacy_Program/Long_Term_Care_Insurance/",
+      "facts": [
+        "Long-term care insurance may cover care at home, personal care, homemaker and respite services; confirm individual policy."
+      ],
+      "method": "WebFetch; replaces prior ACL citation to comply with requested source list"
+    },
+    {
+      "id": "hicap",
+      "url": "https://aging.ca.gov/Programs_and_Services/Medicare_Counseling/",
+      "facts": [
+        "Free confidential individual Medicare/long-term-care-insurance counseling for Medicare-eligible or soon-eligible people; trained on Medi-Cal."
+      ],
+      "method": "WebFetch"
+    },
+    {
+      "id": "aaa",
+      "url": "https://aging.ca.gov/Find_Services_in_My_County/",
+      "facts": [
+        "County aging agencies coordinate local community services, information, assistance and referrals.",
+        "LA City is separate from LA County. Five counties and the city agency verified individually."
+      ],
+      "method": "WebFetch"
+    }
+  ],
+  "countyAgencies": [
+    {
+      "county": "Los Angeles County",
+      "agency": "Los Angeles County Aging & Disabilities Department",
+      "phone": "(626) 414-6439",
+      "source": "https://aging.ca.gov/Find_Services_in_My_County/My_County/?cc=LA"
+    },
+    {
+      "county": "City of Los Angeles",
+      "agency": "City of Los Angeles Department of Aging",
+      "phone": "(213) 482-7252",
+      "source": "https://aging.ca.gov/Find_Services_in_My_County/My_County/?cc=lac"
+    },
+    {
+      "county": "Orange",
+      "agency": "County of Orange Office on Aging",
+      "phone": "(714) 480-6450",
+      "source": "https://aging.ca.gov/Find_Services_in_My_County/My_County/?cc=ora"
+    },
+    {
+      "county": "Riverside",
+      "agency": "Riverside County Office on Aging",
+      "phone": "(951) 867-3800",
+      "source": "https://aging.ca.gov/Find_Services_in_My_County/My_County/?cc=riv"
+    },
+    {
+      "county": "San Bernardino",
+      "agency": "County of San Bernardino Aging & Adult Services",
+      "phone": "(909) 891-3900",
+      "source": "https://aging.ca.gov/Find_Services_in_My_County/My_County/?cc=sbd"
+    },
+    {
+      "county": "Ventura",
+      "agency": "Ventura County Area Agency on Aging",
+      "phone": "(805) 477-7300",
+      "source": "https://aging.ca.gov/Find_Services_in_My_County/My_County/?cc=VEN"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "firstlight-socal-handoff",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare:publish": "python3 tools/prepare-publish.py",
+    "test:routes": "node tests/test_routes.mjs"
+  },
+  "devDependencies": {
+    "axe-core": "4.14.0"
+  }
+}

@@ -1,0 +1,392 @@
+[
+  {
+    "query": "11600 Washington Place, Los Angeles, CA 90066",
+    "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=11600+Washington+Place%2C+Los+Angeles%2C+CA+90066&benchmark=Public_AR_Current&format=json",
+    "status": 200,
+    "matches": [
+      {
+        "tigerLine": {
+          "side": "L",
+          "tigerLineId": "141573974"
+        },
+        "coordinates": {
+          "x": -118.420533312205,
+          "y": 34.004781960048
+        },
+        "addressComponents": {
+          "zip": "90066",
+          "streetName": "WASHINGTON",
+          "preType": "",
+          "city": "LOS ANGELES",
+          "preDirection": "",
+          "suffixDirection": "",
+          "fromAddress": "11600",
+          "state": "CA",
+          "suffixType": "PL",
+          "toAddress": "11698",
+          "suffixQualifier": "",
+          "preQualifier": ""
+        },
+        "matchedAddress": "11600 WASHINGTON PL, LOS ANGELES, CA, 90066"
+      }
+    ]
+  },
+  {
+    "query": "1370 Valley Vista Dr, Diamond Bar, CA 91765",
+    "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1370+Valley+Vista+Dr%2C+Diamond+Bar%2C+CA+91765&benchmark=Public_AR_Current&format=json",
+    "status": 200,
+    "matches": [
+      {
+        "tigerLine": {
+          "side": "L",
+          "tigerLineId": "142843486"
+        },
+        "coordinates": {
+          "x": -117.835669785771,
+          "y": 33.998530636966
+        },
+        "addressComponents": {
+          "zip": "91765",
+          "streetName": "VALLEY VISTA",
+          "preType": "",
+          "city": "DIAMOND BAR",
+          "preDirection": "",
+          "suffixDirection": "",
+          "fromAddress": "1300",
+          "state": "CA",
+          "suffixType": "DR",
+          "toAddress": "1598",
+          "suffixQualifier": "",
+          "preQualifier": ""
+        },
+        "matchedAddress": "1370 VALLEY VISTA DR, DIAMOND BAR, CA, 91765"
+      }
+    ]
+  },
+  {
+    "query": "13781 Roswell Ave, Chino, CA 91710",
+    "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=13781+Roswell+Ave%2C+Chino%2C+CA+91710&benchmark=Public_AR_Current&format=json",
+    "status": 200,
+    "matches": [
+      {
+        "tigerLine": {
+          "side": "L",
+          "tigerLineId": "144983079"
+        },
+        "coordinates": {
+          "x": -117.721704541492,
+          "y": 34.002809662445
+        },
+        "addressComponents": {
+          "zip": "91710",
+          "streetName": "ROSWELL",
+          "preType": "",
+          "city": "CHINO",
+          "preDirection": "",
+          "suffixDirection": "",
+          "fromAddress": "13701",
+          "state": "CA",
+          "suffixType": "AVE",
+          "toAddress": "13899",
+          "suffixQualifier": "",
+          "preQualifier": ""
+        },
+        "matchedAddress": "13781 ROSWELL AVE, CHINO, CA, 91710"
+      }
+    ]
+  },
+  {
+    "query": "1436 S La Cienega Blvd, Los Angeles, CA 90035",
+    "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1436+S+La+Cienega+Blvd%2C+Los+Angeles%2C+CA+90035&benchmark=Public_AR_Current&format=json",
+    "status": 200,
+    "matches": [
+      {
+        "tigerLine": {
+          "side": "L",
+          "tigerLineId": "141573121"
+        },
+        "coordinates": {
+          "x": -118.376062806873,
+          "y": 34.052026374304
+        },
+        "addressComponents": {
+          "zip": "90035",
+          "streetName": "LA CIENEGA",
+          "preType": "",
+          "city": "LOS ANGELES",
+          "preDirection": "S",
+          "suffixDirection": "",
+          "fromAddress": "1426",
+          "state": "CA",
+          "suffixType": "BLVD",
+          "toAddress": "1450",
+          "suffixQualifier": "",
+          "preQualifier": ""
+        },
+        "matchedAddress": "1436 S LA CIENEGA BLVD, LOS ANGELES, CA, 90035"
+      }
+    ]
+  },
+  {
+    "query": "2030 Main Street, Irvine, CA 92614",
+    "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=2030+Main+Street%2C+Irvine%2C+CA+92614&benchmark=Public_AR_Current&format=json",
+    "status": 200,
+    "matches": [
+      {
+        "tigerLine": {
+          "side": "R",
+          "tigerLineId": "144418499"
+        },
+        "coordinates": {
+          "x": -117.854637244791,
+          "y": 33.685401562787
+        },
+        "addressComponents": {
+          "zip": "92614",
+          "streetName": "MAIN",
+          "preType": "",
+          "city": "IRVINE",
+          "preDirection": "",
+          "suffixDirection": "",
+          "fromAddress": "2012",
+          "state": "CA",
+          "suffixType": "ST",
+          "toAddress": "2118",
+          "suffixQualifier": "",
+          "preQualifier": ""
+        },
+        "matchedAddress": "2030 MAIN ST, IRVINE, CA, 92614"
+      }
+    ]
+  },
+  {
+    "query": "21255 Burbank Blvd, Woodland Hills, CA 91367",
+    "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=21255+Burbank+Blvd%2C+Woodland+Hills%2C+CA+91367&benchmark=Public_AR_Current&format=json",
+    "status": 200,
+    "matches": [
+      {
+        "tigerLine": {
+          "side": "R",
+          "tigerLineId": "142811925"
+        },
+        "coordinates": {
+          "x": -118.594229818015,
+          "y": 34.173351278311
+        },
+        "addressComponents": {
+          "zip": "91367",
+          "streetName": "BURBANK",
+          "preType": "",
+          "city": "WOODLAND HILLS",
+          "preDirection": "",
+          "suffixDirection": "",
+          "fromAddress": "21001",
+          "state": "CA",
+          "suffixType": "BLVD",
+          "toAddress": "21299",
+          "suffixQualifier": "",
+          "preQualifier": ""
+        },
+        "matchedAddress": "21255 BURBANK BLVD, WOODLAND HILLS, CA, 91367"
+      }
+    ]
+  },
+  {
+    "query": "2655 First Street, Simi Valley, CA 93065",
+    "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=2655+First+Street%2C+Simi+Valley%2C+CA+93065&benchmark=Public_AR_Current&format=json",
+    "status": 200,
+    "matches": [
+      {
+        "tigerLine": {
+          "side": "L",
+          "tigerLineId": "110127000"
+        },
+        "coordinates": {
+          "x": -118.778917020277,
+          "y": 34.284039722323
+        },
+        "addressComponents": {
+          "zip": "93065",
+          "streetName": "1ST",
+          "preType": "",
+          "city": "SIMI VALLEY",
+          "preDirection": "",
+          "suffixDirection": "",
+          "fromAddress": "2601",
+          "state": "CA",
+          "suffixType": "ST",
+          "toAddress": "2699",
+          "suffixQualifier": "",
+          "preQualifier": ""
+        },
+        "matchedAddress": "2655 1ST ST, SIMI VALLEY, CA, 93065"
+      }
+    ]
+  },
+  {
+    "query": "32303 Camino Capistrano, San Juan Capistrano, CA 92675",
+    "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=32303+Camino+Capistrano%2C+San+Juan+Capistrano%2C+CA+92675&benchmark=Public_AR_Current&format=json",
+    "status": 200,
+    "matches": [
+      {
+        "tigerLine": {
+          "side": "R",
+          "tigerLineId": "144418151"
+        },
+        "coordinates": {
+          "x": -117.662745489939,
+          "y": 33.493906926548
+        },
+        "addressComponents": {
+          "zip": "92675",
+          "streetName": "CAPISTRANO",
+          "preType": "CAM",
+          "city": "SAN JUAN CAPISTRANO",
+          "preDirection": "",
+          "suffixDirection": "",
+          "fromAddress": "32203",
+          "state": "CA",
+          "suffixType": "",
+          "toAddress": "32341",
+          "suffixQualifier": "",
+          "preQualifier": ""
+        },
+        "matchedAddress": "32303 CAM CAPISTRANO, SAN JUAN CAPISTRANO, CA, 92675"
+      }
+    ]
+  },
+  {
+    "query": "43218 Business Park Dr, Temecula, CA 92590",
+    "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=43218+Business+Park+Dr%2C+Temecula%2C+CA+92590&benchmark=Public_AR_Current&format=json",
+    "status": 200,
+    "matches": [
+      {
+        "tigerLine": {
+          "side": "R",
+          "tigerLineId": "195085092"
+        },
+        "coordinates": {
+          "x": -117.166589226428,
+          "y": 33.503253833958
+        },
+        "addressComponents": {
+          "zip": "92590",
+          "streetName": "PARK",
+          "preType": "",
+          "city": "TEMECULA",
+          "preDirection": "",
+          "suffixDirection": "",
+          "fromAddress": "43000",
+          "state": "CA",
+          "suffixType": "DR",
+          "toAddress": "43386",
+          "suffixQualifier": "",
+          "preQualifier": "BUS"
+        },
+        "matchedAddress": "43218 BUS PARK DR, TEMECULA, CA, 92590"
+      }
+    ]
+  },
+  {
+    "query": "450 North Brand Blvd, Glendale, CA 91203",
+    "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=450+North+Brand+Blvd%2C+Glendale%2C+CA+91203&benchmark=Public_AR_Current&format=json",
+    "status": 200,
+    "matches": []
+  },
+  {
+    "query": "612 W Duarte Road, Arcadia, CA 91007",
+    "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=612+W+Duarte+Road%2C+Arcadia%2C+CA+91007&benchmark=Public_AR_Current&format=json",
+    "status": 200,
+    "matches": [
+      {
+        "tigerLine": {
+          "side": "L",
+          "tigerLineId": "141644407"
+        },
+        "coordinates": {
+          "x": -118.051557789705,
+          "y": 34.12649869219
+        },
+        "addressComponents": {
+          "zip": "91007",
+          "streetName": "DUARTE",
+          "preType": "",
+          "city": "ARCADIA",
+          "preDirection": "W",
+          "suffixDirection": "",
+          "fromAddress": "600",
+          "state": "CA",
+          "suffixType": "RD",
+          "toAddress": "798",
+          "suffixQualifier": "",
+          "preQualifier": ""
+        },
+        "matchedAddress": "612 W DUARTE RD, ARCADIA, CA, 91007"
+      }
+    ]
+  },
+  {
+    "query": "7901 Painter Ave, Whittier, CA 90602",
+    "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=7901+Painter+Ave%2C+Whittier%2C+CA+90602&benchmark=Public_AR_Current&format=json",
+    "status": 200,
+    "matches": [
+      {
+        "tigerLine": {
+          "side": "R",
+          "tigerLineId": "141748184"
+        },
+        "coordinates": {
+          "x": -118.032727291698,
+          "y": 33.969242350063
+        },
+        "addressComponents": {
+          "zip": "90602",
+          "streetName": "PAINTER",
+          "preType": "",
+          "city": "WHITTIER",
+          "preDirection": "",
+          "suffixDirection": "",
+          "fromAddress": "7835",
+          "state": "CA",
+          "suffixType": "AVE",
+          "toAddress": "7999",
+          "suffixQualifier": "",
+          "preQualifier": ""
+        },
+        "matchedAddress": "7901 PAINTER AVE, WHITTIER, CA, 90602"
+      }
+    ]
+  },
+  {
+    "query": "9650 Business Center Dr, Rancho Cucamonga, CA 91730",
+    "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=9650+Business+Center+Dr%2C+Rancho+Cucamonga%2C+CA+91730&benchmark=Public_AR_Current&format=json",
+    "status": 200,
+    "matches": [
+      {
+        "tigerLine": {
+          "side": "L",
+          "tigerLineId": "144637187"
+        },
+        "coordinates": {
+          "x": -117.594704760959,
+          "y": 34.098166160904
+        },
+        "addressComponents": {
+          "zip": "91730",
+          "streetName": "CENTER",
+          "preType": "",
+          "city": "RANCHO CUCAMONGA",
+          "preDirection": "",
+          "suffixDirection": "",
+          "fromAddress": "9500",
+          "state": "CA",
+          "suffixType": "DR",
+          "toAddress": "9698",
+          "suffixQualifier": "",
+          "preQualifier": "BUS"
+        },
+        "matchedAddress": "9650 BUS CENTER DR, RANCHO CUCAMONGA, CA, 91730"
+      }
+    ]
+  }
+]

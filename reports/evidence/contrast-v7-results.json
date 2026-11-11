@@ -1,0 +1,150 @@
+{
+  "method": "Computed foreground colors against the background pixels underneath actual text ink, isolated by comparing screenshots before/after making text transparent in the test browser. This examines the gradient and decorative-background items axe marked for manual review. Decorative arrows/step numerals also reviewed; X social labels contain the visible X in their accessible names. No published HTML altered.",
+  "checks": [
+    {
+      "page": "main",
+      "selector": "#page-title",
+      "text": "Good care starts\nwith your local team.",
+      "foreground": "rgb(21, 59, 41)",
+      "minimumSampledRatio": 8.1,
+      "passed": true
+    },
+    {
+      "page": "main",
+      "selector": ".underlined",
+      "text": "with your local team.",
+      "foreground": "rgb(21, 59, 41)",
+      "minimumSampledRatio": 8.1,
+      "passed": true
+    },
+    {
+      "page": "main",
+      "selector": ".hero-copy > .eyebrow",
+      "text": "FIRSTLIGHT HOME CARE: SOUTHERN CALIFORNIA",
+      "foreground": "rgb(4, 106, 56)",
+      "minimumSampledRatio": 6.03,
+      "passed": true
+    },
+    {
+      "page": "main",
+      "selector": ".intro",
+      "text": "Find your office, answer a few questions, then take a simple guide into a local conversation. One step at a time, at your pace.",
+      "foreground": "rgb(64, 89, 74)",
+      "minimumSampledRatio": 5.33,
+      "passed": true
+    },
+    {
+      "page": "main",
+      "selector": ".flow-privacy",
+      "text": "Private by design. Answers stay in this page and are cleared when you leave.",
+      "foreground": "rgb(64, 89, 74)",
+      "minimumSampledRatio": 6.55,
+      "passed": true
+    },
+    {
+      "page": "main",
+      "selector": ".hero .text-link",
+      "text": "Read the service descriptions\n(opens in a new tab)\n\u2197",
+      "foreground": "rgb(19, 77, 50)",
+      "minimumSampledRatio": 8.69,
+      "passed": true
+    },
+    {
+      "page": "main",
+      "selector": ".step-number",
+      "text": "1",
+      "foreground": "rgb(21, 59, 41)",
+      "minimumSampledRatio": 7.96,
+      "passed": true
+    },
+    {
+      "page": "main",
+      "selector": ".step-number",
+      "text": "2",
+      "foreground": "rgb(21, 59, 41)",
+      "minimumSampledRatio": 10.0,
+      "passed": true
+    },
+    {
+      "page": "main",
+      "selector": ".step-number",
+      "text": "3",
+      "foreground": "rgb(21, 59, 41)",
+      "minimumSampledRatio": 10.0,
+      "passed": true
+    },
+    {
+      "page": "main",
+      "selector": ".step-number",
+      "text": "4",
+      "foreground": "rgb(21, 59, 41)",
+      "minimumSampledRatio": 10.0,
+      "passed": true
+    },
+    {
+      "page": "services",
+      "selector": ".services-intro h1",
+      "text": "Help that fits\neveryday life.",
+      "foreground": "rgb(21, 59, 41)",
+      "minimumSampledRatio": 10.64,
+      "passed": true
+    },
+    {
+      "page": "services",
+      "selector": ".services-intro .eyebrow",
+      "text": "UNDERSTAND YOUR OPTIONS",
+      "foreground": "rgb(4, 106, 56)",
+      "minimumSampledRatio": 5.72,
+      "passed": true
+    },
+    {
+      "page": "services",
+      "selector": ".services-intro .wrap > p",
+      "text": "UNDERSTAND YOUR OPTIONS",
+      "foreground": "rgb(4, 106, 56)",
+      "minimumSampledRatio": 5.72,
+      "passed": true
+    },
+    {
+      "page": "services",
+      "selector": ".services-intro .wrap > p",
+      "text": "These descriptions are a starting point. A local assessment confirms the right support, schedule and scope.",
+      "foreground": "rgb(64, 89, 74)",
+      "minimumSampledRatio": 6.57,
+      "passed": true
+    },
+    {
+      "page": "locations",
+      "selector": ".locations-intro h1",
+      "text": "Find the team\nnear you.",
+      "foreground": "rgb(21, 59, 41)",
+      "minimumSampledRatio": 10.64,
+      "passed": true
+    },
+    {
+      "page": "locations",
+      "selector": ".locations-intro .eyebrow",
+      "text": "OUR LOCAL TEAMS",
+      "foreground": "rgb(4, 106, 56)",
+      "minimumSampledRatio": 5.72,
+      "passed": true
+    },
+    {
+      "page": "locations",
+      "selector": ".locations-intro .wrap > p",
+      "text": "OUR LOCAL TEAMS",
+      "foreground": "rgb(4, 106, 56)",
+      "minimumSampledRatio": 5.72,
+      "passed": true
+    },
+    {
+      "page": "locations",
+      "selector": ".locations-intro .wrap > p",
+      "text": "Fifteen participating offices, listed alphabetically. Search by city or ZIP, then call a local team or visit its office website. Each team confirms coverage and availability.",
+      "foreground": "rgb(64, 89, 74)",
+      "minimumSampledRatio": 6.57,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

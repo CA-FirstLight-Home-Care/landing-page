@@ -1,0 +1,299 @@
+{
+  "project": "firstlight-socal",
+  "account": "1b316c4a14fed87a4c721863184e0c77",
+  "email": "gcheung@firstlighthomecare.com",
+  "deploymentId": "033e3a24-ffc9-4d49-9fa3-a2516ceb0fe3",
+  "deploymentUrl": "https://033e3a24.firstlight-socal.pages.dev",
+  "liveUrl": "https://firstlight-socal.pages.dev/",
+  "deployedAtPacific": "Nov 10, 2026 11:40:38 PM PST",
+  "verifiedAtPacific": "Nov 10, 2026 11:41:35 PM PST",
+  "checks": [
+    {
+      "route": "/",
+      "status": 200,
+      "matchesLocal": true,
+      "sha256": "51c89dcfb27ba2048b1dfae309f14a9a4e9c128141f583295e1cad88d6fc8eaf"
+    },
+    {
+      "route": "/index.html",
+      "status": 200,
+      "matchesLocal": true,
+      "sha256": "51c89dcfb27ba2048b1dfae309f14a9a4e9c128141f583295e1cad88d6fc8eaf"
+    },
+    {
+      "route": "/services",
+      "status": 200,
+      "matchesLocal": true,
+      "sha256": "3a5b4eea9f95b3c5ab354b508d456a2ac020b4d5885dcdc1d3acd27a7e676737"
+    },
+    {
+      "route": "/services.html",
+      "status": 200,
+      "matchesLocal": true,
+      "sha256": "3a5b4eea9f95b3c5ab354b508d456a2ac020b4d5885dcdc1d3acd27a7e676737"
+    },
+    {
+      "route": "/locations",
+      "status": 200,
+      "matchesLocal": true,
+      "sha256": "80c6f64fa5513a69435915a8a9e64710c01980aece48e2fe0812b2a6a0cf4e60"
+    },
+    {
+      "route": "/locations.html",
+      "status": 200,
+      "matchesLocal": true,
+      "sha256": "80c6f64fa5513a69435915a8a9e64710c01980aece48e2fe0812b2a6a0cf4e60"
+    },
+    {
+      "route": "/faqs",
+      "status": 200,
+      "matchesLocal": true,
+      "sha256": "12419c37c38b9b54a3f026dab2c671c050ad5a319eaeaf489ae1e38aa472359e"
+    },
+    {
+      "route": "/faqs.html",
+      "status": 200,
+      "matchesLocal": true,
+      "sha256": "12419c37c38b9b54a3f026dab2c671c050ad5a319eaeaf489ae1e38aa472359e"
+    },
+    {
+      "route": "/README.md",
+      "status": 404
+    },
+    {
+      "route": "/offices.json",
+      "status": 404
+    },
+    {
+      "route": "/office-extras.json",
+      "status": 404
+    },
+    {
+      "route": "/source-audit.json",
+      "status": 404
+    },
+    {
+      "route": "/source-current.xlsx",
+      "status": 404
+    },
+    {
+      "route": "/city-aliases-v6.json",
+      "status": 404
+    },
+    {
+      "route": "/shared-cities-v6.json",
+      "status": 404
+    },
+    {
+      "route": "/index-v1.html",
+      "status": 404
+    },
+    {
+      "route": "/index-v2.html",
+      "status": 404
+    },
+    {
+      "route": "/index-v3.html",
+      "status": 404
+    },
+    {
+      "route": "/index-v4.html",
+      "status": 404
+    },
+    {
+      "route": "/index-v5.html",
+      "status": 404
+    },
+    {
+      "route": "/services-v5.html",
+      "status": 404
+    },
+    {
+      "route": "/index-v6.html",
+      "status": 404
+    },
+    {
+      "route": "/services-v6.html",
+      "status": 404
+    },
+    {
+      "route": "/locations-v6.html",
+      "status": 404
+    },
+    {
+      "route": "/test_v7.py",
+      "status": 404
+    },
+    {
+      "route": "/live-v7-results.json",
+      "status": 404
+    },
+    {
+      "route": "/desktop.png",
+      "status": 404
+    },
+    {
+      "route": "/mobile.png",
+      "status": 404
+    },
+    {
+      "route": "/deployment/",
+      "status": 404
+    },
+    {
+      "route": "/deployment/create-deployment-v7.js",
+      "status": 404
+    },
+    {
+      "route": "/_worker.js",
+      "status": 404
+    },
+    {
+      "route": "/REWORK-V6-REPORT.md",
+      "status": 404
+    },
+    {
+      "route": "/REWORK-V7-REPORT.md",
+      "status": 404
+    },
+    {
+      "route": "/phones-v7-verification.json",
+      "status": 404
+    },
+    {
+      "route": "/v7-test-results.json",
+      "status": 404
+    },
+    {
+      "route": "/build-v7.py",
+      "status": 404
+    },
+    {
+      "route": "/v7-inquiry.js",
+      "status": 404
+    },
+    {
+      "route": "/v7-inquiry.html",
+      "status": 404
+    },
+    {
+      "route": "/v7.css",
+      "status": 404
+    },
+    {
+      "route": "/research/official-burbank.html",
+      "status": 404
+    },
+    {
+      "route": "/v7-step-1-mobile.png",
+      "status": 404
+    },
+    {
+      "route": "/v7-inquiry-modal-mobile.png",
+      "status": 404
+    },
+    {
+      "route": "/index-v7-before-programs.html",
+      "status": 404
+    },
+    {
+      "route": "/v7-programs.js",
+      "status": 404
+    },
+    {
+      "route": "/programs-v7-research.json",
+      "status": 404
+    },
+    {
+      "route": "/research/programs-v7/cms-participants.xlsx",
+      "status": 404
+    },
+    {
+      "route": "/test_programs_v7.py",
+      "status": 404
+    },
+    {
+      "route": "/programs-v7-local-results.json",
+      "status": 404
+    },
+    {
+      "route": "/programs-v7-live-results.json",
+      "status": 404
+    },
+    {
+      "route": "/accessibility-v7-manual-review.json",
+      "status": 404
+    },
+    {
+      "route": "/contrast-v7-results.json",
+      "status": 404
+    },
+    {
+      "route": "/live-v7-modal-zoom.json",
+      "status": 404
+    },
+    {
+      "route": "/test_v7_modal_zoom.py",
+      "status": 404
+    },
+    {
+      "route": "/index-v7-before-couples.html",
+      "status": 404
+    },
+    {
+      "route": "/services-v7-before-couples.html",
+      "status": 404
+    },
+    {
+      "route": "/faqs-v7-before-couples.html",
+      "status": 404
+    },
+    {
+      "route": "/v7-service-comparison.py",
+      "status": 404
+    },
+    {
+      "route": "/couples-v7-research.json",
+      "status": 404
+    },
+    {
+      "route": "/test_couples_v7.py",
+      "status": 404
+    },
+    {
+      "route": "/couples-v7-local-results.json",
+      "status": 404
+    },
+    {
+      "route": "/couples-v7-live-results.json",
+      "status": 404
+    },
+    {
+      "route": "/v7-couples-step-3-mobile.png",
+      "status": 404
+    },
+    {
+      "route": "/v7-services-desktop.png",
+      "status": 404
+    },
+    {
+      "route": "/update-v7-program-report.py",
+      "status": 404
+    },
+    {
+      "route": "/REWORK-V7-REPORT-v7-before-couples.md",
+      "status": 404
+    },
+    {
+      "route": "/research/programs-v7/scan-2026.html",
+      "status": 404
+    },
+    {
+      "route": "/deployment/serve-pages-v7.mjs",
+      "status": 404
+    }
+  ],
+  "private404Count": 59,
+  "rawOwnerNamePrefixAndDashMatches": 0,
+  "titleAndZipBoxVerified": true
+}

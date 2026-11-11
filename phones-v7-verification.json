@@ -1,0 +1,122 @@
+[
+  {
+    "id": "burbank",
+    "phone": "(626) 360-0048",
+    "verified": true,
+    "source": "https://www.firstlighthomecare.com/home-healthcare-burbank/",
+    "evidence": "Matching tel link in official office HTML already saved earlier Nov 10, 2026 PST",
+    "phoneHref": "tel:+16263600048"
+  },
+  {
+    "id": "chino-hills",
+    "phone": "(909) 660-8900",
+    "verified": true,
+    "source": "https://www.firstlighthomecare.com/home-healthcare-chino-hills/",
+    "evidence": "Matching tel link in official office HTML already saved earlier Nov 10, 2026 PST",
+    "phoneHref": "tel:+19096608900"
+  },
+  {
+    "id": "glendale",
+    "phone": "(626) 360-0048",
+    "verified": true,
+    "source": "https://www.firstlighthomecare.com/home-healthcare-glendale/",
+    "evidence": "Matching tel link in official office HTML already saved earlier Nov 10, 2026 PST",
+    "phoneHref": "tel:+16263600048"
+  },
+  {
+    "id": "irvine",
+    "phone": "(949) 704-2969",
+    "verified": true,
+    "source": "https://www.firstlighthomecare.com/home-healthcare-irvine/",
+    "evidence": "Matching tel link in official office HTML already saved earlier Nov 10, 2026 PST",
+    "phoneHref": "tel:+19497042969"
+  },
+  {
+    "id": "marina-del-rey",
+    "phone": "(310) 956-4811",
+    "verified": true,
+    "source": "https://www.firstlighthomecare.com/home-healthcare-marina-del-rey/",
+    "evidence": "Matching tel link in official office HTML already saved earlier Nov 10, 2026 PST",
+    "phoneHref": "tel:+13109564811"
+  },
+  {
+    "id": "montclair",
+    "phone": "(840) 200-9868",
+    "verified": true,
+    "source": "Gary explicit instruction (pt24u)",
+    "evidence": "Public phone explicitly provided by Gary",
+    "phoneHref": "tel:+18402009868"
+  },
+  {
+    "id": "pasadena",
+    "phone": "(626) 360-0048",
+    "verified": true,
+    "source": "https://www.firstlighthomecare.com/home-healthcare-pasadena-altadena/",
+    "evidence": "Matching tel link in official office HTML already saved earlier Nov 10, 2026 PST",
+    "phoneHref": "tel:+16263600048"
+  },
+  {
+    "id": "rancho-cucamonga",
+    "phone": "(909) 321-4466",
+    "verified": true,
+    "source": "https://www.firstlighthomecare.com/home-healthcare-rancho-cucamonga/",
+    "evidence": "Matching tel link in official office HTML already saved earlier Nov 10, 2026 PST",
+    "phoneHref": "tel:+19093214466"
+  },
+  {
+    "id": "san-clemente",
+    "phone": "(949) 940-8500",
+    "verified": true,
+    "source": "https://www.firstlighthomecare.com/home-healthcare-sanclemente/",
+    "evidence": "Matching tel link in official office HTML already saved earlier Nov 10, 2026 PST",
+    "phoneHref": "tel:+19499408500"
+  },
+  {
+    "id": "san-gabriel",
+    "phone": "(626) 360-0048",
+    "verified": true,
+    "source": "https://www.firstlighthomecare.com/home-healthcare-san-gabriel/",
+    "evidence": "Matching tel link in official office HTML already saved earlier Nov 10, 2026 PST",
+    "phoneHref": "tel:+16263600048"
+  },
+  {
+    "id": "simi-valley",
+    "phone": "(805) 915-4706",
+    "verified": true,
+    "source": "https://www.firstlighthomecare.com/home-healthcare-simi-valley/",
+    "evidence": "Matching tel link in official office HTML already saved earlier Nov 10, 2026 PST",
+    "phoneHref": "tel:+18059154706"
+  },
+  {
+    "id": "temecula",
+    "phone": "(951) 395-0821",
+    "verified": true,
+    "source": "https://www.firstlighthomecare.com/home-healthcare-temecula-valley/",
+    "evidence": "Matching tel link in official office HTML already saved earlier Nov 10, 2026 PST",
+    "phoneHref": "tel:+19513950821"
+  },
+  {
+    "id": "west-hollywood",
+    "phone": "(424) 230-8833",
+    "verified": true,
+    "source": "https://www.firstlighthomecare.com/home-healthcare-west-hollywood/",
+    "evidence": "Matching tel link in official office HTML already saved earlier Nov 10, 2026 PST",
+    "phoneHref": "tel:+14242308833"
+  },
+  {
+    "id": "whittier",
+    "phone": "(562) 800-6922",
+    "verified": true,
+    "source": "https://www.firstlighthomecare.com/home-healthcare-whittier/",
+    "evidence": "Matching tel link in official office HTML already saved earlier Nov 10, 2026 PST",
+    "phoneHref": "tel:+15628006922"
+  },
+  {
+    "id": "woodland-hills",
+    "phone": "(818) 443-1281",
+    "verified": true,
+    "source": "https://www.firstlighthomecare.com/home-healthcare-woodland-hills/",
+    "evidence": "Matching tel link in official office HTML already saved earlier Nov 10, 2026 PST",
+    "phoneHref": "tel:+18184431281"
+  }
+]

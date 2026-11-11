@@ -1,0 +1,3635 @@
+{
+  "version": 7,
+  "mode": "local",
+  "url": "http://127.0.0.1:43379/",
+  "checks": [
+    {
+      "test": "Three exact v6 backups exist",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "All source ZIP mappings, offices, phones and areas preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "No owner words, office prefixes, em/en dashes or financial/booking vendor names",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "FAQs moved entirely off main; 13 answers and pricing preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "All headers use FAQs and correct destination",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Locations have no ZIP lists, start links or local-office labels",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Skip link keyboard focus",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Skip link targets main",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Privacy line centered and updated hero copy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "All 225 ZIP lookups unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Invalid city/ZIP associated inline error",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Uncovered ZIP links national finder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Shared ZIP 91396 retains both offices",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Shared ZIP 91226 retains both offices",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Main city search requires ZIP for real Pomona overlap",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Shared city ZIP error labelled",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Pomona 91766 resolves Montclair",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Pomona 91768 resolves Chino Hills",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Unique city returns office without inventing a ZIP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Step 1 verified direct phone",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Confirmation advances and focuses Step 2 only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Office context and Change office share flex row",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Eight optional questions and clear 24-hour wording",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Radio arrow keyboard works",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Quiz Back preserves answer",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Result names and edit button adjacency correct",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Existing verified Veteran, memory and financial rules remain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "1,024 care-rule combinations unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Financial triggers remain restricted to selected payment answers",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Step 4 has one merged office card with exactly two actions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Chosen Call action verified",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Native modal opens with focus inside and placeholder notice",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Modal prefilled with office, ZIP and readable editable summary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Tab wraps last to first",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Shift-Tab wraps first to last",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Escape closes modal and restores trigger focus",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Required name and phone have associated accessible errors",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Error summary link focuses invalid input",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Optional email validated when provided",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Closing and reopening preserves message edits during this visit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Valid demo confirms not sent without email or network/navigation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Confirmation Close restores trigger focus",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Header start returns to Step 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Skip all still gives honest results without eligibility claims",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Local FAQ synonym ranking works",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Expand matching FAQs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Collapse matching FAQs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "FAQ no-results state",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Escape restores 13 FAQs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "15 equal alphabetical office cards",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Every exact address is an accessible Google Maps search link",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Verified icon-only social links have accessible office/platform labels",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Social icon targets at least 24px",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "All 15 verified phones available; Montclair construction wording",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Locations shared-city ZIP clarification retained",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Locations ZIP finds Montclair without flow-link button",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Existing deep links remain valid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Invalid office deep link safe",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Location not requested before click",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Deliberate consented location shows candidate, not auto selection",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Step 1 320",
+      "passed": true,
+      "detail": {
+        "root": 320,
+        "client": 320,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question who 320",
+      "passed": true,
+      "detail": {
+        "root": 320,
+        "client": 320,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question daily 320",
+      "passed": true,
+      "detail": {
+        "root": 320,
+        "client": 320,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question memory 320",
+      "passed": true,
+      "detail": {
+        "root": 320,
+        "client": 320,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question recovery 320",
+      "passed": true,
+      "detail": {
+        "root": 320,
+        "client": 320,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question schedule 320",
+      "passed": true,
+      "detail": {
+        "root": 320,
+        "client": 320,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question veteran 320",
+      "passed": true,
+      "detail": {
+        "root": 320,
+        "client": 320,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question ltc 320",
+      "passed": true,
+      "detail": {
+        "root": 320,
+        "client": 320,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question pay 320",
+      "passed": true,
+      "detail": {
+        "root": 320,
+        "client": 320,
+        "bad": []
+      }
+    },
+    {
+      "test": "Maximum results 320",
+      "passed": true,
+      "detail": {
+        "root": 320,
+        "client": 320,
+        "bad": []
+      }
+    },
+    {
+      "test": "Merged office card 320",
+      "passed": true,
+      "detail": {
+        "root": 320,
+        "client": 320,
+        "bad": []
+      }
+    },
+    {
+      "test": "Open prefilled modal 320",
+      "passed": true,
+      "detail": {
+        "root": 320,
+        "client": 320,
+        "bad": []
+      }
+    },
+    {
+      "test": "Long modal text 320",
+      "passed": true,
+      "detail": {
+        "root": 320,
+        "client": 320,
+        "bad": []
+      }
+    },
+    {
+      "test": "services 320",
+      "passed": true,
+      "detail": {
+        "root": 320,
+        "client": 320,
+        "bad": []
+      }
+    },
+    {
+      "test": "locations 320",
+      "passed": true,
+      "detail": {
+        "root": 320,
+        "client": 320,
+        "bad": []
+      }
+    },
+    {
+      "test": "faqs 320",
+      "passed": true,
+      "detail": {
+        "root": 320,
+        "client": 320,
+        "bad": []
+      }
+    },
+    {
+      "test": "Step 1 360",
+      "passed": true,
+      "detail": {
+        "root": 360,
+        "client": 360,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question who 360",
+      "passed": true,
+      "detail": {
+        "root": 360,
+        "client": 360,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question daily 360",
+      "passed": true,
+      "detail": {
+        "root": 360,
+        "client": 360,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question memory 360",
+      "passed": true,
+      "detail": {
+        "root": 360,
+        "client": 360,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question recovery 360",
+      "passed": true,
+      "detail": {
+        "root": 360,
+        "client": 360,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question schedule 360",
+      "passed": true,
+      "detail": {
+        "root": 360,
+        "client": 360,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question veteran 360",
+      "passed": true,
+      "detail": {
+        "root": 360,
+        "client": 360,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question ltc 360",
+      "passed": true,
+      "detail": {
+        "root": 360,
+        "client": 360,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question pay 360",
+      "passed": true,
+      "detail": {
+        "root": 360,
+        "client": 360,
+        "bad": []
+      }
+    },
+    {
+      "test": "Maximum results 360",
+      "passed": true,
+      "detail": {
+        "root": 360,
+        "client": 360,
+        "bad": []
+      }
+    },
+    {
+      "test": "Merged office card 360",
+      "passed": true,
+      "detail": {
+        "root": 360,
+        "client": 360,
+        "bad": []
+      }
+    },
+    {
+      "test": "Open prefilled modal 360",
+      "passed": true,
+      "detail": {
+        "root": 360,
+        "client": 360,
+        "bad": []
+      }
+    },
+    {
+      "test": "Long modal text 360",
+      "passed": true,
+      "detail": {
+        "root": 360,
+        "client": 360,
+        "bad": []
+      }
+    },
+    {
+      "test": "services 360",
+      "passed": true,
+      "detail": {
+        "root": 360,
+        "client": 360,
+        "bad": []
+      }
+    },
+    {
+      "test": "locations 360",
+      "passed": true,
+      "detail": {
+        "root": 360,
+        "client": 360,
+        "bad": []
+      }
+    },
+    {
+      "test": "faqs 360",
+      "passed": true,
+      "detail": {
+        "root": 360,
+        "client": 360,
+        "bad": []
+      }
+    },
+    {
+      "test": "Step 1 375",
+      "passed": true,
+      "detail": {
+        "root": 375,
+        "client": 375,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question who 375",
+      "passed": true,
+      "detail": {
+        "root": 375,
+        "client": 375,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question daily 375",
+      "passed": true,
+      "detail": {
+        "root": 375,
+        "client": 375,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question memory 375",
+      "passed": true,
+      "detail": {
+        "root": 375,
+        "client": 375,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question recovery 375",
+      "passed": true,
+      "detail": {
+        "root": 375,
+        "client": 375,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question schedule 375",
+      "passed": true,
+      "detail": {
+        "root": 375,
+        "client": 375,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question veteran 375",
+      "passed": true,
+      "detail": {
+        "root": 375,
+        "client": 375,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question ltc 375",
+      "passed": true,
+      "detail": {
+        "root": 375,
+        "client": 375,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question pay 375",
+      "passed": true,
+      "detail": {
+        "root": 375,
+        "client": 375,
+        "bad": []
+      }
+    },
+    {
+      "test": "Maximum results 375",
+      "passed": true,
+      "detail": {
+        "root": 375,
+        "client": 375,
+        "bad": []
+      }
+    },
+    {
+      "test": "Merged office card 375",
+      "passed": true,
+      "detail": {
+        "root": 375,
+        "client": 375,
+        "bad": []
+      }
+    },
+    {
+      "test": "Open prefilled modal 375",
+      "passed": true,
+      "detail": {
+        "root": 375,
+        "client": 375,
+        "bad": []
+      }
+    },
+    {
+      "test": "Long modal text 375",
+      "passed": true,
+      "detail": {
+        "root": 375,
+        "client": 375,
+        "bad": []
+      }
+    },
+    {
+      "test": "services 375",
+      "passed": true,
+      "detail": {
+        "root": 375,
+        "client": 375,
+        "bad": []
+      }
+    },
+    {
+      "test": "locations 375",
+      "passed": true,
+      "detail": {
+        "root": 375,
+        "client": 375,
+        "bad": []
+      }
+    },
+    {
+      "test": "faqs 375",
+      "passed": true,
+      "detail": {
+        "root": 375,
+        "client": 375,
+        "bad": []
+      }
+    },
+    {
+      "test": "Step 1 390",
+      "passed": true,
+      "detail": {
+        "root": 390,
+        "client": 390,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question who 390",
+      "passed": true,
+      "detail": {
+        "root": 390,
+        "client": 390,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question daily 390",
+      "passed": true,
+      "detail": {
+        "root": 390,
+        "client": 390,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question memory 390",
+      "passed": true,
+      "detail": {
+        "root": 390,
+        "client": 390,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question recovery 390",
+      "passed": true,
+      "detail": {
+        "root": 390,
+        "client": 390,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question schedule 390",
+      "passed": true,
+      "detail": {
+        "root": 390,
+        "client": 390,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question veteran 390",
+      "passed": true,
+      "detail": {
+        "root": 390,
+        "client": 390,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question ltc 390",
+      "passed": true,
+      "detail": {
+        "root": 390,
+        "client": 390,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question pay 390",
+      "passed": true,
+      "detail": {
+        "root": 390,
+        "client": 390,
+        "bad": []
+      }
+    },
+    {
+      "test": "Maximum results 390",
+      "passed": true,
+      "detail": {
+        "root": 390,
+        "client": 390,
+        "bad": []
+      }
+    },
+    {
+      "test": "Merged office card 390",
+      "passed": true,
+      "detail": {
+        "root": 390,
+        "client": 390,
+        "bad": []
+      }
+    },
+    {
+      "test": "Open prefilled modal 390",
+      "passed": true,
+      "detail": {
+        "root": 390,
+        "client": 390,
+        "bad": []
+      }
+    },
+    {
+      "test": "Long modal text 390",
+      "passed": true,
+      "detail": {
+        "root": 390,
+        "client": 390,
+        "bad": []
+      }
+    },
+    {
+      "test": "services 390",
+      "passed": true,
+      "detail": {
+        "root": 390,
+        "client": 390,
+        "bad": []
+      }
+    },
+    {
+      "test": "locations 390",
+      "passed": true,
+      "detail": {
+        "root": 390,
+        "client": 390,
+        "bad": []
+      }
+    },
+    {
+      "test": "faqs 390",
+      "passed": true,
+      "detail": {
+        "root": 390,
+        "client": 390,
+        "bad": []
+      }
+    },
+    {
+      "test": "Step 1 414",
+      "passed": true,
+      "detail": {
+        "root": 414,
+        "client": 414,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question who 414",
+      "passed": true,
+      "detail": {
+        "root": 414,
+        "client": 414,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question daily 414",
+      "passed": true,
+      "detail": {
+        "root": 414,
+        "client": 414,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question memory 414",
+      "passed": true,
+      "detail": {
+        "root": 414,
+        "client": 414,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question recovery 414",
+      "passed": true,
+      "detail": {
+        "root": 414,
+        "client": 414,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question schedule 414",
+      "passed": true,
+      "detail": {
+        "root": 414,
+        "client": 414,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question veteran 414",
+      "passed": true,
+      "detail": {
+        "root": 414,
+        "client": 414,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question ltc 414",
+      "passed": true,
+      "detail": {
+        "root": 414,
+        "client": 414,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question pay 414",
+      "passed": true,
+      "detail": {
+        "root": 414,
+        "client": 414,
+        "bad": []
+      }
+    },
+    {
+      "test": "Maximum results 414",
+      "passed": true,
+      "detail": {
+        "root": 414,
+        "client": 414,
+        "bad": []
+      }
+    },
+    {
+      "test": "Merged office card 414",
+      "passed": true,
+      "detail": {
+        "root": 414,
+        "client": 414,
+        "bad": []
+      }
+    },
+    {
+      "test": "Open prefilled modal 414",
+      "passed": true,
+      "detail": {
+        "root": 414,
+        "client": 414,
+        "bad": []
+      }
+    },
+    {
+      "test": "Long modal text 414",
+      "passed": true,
+      "detail": {
+        "root": 414,
+        "client": 414,
+        "bad": []
+      }
+    },
+    {
+      "test": "services 414",
+      "passed": true,
+      "detail": {
+        "root": 414,
+        "client": 414,
+        "bad": []
+      }
+    },
+    {
+      "test": "locations 414",
+      "passed": true,
+      "detail": {
+        "root": 414,
+        "client": 414,
+        "bad": []
+      }
+    },
+    {
+      "test": "faqs 414",
+      "passed": true,
+      "detail": {
+        "root": 414,
+        "client": 414,
+        "bad": []
+      }
+    },
+    {
+      "test": "Step 1 430",
+      "passed": true,
+      "detail": {
+        "root": 430,
+        "client": 430,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question who 430",
+      "passed": true,
+      "detail": {
+        "root": 430,
+        "client": 430,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question daily 430",
+      "passed": true,
+      "detail": {
+        "root": 430,
+        "client": 430,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question memory 430",
+      "passed": true,
+      "detail": {
+        "root": 430,
+        "client": 430,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question recovery 430",
+      "passed": true,
+      "detail": {
+        "root": 430,
+        "client": 430,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question schedule 430",
+      "passed": true,
+      "detail": {
+        "root": 430,
+        "client": 430,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question veteran 430",
+      "passed": true,
+      "detail": {
+        "root": 430,
+        "client": 430,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question ltc 430",
+      "passed": true,
+      "detail": {
+        "root": 430,
+        "client": 430,
+        "bad": []
+      }
+    },
+    {
+      "test": "Question pay 430",
+      "passed": true,
+      "detail": {
+        "root": 430,
+        "client": 430,
+        "bad": []
+      }
+    },
+    {
+      "test": "Maximum results 430",
+      "passed": true,
+      "detail": {
+        "root": 430,
+        "client": 430,
+        "bad": []
+      }
+    },
+    {
+      "test": "Merged office card 430",
+      "passed": true,
+      "detail": {
+        "root": 430,
+        "client": 430,
+        "bad": []
+      }
+    },
+    {
+      "test": "Open prefilled modal 430",
+      "passed": true,
+      "detail": {
+        "root": 430,
+        "client": 430,
+        "bad": []
+      }
+    },
+    {
+      "test": "Long modal text 430",
+      "passed": true,
+      "detail": {
+        "root": 430,
+        "client": 430,
+        "bad": []
+      }
+    },
+    {
+      "test": "services 430",
+      "passed": true,
+      "detail": {
+        "root": 430,
+        "client": 430,
+        "bad": []
+      }
+    },
+    {
+      "test": "locations 430",
+      "passed": true,
+      "detail": {
+        "root": 430,
+        "client": 430,
+        "bad": []
+      }
+    },
+    {
+      "test": "faqs 430",
+      "passed": true,
+      "detail": {
+        "root": 430,
+        "client": 430,
+        "bad": []
+      }
+    },
+    {
+      "test": "Continuous 320..430 width sweep main",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "test": "Continuous 320..430 width sweep services",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "test": "Continuous 320..430 width sweep locations",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "test": "Continuous 320..430 width sweep faqs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "test": "Continuous dynamic step/modal 320..430 state 1",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "test": "Continuous dynamic step/modal 320..430 state 2",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "test": "Continuous dynamic step/modal 320..430 state 3",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "test": "Continuous dynamic step/modal 320..430 state 4",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "test": "Continuous dynamic step/modal 320..430 state 5",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "test": "Page keyboard rings and unobscured focus main",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "test": "Page keyboard rings and unobscured focus services",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "test": "Page keyboard rings and unobscured focus locations",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "test": "Page keyboard rings and unobscured focus faqs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "test": "Modal keyboard trap and visible unobscured rings 320",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "test": "Modal keyboard trap and visible unobscured rings 720",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "test": "Modal keyboard trap and visible unobscured rings 1440",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "test": "200% text main",
+      "passed": true,
+      "detail": {
+        "root": 720,
+        "client": 720,
+        "bad": []
+      }
+    },
+    {
+      "test": "One H1 and semantic landmarks main",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "200% text services",
+      "passed": true,
+      "detail": {
+        "root": 720,
+        "client": 720,
+        "bad": []
+      }
+    },
+    {
+      "test": "One H1 and semantic landmarks services",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "200% text locations",
+      "passed": true,
+      "detail": {
+        "root": 720,
+        "client": 720,
+        "bad": []
+      }
+    },
+    {
+      "test": "One H1 and semantic landmarks locations",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "200% text faqs",
+      "passed": true,
+      "detail": {
+        "root": 720,
+        "client": 720,
+        "bad": []
+      }
+    },
+    {
+      "test": "One H1 and semantic landmarks faqs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "Leaving clears quiz and inquiry values",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "No external application requests or persistent storage writes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "No JavaScript errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "passed": 183,
+  "axe": [
+    {
+      "state": "main initial",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "8.3pt (11px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p class=\"eyebrow\">FirstLight Home Care: Southern California</p>",
+              "target": [
+                ".hero-copy > .eyebrow"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "52.8pt (70.4px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<h1 id=\"page-title\">Good care starts<br><span class=\"underlined\">with your local team.</span></h1>",
+              "target": [
+                "#page-title"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "52.8pt (70.4px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section aria-labelledby=\"page-title\" class=\"hero\">",
+                      "target": [
+                        ".hero"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"underlined\">with your local team.</span>",
+              "target": [
+                ".underlined"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "13.5pt (18px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p class=\"intro\">Find your office, answer a few questions, then take a simple guide into a local conversation. One step at a time, at your pace.</p>",
+              "target": [
+                ".intro"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "9.0pt (12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p class=\"flow-privacy\">Private by design. Answers stay in this page and are cleared when you leave.</p>",
+              "target": [
+                ".flow-privacy"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<a class=\"text-link\" href=\"/services\" rel=\"noopener noreferrer\" target=\"_blank\">Read the service descriptions <span class=\"sr-only\">(opens in a new tab)</span><span aria-hidden=\"true\">\u2197</span></a>",
+              "target": [
+                ".text-link"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "step 1 selected",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "8.3pt (11px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p class=\"eyebrow\">FirstLight Home Care: Southern California</p>",
+              "target": [
+                ".hero-copy > .eyebrow"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "52.8pt (70.4px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<h1 id=\"page-title\">Good care starts<br><span class=\"underlined\">with your local team.</span></h1>",
+              "target": [
+                "#page-title"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "52.8pt (70.4px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section aria-labelledby=\"page-title\" class=\"hero\">",
+                      "target": [
+                        ".hero"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"underlined\">with your local team.</span>",
+              "target": [
+                ".underlined"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "13.5pt (18px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p class=\"intro\">Find your office, answer a few questions, then take a simple guide into a local conversation. One step at a time, at your pace.</p>",
+              "target": [
+                ".intro"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "9.0pt (12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p class=\"flow-privacy\">Private by design. Answers stay in this page and are cleared when you leave.</p>",
+              "target": [
+                ".flow-privacy"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<a class=\"text-link\" href=\"/services\" rel=\"noopener noreferrer\" target=\"_blank\">Read the service descriptions <span class=\"sr-only\">(opens in a new tab)</span><span aria-hidden=\"true\">\u2197</span></a>",
+              "target": [
+                ".text-link"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "step 2",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "8.3pt (11px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p class=\"eyebrow\">FirstLight Home Care: Southern California</p>",
+              "target": [
+                ".hero-copy > .eyebrow"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "52.8pt (70.4px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<h1 id=\"page-title\">Good care starts<br><span class=\"underlined\">with your local team.</span></h1>",
+              "target": [
+                "#page-title"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "52.8pt (70.4px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section aria-labelledby=\"page-title\" class=\"hero\">",
+                      "target": [
+                        ".hero"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"underlined\">with your local team.</span>",
+              "target": [
+                ".underlined"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "13.5pt (18px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p class=\"intro\">Find your office, answer a few questions, then take a simple guide into a local conversation. One step at a time, at your pace.</p>",
+              "target": [
+                ".intro"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "9.0pt (12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p class=\"flow-privacy\">Private by design. Answers stay in this page and are cleared when you leave.</p>",
+              "target": [
+                ".flow-privacy"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<a class=\"text-link\" href=\"/services\" rel=\"noopener noreferrer\" target=\"_blank\">Read the service descriptions <span class=\"sr-only\">(opens in a new tab)</span><span aria-hidden=\"true\">\u2197</span></a>",
+              "target": [
+                ".text-link"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span aria-hidden=\"true\">\u2192</span>",
+              "target": [
+                "#quiz-next > span[aria-hidden=\"true\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "care results",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "8.3pt (11px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p class=\"eyebrow\">FirstLight Home Care: Southern California</p>",
+              "target": [
+                ".hero-copy > .eyebrow"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "52.8pt (70.4px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<h1 id=\"page-title\">Good care starts<br><span class=\"underlined\">with your local team.</span></h1>",
+              "target": [
+                "#page-title"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "52.8pt (70.4px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section aria-labelledby=\"page-title\" class=\"hero\">",
+                      "target": [
+                        ".hero"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"underlined\">with your local team.</span>",
+              "target": [
+                ".underlined"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "13.5pt (18px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p class=\"intro\">Find your office, answer a few questions, then take a simple guide into a local conversation. One step at a time, at your pace.</p>",
+              "target": [
+                ".intro"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "9.0pt (12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p class=\"flow-privacy\">Private by design. Answers stay in this page and are cleared when you leave.</p>",
+              "target": [
+                ".flow-privacy"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<a class=\"text-link\" href=\"/services\" rel=\"noopener noreferrer\" target=\"_blank\">Read the service descriptions <span class=\"sr-only\">(opens in a new tab)</span><span aria-hidden=\"true\">\u2197</span></a>",
+              "target": [
+                ".text-link"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span aria-hidden=\"true\">\u2192</span>",
+              "target": [
+                "#summary-continue > span[aria-hidden=\"true\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "step 4",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "impact": "critical",
+          "tags": [
+            "cat.aria",
+            "wcag2a",
+            "wcag412",
+            "EN-301-549",
+            "EN-9.4.1.2",
+            "RGAAv4",
+            "RGAA-7.1.1"
+          ],
+          "description": "Ensure all ARIA attributes have valid values",
+          "help": "ARIA attributes must conform to valid values",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-valid-attr-value?application=axeAPI",
+          "nodes": [
+            {
+              "any": [],
+              "all": [
+                {
+                  "id": "aria-valid-attr-value",
+                  "data": {
+                    "messageKey": "controlsWithinPopup",
+                    "needsReview": "aria-controls=\"inquiry-dialog\""
+                  },
+                  "relatedNodes": [],
+                  "impact": "critical",
+                  "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"inquiry-dialog\""
+                }
+              ],
+              "none": [],
+              "impact": "critical",
+              "html": "<button class=\"button inquiry-trigger\" id=\"inquiry-open\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"inquiry-dialog\">Submit an inquiry</button>",
+              "target": [
+                "#inquiry-open"
+              ],
+              "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"inquiry-dialog\""
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "8.3pt (11px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p class=\"eyebrow\">FirstLight Home Care: Southern California</p>",
+              "target": [
+                ".hero-copy > .eyebrow"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "52.8pt (70.4px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<h1 id=\"page-title\">Good care starts<br><span class=\"underlined\">with your local team.</span></h1>",
+              "target": [
+                "#page-title"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "52.8pt (70.4px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section aria-labelledby=\"page-title\" class=\"hero\">",
+                      "target": [
+                        ".hero"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"underlined\">with your local team.</span>",
+              "target": [
+                ".underlined"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "13.5pt (18px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p class=\"intro\">Find your office, answer a few questions, then take a simple guide into a local conversation. One step at a time, at your pace.</p>",
+              "target": [
+                ".intro"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "9.0pt (12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p class=\"flow-privacy\">Private by design. Answers stay in this page and are cleared when you leave.</p>",
+              "target": [
+                ".flow-privacy"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<a class=\"text-link\" href=\"/services\" rel=\"noopener noreferrer\" target=\"_blank\">Read the service descriptions <span class=\"sr-only\">(opens in a new tab)</span><span aria-hidden=\"true\">\u2197</span></a>",
+              "target": [
+                ".text-link"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "open modal",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "state": "modal errors",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "24.0pt (32px)",
+                    "fontWeight": "bold",
+                    "messageKey": "elmPartiallyObscured",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<dialog aria-describedby=\"inquiry-placeholder\" aria-labelledby=\"inquiry-title\" aria-modal=\"true\" id=\"inquiry-dialog\" open=\"\">",
+                      "target": [
+                        "#inquiry-dialog"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it's partially obscured by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<h2 id=\"inquiry-title\" tabindex=\"-1\">Try an inquiry.</h2>",
+              "target": [
+                "#inquiry-title"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "modal confirmation",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscuring",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it partially overlaps other elements"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p class=\"demo-warning\" id=\"inquiry-placeholder\">Nothing is sent to an office. Use fictional details only. This is a preview, not a request for care.</p>",
+              "target": [
+                "#inquiry-placeholder"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscuring",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it partially overlaps other elements"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p>No inquiry, appointment or request for care was created. Close this preview and use the Call button to reach your office.</p>",
+              "target": [
+                "#inquiry-confirmation > p"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "faqs initial",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "state": "locations initial",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "8.3pt (11px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"locations-intro\">",
+                      "target": [
+                        ".locations-intro"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p class=\"eyebrow\">Our local teams</p>",
+              "target": [
+                ".eyebrow"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "52.8pt (70.4px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"locations-intro\">",
+                      "target": [
+                        ".locations-intro"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<h1>Find the team<br>near you.</h1>",
+              "target": [
+                "h1"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "11.3pt (15px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"locations-intro\">",
+                      "target": [
+                        ".locations-intro"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p>Fifteen participating offices, listed alphabetically. Search by city or ZIP, then call a local team or visit its office website. Each team confirms coverage and availability.</p>",
+              "target": [
+                ".wrap > p:nth-child(3)"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "modal 320",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "state": "services 320",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "8.3pt (11px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"services-intro\">",
+                      "target": [
+                        ".services-intro"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p class=\"eyebrow\">Understand your options</p>",
+              "target": [
+                ".wrap > .eyebrow"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "33.6pt (44.8px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"services-intro\">",
+                      "target": [
+                        ".services-intro"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<h1>Help that fits<br>everyday life.</h1>",
+              "target": [
+                "h1"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"services-intro\">",
+                      "target": [
+                        ".services-intro"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p>These descriptions are a starting point. A local assessment confirms the right support, schedule and scope.</p>",
+              "target": [
+                "p:nth-child(3)"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span aria-hidden=\"true\">\u2192</span>",
+              "target": [
+                ".button > span[aria-hidden=\"true\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "locations 320",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "8.3pt (11px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"locations-intro\">",
+                      "target": [
+                        ".locations-intro"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p class=\"eyebrow\">Our local teams</p>",
+              "target": [
+                ".eyebrow"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "32.4pt (43.2px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"locations-intro\">",
+                      "target": [
+                        ".locations-intro"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<h1>Find the team<br>near you.</h1>",
+              "target": [
+                "h1"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "10.5pt (14px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"locations-intro\">",
+                      "target": [
+                        ".locations-intro"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p>Fifteen participating offices, listed alphabetically. Search by city or ZIP, then call a local team or visit its office website. Each team confirms coverage and availability.</p>",
+              "target": [
+                ".wrap > p:nth-child(3)"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "faqs 320",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "state": "modal 430",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "state": "200% main",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "16.5pt (22px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p class=\"eyebrow\">FirstLight Home Care: Southern California</p>",
+              "target": [
+                ".hero-copy > .eyebrow"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "62.4pt (83.2px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<h1 id=\"page-title\">Good care starts<br><span class=\"underlined\">with your local team.</span></h1>",
+              "target": [
+                "#page-title"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "62.4pt (83.2px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section aria-labelledby=\"page-title\" class=\"hero\">",
+                      "target": [
+                        ".hero"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"underlined\">with your local team.</span>",
+              "target": [
+                ".underlined"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "27.0pt (36px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p class=\"intro\">Find your office, answer a few questions, then take a simple guide into a local conversation. One step at a time, at your pace.</p>",
+              "target": [
+                ".intro"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "18.0pt (24px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p class=\"flow-privacy\">Private by design. Answers stay in this page and are cleared when you leave.</p>",
+              "target": [
+                ".flow-privacy"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "19.5pt (26px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<a class=\"text-link\" href=\"/services\" rel=\"noopener noreferrer\" target=\"_blank\">Read the service descriptions <span class=\"sr-only\">(opens in a new tab)</span><span aria-hidden=\"true\">\u2197</span></a>",
+              "target": [
+                ".text-link"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "21.0pt (28px)",
+                    "fontWeight": "bold",
+                    "messageKey": "shortTextContent",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<span class=\"step-number\">1</span>",
+                      "target": [
+                        "button[aria-current=\"step\"] > .step-number"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element content is too short to determine if it is actual text content"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"step-number\">1</span>",
+              "target": [
+                "button[aria-current=\"step\"] > .step-number"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "200% services",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "16.5pt (22px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"services-intro\">",
+                      "target": [
+                        ".services-intro"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p class=\"eyebrow\">Understand your options</p>",
+              "target": [
+                ".wrap > .eyebrow"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "64.8pt (86.4px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"services-intro\">",
+                      "target": [
+                        ".services-intro"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<h1>Help that fits<br>everyday life.</h1>",
+              "target": [
+                "h1"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "24.0pt (32px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"services-intro\">",
+                      "target": [
+                        ".services-intro"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p>These descriptions are a starting point. A local assessment confirms the right support, schedule and scope.</p>",
+              "target": [
+                "p:nth-child(3)"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span aria-hidden=\"true\">\u2192</span>",
+              "target": [
+                ".button > span[aria-hidden=\"true\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "200% locations",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "16.5pt (22px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"locations-intro\">",
+                      "target": [
+                        ".locations-intro"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p class=\"eyebrow\">Our local teams</p>",
+              "target": [
+                ".eyebrow"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "64.8pt (86.4px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"locations-intro\">",
+                      "target": [
+                        ".locations-intro"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<h1>Find the team<br>near you.</h1>",
+              "target": [
+                "h1"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "22.5pt (30px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1",
+                    "shadowColor": null,
+                    "colorParse": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"locations-intro\">",
+                      "target": [
+                        ".locations-intro"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p>Fifteen participating offices, listed alphabetically. Search by city or ZIP, then call a local team or visit its office website. Each team confirms coverage and availability.</p>",
+              "target": [
+                ".wrap > p:nth-child(3)"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "200% faqs",
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "axeViolations": 0,
+  "keyboard": [
+    {
+      "width": 320,
+      "page": "main",
+      "checkedTabs": 45,
+      "failures": []
+    },
+    {
+      "width": 320,
+      "page": "services",
+      "checkedTabs": 45,
+      "failures": []
+    },
+    {
+      "width": 320,
+      "page": "locations",
+      "checkedTabs": 45,
+      "failures": []
+    },
+    {
+      "width": 320,
+      "page": "faqs",
+      "checkedTabs": 45,
+      "failures": []
+    },
+    {
+      "width": 320,
+      "checkedTabs": 45,
+      "failures": []
+    },
+    {
+      "width": 720,
+      "checkedTabs": 45,
+      "failures": []
+    },
+    {
+      "width": 1440,
+      "checkedTabs": 45,
+      "failures": []
+    }
+  ],
+  "sha256": {
+    "index.html": "51c89dcfb27ba2048b1dfae309f14a9a4e9c128141f583295e1cad88d6fc8eaf",
+    "services.html": "3a5b4eea9f95b3c5ab354b508d456a2ac020b4d5885dcdc1d3acd27a7e676737",
+    "locations.html": "80c6f64fa5513a69435915a8a9e64710c01980aece48e2fe0812b2a6a0cf4e60",
+    "faqs.html": "12419c37c38b9b54a3f026dab2c671c050ad5a319eaeaf489ae1e38aa472359e"
+  },
+  "researchLimitation": "Resolved: official-source program research completed using owner-authorized WebSearch/WebFetch, with public-source fetch fallbacks."
+}

@@ -1,0 +1,154 @@
+{
+  "mode": "local",
+  "url": "http://127.0.0.1:32803/",
+  "passed": 28,
+  "checks": [
+    {
+      "test": "Only two-person selection triggers Couples care",
+      "passed": true
+    },
+    {
+      "test": "Couples choice does not infer shared benefit eligibility",
+      "passed": true
+    },
+    {
+      "test": "Couples radio works by keyboard and has a label",
+      "passed": true
+    },
+    {
+      "test": "Two-person question explains separate assessments",
+      "passed": true
+    },
+    {
+      "test": "Axe couples question 320",
+      "passed": true
+    },
+    {
+      "test": "Eight-question flow yields seven possible care types including couples",
+      "passed": true
+    },
+    {
+      "test": "Program topics remain separately conditional",
+      "passed": true
+    },
+    {
+      "test": "Couples result warns about individual staffing and benefit review",
+      "passed": true
+    },
+    {
+      "test": "Seven-service couples results fit every width 320..430",
+      "passed": true
+    },
+    {
+      "test": "Axe couples results desktop",
+      "passed": true
+    },
+    {
+      "test": "Axe couples results mobile",
+      "passed": true
+    },
+    {
+      "test": "Inquiry summary includes Couples care, two people and separate benefits review",
+      "passed": true
+    },
+    {
+      "test": "Axe couples prefilled modal",
+      "passed": true
+    },
+    {
+      "test": "Axe services desktop",
+      "passed": true
+    },
+    {
+      "test": "Native comparison table semantics desktop",
+      "passed": true
+    },
+    {
+      "test": "Every comparison cell has explicit row and column headers desktop",
+      "passed": true
+    },
+    {
+      "test": "Couples description and only variable-local-rate wording desktop",
+      "passed": true
+    },
+    {
+      "test": "Axe services mobile",
+      "passed": true
+    },
+    {
+      "test": "Native comparison table semantics mobile",
+      "passed": true
+    },
+    {
+      "test": "Every comparison cell has explicit row and column headers mobile",
+      "passed": true
+    },
+    {
+      "test": "Couples description and only variable-local-rate wording mobile",
+      "passed": true
+    },
+    {
+      "test": "Axe faqs desktop",
+      "passed": true
+    },
+    {
+      "test": "FAQs are one column desktop",
+      "passed": true
+    },
+    {
+      "test": "Axe faqs mobile",
+      "passed": true
+    },
+    {
+      "test": "FAQs are one column mobile",
+      "passed": true
+    },
+    {
+      "test": "Existing service section links including couples focus the table row header",
+      "passed": true
+    },
+    {
+      "test": "Linked row header has a visible inset focus ring",
+      "passed": true
+    },
+    {
+      "test": "Mobile table uses stacked rows, not clipped or page-wide cells",
+      "passed": true
+    }
+  ],
+  "axe": [
+    {
+      "state": "couples question 320",
+      "violations": []
+    },
+    {
+      "state": "couples results desktop",
+      "violations": []
+    },
+    {
+      "state": "couples results mobile",
+      "violations": []
+    },
+    {
+      "state": "couples prefilled modal",
+      "violations": []
+    },
+    {
+      "state": "services desktop",
+      "violations": []
+    },
+    {
+      "state": "services mobile",
+      "violations": []
+    },
+    {
+      "state": "faqs desktop",
+      "violations": []
+    },
+    {
+      "state": "faqs mobile",
+      "violations": []
+    }
+  ],
+  "axeViolations": 0
+}

@@ -1,0 +1,136 @@
+{
+  "checkedDate": "2026-11-10 (PST)",
+  "method": "Official national all-locations directory supplied actual office URLs and main phone numbers. Each of 14 office URLs was then opened successfully with WebFetch and returned the named office content. Direct requests encountered 403 on 13 pages; WebFetch succeeded, so those 403s were not treated as nonexistent pages.",
+  "directoryUrl": "https://www.firstlighthomecare.com/locations/all/",
+  "nationalFinderUrl": "https://www.firstlighthomecare.com/locations/",
+  "serviceNamesSource": "https://www.firstlighthomecare.com/",
+  "logoSource": "https://www.firstlighthomecare.com/wp-content/uploads/2022/06/firstlight-home-care-logo.png",
+  "offices": [
+    {
+      "officeId": "burbank",
+      "name": "FirstLight Home Care of Burbank",
+      "url": "https://www.firstlighthomecare.com/home-healthcare-burbank/",
+      "phone": "(626) 360-0048",
+      "websiteStatus": "Verified: office content loaded with WebFetch",
+      "phoneStatus": "Verified on official office page and national directory"
+    },
+    {
+      "officeId": "chino-hills",
+      "name": "FirstLight Home Care of Chino Hills",
+      "url": "https://www.firstlighthomecare.com/home-healthcare-chino-hills/",
+      "phone": "(909) 660-8900",
+      "websiteStatus": "Verified: office content loaded with WebFetch",
+      "phoneStatus": "Verified on official office page and national directory"
+    },
+    {
+      "officeId": "glendale",
+      "name": "FirstLight Home Care of Glendale",
+      "url": "https://www.firstlighthomecare.com/home-healthcare-glendale/",
+      "phone": "(626) 360-0048",
+      "websiteStatus": "Verified: office content loaded with WebFetch",
+      "phoneStatus": "Verified on official office page and national directory"
+    },
+    {
+      "officeId": "irvine",
+      "name": "FirstLight Home Care of Irvine",
+      "url": "https://www.firstlighthomecare.com/home-healthcare-irvine/",
+      "phone": "(949) 704-2969",
+      "websiteStatus": "Verified: office content loaded with WebFetch",
+      "phoneStatus": "Verified on official office page and national directory"
+    },
+    {
+      "officeId": "marina-del-rey",
+      "name": "FirstLight Home Care of Marina del Rey",
+      "url": "https://www.firstlighthomecare.com/home-healthcare-marina-del-rey/",
+      "phone": "(310) 956-4811",
+      "websiteStatus": "Verified: office content loaded with WebFetch",
+      "phoneStatus": "Verified on official office page and national directory"
+    },
+    {
+      "officeId": "montclair",
+      "name": "FirstLight Home Care of Montclair",
+      "url": null,
+      "phone": "(840) 200-9868",
+      "websiteStatus": "TBD: office-specific page not verified",
+      "phoneStatus": "Provided by Gary in task context; not independently verified on official site"
+    },
+    {
+      "officeId": "pasadena",
+      "name": "FirstLight Home Care of Pasadena",
+      "url": "https://www.firstlighthomecare.com/home-healthcare-pasadena-altadena/",
+      "phone": "(626) 360-0048",
+      "websiteStatus": "Verified: office content loaded with WebFetch",
+      "phoneStatus": "Verified on official office page and national directory"
+    },
+    {
+      "officeId": "rancho-cucamonga",
+      "name": "FirstLight Home Care of Rancho Cucamonga",
+      "url": "https://www.firstlighthomecare.com/home-healthcare-rancho-cucamonga/",
+      "phone": "(909) 321-4466",
+      "websiteStatus": "Verified: office content loaded with WebFetch",
+      "phoneStatus": "Verified on official office page and national directory"
+    },
+    {
+      "officeId": "san-clemente",
+      "name": "FirstLight Home Care of San Clemente",
+      "url": "https://www.firstlighthomecare.com/home-healthcare-sanclemente/",
+      "phone": "(949) 940-8500",
+      "websiteStatus": "Verified: office content loaded with WebFetch",
+      "phoneStatus": "Verified on official office page and national directory"
+    },
+    {
+      "officeId": "san-gabriel",
+      "name": "FirstLight Home Care of San Gabriel",
+      "url": "https://www.firstlighthomecare.com/home-healthcare-san-gabriel/",
+      "phone": "(626) 360-0048",
+      "websiteStatus": "Verified: office content loaded with WebFetch",
+      "phoneStatus": "Verified on official office page and national directory"
+    },
+    {
+      "officeId": "simi-valley",
+      "name": "FirstLight Home Care of Simi Valley",
+      "url": "https://www.firstlighthomecare.com/home-healthcare-simi-valley/",
+      "phone": "(805) 915-4706",
+      "websiteStatus": "Verified: office content loaded with WebFetch",
+      "phoneStatus": "Verified on official office page and national directory"
+    },
+    {
+      "officeId": "temecula",
+      "name": "FirstLight Home Care of Temecula",
+      "url": "https://www.firstlighthomecare.com/home-healthcare-temecula-valley/",
+      "phone": "(951) 395-0821",
+      "websiteStatus": "Verified: office content loaded with WebFetch",
+      "phoneStatus": "Verified on official office page and national directory"
+    },
+    {
+      "officeId": "west-hollywood",
+      "name": "FirstLight Home Care of West Hollywood",
+      "url": "https://www.firstlighthomecare.com/home-healthcare-west-hollywood/",
+      "phone": "(424) 230-8833",
+      "websiteStatus": "Verified: office content loaded with WebFetch",
+      "phoneStatus": "Verified on official office page and national directory"
+    },
+    {
+      "officeId": "whittier",
+      "name": "FirstLight Home Care of Whittier",
+      "url": "https://www.firstlighthomecare.com/home-healthcare-whittier/",
+      "phone": "(562) 800-6922",
+      "websiteStatus": "Verified: office content loaded with WebFetch",
+      "phoneStatus": "Verified on official office page and national directory"
+    },
+    {
+      "officeId": "woodland-hills",
+      "name": "FirstLight Home Care of Woodland Hills\u2013Calabasas",
+      "url": "https://www.firstlighthomecare.com/home-healthcare-woodland-hills/",
+      "phone": "(818) 443-1281",
+      "websiteStatus": "Verified: office content loaded with WebFetch",
+      "phoneStatus": "Verified on official office page and national directory"
+    }
+  ],
+  "montclairAttempt": {
+    "url": "https://www.firstlighthomecare.com/home-healthcare-montclair/",
+    "outcome": "WebFetch returned national location-finder content, not a Montclair office page. Not used as an office URL."
+  },
+  "simiPhoneAmbiguity": "Main call link, footer, and national directory all use 805-915-4706. A lower body paragraph says 805-915-5676. Draft uses the repeated main number; owner should confirm before launch.",
+  "searchToolNote": "parallel-cli search was not installed (command not found). No replacement search provider was used. Office URL discovery used official public navigation, the all-locations directory, and WebFetch instead."
+}

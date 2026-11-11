@@ -1,0 +1,154 @@
+{
+  "url": "https://firstlight-socal.pages.dev/",
+  "mode": "live",
+  "passed": 32,
+  "checks": [
+    {
+      "test": "Completely skipped guide has no inferred program eligibility",
+      "passed": true
+    },
+    {
+      "test": "GUIDE not inferred from memory answer concerns",
+      "passed": true
+    },
+    {
+      "test": "GUIDE not inferred from memory answer none",
+      "passed": true
+    },
+    {
+      "test": "GUIDE not inferred from memory answer unsure",
+      "passed": true
+    },
+    {
+      "test": "GUIDE not inferred from memory answer skipped",
+      "passed": true
+    },
+    {
+      "test": "Diagnosis triggers GUIDE referral",
+      "passed": true
+    },
+    {
+      "test": "SCAN only conditionally surfaced for support need {'daily': 'personal'}",
+      "passed": true
+    },
+    {
+      "test": "SCAN only conditionally surfaced for support need {'daily': 'companion'}",
+      "passed": true
+    },
+    {
+      "test": "SCAN only conditionally surfaced for support need {'recovery': 'yes'}",
+      "passed": true
+    },
+    {
+      "test": "SCAN only conditionally surfaced for support need {'schedule': ['respite']}",
+      "passed": true
+    },
+    {
+      "test": "SCAN not inferred from Veteran status alone",
+      "passed": true
+    },
+    {
+      "test": "IHSS daily and memory referrals",
+      "passed": true
+    },
+    {
+      "test": "Community Supports personal-care topic needs daily-help signal",
+      "passed": true
+    },
+    {
+      "test": "Community Supports respite only with caregiver-break answer",
+      "passed": true
+    },
+    {
+      "test": "ALW excluded from ordinary private home-care answers",
+      "passed": true
+    },
+    {
+      "test": "ALW different-setting referral only with intensive support signal",
+      "passed": true
+    },
+    {
+      "test": "Local aging guidance without treating it as funding",
+      "passed": true
+    },
+    {
+      "test": "HICAP insurance-review referral",
+      "passed": true
+    },
+    {
+      "test": "VA pension and actual home-care rules remain distinct",
+      "passed": true
+    },
+    {
+      "test": "Maximum case has all 12 conditional discussion topics",
+      "passed": true
+    },
+    {
+      "test": "Unasked eligibility, provider acceptance and incompatible coverage are explicit",
+      "passed": true
+    },
+    {
+      "test": "Every program citation is on an allowed official source domain",
+      "passed": true
+    },
+    {
+      "test": "County resource disclosure keyboard-operable",
+      "passed": true
+    },
+    {
+      "test": "All five counties plus Los Angeles City have verified resource links",
+      "passed": true
+    },
+    {
+      "test": "Axe maximum referrals desktop",
+      "passed": true
+    },
+    {
+      "test": "Axe maximum referrals mobile",
+      "passed": true
+    },
+    {
+      "test": "All maximum referrals plus expanded county resources fit every width 320..430",
+      "passed": true
+    },
+    {
+      "test": "Axe maximum referrals expanded counties mobile",
+      "passed": true
+    },
+    {
+      "test": "Maximum referrals and county resources reflow at 200% text",
+      "passed": true
+    },
+    {
+      "test": "Axe maximum referrals 200% maximum results",
+      "passed": true
+    },
+    {
+      "test": "Inquiry prefill includes new programs without eligibility promise",
+      "passed": true
+    },
+    {
+      "test": "No application network calls to programs or third parties",
+      "passed": true
+    }
+  ],
+  "axe": [
+    {
+      "state": "desktop",
+      "violations": []
+    },
+    {
+      "state": "mobile",
+      "violations": []
+    },
+    {
+      "state": "expanded counties mobile",
+      "violations": []
+    },
+    {
+      "state": "200% maximum results",
+      "violations": []
+    }
+  ],
+  "axeViolations": 0
+}

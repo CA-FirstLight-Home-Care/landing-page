@@ -1,0 +1,53 @@
+{
+  "target": "WCAG 2.2 AA",
+  "automatedCertification": false,
+  "contrastReview": {
+    "gradientAndNumerals": {
+      "file": "contrast-v7-results.json",
+      "passed": true,
+      "sampledChecks": 18,
+      "minimumRatio": 5.33
+    },
+    "solidV7PaletteChecks": [
+      {
+        "foreground": "#153b29",
+        "background": "#f7faf2",
+        "ratio": 11.79
+      },
+      {
+        "foreground": "#254b33",
+        "background": "#ffffff",
+        "ratio": 9.85
+      },
+      {
+        "foreground": "#153b29",
+        "background": "#ffffff",
+        "ratio": 12.43
+      },
+      {
+        "foreground": "#153b29",
+        "background": "#eaf1e5",
+        "ratio": 10.78
+      },
+      {
+        "foreground": "#9a2222",
+        "background": "#f7faf2",
+        "ratio": 7.58
+      },
+      {
+        "foreground": "#125e38",
+        "background": "#ffffff",
+        "ratio": 7.82
+      },
+      {
+        "foreground": "#315a40",
+        "background": "#f7faf2",
+        "ratio": 7.47
+      }
+    ]
+  },
+  "ariaControlsReview": "The Submit an inquiry button references the single existing native inquiry-dialog element. That dialog is intentionally closed until click; verified opening, closing, label, containment, focus trap and focus restoration in the functional test.",
+  "nonTextAndScrollReview": "Decorative arrow is aria-hidden. Modal error focus scrolls its internal content; its title may be above the current scroll position, not an overlapping floating panel. Modal confirmation text is on the same opaque high-contrast background. Enlarged 200% modal axe reports zero violations and no incomplete items.",
+  "keyboardEvidence": "315 stops with visible unobscured focus: 180 across the four pages, 135 inside the dialog at 320/720/1440px.",
+  "caution": "Automated and targeted manual checks are not a formal WCAG conformance certification."
+}

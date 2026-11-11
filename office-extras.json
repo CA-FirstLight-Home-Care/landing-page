@@ -1,0 +1,271 @@
+{
+  "burbank": {
+    "address": "450 North Brand Blvd, #600, Glendale, CA 91203",
+    "addressSource": "https://www.firstlighthomecare.com/home-healthcare-burbank/",
+    "geocoder": "OpenStreetMap Nominatim",
+    "geocoderQuery": "450 North Brand Boulevard, Glendale, California, USA",
+    "geocoderSource": "https://nominatim.openstreetmap.org/search?street=450+North+Brand+Boulevard&city=Glendale&state=California&country=USA&format=jsonv2&addressdetails=1&limit=3",
+    "socials": [],
+    "coordinateStatus": "Exact-number matching commercial building footprint selected; other results were occupants or nearby address objects; approximate building center",
+    "latitude": 34.1526952,
+    "longitude": -118.2545802,
+    "matchedAddress": "450, North Brand Boulevard, Glendale City Center, Glendale, Los Angeles County, California, 91203, United States",
+    "coordinateFeatureSource": "https://www.openstreetmap.org/way/246220305",
+    "license": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright"
+  },
+  "chino-hills": {
+    "address": "1370 Valley Vista Dr., Suite 200, Diamond Bar, CA 91765",
+    "addressSource": "https://www.firstlighthomecare.com/home-healthcare-chino-hills/",
+    "geocoder": "U.S. Census Geocoder, Public_AR_Current",
+    "geocoderQuery": "1370 Valley Vista Dr, Diamond Bar, CA 91765",
+    "geocoderSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1370+Valley+Vista+Dr%2C+Diamond+Bar%2C+CA+91765&benchmark=Public_AR_Current&format=json",
+    "socials": [],
+    "latitude": 33.998530636966,
+    "longitude": -117.835669785771,
+    "matchedAddress": "1370 VALLEY VISTA DR, DIAMOND BAR, CA, 91765",
+    "coordinateStatus": "Geocoded public street address; approximate address-range interpolation, not a surveyed entrance"
+  },
+  "glendale": {
+    "address": "450 North Brand Blvd, #600, Glendale, CA 91203",
+    "addressSource": "https://www.firstlighthomecare.com/home-healthcare-glendale/",
+    "geocoder": "OpenStreetMap Nominatim",
+    "geocoderQuery": "450 North Brand Boulevard, Glendale, California, USA",
+    "geocoderSource": "https://nominatim.openstreetmap.org/search?street=450+North+Brand+Boulevard&city=Glendale&state=California&country=USA&format=jsonv2&addressdetails=1&limit=3",
+    "socials": [],
+    "coordinateStatus": "Exact-number matching commercial building footprint selected; other results were occupants or nearby address objects; approximate building center",
+    "latitude": 34.1526952,
+    "longitude": -118.2545802,
+    "matchedAddress": "450, North Brand Boulevard, Glendale City Center, Glendale, Los Angeles County, California, 91203, United States",
+    "coordinateFeatureSource": "https://www.openstreetmap.org/way/246220305",
+    "license": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright"
+  },
+  "irvine": {
+    "address": "2030 Main Street, Suite 1300, Irvine, CA 92614",
+    "addressSource": "https://www.firstlighthomecare.com/home-healthcare-irvine/",
+    "geocoder": "U.S. Census Geocoder, Public_AR_Current",
+    "geocoderQuery": "2030 Main Street, Irvine, CA 92614",
+    "geocoderSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=2030+Main+Street%2C+Irvine%2C+CA+92614&benchmark=Public_AR_Current&format=json",
+    "socials": [],
+    "latitude": 33.685401562787,
+    "longitude": -117.854637244791,
+    "matchedAddress": "2030 MAIN ST, IRVINE, CA, 92614",
+    "coordinateStatus": "Geocoded public street address; approximate address-range interpolation, not a surveyed entrance"
+  },
+  "marina-del-rey": {
+    "address": "11600 Washington Place, PH 2, Los Angeles, CA 90066",
+    "addressSource": "https://www.firstlighthomecare.com/home-healthcare-marina-del-rey/",
+    "geocoder": "U.S. Census Geocoder, Public_AR_Current",
+    "geocoderQuery": "11600 Washington Place, Los Angeles, CA 90066",
+    "geocoderSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=11600+Washington+Place%2C+Los+Angeles%2C+CA+90066&benchmark=Public_AR_Current&format=json",
+    "socials": [],
+    "latitude": 34.004781960048,
+    "longitude": -118.420533312205,
+    "matchedAddress": "11600 WASHINGTON PL, LOS ANGELES, CA, 90066",
+    "coordinateStatus": "Geocoded public street address; approximate address-range interpolation, not a surveyed entrance"
+  },
+  "montclair": {
+    "address": "13781 Roswell Ave Ste D, Chino, CA 91710",
+    "addressSource": "https://linktr.ee/flhcmontclair",
+    "geocoder": "U.S. Census Geocoder, Public_AR_Current",
+    "geocoderQuery": "13781 Roswell Ave, Chino, CA 91710",
+    "geocoderSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=13781+Roswell+Ave%2C+Chino%2C+CA+91710&benchmark=Public_AR_Current&format=json",
+    "socials": [
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/firstlightmontclair",
+        "verifiedFrom": "https://linktr.ee/flhcmontclair",
+        "verification": "Public hub matches Montclair name, Chino address and verified phone. X additionally verified by public X account profile."
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://www.linkedin.com/company/firstlight-home-care-of-montclair",
+        "verifiedFrom": "https://linktr.ee/flhcmontclair",
+        "verification": "Public hub matches Montclair name, Chino address and verified phone. X additionally verified by public X account profile."
+      },
+      {
+        "platform": "X",
+        "url": "https://x.com/FLHCMontclair",
+        "verifiedFrom": "https://linktr.ee/flhcmontclair",
+        "verification": "Public hub matches Montclair name, Chino address and verified phone. X additionally verified by public X account profile."
+      }
+    ],
+    "latitude": 34.002809662445,
+    "longitude": -117.721704541492,
+    "matchedAddress": "13781 ROSWELL AVE, CHINO, CA, 91710",
+    "coordinateStatus": "Geocoded public street address; approximate address-range interpolation, not a surveyed entrance"
+  },
+  "pasadena": {
+    "address": "612 W. Duarte Road, Suite 404, Arcadia, CA 91007",
+    "addressSource": "https://www.firstlighthomecare.com/home-healthcare-pasadena-altadena/",
+    "geocoder": "U.S. Census Geocoder, Public_AR_Current",
+    "geocoderQuery": "612 W Duarte Road, Arcadia, CA 91007",
+    "geocoderSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=612+W+Duarte+Road%2C+Arcadia%2C+CA+91007&benchmark=Public_AR_Current&format=json",
+    "socials": [
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/firstlightpasadena/",
+        "verifiedFrom": "https://www.firstlighthomecare.com/home-healthcare-pasadena-altadena/",
+        "verification": "Office-specific account linked from the exact official local FirstLight page; corporate links excluded. Tracking-only query parameters removed; Facebook profile id retained."
+      },
+      {
+        "platform": "X",
+        "url": "https://x.com/FLHC_Pasadena",
+        "verifiedFrom": "https://x.com/FLHC_Pasadena",
+        "verification": "Public X search profile names the exact city and links back to this exact official FirstLight office page."
+      }
+    ],
+    "latitude": 34.12649869219,
+    "longitude": -118.051557789705,
+    "matchedAddress": "612 W DUARTE RD, ARCADIA, CA, 91007",
+    "coordinateStatus": "Geocoded public street address; approximate address-range interpolation, not a surveyed entrance"
+  },
+  "rancho-cucamonga": {
+    "address": "9650 Business Center Dr Suite 132, Rancho Cucamonga, CA 91730",
+    "addressSource": "https://www.firstlighthomecare.com/home-healthcare-rancho-cucamonga/",
+    "geocoder": "U.S. Census Geocoder, Public_AR_Current",
+    "geocoderQuery": "9650 Business Center Dr, Rancho Cucamonga, CA 91730",
+    "geocoderSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=9650+Business+Center+Dr%2C+Rancho+Cucamonga%2C+CA+91730&benchmark=Public_AR_Current&format=json",
+    "socials": [],
+    "latitude": 34.098166160904,
+    "longitude": -117.594704760959,
+    "matchedAddress": "9650 BUS CENTER DR, RANCHO CUCAMONGA, CA, 91730",
+    "coordinateStatus": "Geocoded public street address; approximate address-range interpolation, not a surveyed entrance"
+  },
+  "san-clemente": {
+    "address": "32303 Camino Capistrano, Suite 203, San Juan Capistrano, CA 92675",
+    "addressSource": "https://www.firstlighthomecare.com/home-healthcare-sanclemente/",
+    "geocoder": "U.S. Census Geocoder, Public_AR_Current",
+    "geocoderQuery": "32303 Camino Capistrano, San Juan Capistrano, CA 92675",
+    "geocoderSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=32303+Camino+Capistrano%2C+San+Juan+Capistrano%2C+CA+92675&benchmark=Public_AR_Current&format=json",
+    "socials": [
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/firstlight.sanclemente",
+        "verifiedFrom": "https://www.firstlighthomecare.com/home-healthcare-sanclemente/",
+        "verification": "Office-specific account linked from the exact official local FirstLight page; corporate links excluded. Tracking-only query parameters removed; Facebook profile id retained."
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://www.linkedin.com/company/firstlight-homecare-of-san-clemente",
+        "verifiedFrom": "https://www.firstlighthomecare.com/home-healthcare-sanclemente/",
+        "verification": "Office-specific account linked from the exact official local FirstLight page; corporate links excluded. Tracking-only query parameters removed; Facebook profile id retained."
+      }
+    ],
+    "latitude": 33.493906926548,
+    "longitude": -117.662745489939,
+    "matchedAddress": "32303 CAM CAPISTRANO, SAN JUAN CAPISTRANO, CA, 92675",
+    "coordinateStatus": "Geocoded public street address; approximate address-range interpolation, not a surveyed entrance"
+  },
+  "san-gabriel": {
+    "address": "612 W. Duarte Road, Suite 404, Arcadia, CA 91007",
+    "addressSource": "https://www.firstlighthomecare.com/home-healthcare-san-gabriel/",
+    "geocoder": "U.S. Census Geocoder, Public_AR_Current",
+    "geocoderQuery": "612 W Duarte Road, Arcadia, CA 91007",
+    "geocoderSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=612+W+Duarte+Road%2C+Arcadia%2C+CA+91007&benchmark=Public_AR_Current&format=json",
+    "socials": [],
+    "latitude": 34.12649869219,
+    "longitude": -118.051557789705,
+    "matchedAddress": "612 W DUARTE RD, ARCADIA, CA, 91007",
+    "coordinateStatus": "Geocoded public street address; approximate address-range interpolation, not a surveyed entrance"
+  },
+  "simi-valley": {
+    "address": "2655 First Street, Suite 250, Simi Valley, CA 93065",
+    "addressSource": "https://www.firstlighthomecare.com/home-healthcare-simi-valley/",
+    "geocoder": "U.S. Census Geocoder, Public_AR_Current",
+    "geocoderQuery": "2655 First Street, Simi Valley, CA 93065",
+    "geocoderSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=2655+First+Street%2C+Simi+Valley%2C+CA+93065&benchmark=Public_AR_Current&format=json",
+    "socials": [
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/firstlightventuracounty",
+        "verifiedFrom": "https://www.firstlighthomecare.com/home-healthcare-simi-valley/",
+        "verification": "Office-specific account linked from the exact official local FirstLight page; corporate links excluded. Tracking-only query parameters removed; Facebook profile id retained."
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://www.linkedin.com/company/firstlight-home-care-of-simi-valley/",
+        "verifiedFrom": "https://www.firstlighthomecare.com/home-healthcare-simi-valley/",
+        "verification": "Office-specific account linked from the exact official local FirstLight page; corporate links excluded. Tracking-only query parameters removed; Facebook profile id retained."
+      }
+    ],
+    "latitude": 34.284039722323,
+    "longitude": -118.778917020277,
+    "matchedAddress": "2655 1ST ST, SIMI VALLEY, CA, 93065",
+    "coordinateStatus": "Geocoded public street address; approximate address-range interpolation, not a surveyed entrance"
+  },
+  "temecula": {
+    "address": "43218 Business Park Dr Ste 101, Temecula, CA 92590",
+    "addressSource": "https://www.firstlighthomecare.com/home-healthcare-temecula-valley/",
+    "geocoder": "U.S. Census Geocoder, Public_AR_Current",
+    "geocoderQuery": "43218 Business Park Dr, Temecula, CA 92590",
+    "geocoderSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=43218+Business+Park+Dr%2C+Temecula%2C+CA+92590&benchmark=Public_AR_Current&format=json",
+    "socials": [
+      {
+        "platform": "X",
+        "url": "https://x.com/FLHC_Temecula",
+        "verifiedFrom": "https://x.com/FLHC_Temecula",
+        "verification": "Public X search profile names the exact city and links back to this exact official FirstLight office page."
+      }
+    ],
+    "latitude": 33.503253833958,
+    "longitude": -117.166589226428,
+    "matchedAddress": "43218 BUS PARK DR, TEMECULA, CA, 92590",
+    "coordinateStatus": "Geocoded public street address; approximate address-range interpolation, not a surveyed entrance"
+  },
+  "west-hollywood": {
+    "address": "1436 S La Cienega Blvd Unit 104, Los Angeles, CA 90035",
+    "addressSource": "https://www.firstlighthomecare.com/home-healthcare-west-hollywood/",
+    "geocoder": "U.S. Census Geocoder, Public_AR_Current",
+    "geocoderQuery": "1436 S La Cienega Blvd, Los Angeles, CA 90035",
+    "geocoderSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1436+S+La+Cienega+Blvd%2C+Los+Angeles%2C+CA+90035&benchmark=Public_AR_Current&format=json",
+    "socials": [],
+    "latitude": 34.052026374304,
+    "longitude": -118.376062806873,
+    "matchedAddress": "1436 S LA CIENEGA BLVD, LOS ANGELES, CA, 90035",
+    "coordinateStatus": "Geocoded public street address; approximate address-range interpolation, not a surveyed entrance"
+  },
+  "whittier": {
+    "address": "7901 Painter Ave, Suite 5, Whittier, CA 90602",
+    "addressSource": "https://www.firstlighthomecare.com/home-healthcare-whittier/",
+    "geocoder": "U.S. Census Geocoder, Public_AR_Current",
+    "geocoderQuery": "7901 Painter Ave, Whittier, CA 90602",
+    "geocoderSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=7901+Painter+Ave%2C+Whittier%2C+CA+90602&benchmark=Public_AR_Current&format=json",
+    "socials": [
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/firstlight_home_care_whittier/",
+        "verifiedFrom": "https://www.firstlighthomecare.com/home-healthcare-whittier/",
+        "verification": "Office-specific account linked from the exact official local FirstLight page; corporate links excluded. Tracking-only query parameters removed; Facebook profile id retained."
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://www.linkedin.com/company/firstlight-home-care-whittier/",
+        "verifiedFrom": "https://www.firstlighthomecare.com/home-healthcare-whittier/",
+        "verification": "Office-specific account linked from the exact official local FirstLight page; corporate links excluded. Tracking-only query parameters removed; Facebook profile id retained."
+      }
+    ],
+    "latitude": 33.969242350063,
+    "longitude": -118.032727291698,
+    "matchedAddress": "7901 PAINTER AVE, WHITTIER, CA, 90602",
+    "coordinateStatus": "Geocoded public street address; approximate address-range interpolation, not a surveyed entrance"
+  },
+  "woodland-hills": {
+    "address": "21255 Burbank Blvd., 1st Floor, Woodland Hills, CA 91367",
+    "addressSource": "https://www.firstlighthomecare.com/home-healthcare-woodland-hills/",
+    "geocoder": "U.S. Census Geocoder, Public_AR_Current",
+    "geocoderQuery": "21255 Burbank Blvd, Woodland Hills, CA 91367",
+    "geocoderSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=21255+Burbank+Blvd%2C+Woodland+Hills%2C+CA+91367&benchmark=Public_AR_Current&format=json",
+    "socials": [
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/flhcwoodlandhillscalabasas/",
+        "verifiedFrom": "https://www.firstlighthomecare.com/home-healthcare-woodland-hills/",
+        "verification": "Office-specific account linked from the exact official local FirstLight page; corporate links excluded. Tracking-only query parameters removed; Facebook profile id retained."
+      }
+    ],
+    "latitude": 34.173351278311,
+    "longitude": -118.594229818015,
+    "matchedAddress": "21255 BURBANK BLVD, WOODLAND HILLS, CA, 91367",
+    "coordinateStatus": "Geocoded public street address; approximate address-range interpolation, not a surveyed entrance"
+  }
+}

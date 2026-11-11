@@ -1,0 +1,22 @@
+{
+  "los angeles": [
+    "burbank",
+    "glendale"
+  ],
+  "glendale": [
+    "burbank",
+    "glendale"
+  ],
+  "pomona": [
+    "chino-hills",
+    "montclair"
+  ],
+  "ontario": [
+    "montclair",
+    "rancho-cucamonga"
+  ],
+  "temple city": [
+    "pasadena",
+    "san-gabriel"
+  ]
+}

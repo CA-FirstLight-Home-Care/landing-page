@@ -1,0 +1,330 @@
+[
+  {
+    "id": "burbank",
+    "source": "https://www.firstlighthomecare.com/home-healthcare-burbank/",
+    "finalUrl": "https://www.firstlighthomecare.com/home-healthcare-burbank/",
+    "status": 200,
+    "links": [
+      {
+        "label": "",
+        "url": "https://www.youtube.com/watch?v=6qQfZ3V4nwg"
+      },
+      {
+        "label": "",
+        "url": "https://www.youtube.com/watch?v=7pskIwB-844"
+      },
+      {
+        "label": "Burbank, CA Facebook",
+        "url": "https://www.facebook.com/FirstLight.HomeCare"
+      },
+      {
+        "label": "Burbank, CA Instagram",
+        "url": "https://www.instagram.com/firstlighthomecarenational/"
+      },
+      {
+        "label": "Burbank, CA LinkedIn",
+        "url": "https://www.linkedin.com/company/firstlight-homecare"
+      },
+      {
+        "label": "Burbank, CA YouTube",
+        "url": "https://www.youtube.com/channel/UCsnuRm5ux4eIhwwqpdnyIOw"
+      }
+    ]
+  },
+  {
+    "id": "chino-hills",
+    "source": "https://www.firstlighthomecare.com/home-healthcare-chino-hills/",
+    "finalUrl": "https://www.firstlighthomecare.com/home-healthcare-chino-hills/",
+    "status": 200,
+    "links": [
+      {
+        "label": "",
+        "url": "https://www.youtube.com/watch?v=6qQfZ3V4nwg"
+      },
+      {
+        "label": "",
+        "url": "https://www.youtube.com/watch?v=7pskIwB-844"
+      },
+      {
+        "label": "Chino Hills  Facebook",
+        "url": "https://www.facebook.com/FLHCChinoHills"
+      },
+      {
+        "label": "Chino Hills  Instagram",
+        "url": "https://www.instagram.com/firstlighthomecarenational/"
+      },
+      {
+        "label": "Chino Hills  LinkedIn",
+        "url": "https://www.linkedin.com/company/firstlight-homecare"
+      },
+      {
+        "label": "Chino Hills  YouTube",
+        "url": "https://www.youtube.com/user/FirstLightHomeCare"
+      }
+    ]
+  },
+  {
+    "id": "glendale",
+    "source": "https://www.firstlighthomecare.com/home-healthcare-glendale/",
+    "finalUrl": "https://firstlighthomecare.com/home-healthcare-glendale/",
+    "status": 403,
+    "links": []
+  },
+  {
+    "id": "irvine",
+    "source": "https://www.firstlighthomecare.com/home-healthcare-irvine/",
+    "finalUrl": "https://www.firstlighthomecare.com/home-healthcare-irvine/",
+    "status": 200,
+    "links": [
+      {
+        "label": "",
+        "url": "https://www.youtube.com/watch?v=6qQfZ3V4nwg"
+      },
+      {
+        "label": "",
+        "url": "https://www.youtube.com/watch?v=7pskIwB-844"
+      },
+      {
+        "label": "Irvine, CA Facebook",
+        "url": "https://www.facebook.com/FirstLightHomeCareIrvine/"
+      },
+      {
+        "label": "Irvine, CA Instagram",
+        "url": "https://www.instagram.com/firstlighthomecarenational/"
+      },
+      {
+        "label": "Irvine, CA LinkedIn",
+        "url": "https://www.linkedin.com/company/firstlight-homecare"
+      },
+      {
+        "label": "Irvine, CA YouTube",
+        "url": "https://www.youtube.com/user/FirstLightHomeCare"
+      }
+    ]
+  },
+  {
+    "id": "marina-del-rey",
+    "source": "https://www.firstlighthomecare.com/home-healthcare-marina-del-rey/",
+    "finalUrl": "https://www.firstlighthomecare.com/home-healthcare-marina-del-rey/",
+    "status": 200,
+    "links": [
+      {
+        "label": "",
+        "url": "https://www.youtube.com/watch?v=6qQfZ3V4nwg"
+      },
+      {
+        "label": "",
+        "url": "https://www.youtube.com/watch?v=7pskIwB-844"
+      },
+      {
+        "label": "Marina del Rey Facebook",
+        "url": "https://www.facebook.com/FLHCMarinadelrey"
+      },
+      {
+        "label": "Marina del Rey Instagram",
+        "url": "https://www.instagram.com/firstlighthomecarenational/"
+      },
+      {
+        "label": "Marina del Rey LinkedIn",
+        "url": "https://www.linkedin.com/company/firstlight-homecare"
+      },
+      {
+        "label": "Marina del Rey YouTube",
+        "url": "https://www.youtube.com/user/FirstLightHomeCare"
+      }
+    ]
+  },
+  {
+    "id": "montclair",
+    "url": null,
+    "status": "TBD"
+  },
+  {
+    "id": "pasadena",
+    "source": "https://www.firstlighthomecare.com/home-healthcare-pasadena-altadena/",
+    "finalUrl": "https://firstlighthomecare.com/home-healthcare-pasadena-altadena/",
+    "status": 403,
+    "links": []
+  },
+  {
+    "id": "rancho-cucamonga",
+    "source": "https://www.firstlighthomecare.com/home-healthcare-rancho-cucamonga/",
+    "finalUrl": "https://www.firstlighthomecare.com/home-healthcare-rancho-cucamonga/",
+    "status": 200,
+    "links": [
+      {
+        "label": "",
+        "url": "https://www.youtube.com/watch?v=6qQfZ3V4nwg"
+      },
+      {
+        "label": "",
+        "url": "https://www.youtube.com/watch?v=7pskIwB-844"
+      },
+      {
+        "label": "Rancho Cucamonga, CA Facebook",
+        "url": "https://www.facebook.com/FirstLightHomeCareofRanchoCucamonga"
+      },
+      {
+        "label": "Rancho Cucamonga, CA Instagram",
+        "url": "https://www.instagram.com/firstlighthomecarenational/"
+      },
+      {
+        "label": "Rancho Cucamonga, CA LinkedIn",
+        "url": "https://www.linkedin.com/company/firstlight-homecare"
+      },
+      {
+        "label": "Rancho Cucamonga, CA YouTube",
+        "url": "https://www.youtube.com/user/FirstLightHomeCare"
+      }
+    ]
+  },
+  {
+    "id": "san-clemente",
+    "source": "https://www.firstlighthomecare.com/home-healthcare-sanclemente/",
+    "finalUrl": "https://www.firstlighthomecare.com/home-healthcare-sanclemente/",
+    "status": 200,
+    "links": [
+      {
+        "label": "",
+        "url": "https://www.youtube.com/watch?v=6qQfZ3V4nwg"
+      },
+      {
+        "label": "",
+        "url": "https://www.youtube.com/watch?v=7pskIwB-844"
+      },
+      {
+        "label": "San Clemente Facebook",
+        "url": "https://www.facebook.com/FLHCSanClemente"
+      },
+      {
+        "label": "San Clemente Instagram",
+        "url": "https://www.instagram.com/firstlight.sanclemente?fbclid=IwY2xjawJRa95leHRuA2FlbQIxMAABHa9zMlSWXhDB73g50nP75O1mr1LlLl5ggHhOkLrV1XQImRrVvRpyMTC9Xg_aem_XdACZ5UPyvBy1J0mDgPBMA"
+      },
+      {
+        "label": "San Clemente LinkedIn",
+        "url": "http://linkedin.com/company/firstlight-homecare-of-san-clemente"
+      },
+      {
+        "label": "San Clemente YouTube",
+        "url": "https://www.youtube.com/user/FirstLightHomeCare"
+      }
+    ]
+  },
+  {
+    "id": "san-gabriel",
+    "source": "https://www.firstlighthomecare.com/home-healthcare-san-gabriel/",
+    "finalUrl": "https://www.firstlighthomecare.com/home-healthcare-san-gabriel/",
+    "status": 200,
+    "links": [
+      {
+        "label": "",
+        "url": "https://www.youtube.com/watch?v=6qQfZ3V4nwg"
+      },
+      {
+        "label": "",
+        "url": "https://www.youtube.com/watch?v=7pskIwB-844"
+      },
+      {
+        "label": "San Gabriel, CA Facebook",
+        "url": "https://www.facebook.com/FirstLight.HomeCare"
+      },
+      {
+        "label": "San Gabriel, CA Instagram",
+        "url": "https://www.instagram.com/firstlighthomecarenational/"
+      },
+      {
+        "label": "San Gabriel, CA LinkedIn",
+        "url": "https://www.linkedin.com/company/firstlight-homecare"
+      },
+      {
+        "label": "San Gabriel, CA YouTube",
+        "url": "https://www.youtube.com/channel/UCsnuRm5ux4eIhwwqpdnyIOw"
+      }
+    ]
+  },
+  {
+    "id": "simi-valley",
+    "source": "https://www.firstlighthomecare.com/home-healthcare-simi-valley/",
+    "finalUrl": "https://www.firstlighthomecare.com/home-healthcare-simi-valley/",
+    "status": 200,
+    "links": [
+      {
+        "label": "",
+        "url": "https://www.youtube.com/watch?v=6qQfZ3V4nwg"
+      },
+      {
+        "label": "",
+        "url": "https://www.youtube.com/watch?v=7pskIwB-844"
+      },
+      {
+        "label": "Simi Valley Facebook",
+        "url": "https://www.facebook.com/profile.php?id=61560508876267"
+      },
+      {
+        "label": "Simi Valley Instagram",
+        "url": "https://www.instagram.com/firstlightventuracounty?igsh=NTc4MTIwNjQ2YQ=="
+      },
+      {
+        "label": "Simi Valley LinkedIn",
+        "url": "https://www.linkedin.com/company/firstlight-home-care-of-simi-valley/?viewAsMember=true"
+      },
+      {
+        "label": "Simi Valley YouTube",
+        "url": "https://www.youtube.com/user/FirstLightHomeCare"
+      }
+    ]
+  },
+  {
+    "id": "temecula",
+    "source": "https://www.firstlighthomecare.com/home-healthcare-temecula-valley/",
+    "finalUrl": "https://www.firstlighthomecare.com/home-healthcare-temecula-valley/",
+    "status": 200,
+    "links": [
+      {
+        "label": "",
+        "url": "https://www.youtube.com/watch?v=6qQfZ3V4nwg"
+      },
+      {
+        "label": "",
+        "url": "https://www.youtube.com/watch?v=7pskIwB-844"
+      },
+      {
+        "label": "Temecula Valley, CA Facebook",
+        "url": "https://www.facebook.com/FirstLight-Home-Care-of-Temecula-1645243659113431/"
+      },
+      {
+        "label": "Temecula Valley, CA Instagram",
+        "url": "https://www.instagram.com/firstlighthomecarenational/"
+      },
+      {
+        "label": "Temecula Valley, CA LinkedIn",
+        "url": "https://www.linkedin.com/company/firstlight-homecare"
+      },
+      {
+        "label": "Temecula Valley, CA YouTube",
+        "url": "https://www.youtube.com/user/FirstLightHomeCare"
+      }
+    ]
+  },
+  {
+    "id": "west-hollywood",
+    "source": "https://www.firstlighthomecare.com/home-healthcare-west-hollywood/",
+    "finalUrl": "https://firstlighthomecare.com/home-healthcare-west-hollywood/",
+    "status": 403,
+    "links": []
+  },
+  {
+    "id": "whittier",
+    "source": "https://www.firstlighthomecare.com/home-healthcare-whittier/",
+    "finalUrl": "https://firstlighthomecare.com/home-healthcare-whittier/",
+    "status": 403,
+    "links": []
+  },
+  {
+    "id": "woodland-hills",
+    "source": "https://www.firstlighthomecare.com/home-healthcare-woodland-hills/",
+    "finalUrl": "https://firstlighthomecare.com/home-healthcare-woodland-hills/",
+    "status": 403,
+    "links": []
+  }
+]

@@ -1,0 +1,1935 @@
+{
+  "sourceFile": "source-current.xlsx",
+  "sourceDriveFileId": "1F_2B0a-3bMgodfawzJHrkoeIbD6b8luI",
+  "requestedGid": "143651117",
+  "sourceTab": "Zip Codes",
+  "gidProof": "xl/metadata maps Excel sheetId 1 (Zip Codes) to gid 143651117; no ZIP assignments imported from SoCal, NoCal, or Owners tabs.",
+  "sourceZipRows": 229,
+  "uniqueZipCount": 225,
+  "officeCount": 15,
+  "sourceRows": [
+    {
+      "zip": "92602",
+      "territory": "397A",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A2",
+      "officeId": "irvine"
+    },
+    {
+      "zip": "91001",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G2",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "91701",
+      "territory": "296",
+      "rawOwner": "Lolita Pinto, Sunil Pinto",
+      "cell": "V2",
+      "officeId": "rancho-cucamonga"
+    },
+    {
+      "zip": "91303",
+      "territory": "442",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK2",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "92530",
+      "territory": "460",
+      "rawOwner": "Sean and Stephanie Ruitenberg",
+      "cell": "AT2",
+      "officeId": "san-clemente"
+    },
+    {
+      "zip": "90601",
+      "territory": "470",
+      "rawOwner": "Julio Rivas",
+      "cell": "AZ2",
+      "officeId": "whittier"
+    },
+    {
+      "zip": "90290",
+      "territory": "490",
+      "rawOwner": "Thomas Webber",
+      "cell": "BC2",
+      "officeId": "woodland-hills"
+    },
+    {
+      "zip": "91702",
+      "territory": "513",
+      "rawOwner": "Kevan Kwan, Roland Demasco, David Kapojos",
+      "cell": "BI2",
+      "officeId": "chino-hills"
+    },
+    {
+      "zip": "90034",
+      "territory": "535",
+      "rawOwner": "Jason Taylor",
+      "cell": "BU2",
+      "officeId": "marina-del-rey"
+    },
+    {
+      "zip": "90016",
+      "territory": "561",
+      "rawOwner": "Zachary Wechsler",
+      "cell": "CA2",
+      "officeId": "west-hollywood"
+    },
+    {
+      "zip": "91710",
+      "territory": "576",
+      "rawOwner": "Gary Chueng",
+      "cell": "CD2",
+      "officeId": "montclair"
+    },
+    {
+      "zip": "92604",
+      "territory": "397A",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A3",
+      "officeId": "irvine"
+    },
+    {
+      "zip": "91003",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G3",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "91711",
+      "territory": "296",
+      "rawOwner": "Lolita Pinto, Sunil Pinto",
+      "cell": "V3",
+      "officeId": "rancho-cucamonga"
+    },
+    {
+      "zip": "91304",
+      "territory": "442",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK3",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "92531",
+      "territory": "460",
+      "rawOwner": "Sean and Stephanie Ruitenberg",
+      "cell": "AT3",
+      "officeId": "san-clemente"
+    },
+    {
+      "zip": "90602",
+      "territory": "470",
+      "rawOwner": "Julio Rivas",
+      "cell": "AZ3",
+      "officeId": "whittier"
+    },
+    {
+      "zip": "91301",
+      "territory": "490",
+      "rawOwner": "Thomas Webber",
+      "cell": "BC3",
+      "officeId": "woodland-hills"
+    },
+    {
+      "zip": "91709",
+      "territory": "513",
+      "rawOwner": "Kevan Kwan, Roland Demasco, David Kapojos",
+      "cell": "BI3",
+      "officeId": "chino-hills"
+    },
+    {
+      "zip": "90064",
+      "territory": "535",
+      "rawOwner": "Jason Taylor",
+      "cell": "BU3",
+      "officeId": "marina-del-rey"
+    },
+    {
+      "zip": "90019",
+      "territory": "561",
+      "rawOwner": "Zachary Wechsler",
+      "cell": "CA3",
+      "officeId": "west-hollywood"
+    },
+    {
+      "zip": "91762",
+      "territory": "576",
+      "rawOwner": "Gary Chueng",
+      "cell": "CD3",
+      "officeId": "montclair"
+    },
+    {
+      "zip": "92606",
+      "territory": "397A",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A4",
+      "officeId": "irvine"
+    },
+    {
+      "zip": "91006",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G4",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "91729",
+      "territory": "296",
+      "rawOwner": "Lolita Pinto, Sunil Pinto",
+      "cell": "V4",
+      "officeId": "rancho-cucamonga"
+    },
+    {
+      "zip": "91305",
+      "territory": "442",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK4",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "92607",
+      "territory": "460",
+      "rawOwner": "Sean and Stephanie Ruitenberg",
+      "cell": "AT4",
+      "officeId": "san-clemente"
+    },
+    {
+      "zip": "90603",
+      "territory": "470",
+      "rawOwner": "Julio Rivas",
+      "cell": "AZ4",
+      "officeId": "whittier"
+    },
+    {
+      "zip": "91302",
+      "territory": "490",
+      "rawOwner": "Thomas Webber",
+      "cell": "BC4",
+      "officeId": "woodland-hills"
+    },
+    {
+      "zip": "91741",
+      "territory": "513",
+      "rawOwner": "Kevan Kwan, Roland Demasco, David Kapojos",
+      "cell": "BI4",
+      "officeId": "chino-hills"
+    },
+    {
+      "zip": "90066",
+      "territory": "535",
+      "rawOwner": "Jason Taylor",
+      "cell": "BU4",
+      "officeId": "marina-del-rey"
+    },
+    {
+      "zip": "90035",
+      "territory": "561",
+      "rawOwner": "Zachary Wechsler",
+      "cell": "CA4",
+      "officeId": "west-hollywood"
+    },
+    {
+      "zip": "91763",
+      "territory": "576",
+      "rawOwner": "Gary Chueng",
+      "cell": "CD4",
+      "officeId": "montclair"
+    },
+    {
+      "zip": "92614",
+      "territory": "397A",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A5",
+      "officeId": "irvine"
+    },
+    {
+      "zip": "91007",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G5",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "91730",
+      "territory": "296",
+      "rawOwner": "Lolita Pinto, Sunil Pinto",
+      "cell": "V5",
+      "officeId": "rancho-cucamonga"
+    },
+    {
+      "zip": "91309",
+      "territory": "442",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK5",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "92624",
+      "territory": "460",
+      "rawOwner": "Sean and Stephanie Ruitenberg",
+      "cell": "AT5",
+      "officeId": "san-clemente"
+    },
+    {
+      "zip": "90604",
+      "territory": "470",
+      "rawOwner": "Julio Rivas",
+      "cell": "AZ5",
+      "officeId": "whittier"
+    },
+    {
+      "zip": "91306",
+      "territory": "490",
+      "rawOwner": "Thomas Webber",
+      "cell": "BC5",
+      "officeId": "woodland-hills"
+    },
+    {
+      "zip": "91765",
+      "territory": "513",
+      "rawOwner": "Kevan Kwan, Roland Demasco, David Kapojos",
+      "cell": "BI5",
+      "officeId": "chino-hills"
+    },
+    {
+      "zip": "90230",
+      "territory": "535",
+      "rawOwner": "Jason Taylor",
+      "cell": "BU5",
+      "officeId": "marina-del-rey"
+    },
+    {
+      "zip": "90036",
+      "territory": "561",
+      "rawOwner": "Zachary Wechsler",
+      "cell": "CA5",
+      "officeId": "west-hollywood"
+    },
+    {
+      "zip": "91766",
+      "territory": "576",
+      "rawOwner": "Gary Chueng",
+      "cell": "CD5",
+      "officeId": "montclair"
+    },
+    {
+      "zip": "92623",
+      "territory": "397A",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A6",
+      "officeId": "irvine"
+    },
+    {
+      "zip": "91024",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G6",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "91739",
+      "territory": "296",
+      "rawOwner": "Lolita Pinto, Sunil Pinto",
+      "cell": "V6",
+      "officeId": "rancho-cucamonga"
+    },
+    {
+      "zip": "91359",
+      "territory": "442",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK6",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "92629",
+      "territory": "460",
+      "rawOwner": "Sean and Stephanie Ruitenberg",
+      "cell": "AT6",
+      "officeId": "san-clemente"
+    },
+    {
+      "zip": "90605",
+      "territory": "470",
+      "rawOwner": "Julio Rivas",
+      "cell": "AZ6",
+      "officeId": "whittier"
+    },
+    {
+      "zip": "91307",
+      "territory": "490",
+      "rawOwner": "Thomas Webber",
+      "cell": "BC6",
+      "officeId": "woodland-hills"
+    },
+    {
+      "zip": "91768",
+      "territory": "513",
+      "rawOwner": "Kevan Kwan, Roland Demasco, David Kapojos",
+      "cell": "BI6",
+      "officeId": "chino-hills"
+    },
+    {
+      "zip": "90231",
+      "territory": "535",
+      "rawOwner": "Jason Taylor",
+      "cell": "BU6",
+      "officeId": "marina-del-rey"
+    },
+    {
+      "zip": "90046",
+      "territory": "561",
+      "rawOwner": "Zachary Wechsler",
+      "cell": "CA6",
+      "officeId": "west-hollywood"
+    },
+    {
+      "zip": "91767",
+      "territory": "576",
+      "rawOwner": "Gary Chueng",
+      "cell": "CD6",
+      "officeId": "montclair"
+    },
+    {
+      "zip": "92701",
+      "territory": "397A",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A7",
+      "officeId": "irvine"
+    },
+    {
+      "zip": "91025",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G7",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "91750",
+      "territory": "296",
+      "rawOwner": "Lolita Pinto, Sunil Pinto",
+      "cell": "V7",
+      "officeId": "rancho-cucamonga"
+    },
+    {
+      "zip": "91361",
+      "territory": "442",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK7",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "92672",
+      "territory": "460",
+      "rawOwner": "Sean and Stephanie Ruitenberg",
+      "cell": "AT7",
+      "officeId": "san-clemente"
+    },
+    {
+      "zip": "90607",
+      "territory": "470",
+      "rawOwner": "Julio Rivas",
+      "cell": "AZ7",
+      "officeId": "whittier"
+    },
+    {
+      "zip": "91308",
+      "territory": "490",
+      "rawOwner": "Thomas Webber",
+      "cell": "BC7",
+      "officeId": "woodland-hills"
+    },
+    {
+      "zip": "91769",
+      "territory": "513",
+      "rawOwner": "Kevan Kwan, Roland Demasco, David Kapojos",
+      "cell": "BI7",
+      "officeId": "chino-hills"
+    },
+    {
+      "zip": "90232",
+      "territory": "535",
+      "rawOwner": "Jason Taylor",
+      "cell": "BU7",
+      "officeId": "marina-del-rey"
+    },
+    {
+      "zip": "90048",
+      "territory": "561",
+      "rawOwner": "Zachary Wechsler",
+      "cell": "CA7",
+      "officeId": "west-hollywood"
+    },
+    {
+      "zip": "92702",
+      "territory": "397A",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A8",
+      "officeId": "irvine"
+    },
+    {
+      "zip": "91066",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G8",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "91784",
+      "territory": "296",
+      "rawOwner": "Lolita Pinto, Sunil Pinto",
+      "cell": "V8",
+      "officeId": "rancho-cucamonga"
+    },
+    {
+      "zip": "91362",
+      "territory": "442",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK8",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "92673",
+      "territory": "460",
+      "rawOwner": "Sean and Stephanie Ruitenberg",
+      "cell": "AT8",
+      "officeId": "san-clemente"
+    },
+    {
+      "zip": "90608",
+      "territory": "470",
+      "rawOwner": "Julio Rivas",
+      "cell": "AZ8",
+      "officeId": "whittier"
+    },
+    {
+      "zip": "91324",
+      "territory": "490",
+      "rawOwner": "Thomas Webber",
+      "cell": "BC8",
+      "officeId": "woodland-hills"
+    },
+    {
+      "zip": "91773",
+      "territory": "513",
+      "rawOwner": "Kevan Kwan, Roland Demasco, David Kapojos",
+      "cell": "BI8",
+      "officeId": "chino-hills"
+    },
+    {
+      "zip": "90291",
+      "territory": "535",
+      "rawOwner": "Jason Taylor",
+      "cell": "BU8",
+      "officeId": "marina-del-rey"
+    },
+    {
+      "zip": "90067",
+      "territory": "561",
+      "rawOwner": "Zachary Wechsler",
+      "cell": "CA8",
+      "officeId": "west-hollywood"
+    },
+    {
+      "zip": "92705",
+      "territory": "397A",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A9",
+      "officeId": "irvine"
+    },
+    {
+      "zip": "91077",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G9",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "91785",
+      "territory": "296",
+      "rawOwner": "Lolita Pinto, Sunil Pinto",
+      "cell": "V9",
+      "officeId": "rancho-cucamonga"
+    },
+    {
+      "zip": "91396",
+      "territory": "442",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK9",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "92675",
+      "territory": "460",
+      "rawOwner": "Sean and Stephanie Ruitenberg",
+      "cell": "AT9",
+      "officeId": "san-clemente"
+    },
+    {
+      "zip": "90609",
+      "territory": "470",
+      "rawOwner": "Julio Rivas",
+      "cell": "AZ9",
+      "officeId": "whittier"
+    },
+    {
+      "zip": "91356",
+      "territory": "490",
+      "rawOwner": "Thomas Webber",
+      "cell": "BC9",
+      "officeId": "woodland-hills"
+    },
+    {
+      "zip": "90292",
+      "territory": "535",
+      "rawOwner": "Jason Taylor",
+      "cell": "BU9",
+      "officeId": "marina-del-rey"
+    },
+    {
+      "zip": "90069",
+      "territory": "561",
+      "rawOwner": "Zachary Wechsler",
+      "cell": "CA9",
+      "officeId": "west-hollywood"
+    },
+    {
+      "zip": "92706",
+      "territory": "397A",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A10",
+      "officeId": "irvine"
+    },
+    {
+      "zip": "91101",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G10",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "91786",
+      "territory": "296",
+      "rawOwner": "Lolita Pinto, Sunil Pinto",
+      "cell": "V10",
+      "officeId": "rancho-cucamonga"
+    },
+    {
+      "zip": "93015",
+      "territory": "442",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK10",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "92677",
+      "territory": "460",
+      "rawOwner": "Sean and Stephanie Ruitenberg",
+      "cell": "AT10",
+      "officeId": "san-clemente"
+    },
+    {
+      "zip": "90631",
+      "territory": "470",
+      "rawOwner": "Julio Rivas",
+      "cell": "AZ10",
+      "officeId": "whittier"
+    },
+    {
+      "zip": "91357",
+      "territory": "490",
+      "rawOwner": "Thomas Webber",
+      "cell": "BC10",
+      "officeId": "woodland-hills"
+    },
+    {
+      "zip": "90294",
+      "territory": "535",
+      "rawOwner": "Jason Taylor",
+      "cell": "BU10",
+      "officeId": "marina-del-rey"
+    },
+    {
+      "zip": "90211",
+      "territory": "561",
+      "rawOwner": "Zachary Wechsler",
+      "cell": "CA10",
+      "officeId": "west-hollywood"
+    },
+    {
+      "zip": "92707",
+      "territory": "397A",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A11",
+      "officeId": "irvine"
+    },
+    {
+      "zip": "91102",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G11",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "93016",
+      "territory": "442",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK11",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "92693",
+      "territory": "460",
+      "rawOwner": "Sean and Stephanie Ruitenberg",
+      "cell": "AT11",
+      "officeId": "san-clemente"
+    },
+    {
+      "zip": "90632",
+      "territory": "470",
+      "rawOwner": "Julio Rivas",
+      "cell": "AZ11",
+      "officeId": "whittier"
+    },
+    {
+      "zip": "91364",
+      "territory": "490",
+      "rawOwner": "Thomas Webber",
+      "cell": "BC11",
+      "officeId": "woodland-hills"
+    },
+    {
+      "zip": "90295",
+      "territory": "535",
+      "rawOwner": "Jason Taylor",
+      "cell": "BU11",
+      "officeId": "marina-del-rey"
+    },
+    {
+      "zip": "92711",
+      "territory": "397A",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A12",
+      "officeId": "irvine"
+    },
+    {
+      "zip": "91103",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G12",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "93020",
+      "territory": "442",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK12",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "92694",
+      "territory": "460",
+      "rawOwner": "Sean and Stephanie Ruitenberg",
+      "cell": "AT12",
+      "officeId": "san-clemente"
+    },
+    {
+      "zip": "90637",
+      "territory": "470",
+      "rawOwner": "Julio Rivas",
+      "cell": "AZ12",
+      "officeId": "whittier"
+    },
+    {
+      "zip": "91365",
+      "territory": "490",
+      "rawOwner": "Thomas Webber",
+      "cell": "BC12",
+      "officeId": "woodland-hills"
+    },
+    {
+      "zip": "90405",
+      "territory": "535",
+      "rawOwner": "Jason Taylor",
+      "cell": "BU12",
+      "officeId": "marina-del-rey"
+    },
+    {
+      "zip": "92712",
+      "territory": "397A",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A13",
+      "officeId": "irvine"
+    },
+    {
+      "zip": "91104",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G13",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "93021",
+      "territory": "442",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK13",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "90638",
+      "territory": "470",
+      "rawOwner": "Julio Rivas",
+      "cell": "AZ13",
+      "officeId": "whittier"
+    },
+    {
+      "zip": "91367",
+      "territory": "490",
+      "rawOwner": "Thomas Webber",
+      "cell": "BC13",
+      "officeId": "woodland-hills"
+    },
+    {
+      "zip": "90409",
+      "territory": "535",
+      "rawOwner": "Jason Taylor",
+      "cell": "BU13",
+      "officeId": "marina-del-rey"
+    },
+    {
+      "zip": "92735",
+      "territory": "397A",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A14",
+      "officeId": "irvine"
+    },
+    {
+      "zip": "91106",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G14",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "93040",
+      "territory": "442",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK14",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "90639",
+      "territory": "470",
+      "rawOwner": "Julio Rivas",
+      "cell": "AZ14",
+      "officeId": "whittier"
+    },
+    {
+      "zip": "91371",
+      "territory": "490",
+      "rawOwner": "Thomas Webber",
+      "cell": "BC14",
+      "officeId": "woodland-hills"
+    },
+    {
+      "zip": "92780",
+      "territory": "397A",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A15",
+      "officeId": "irvine"
+    },
+    {
+      "zip": "91107",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G15",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "93062",
+      "territory": "442",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK15",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "90670",
+      "territory": "470",
+      "rawOwner": "Julio Rivas",
+      "cell": "AZ15",
+      "officeId": "whittier"
+    },
+    {
+      "zip": "91372",
+      "territory": "490",
+      "rawOwner": "Thomas Webber",
+      "cell": "BC15",
+      "officeId": "woodland-hills"
+    },
+    {
+      "zip": "92781",
+      "territory": "397A",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A16",
+      "officeId": "irvine"
+    },
+    {
+      "zip": "91108",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G16",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "93063",
+      "territory": "442",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK16",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "90671",
+      "territory": "470",
+      "rawOwner": "Julio Rivas",
+      "cell": "AZ16",
+      "officeId": "whittier"
+    },
+    {
+      "zip": "91376",
+      "territory": "490",
+      "rawOwner": "Thomas Webber",
+      "cell": "BC16",
+      "officeId": "woodland-hills"
+    },
+    {
+      "zip": "92782",
+      "territory": "397A",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A17",
+      "officeId": "irvine"
+    },
+    {
+      "zip": "91109",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G17",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "93065",
+      "territory": "442",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK17",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "91377",
+      "territory": "490",
+      "rawOwner": "Thomas Webber",
+      "cell": "BC17",
+      "officeId": "woodland-hills"
+    },
+    {
+      "zip": "92856",
+      "territory": "397A",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A18",
+      "officeId": "irvine"
+    },
+    {
+      "zip": "91110",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G18",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "93066",
+      "territory": "442",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK18",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "91396",
+      "territory": "490",
+      "rawOwner": "Thomas Webber",
+      "cell": "BC18",
+      "officeId": "woodland-hills"
+    },
+    {
+      "zip": "92859",
+      "territory": "397A",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A19",
+      "officeId": "irvine"
+    },
+    {
+      "zip": "91114",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G19",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "93094",
+      "territory": "442",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK19",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "92866",
+      "territory": "397A",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A20",
+      "officeId": "irvine"
+    },
+    {
+      "zip": "91116",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G20",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "93099",
+      "territory": "442",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK20",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "92869",
+      "territory": "397A",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A21",
+      "officeId": "irvine"
+    },
+    {
+      "zip": "91117",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G21",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "91319",
+      "territory": "493",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK21",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "92562",
+      "territory": "309C",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A22",
+      "officeId": "temecula"
+    },
+    {
+      "zip": "91118",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G22",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "91320",
+      "territory": "493",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK22",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "92563",
+      "territory": "309C",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A23",
+      "officeId": "temecula"
+    },
+    {
+      "zip": "91121",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G23",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "91358",
+      "territory": "493",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK23",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "92564",
+      "territory": "309C",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A24",
+      "officeId": "temecula"
+    },
+    {
+      "zip": "91124",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G24",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "91360",
+      "territory": "493",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK24",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "92589",
+      "territory": "309C",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A25",
+      "officeId": "temecula"
+    },
+    {
+      "zip": "91125",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G25",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "93010",
+      "territory": "493",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK25",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "92590",
+      "territory": "309C",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A26",
+      "officeId": "temecula"
+    },
+    {
+      "zip": "91126",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G26",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "93011",
+      "territory": "493",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK26",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "92591",
+      "territory": "309C",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A27",
+      "officeId": "temecula"
+    },
+    {
+      "zip": "91182",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G27",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "93012",
+      "territory": "493",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK27",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "92592",
+      "territory": "309C",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A28",
+      "officeId": "temecula"
+    },
+    {
+      "zip": "91188",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G28",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "93033",
+      "territory": "493",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK28",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "92593",
+      "territory": "309C",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A29",
+      "officeId": "temecula"
+    },
+    {
+      "zip": "91199",
+      "territory": "346",
+      "rawOwner": "David Kapojos",
+      "cell": "G29",
+      "officeId": "pasadena"
+    },
+    {
+      "zip": "93034",
+      "territory": "493",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK29",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "92595",
+      "territory": "309C",
+      "rawOwner": "Prashant Kumar",
+      "cell": "A30",
+      "officeId": "temecula"
+    },
+    {
+      "zip": "91008",
+      "territory": "174B",
+      "rawOwner": "David Kapojos",
+      "cell": "G30",
+      "officeId": "san-gabriel"
+    },
+    {
+      "zip": "93041",
+      "territory": "493",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK30",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "91009",
+      "territory": "174B",
+      "rawOwner": "David Kapojos",
+      "cell": "G31",
+      "officeId": "san-gabriel"
+    },
+    {
+      "zip": "93042",
+      "territory": "493",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK31",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "91010",
+      "territory": "174B",
+      "rawOwner": "David Kapojos",
+      "cell": "G32",
+      "officeId": "san-gabriel"
+    },
+    {
+      "zip": "93043",
+      "territory": "493",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK32",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "91016",
+      "territory": "174B",
+      "rawOwner": "David Kapojos",
+      "cell": "G33",
+      "officeId": "san-gabriel"
+    },
+    {
+      "zip": "93044",
+      "territory": "493",
+      "rawOwner": "Scot Kuratsu",
+      "cell": "AK33",
+      "officeId": "simi-valley"
+    },
+    {
+      "zip": "91731",
+      "territory": "174B",
+      "rawOwner": "David Kapojos",
+      "cell": "G34",
+      "officeId": "san-gabriel"
+    },
+    {
+      "zip": "91734",
+      "territory": "174B",
+      "rawOwner": "David Kapojos",
+      "cell": "G35",
+      "officeId": "san-gabriel"
+    },
+    {
+      "zip": "91770",
+      "territory": "174B",
+      "rawOwner": "David Kapojos",
+      "cell": "G36",
+      "officeId": "san-gabriel"
+    },
+    {
+      "zip": "91771",
+      "territory": "174B",
+      "rawOwner": "David Kapojos",
+      "cell": "G37",
+      "officeId": "san-gabriel"
+    },
+    {
+      "zip": "91772",
+      "territory": "174B",
+      "rawOwner": "David Kapojos",
+      "cell": "G38",
+      "officeId": "san-gabriel"
+    },
+    {
+      "zip": "91775",
+      "territory": "174B",
+      "rawOwner": "David Kapojos",
+      "cell": "G39",
+      "officeId": "san-gabriel"
+    },
+    {
+      "zip": "91775",
+      "territory": "174B",
+      "rawOwner": "David Kapojos",
+      "cell": "G40",
+      "officeId": "san-gabriel"
+    },
+    {
+      "zip": "91778",
+      "territory": "174B",
+      "rawOwner": "David Kapojos",
+      "cell": "G41",
+      "officeId": "san-gabriel"
+    },
+    {
+      "zip": "91780",
+      "territory": "174B",
+      "rawOwner": "David Kapojos",
+      "cell": "G42",
+      "officeId": "san-gabriel"
+    },
+    {
+      "zip": "90027",
+      "territory": "191C",
+      "rawOwner": "David Kapojos",
+      "cell": "G43",
+      "officeId": "burbank"
+    },
+    {
+      "zip": "90031",
+      "territory": "191C",
+      "rawOwner": "David Kapojos",
+      "cell": "G44",
+      "officeId": "burbank"
+    },
+    {
+      "zip": "90039",
+      "territory": "191C",
+      "rawOwner": "David Kapojos",
+      "cell": "G45",
+      "officeId": "burbank"
+    },
+    {
+      "zip": "90065",
+      "territory": "191C",
+      "rawOwner": "David Kapojos",
+      "cell": "G46",
+      "officeId": "burbank"
+    },
+    {
+      "zip": "90072",
+      "territory": "191C",
+      "rawOwner": "David Kapojos",
+      "cell": "G47",
+      "officeId": "burbank"
+    },
+    {
+      "zip": "91204",
+      "territory": "191C",
+      "rawOwner": "David Kapojos",
+      "cell": "G48",
+      "officeId": "burbank"
+    },
+    {
+      "zip": "91205",
+      "territory": "191C",
+      "rawOwner": "David Kapojos",
+      "cell": "G49",
+      "officeId": "burbank"
+    },
+    {
+      "zip": "91210",
+      "territory": "191C",
+      "rawOwner": "David Kapojos",
+      "cell": "G50",
+      "officeId": "burbank"
+    },
+    {
+      "zip": "91210",
+      "territory": "191C",
+      "rawOwner": "David Kapojos",
+      "cell": "G51",
+      "officeId": "burbank"
+    },
+    {
+      "zip": "91226",
+      "territory": "191C",
+      "rawOwner": "David Kapojos",
+      "cell": "G52",
+      "officeId": "burbank"
+    },
+    {
+      "zip": "91501",
+      "territory": "191C",
+      "rawOwner": "David Kapojos",
+      "cell": "G53",
+      "officeId": "burbank"
+    },
+    {
+      "zip": "91502",
+      "territory": "191C",
+      "rawOwner": "David Kapojos",
+      "cell": "G54",
+      "officeId": "burbank"
+    },
+    {
+      "zip": "91504",
+      "territory": "191C",
+      "rawOwner": "David Kapojos",
+      "cell": "G55",
+      "officeId": "burbank"
+    },
+    {
+      "zip": "91506",
+      "territory": "191C",
+      "rawOwner": "David Kapojos",
+      "cell": "G56",
+      "officeId": "burbank"
+    },
+    {
+      "zip": "91526",
+      "territory": "191C",
+      "rawOwner": "David Kapojos",
+      "cell": "G57",
+      "officeId": "burbank"
+    },
+    {
+      "zip": "90041",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G58",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91011",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G59",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91012",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G60",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91020",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G61",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91021",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G62",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91023",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G63",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91030",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G64",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91031",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G65",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91046",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G66",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91105",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G67",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91115",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G68",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91123",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G69",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91129",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G70",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91184",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G71",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91189",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G72",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91201",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G73",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91202",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G74",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91203",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G75",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91206",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G76",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91207",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G77",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91208",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G78",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91209",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G79",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91214",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G80",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91221",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G81",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91222",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G82",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91224",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G83",
+      "officeId": "glendale"
+    },
+    {
+      "zip": "91226",
+      "territory": "360A",
+      "rawOwner": "David Kapojos",
+      "cell": "G84",
+      "officeId": "glendale"
+    }
+  ],
+  "duplicateRows": [
+    {
+      "zip": "91210",
+      "officeId": "burbank",
+      "sourceRowCount": 2
+    },
+    {
+      "zip": "91775",
+      "officeId": "san-gabriel",
+      "sourceRowCount": 2
+    }
+  ],
+  "overlappingZips": {
+    "91226": [
+      "burbank",
+      "glendale"
+    ],
+    "91396": [
+      "simi-valley",
+      "woodland-hills"
+    ]
+  },
+  "excludedTerritories": [
+    {
+      "territory": "130",
+      "owners": [
+        "Charles Park, Ray Kikavousi"
+      ],
+      "zipCount": 17,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "353",
+      "owners": [
+        "Ernesto Ortega"
+      ],
+      "zipCount": 16,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "366",
+      "owners": [
+        "Jason Landau"
+      ],
+      "zipCount": 14,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "371",
+      "owners": [
+        "Jim Carteris"
+      ],
+      "zipCount": 11,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "244",
+      "owners": [
+        "Larry Roberts"
+      ],
+      "zipCount": 11,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "234",
+      "owners": [
+        "Mark and Charlie Paretchan"
+      ],
+      "zipCount": 39,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "316",
+      "owners": [
+        "Paul Terpeluk"
+      ],
+      "zipCount": 8,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "416",
+      "owners": [
+        "Nicole Freeman"
+      ],
+      "zipCount": 19,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "425",
+      "owners": [
+        "Matt & Carolyn August"
+      ],
+      "zipCount": 15,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "447",
+      "owners": [
+        "Kanisha Golden"
+      ],
+      "zipCount": 7,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "453",
+      "owners": [
+        "Ellen Wong"
+      ],
+      "zipCount": 12,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "463",
+      "owners": [
+        "Felipe Dos Santos De Souza, Jonathan Dos Santos De Souza, Jordan Belcher"
+      ],
+      "zipCount": 15,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "498",
+      "owners": [
+        "David and Ruth Kim"
+      ],
+      "zipCount": 22,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "520",
+      "owners": [
+        "Hai Tran"
+      ],
+      "zipCount": 13,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "528",
+      "owners": [
+        "Rohit Punj"
+      ],
+      "zipCount": 23,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "530",
+      "owners": [
+        "Loc Lam"
+      ],
+      "zipCount": 25,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "550",
+      "owners": [
+        "Rajvir Sahota"
+      ],
+      "zipCount": 23,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "448",
+      "owners": [
+        "Kanisha Golden"
+      ],
+      "zipCount": 19,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "412",
+      "owners": [
+        "Paul Terpeluk"
+      ],
+      "zipCount": 9,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "372",
+      "owners": [
+        "Jim Carteris"
+      ],
+      "zipCount": 14,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "522",
+      "owners": [
+        "Hai Tran"
+      ],
+      "zipCount": 13,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "405",
+      "owners": [
+        "Jason Landau"
+      ],
+      "zipCount": 14,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "426",
+      "owners": [
+        "Matt & Carolyn August"
+      ],
+      "zipCount": 16,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "133",
+      "owners": [
+        "Charles Park, Ray Kikavousi"
+      ],
+      "zipCount": 12,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "413",
+      "owners": [
+        "Paul Terpeluk"
+      ],
+      "zipCount": 43,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "492",
+      "owners": [
+        "David and Ruth Kim"
+      ],
+      "zipCount": 12,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "433",
+      "owners": [
+        "Jim Carteris"
+      ],
+      "zipCount": 15,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "449",
+      "owners": [
+        "Kanisha Golden"
+      ],
+      "zipCount": 14,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "305A",
+      "owners": [
+        "Jason Landau"
+      ],
+      "zipCount": 9,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "136",
+      "owners": [
+        "Charles Park, Ray Kikavousi"
+      ],
+      "zipCount": 16,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "496",
+      "owners": [
+        "Matt & Carolyn August"
+      ],
+      "zipCount": 12,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "437",
+      "owners": [
+        "Jason Landau"
+      ],
+      "zipCount": 20,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "254",
+      "owners": [
+        "Mark and Charlie Paretchan"
+      ],
+      "zipCount": 21,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "432",
+      "owners": [
+        "Jim Carteris"
+      ],
+      "zipCount": 20,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "558",
+      "owners": [
+        "Matt & Carolyn August"
+      ],
+      "zipCount": 13,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "302",
+      "owners": [
+        "Charles Park, Ray Kikavousi"
+      ],
+      "zipCount": 15,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    },
+    {
+      "territory": "541",
+      "owners": [
+        "Jason Landau"
+      ],
+      "zipCount": 8,
+      "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
+    }
+  ]
+}

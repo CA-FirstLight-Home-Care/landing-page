@@ -1,0 +1,191 @@
+{
+  "burbank": {
+    "cities": [
+      "Burbank",
+      "Los Angeles",
+      "Glendale"
+    ],
+    "publicAreaSource": "https://www.firstlighthomecare.com/home-healthcare-burbank/",
+    "note": "Original area labels plus exact Areas We Serve list from the previously verified public office page. ZIPs unchanged."
+  },
+  "chino-hills": {
+    "cities": [
+      "Chino Hills",
+      "Diamond Bar",
+      "Glendora",
+      "San Dimas",
+      "Azusa",
+      "Pomona"
+    ],
+    "publicAreaSource": "https://www.firstlighthomecare.com/home-healthcare-chino-hills/",
+    "note": "Original area labels plus exact Areas We Serve list from the previously verified public office page. ZIPs unchanged."
+  },
+  "glendale": {
+    "cities": [
+      "Glendale",
+      "La Crescenta",
+      "South Pasadena",
+      "La Cañada Flintridge",
+      "Montrose",
+      "Verdugo City",
+      "Los Angeles"
+    ],
+    "publicAreaSource": "https://www.firstlighthomecare.com/home-healthcare-glendale/",
+    "note": "Original area labels plus exact Areas We Serve list from the previously verified public office page. ZIPs unchanged."
+  },
+  "irvine": {
+    "cities": [
+      "Irvine",
+      "Tustin",
+      "Santa Ana",
+      "North Tustin",
+      "Woodbridge",
+      "Northwood",
+      "Lemon Heights",
+      "Costa Mesa",
+      "Villa Park",
+      "Orange"
+    ],
+    "publicAreaSource": "https://www.firstlighthomecare.com/home-healthcare-irvine/",
+    "note": "Original area labels plus exact Areas We Serve list from the previously verified public office page. ZIPs unchanged."
+  },
+  "marina-del-rey": {
+    "cities": [
+      "Marina del Rey",
+      "Culver City",
+      "Venice",
+      "West Los Angeles",
+      "Santa Monica",
+      "Mar Vista",
+      "Palms",
+      "Cheviot Hills",
+      "Del Rey"
+    ],
+    "publicAreaSource": "https://www.firstlighthomecare.com/home-healthcare-marina-del-rey/",
+    "note": "Original area labels plus exact Areas We Serve list from the previously verified public office page. ZIPs unchanged."
+  },
+  "montclair": {
+    "cities": [
+      "Chino",
+      "Montclair",
+      "Pomona",
+      "Ontario"
+    ],
+    "publicAreaSource": null,
+    "note": "Original area labels plus exact Areas We Serve list from the previously verified public office page. ZIPs unchanged."
+  },
+  "pasadena": {
+    "cities": [
+      "Pasadena",
+      "Arcadia",
+      "Altadena",
+      "San Marino",
+      "Sierra Madre",
+      "Temple City",
+      "Greater San Gabriel Valley"
+    ],
+    "publicAreaSource": "https://www.firstlighthomecare.com/home-healthcare-pasadena-altadena/",
+    "note": "Original area labels plus exact Areas We Serve list from the previously verified public office page. ZIPs unchanged."
+  },
+  "rancho-cucamonga": {
+    "cities": [
+      "Rancho Cucamonga",
+      "Upland",
+      "Claremont",
+      "La Verne",
+      "Ontario",
+      "Alta Loma"
+    ],
+    "publicAreaSource": "https://www.firstlighthomecare.com/home-healthcare-rancho-cucamonga/",
+    "note": "Original area labels plus exact Areas We Serve list from the previously verified public office page. ZIPs unchanged."
+  },
+  "san-clemente": {
+    "cities": [
+      "San Clemente",
+      "San Juan Capistrano",
+      "Dana Point",
+      "Laguna Niguel",
+      "Ladera Ranch",
+      "Rancho Mission Viejo"
+    ],
+    "publicAreaSource": "https://www.firstlighthomecare.com/home-healthcare-sanclemente/",
+    "note": "Original area labels plus exact Areas We Serve list from the previously verified public office page. ZIPs unchanged."
+  },
+  "san-gabriel": {
+    "cities": [
+      "San Gabriel",
+      "Monrovia",
+      "Rosemead",
+      "Temple City",
+      "Duarte",
+      "El Monte"
+    ],
+    "publicAreaSource": "https://www.firstlighthomecare.com/home-healthcare-san-gabriel/",
+    "note": "Original area labels plus exact Areas We Serve list from the previously verified public office page. ZIPs unchanged."
+  },
+  "simi-valley": {
+    "cities": [
+      "Simi Valley",
+      "Moorpark",
+      "Westlake Village",
+      "Camarillo",
+      "Thousand Oaks",
+      "West Hills",
+      "Fillmore"
+    ],
+    "publicAreaSource": "https://www.firstlighthomecare.com/home-healthcare-simi-valley/",
+    "note": "Original area labels plus exact Areas We Serve list from the previously verified public office page. ZIPs unchanged."
+  },
+  "temecula": {
+    "cities": [
+      "Temecula",
+      "Murrieta",
+      "Wildomar",
+      "Hemet",
+      "Winchester",
+      "Glenoak Hills",
+      "Lake Elsinore",
+      "Temescal Valley",
+      "Menifee",
+      "Fallbrook"
+    ],
+    "publicAreaSource": "https://www.firstlighthomecare.com/home-healthcare-temecula-valley/",
+    "note": "Original area labels plus exact Areas We Serve list from the previously verified public office page. ZIPs unchanged."
+  },
+  "west-hollywood": {
+    "cities": [
+      "West Hollywood",
+      "Beverly Hills",
+      "Century City",
+      "Fairfax District",
+      "Park La Brea",
+      "Miracle Mile",
+      "Beverlywood",
+      "Carthay",
+      "Beverly Grove",
+      "Hancock Park"
+    ],
+    "publicAreaSource": "https://www.firstlighthomecare.com/home-healthcare-west-hollywood/",
+    "note": "Original area labels plus exact Areas We Serve list from the previously verified public office page. ZIPs unchanged."
+  },
+  "whittier": {
+    "cities": [
+      "Whittier",
+      "La Habra",
+      "La Mirada",
+      "Santa Fe Springs"
+    ],
+    "publicAreaSource": "https://www.firstlighthomecare.com/home-healthcare-whittier/",
+    "note": "Original area labels plus exact Areas We Serve list from the previously verified public office page. ZIPs unchanged."
+  },
+  "woodland-hills": {
+    "cities": [
+      "Woodland Hills",
+      "Calabasas",
+      "Agoura Hills",
+      "Topanga"
+    ],
+    "publicAreaSource": null,
+    "note": "Original area labels plus exact Areas We Serve list from the previously verified public office page. ZIPs unchanged."
+  }
+}

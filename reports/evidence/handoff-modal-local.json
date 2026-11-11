@@ -1,0 +1,12 @@
+{
+  "url": "http://127.0.0.1:34405/",
+  "mode": "local",
+  "modal200PercentReflow": {
+    "root": 720,
+    "client": 720,
+    "bad": []
+  },
+  "axeViolations": [],
+  "axeIncomplete": [],
+  "prefill": "Care conversation for Montclair.\nCare ZIP: 91710.\nWho are you finding help for? A family member or friend\nWhat everyday help would be useful? Help with bathing, dressing or toileting\nWhat best describes their memory needs? A dementia diagnosis has been made\nIs this after a hospital stay or surgery? Yes\nWhen might help be needed? Regular daytime visits; Overnight care; Give our family caregiver a break\nIs the person a Veteran or a surviving spouse? A Veteran\nDo they have long-term care insurance? Yes\nHow are they thinking about paying for care? Not sure how to pay. I would like to explore options\nSuggested services: Personal care, Dementia & Alzheimer\u2019s care, Respite care, Post-surgery & transitional care, Veteran care.\nPrograms and payment topics: Ask your doctor about CMS GUIDE, SCAN members: ask about at-home benefits, Ask your county about Medi-Cal IHSS, Medi-Cal plan: personal care and homemaker support, Medi-Cal plan: caregiver respite, Ask your local Area Agency on Aging, Ask HICAP for insurance counseling, VA Aid & Attendance questions, VA community care and home-care questions, Long-term care insurance review, Financial consulting may be available.\nA discussion guide only, not an assessment or eligibility decision. Placeholder only. Nothing sent."
+}
