@@ -2,12 +2,13 @@
 
 Regional landing website for the Southern California Alliance of FirstLight Home Care franchise owners.
 
-- **Production URL**: https://firstlight-socal.pages.dev/
-- **Routes**:
-  - `/` (`/index.html`): Hero, who we are / what we do, and four-step guided flow (office selection, care quiz, results, and inquiry modal).
-  - `/services` (`/services.html`): Accessible comparison table of the seven core non-medical services and scheduling caveats.
-  - `/locations` (`/locations.html`): 15 participating offices directory with search/ZIP filtering, maps links, and verified contact links.
-  - `/faqs` (`/faqs.html`): 13 single-column FAQs with local search and expand/collapse controls.
+- **GitHub Pages URL**: https://ca-firstlight-home-care.github.io/landing-page/
+- **Cloudflare Pages URL (alternative)**: https://firstlight-socal.pages.dev/
+- **Routes & Pages**:
+  - `index.html`: Hero, who we are / what we do, and four-step guided flow (office selection, care quiz, results, and inquiry modal).
+  - `services.html`: Accessible comparison table of the seven core non-medical services and scheduling caveats.
+  - `locations.html`: 15 participating offices directory with search/ZIP filtering, maps links, and verified contact links.
+  - `faqs.html`: 13 single-column FAQs with local search and expand/collapse controls.
 - **Configurations (`config/`)**:
   - `config/quiz.json` & `config/quiz.yaml`: Quiz questions, options, and branching keys.
   - `config/offices.json` & `config/offices.yaml`: Participating office list, coverage ZIP mapping, addresses, and verified socials.
@@ -16,24 +17,15 @@ Regional landing website for the Southern California Alliance of FirstLight Home
 
 ---
 
-## Local Development & Publishing
+## Local Development & Testing
 
-The live site is served via Cloudflare Pages through an allowlist `_worker.js` generated from the four standalone HTML files.
-
-### 1. Preparing the Publish Bundle
-Whenever changes are made to the HTML documents, repackage the `publish/` directory:
-```bash
-python3 tools/prepare-publish.py
-```
-This updates `publish/_worker.js` with embedded copies of the HTML files and verifies that only public files are included in `publish/`.
-
-### 2. Testing Routes Locally
+### 1. Testing Routes Locally
 ```bash
 npm install
 node tests/test_routes.mjs
 ```
 
-### 3. Local Preview Server
+### 2. Local Preview Server
 ```bash
 python3 tools/preview.py 8788
 # Visit http://127.0.0.1:8788
@@ -43,15 +35,14 @@ python3 tools/preview.py 8788
 
 ## Deployment & CI/CD
 
-Deployment is automated via GitHub Actions on push/merge to the default branch (`main`).
+### GitHub Pages (Active)
+Deployment to GitHub Pages is fully automated via GitHub Actions (`.github/workflows/deploy.yml`) on every push to the default `main` branch.
+GitHub Pages is served at: **https://ca-firstlight-home-care.github.io/landing-page/**
 
-### Required GitHub Secrets
-To enable automated deployments via GitHub Actions, configure the following secrets in repository settings (**Settings > Secrets and variables > Actions**):
-- `CLOUDFLARE_API_TOKEN`: Cloudflare API token with **Cloudflare Pages: Edit** permission.
-- `CLOUDFLARE_ACCOUNT_ID`: `1b316c4a14fed87a4c721863184e0c77`
-
-### Manual Deployment via Wrangler CLI
+### Cloudflare Pages (Alternative)
+Whenever publishing to Cloudflare Pages:
 ```bash
+python3 tools/prepare-publish.py
 npx wrangler pages deploy publish --project-name firstlight-socal --branch main
 ```
 
