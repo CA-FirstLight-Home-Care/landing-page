@@ -32,10 +32,10 @@
 - - recovery
   - Is this after a hospital stay or surgery?
   - This can also include recovery after an illness or injury.
-  - - - 'yes'
-      - 'Yes'
-    - - 'no'
-      - 'No'
+  - - - "yes"
+      - "Yes"
+    - - "no"
+      - "No"
 - - schedule
   - When might help be needed?
   - Choose all that apply. Overnight or 24-hour care is a schedule, not a separate
@@ -58,16 +58,16 @@
       - A Veteran
     - - spouse
       - A surviving spouse of a Veteran
-    - - 'no'
+    - - "no"
       - Neither
 - - ltc
   - Do they have long-term care insurance?
   - This is different from regular health insurance. No policy numbers or documents
     are needed.
-  - - - 'yes'
-      - 'Yes'
-    - - 'no'
-      - 'No'
+  - - - "yes"
+      - "Yes"
+    - - "no"
+      - "No"
 - - pay
   - How are they thinking about paying for care?
   - No balances, income amounts or financial records are requested.

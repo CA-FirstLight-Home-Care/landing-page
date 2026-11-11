@@ -1625,101 +1625,73 @@
     }
   ],
   "overlappingZips": {
-    "91226": [
-      "burbank",
-      "glendale"
-    ],
-    "91396": [
-      "simi-valley",
-      "woodland-hills"
-    ]
+    "91226": ["burbank", "glendale"],
+    "91396": ["simi-valley", "woodland-hills"]
   },
   "excludedTerritories": [
     {
       "territory": "130",
-      "owners": [
-        "Charles Park, Ray Kikavousi"
-      ],
+      "owners": ["Charles Park, Ray Kikavousi"],
       "zipCount": 17,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "353",
-      "owners": [
-        "Ernesto Ortega"
-      ],
+      "owners": ["Ernesto Ortega"],
       "zipCount": 16,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "366",
-      "owners": [
-        "Jason Landau"
-      ],
+      "owners": ["Jason Landau"],
       "zipCount": 14,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "371",
-      "owners": [
-        "Jim Carteris"
-      ],
+      "owners": ["Jim Carteris"],
       "zipCount": 11,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "244",
-      "owners": [
-        "Larry Roberts"
-      ],
+      "owners": ["Larry Roberts"],
       "zipCount": 11,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "234",
-      "owners": [
-        "Mark and Charlie Paretchan"
-      ],
+      "owners": ["Mark and Charlie Paretchan"],
       "zipCount": 39,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "316",
-      "owners": [
-        "Paul Terpeluk"
-      ],
+      "owners": ["Paul Terpeluk"],
       "zipCount": 8,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "416",
-      "owners": [
-        "Nicole Freeman"
-      ],
+      "owners": ["Nicole Freeman"],
       "zipCount": 19,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "425",
-      "owners": [
-        "Matt & Carolyn August"
-      ],
+      "owners": ["Matt & Carolyn August"],
       "zipCount": 15,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "447",
-      "owners": [
-        "Kanisha Golden"
-      ],
+      "owners": ["Kanisha Golden"],
       "zipCount": 7,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "453",
-      "owners": [
-        "Ellen Wong"
-      ],
+      "owners": ["Ellen Wong"],
       "zipCount": 12,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
@@ -1733,201 +1705,151 @@
     },
     {
       "territory": "498",
-      "owners": [
-        "David and Ruth Kim"
-      ],
+      "owners": ["David and Ruth Kim"],
       "zipCount": 22,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "520",
-      "owners": [
-        "Hai Tran"
-      ],
+      "owners": ["Hai Tran"],
       "zipCount": 13,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "528",
-      "owners": [
-        "Rohit Punj"
-      ],
+      "owners": ["Rohit Punj"],
       "zipCount": 23,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "530",
-      "owners": [
-        "Loc Lam"
-      ],
+      "owners": ["Loc Lam"],
       "zipCount": 25,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "550",
-      "owners": [
-        "Rajvir Sahota"
-      ],
+      "owners": ["Rajvir Sahota"],
       "zipCount": 23,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "448",
-      "owners": [
-        "Kanisha Golden"
-      ],
+      "owners": ["Kanisha Golden"],
       "zipCount": 19,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "412",
-      "owners": [
-        "Paul Terpeluk"
-      ],
+      "owners": ["Paul Terpeluk"],
       "zipCount": 9,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "372",
-      "owners": [
-        "Jim Carteris"
-      ],
+      "owners": ["Jim Carteris"],
       "zipCount": 14,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "522",
-      "owners": [
-        "Hai Tran"
-      ],
+      "owners": ["Hai Tran"],
       "zipCount": 13,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "405",
-      "owners": [
-        "Jason Landau"
-      ],
+      "owners": ["Jason Landau"],
       "zipCount": 14,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "426",
-      "owners": [
-        "Matt & Carolyn August"
-      ],
+      "owners": ["Matt & Carolyn August"],
       "zipCount": 16,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "133",
-      "owners": [
-        "Charles Park, Ray Kikavousi"
-      ],
+      "owners": ["Charles Park, Ray Kikavousi"],
       "zipCount": 12,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "413",
-      "owners": [
-        "Paul Terpeluk"
-      ],
+      "owners": ["Paul Terpeluk"],
       "zipCount": 43,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "492",
-      "owners": [
-        "David and Ruth Kim"
-      ],
+      "owners": ["David and Ruth Kim"],
       "zipCount": 12,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "433",
-      "owners": [
-        "Jim Carteris"
-      ],
+      "owners": ["Jim Carteris"],
       "zipCount": 15,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "449",
-      "owners": [
-        "Kanisha Golden"
-      ],
+      "owners": ["Kanisha Golden"],
       "zipCount": 14,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "305A",
-      "owners": [
-        "Jason Landau"
-      ],
+      "owners": ["Jason Landau"],
       "zipCount": 9,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "136",
-      "owners": [
-        "Charles Park, Ray Kikavousi"
-      ],
+      "owners": ["Charles Park, Ray Kikavousi"],
       "zipCount": 16,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "496",
-      "owners": [
-        "Matt & Carolyn August"
-      ],
+      "owners": ["Matt & Carolyn August"],
       "zipCount": 12,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "437",
-      "owners": [
-        "Jason Landau"
-      ],
+      "owners": ["Jason Landau"],
       "zipCount": 20,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "254",
-      "owners": [
-        "Mark and Charlie Paretchan"
-      ],
+      "owners": ["Mark and Charlie Paretchan"],
       "zipCount": 21,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "432",
-      "owners": [
-        "Jim Carteris"
-      ],
+      "owners": ["Jim Carteris"],
       "zipCount": 20,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "558",
-      "owners": [
-        "Matt & Carolyn August"
-      ],
+      "owners": ["Matt & Carolyn August"],
       "zipCount": 13,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "302",
-      "owners": [
-        "Charles Park, Ray Kikavousi"
-      ],
+      "owners": ["Charles Park, Ray Kikavousi"],
       "zipCount": 15,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     },
     {
       "territory": "541",
-      "owners": [
-        "Jason Landau"
-      ],
+      "owners": ["Jason Landau"],
       "zipCount": 8,
       "reason": "No listed owner is a member of the supplied SoCal Alliance Chat roster."
     }

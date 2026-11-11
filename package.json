@@ -3,10 +3,12 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "lint": "prettier --check .",
     "prepare:publish": "python3 tools/prepare-publish.py",
     "test:routes": "node tests/test_routes.mjs"
   },
   "devDependencies": {
-    "axe-core": "4.14.0"
+    "axe-core": "4.14.0",
+    "prettier": "^3.10.0"
   }
 }

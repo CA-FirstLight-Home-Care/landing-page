@@ -1,8 +1,8 @@
-> DEPLOYED: https://firstlight-socal.pages.dev/  -  November 10, 2026 (PST). See DEPLOYMENT.md for scope and live verification. Only the one-page HTML is served; local notes and evidence are not public. Earlier “not published” statements below describe the original drafting stage.
+> DEPLOYED: https://firstlight-socal.pages.dev/ - November 10, 2026 (PST). See DEPLOYMENT.md for scope and live verification. Only the one-page HTML is served; local notes and evidence are not public. Earlier “not published” statements below describe the original drafting stage.
 
 > CURRENT VERSION: modern v2 redesign is now `index.html`; the original is preserved as `index-v1.html`. Read `REDESIGN-NOTES.md` for design/accessibility results and use `redesign.py` for visual rebuilds. Legacy `build.py` alone regenerates the old v1 look. All territory/contact/source findings below remain unchanged.
 
-# FirstLight Home Care of Southern California  -  working draft
+# FirstLight Home Care of Southern California - working draft
 
 Built and reviewed November 10, 2026 (PST). **Local draft only. Not published or sent.**
 
@@ -12,20 +12,20 @@ Open `index.html` in a modern browser. It works directly from disk with no serve
 
 ## Files
 
-- `index.html`  -  one self-contained HTML file; styles, JavaScript, logo, office metadata and ZIP routing are embedded.
-- `desktop.png`  -  full-page 1440px desktop render with 91710 → Montclair result.
-- `mobile.png`  -  full-page 390px mobile render with the same lookup.
-- `desktop-top.png`, `mobile-top.png`, `mobile-lookup.png`  -  readable close-up screenshots.
-- `desktop-initial.png`, `mobile-initial.png`  -  initial empty-search state.
-- `overlap.png`, `uncovered.png`  -  overlap and no-match examples.
-- `offices.json`  -  formatted, easy-to-read/export office data and explicit `zipToOfficeIds` object. The same object is embedded in `index.html` in `<script id="office-data" type="application/json">`.
-- `source-current.xlsx`  -  fresh read-only download from the supplied Drive file; original named `20260708 CA Zip Codes.xlsx`.
-- `source-audit.json`  -  every selected source ZIP cell and raw owner/territory, excluded territories, duplicates and overlaps.
-- `verification.json`  -  source URLs, verification method and all contact-status notes.
-- `test-results.json`  -  passing automated Chromium tests.
-- `build.py`  -  repeatable offline build from the workbook and explicit territory allowlist. Python 3 + openpyxl required to rebuild, not to use the page.
-- `test_page.py`  -  local Playwright/installed-Chrome QA script; reads only this draft. Playwright is installed for this run in `/tmp/socal-playwright`.
-- `research/`  -  official corporate assets, directory HTML and initial HTTP fetch evidence.
+- `index.html` - one self-contained HTML file; styles, JavaScript, logo, office metadata and ZIP routing are embedded.
+- `desktop.png` - full-page 1440px desktop render with 91710 → Montclair result.
+- `mobile.png` - full-page 390px mobile render with the same lookup.
+- `desktop-top.png`, `mobile-top.png`, `mobile-lookup.png` - readable close-up screenshots.
+- `desktop-initial.png`, `mobile-initial.png` - initial empty-search state.
+- `overlap.png`, `uncovered.png` - overlap and no-match examples.
+- `offices.json` - formatted, easy-to-read/export office data and explicit `zipToOfficeIds` object. The same object is embedded in `index.html` in `<script id="office-data" type="application/json">`.
+- `source-current.xlsx` - fresh read-only download from the supplied Drive file; original named `20260708 CA Zip Codes.xlsx`.
+- `source-audit.json` - every selected source ZIP cell and raw owner/territory, excluded territories, duplicates and overlaps.
+- `verification.json` - source URLs, verification method and all contact-status notes.
+- `test-results.json` - passing automated Chromium tests.
+- `build.py` - repeatable offline build from the workbook and explicit territory allowlist. Python 3 + openpyxl required to rebuild, not to use the page.
+- `test_page.py` - local Playwright/installed-Chrome QA script; reads only this draft. Playwright is installed for this run in `/tmp/socal-playwright`.
+- `research/` - official corporate assets, directory HTML and initial HTTP fetch evidence.
 
 ## Coverage and exact source tab
 
@@ -35,29 +35,30 @@ The Google Sheets connector was tried first and returned “Office file; use Dri
 
 **225 unique ZIPs, 229 selected source rows, 16 territory IDs, 15 office cards.** Counts below are unique per office; their sum is 227 because two ZIPs occur in two offices. Scot's Simi Valley and Camarillo territories share one Simi Valley card: its verified official page explicitly serves Camarillo.
 
-| Office / verified website | Source territory IDs | ZIP count | Local alliance team displayed | Main phone |
-|---|---|---:|---|---|
-| [Burbank](https://www.firstlighthomecare.com/home-healthcare-burbank/) | 191C | 14 | David Kapojos | (626) 360-0048 |
-| [Chino Hills](https://www.firstlighthomecare.com/home-healthcare-chino-hills/) | 513 | 7 | Kevan Kwan; Lori Kwan; David Kapojos | (909) 660-8900 |
-| [Glendale](https://www.firstlighthomecare.com/home-healthcare-glendale/) | 360A | 27 | David Kapojos | (626) 360-0048 |
-| [Irvine](https://www.firstlighthomecare.com/home-healthcare-irvine/) | 397A | 20 | Prashant Kumar (PK) | (949) 704-2969 |
-| [Marina del Rey](https://www.firstlighthomecare.com/home-healthcare-marina-del-rey/) | 535 | 12 | Jason Taylor | (310) 956-4811 |
-| Montclair (URL TBD) | 576 | 5 | Gary Cheung; YongMing Zheng | (840) 200-9868 |
-| [Pasadena](https://www.firstlighthomecare.com/home-healthcare-pasadena-altadena/) | 346 | 28 | David Kapojos | (626) 360-0048 |
-| [Rancho Cucamonga](https://www.firstlighthomecare.com/home-healthcare-rancho-cucamonga/) | 296 | 9 | Lolita Pinto | (909) 321-4466 |
-| [San Clemente](https://www.firstlighthomecare.com/home-healthcare-sanclemente/) | 460 | 11 | Sean Ruitenberg; Stephanie Ruitenberg | (949) 940-8500 |
-| [San Gabriel](https://www.firstlighthomecare.com/home-healthcare-san-gabriel/) | 174B | 12 | David Kapojos | (626) 360-0048 |
-| [Simi Valley](https://www.firstlighthomecare.com/home-healthcare-simi-valley/) | 442, 493 | 32 | Scot Kuratsu | (805) 915-4706 |
-| [Temecula](https://www.firstlighthomecare.com/home-healthcare-temecula-valley/) | 309C | 9 | Prashant Kumar (PK) | (951) 395-0821 |
-| [West Hollywood](https://www.firstlighthomecare.com/home-healthcare-west-hollywood/) | 561 | 9 | Zachary Wechsler | (424) 230-8833 |
-| [Whittier](https://www.firstlighthomecare.com/home-healthcare-whittier/) | 470 | 15 | Julio Rivas | (562) 800-6922 |
-| [Woodland Hills–Calabasas](https://www.firstlighthomecare.com/home-healthcare-woodland-hills/) | 490 | 17 | Tommy Webber; Megan Lange | (818) 443-1281 |
+| Office / verified website                                                                      | Source territory IDs | ZIP count | Local alliance team displayed         | Main phone     |
+| ---------------------------------------------------------------------------------------------- | -------------------- | --------: | ------------------------------------- | -------------- |
+| [Burbank](https://www.firstlighthomecare.com/home-healthcare-burbank/)                         | 191C                 |        14 | David Kapojos                         | (626) 360-0048 |
+| [Chino Hills](https://www.firstlighthomecare.com/home-healthcare-chino-hills/)                 | 513                  |         7 | Kevan Kwan; Lori Kwan; David Kapojos  | (909) 660-8900 |
+| [Glendale](https://www.firstlighthomecare.com/home-healthcare-glendale/)                       | 360A                 |        27 | David Kapojos                         | (626) 360-0048 |
+| [Irvine](https://www.firstlighthomecare.com/home-healthcare-irvine/)                           | 397A                 |        20 | Prashant Kumar (PK)                   | (949) 704-2969 |
+| [Marina del Rey](https://www.firstlighthomecare.com/home-healthcare-marina-del-rey/)           | 535                  |        12 | Jason Taylor                          | (310) 956-4811 |
+| Montclair (URL TBD)                                                                            | 576                  |         5 | Gary Cheung; YongMing Zheng           | (840) 200-9868 |
+| [Pasadena](https://www.firstlighthomecare.com/home-healthcare-pasadena-altadena/)              | 346                  |        28 | David Kapojos                         | (626) 360-0048 |
+| [Rancho Cucamonga](https://www.firstlighthomecare.com/home-healthcare-rancho-cucamonga/)       | 296                  |         9 | Lolita Pinto                          | (909) 321-4466 |
+| [San Clemente](https://www.firstlighthomecare.com/home-healthcare-sanclemente/)                | 460                  |        11 | Sean Ruitenberg; Stephanie Ruitenberg | (949) 940-8500 |
+| [San Gabriel](https://www.firstlighthomecare.com/home-healthcare-san-gabriel/)                 | 174B                 |        12 | David Kapojos                         | (626) 360-0048 |
+| [Simi Valley](https://www.firstlighthomecare.com/home-healthcare-simi-valley/)                 | 442, 493             |        32 | Scot Kuratsu                          | (805) 915-4706 |
+| [Temecula](https://www.firstlighthomecare.com/home-healthcare-temecula-valley/)                | 309C                 |         9 | Prashant Kumar (PK)                   | (951) 395-0821 |
+| [West Hollywood](https://www.firstlighthomecare.com/home-healthcare-west-hollywood/)           | 561                  |         9 | Zachary Wechsler                      | (424) 230-8833 |
+| [Whittier](https://www.firstlighthomecare.com/home-healthcare-whittier/)                       | 470                  |        15 | Julio Rivas                           | (562) 800-6922 |
+| [Woodland Hills–Calabasas](https://www.firstlighthomecare.com/home-healthcare-woodland-hills/) | 490                  |        17 | Tommy Webber; Megan Lange             | (818) 443-1281 |
 
 ### Included people
 
 All 15 supplied Chat members are represented in matching alliance teams: Lolita Pinto, David Kapojos, Gary Cheung, Jason Taylor, Julio Rivas, Kevan Kwan, Lori Kwan, Megan Lange, Prashant Kumar (PK; displayed as Gary requested instead of Prashant Rameshkumar), Scot Kuratsu, Sean Ruitenberg, Stephanie Ruitenberg, Tommy Webber, YongMing Zheng, Zachary Wechsler.
 
 Matching notes:
+
 - Source `Gary Chueng`, territory 576, is Gary Cheung: corrected display spelling, supported by the workbook Owners label and supplied Montclair context. Its five ZIPs are exactly **91710, 91762, 91763, 91766, 91767**. No other Ontario/Pomona/Chino codes were inferred.
 - Source `Thomas Webber`, territory 490, is displayed as Tommy Webber. The official office page directly names “Tommy Webber and Megan Lange.”
 - YongMing Zheng and Lori Kwan are alliance-team contacts based on the supplied meeting context, not separately named ZIP owners in the source. No additional ZIPs were assigned to them. The UI says **“Local alliance team”**, not an exhaustive legal ownership roster.

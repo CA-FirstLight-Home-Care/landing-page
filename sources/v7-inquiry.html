@@ -1,19 +1,127 @@
-<dialog id="inquiry-dialog" aria-labelledby="inquiry-title" aria-describedby="inquiry-placeholder" aria-modal="true">
- <div class="inquiry-header"><button type="button" id="inquiry-close" class="quiet-button" aria-label="Close inquiry dialog">Close <span aria-hidden="true">×</span></button><h2 id="inquiry-title" tabindex="-1">Try an inquiry.</h2><p class="placeholder-tag">Placeholder only</p></div>
- <p id="inquiry-placeholder" class="demo-warning">Nothing is sent to an office. Use fictional details only. This is a preview, not a request for care.</p>
- <form id="inquiry-form" autocomplete="off" novalidate>
-  <div id="inquiry-errors" class="validation-summary" role="alert" tabindex="-1" hidden></div>
-  <div class="inquiry-fields">
-   <div class="inquiry-field"><label for="inquiry-name">Name (required)</label><input id="inquiry-name" name="name" maxlength="100" required aria-describedby="inquiry-name-error"><p class="field-error" id="inquiry-name-error" hidden></p></div>
-   <div class="inquiry-field"><label for="inquiry-phone">Phone (required)</label><input id="inquiry-phone" name="phone" type="tel" inputmode="tel" maxlength="30" required aria-describedby="inquiry-phone-error"><p class="field-error" id="inquiry-phone-error" hidden></p></div>
-   <div class="inquiry-field"><label for="inquiry-email">Email (optional)</label><input id="inquiry-email" name="email" type="email" maxlength="254" aria-describedby="inquiry-email-error"><p class="field-error" id="inquiry-email-error" hidden></p></div>
-   <div class="inquiry-field"><label for="inquiry-time">Best time to contact (optional)</label><input id="inquiry-time" name="best-time" maxlength="100" placeholder="For example, weekday afternoons"></div>
-   <div class="inquiry-field inquiry-wide"><label for="inquiry-relationship">Relationship to the person needing care (optional)</label><select id="inquiry-relationship" name="relationship"><option value="">Choose if you would like</option><option value="self">I need care</option><option value="partner">Spouse or partner</option><option value="child">Adult child</option><option value="family">Other family member</option><option value="friend">Friend</option><option value="other">Other</option><option value="unsure">Prefer not to say</option></select></div>
-   <div class="inquiry-field"><label for="inquiry-office">Chosen office</label><input id="inquiry-office" name="office" readonly></div>
-   <div class="inquiry-field"><label for="inquiry-zip">Care ZIP</label><input id="inquiry-zip" name="zip" readonly></div>
-   <div class="inquiry-field inquiry-wide"><label for="inquiry-message">Message or notes (optional)</label><textarea id="inquiry-message" name="message" rows="8" maxlength="5000" aria-describedby="inquiry-message-help"></textarea><p class="field-hint" id="inquiry-message-help">Filled from your care results. You can edit it. Nothing is stored or sent.</p></div>
+<dialog
+  id="inquiry-dialog"
+  aria-labelledby="inquiry-title"
+  aria-describedby="inquiry-placeholder"
+  aria-modal="true"
+>
+  <div class="inquiry-header">
+    <button
+      type="button"
+      id="inquiry-close"
+      class="quiet-button"
+      aria-label="Close inquiry dialog"
+    >
+      Close <span aria-hidden="true">×</span>
+    </button>
+    <h2 id="inquiry-title" tabindex="-1">Try an inquiry.</h2>
+    <p class="placeholder-tag">Placeholder only</p>
   </div>
-  <button type="submit" class="button inquiry-submit">Try demo submission</button>
- </form>
- <div id="inquiry-confirmation" role="status" tabindex="-1" hidden><h3>Demo complete. Nothing was sent.</h3><p>No inquiry, appointment or request for care was created. Close this preview and use the Call button to reach your office.</p><button class="button" id="inquiry-confirm-close" type="button">Close preview</button></div>
+  <p id="inquiry-placeholder" class="demo-warning">
+    Nothing is sent to an office. Use fictional details only. This is a preview,
+    not a request for care.
+  </p>
+  <form id="inquiry-form" autocomplete="off" novalidate>
+    <div
+      id="inquiry-errors"
+      class="validation-summary"
+      role="alert"
+      tabindex="-1"
+      hidden
+    ></div>
+    <div class="inquiry-fields">
+      <div class="inquiry-field">
+        <label for="inquiry-name">Name (required)</label
+        ><input
+          id="inquiry-name"
+          name="name"
+          maxlength="100"
+          required
+          aria-describedby="inquiry-name-error"
+        />
+        <p class="field-error" id="inquiry-name-error" hidden></p>
+      </div>
+      <div class="inquiry-field">
+        <label for="inquiry-phone">Phone (required)</label
+        ><input
+          id="inquiry-phone"
+          name="phone"
+          type="tel"
+          inputmode="tel"
+          maxlength="30"
+          required
+          aria-describedby="inquiry-phone-error"
+        />
+        <p class="field-error" id="inquiry-phone-error" hidden></p>
+      </div>
+      <div class="inquiry-field">
+        <label for="inquiry-email">Email (optional)</label
+        ><input
+          id="inquiry-email"
+          name="email"
+          type="email"
+          maxlength="254"
+          aria-describedby="inquiry-email-error"
+        />
+        <p class="field-error" id="inquiry-email-error" hidden></p>
+      </div>
+      <div class="inquiry-field">
+        <label for="inquiry-time">Best time to contact (optional)</label
+        ><input
+          id="inquiry-time"
+          name="best-time"
+          maxlength="100"
+          placeholder="For example, weekday afternoons"
+        />
+      </div>
+      <div class="inquiry-field inquiry-wide">
+        <label for="inquiry-relationship"
+          >Relationship to the person needing care (optional)</label
+        ><select id="inquiry-relationship" name="relationship">
+          <option value="">Choose if you would like</option>
+          <option value="self">I need care</option>
+          <option value="partner">Spouse or partner</option>
+          <option value="child">Adult child</option>
+          <option value="family">Other family member</option>
+          <option value="friend">Friend</option>
+          <option value="other">Other</option>
+          <option value="unsure">Prefer not to say</option>
+        </select>
+      </div>
+      <div class="inquiry-field">
+        <label for="inquiry-office">Chosen office</label
+        ><input id="inquiry-office" name="office" readonly />
+      </div>
+      <div class="inquiry-field">
+        <label for="inquiry-zip">Care ZIP</label
+        ><input id="inquiry-zip" name="zip" readonly />
+      </div>
+      <div class="inquiry-field inquiry-wide">
+        <label for="inquiry-message">Message or notes (optional)</label
+        ><textarea
+          id="inquiry-message"
+          name="message"
+          rows="8"
+          maxlength="5000"
+          aria-describedby="inquiry-message-help"
+        ></textarea>
+        <p class="field-hint" id="inquiry-message-help">
+          Filled from your care results. You can edit it. Nothing is stored or
+          sent.
+        </p>
+      </div>
+    </div>
+    <button type="submit" class="button inquiry-submit">
+      Try demo submission
+    </button>
+  </form>
+  <div id="inquiry-confirmation" role="status" tabindex="-1" hidden>
+    <h3>Demo complete. Nothing was sent.</h3>
+    <p>
+      No inquiry, appointment or request for care was created. Close this
+      preview and use the Call button to reach your office.
+    </p>
+    <button class="button" id="inquiry-confirm-close" type="button">
+      Close preview
+    </button>
+  </div>
 </dialog>

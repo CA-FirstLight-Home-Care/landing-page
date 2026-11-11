@@ -1,10 +1,6 @@
 {
   "burbank": {
-    "cities": [
-      "Burbank",
-      "Los Angeles",
-      "Glendale"
-    ],
+    "cities": ["Burbank", "Los Angeles", "Glendale"],
     "publicAreaSource": "https://www.firstlighthomecare.com/home-healthcare-burbank/",
     "note": "Original area labels plus exact Areas We Serve list from the previously verified public office page. ZIPs unchanged."
   },
@@ -65,12 +61,7 @@
     "note": "Original area labels plus exact Areas We Serve list from the previously verified public office page. ZIPs unchanged."
   },
   "montclair": {
-    "cities": [
-      "Chino",
-      "Montclair",
-      "Pomona",
-      "Ontario"
-    ],
+    "cities": ["Chino", "Montclair", "Pomona", "Ontario"],
     "publicAreaSource": null,
     "note": "Original area labels plus exact Areas We Serve list from the previously verified public office page. ZIPs unchanged."
   },
@@ -169,22 +160,12 @@
     "note": "Original area labels plus exact Areas We Serve list from the previously verified public office page. ZIPs unchanged."
   },
   "whittier": {
-    "cities": [
-      "Whittier",
-      "La Habra",
-      "La Mirada",
-      "Santa Fe Springs"
-    ],
+    "cities": ["Whittier", "La Habra", "La Mirada", "Santa Fe Springs"],
     "publicAreaSource": "https://www.firstlighthomecare.com/home-healthcare-whittier/",
     "note": "Original area labels plus exact Areas We Serve list from the previously verified public office page. ZIPs unchanged."
   },
   "woodland-hills": {
-    "cities": [
-      "Woodland Hills",
-      "Calabasas",
-      "Agoura Hills",
-      "Topanga"
-    ],
+    "cities": ["Woodland Hills", "Calabasas", "Agoura Hills", "Topanga"],
     "publicAreaSource": null,
     "note": "Original area labels plus exact Areas We Serve list from the previously verified public office page. ZIPs unchanged."
   }

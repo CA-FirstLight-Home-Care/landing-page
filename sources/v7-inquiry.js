@@ -1,17 +1,191 @@
-(()=>{
- const dialog=document.getElementById('inquiry-dialog'),form=document.getElementById('inquiry-form'),errors=document.getElementById('inquiry-errors'),confirmation=document.getElementById('inquiry-confirmation');let opener=null,stamp='';
- function note(){const o=OFFICES[selectedOfficeId];if(!o)return '';const g=buildCareGuide(careAnswers);return ['Care conversation for '+displayOfficeName(o)+'.','Care ZIP: '+(careZip||'not provided')+'.',...(careAnswers.who==='couple'?['Two people in the same home need support. Quiz answers describe the person with greater needs. Each person needs a separate care assessment and benefits review.']:[]),...CARE_QUESTIONS.map(q=>q[1]+' '+answerLabel(q)),'Suggested services: '+(g.care.map(x=>x.name).join(', ')||'To discuss with the local team')+'.','Programs and payment topics: '+(g.programs.map(x=>x.name).join(', ')||'Costs and available guidance')+'.','A discussion guide only, not an assessment or eligibility decision. Placeholder only. Nothing sent.'].join('\n');}
- function prefill(){const o=OFFICES[selectedOfficeId];if(!o)return;const next=JSON.stringify([selectedOfficeId,careZip,careAnswers]);document.getElementById('inquiry-office').value=displayOfficeName(o);document.getElementById('inquiry-zip').value=careZip||'Not provided';if(next!==stamp){document.getElementById('inquiry-message').value=note();stamp=next;}}
- window.prefillCareContact=prefill;
- function clearErrors(){errors.hidden=true;errors.textContent='';form.querySelectorAll('[aria-invalid]').forEach(e=>e.removeAttribute('aria-invalid'));form.querySelectorAll('.field-error').forEach(e=>{e.hidden=true;e.textContent='';});}
- function open(button){opener=button;prefill();clearErrors();form.hidden=false;confirmation.hidden=true;dialog.showModal();document.body.classList.add('inquiry-open');dialog.scrollTop=0;document.getElementById('inquiry-title').focus({preventScroll:true});}
- function close(restore=true){if(dialog.open)dialog.close();document.body.classList.remove('inquiry-open');if(restore){const target=opener?.isConnected?opener:document.getElementById('contact-title');target.focus({preventScroll:true});target.scrollIntoView({block:'nearest',behavior:'instant'});}}
- document.addEventListener('click',event=>{const button=event.target.closest('#inquiry-open');if(button&&selectedOfficeId){event.preventDefault();open(button);}});
- document.getElementById('inquiry-close').addEventListener('click',()=>close());document.getElementById('inquiry-confirm-close').addEventListener('click',()=>close());dialog.addEventListener('cancel',event=>{event.preventDefault();close();});
- dialog.addEventListener('keydown',event=>{if(event.key!=='Tab')return;const items=[...dialog.querySelectorAll('button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),a[href],[tabindex="0"]')].filter(e=>e.getClientRects().length);const first=items[0],last=items[items.length-1];if(!first)return;if(!items.includes(document.activeElement)){event.preventDefault();(event.shiftKey?last:first).focus();}else if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}});
- form.addEventListener('submit',event=>{event.preventDefault();clearErrors();const invalid=[],name=document.getElementById('inquiry-name'),phone=document.getElementById('inquiry-phone'),email=document.getElementById('inquiry-email');if(!name.value.trim())invalid.push([name,'Enter a name for this demo.']);const n=phone.value.replace(/\D/g,'');if(n.length<10||n.length>15||!/^[+()0-9.\s-]+$/.test(phone.value))invalid.push([phone,'Enter a phone number with 10 to 15 digits.']);if(email.value&&email.validity.typeMismatch)invalid.push([email,'Enter a valid email address, or leave it blank.']);if(invalid.length){for(const [input,message]of invalid){input.setAttribute('aria-invalid','true');const error=document.getElementById(input.id+'-error');error.textContent=message;error.hidden=false;}errors.innerHTML='<strong>Please check these fields.</strong><ul>'+invalid.map(([input,message])=>'<li><a href="#'+input.id+'">'+esc(message)+'</a></li>').join('')+'</ul>';errors.hidden=false;errors.focus();errors.scrollIntoView({block:'nearest'});return;}form.reset();stamp='';form.hidden=true;confirmation.hidden=false;confirmation.focus();confirmation.scrollIntoView({block:'nearest'});});
- errors.addEventListener('click',event=>{const a=event.target.closest('a');if(a){event.preventDefault();document.getElementById(a.hash.slice(1))?.focus();}});
- document.addEventListener('officechange',()=>{stamp='';if(dialog.open)close(false);});
- window.addEventListener('pagehide',()=>{close(false);form.reset();stamp='';opener=null;clearErrors();confirmation.hidden=true;form.hidden=false;});
- const params=new URLSearchParams(location.search),id=params.get('office');if(id){if(Object.hasOwn(OFFICES,id)){const z=params.get('zip')||'';if(/^[0-9]{5}$/.test(z)&&(OFFICE_DATA.zipToOfficeIds[z]||[]).includes(id))document.getElementById('zip').value=z;setOffice(id,true);}else document.getElementById('zip-message').textContent='That office link was not recognized. Please choose an office by city, ZIP or location.';}
+(() => {
+  const dialog = document.getElementById("inquiry-dialog"),
+    form = document.getElementById("inquiry-form"),
+    errors = document.getElementById("inquiry-errors"),
+    confirmation = document.getElementById("inquiry-confirmation");
+  let opener = null,
+    stamp = "";
+  function note() {
+    const o = OFFICES[selectedOfficeId];
+    if (!o) return "";
+    const g = buildCareGuide(careAnswers);
+    return [
+      "Care conversation for " + displayOfficeName(o) + ".",
+      "Care ZIP: " + (careZip || "not provided") + ".",
+      ...(careAnswers.who === "couple"
+        ? [
+            "Two people in the same home need support. Quiz answers describe the person with greater needs. Each person needs a separate care assessment and benefits review.",
+          ]
+        : []),
+      ...CARE_QUESTIONS.map((q) => q[1] + " " + answerLabel(q)),
+      "Suggested services: " +
+        (g.care.map((x) => x.name).join(", ") ||
+          "To discuss with the local team") +
+        ".",
+      "Programs and payment topics: " +
+        (g.programs.map((x) => x.name).join(", ") ||
+          "Costs and available guidance") +
+        ".",
+      "A discussion guide only, not an assessment or eligibility decision. Placeholder only. Nothing sent.",
+    ].join("\n");
+  }
+  function prefill() {
+    const o = OFFICES[selectedOfficeId];
+    if (!o) return;
+    const next = JSON.stringify([selectedOfficeId, careZip, careAnswers]);
+    document.getElementById("inquiry-office").value = displayOfficeName(o);
+    document.getElementById("inquiry-zip").value = careZip || "Not provided";
+    if (next !== stamp) {
+      document.getElementById("inquiry-message").value = note();
+      stamp = next;
+    }
+  }
+  window.prefillCareContact = prefill;
+  function clearErrors() {
+    errors.hidden = true;
+    errors.textContent = "";
+    form
+      .querySelectorAll("[aria-invalid]")
+      .forEach((e) => e.removeAttribute("aria-invalid"));
+    form.querySelectorAll(".field-error").forEach((e) => {
+      e.hidden = true;
+      e.textContent = "";
+    });
+  }
+  function open(button) {
+    opener = button;
+    prefill();
+    clearErrors();
+    form.hidden = false;
+    confirmation.hidden = true;
+    dialog.showModal();
+    document.body.classList.add("inquiry-open");
+    dialog.scrollTop = 0;
+    document.getElementById("inquiry-title").focus({ preventScroll: true });
+  }
+  function close(restore = true) {
+    if (dialog.open) dialog.close();
+    document.body.classList.remove("inquiry-open");
+    if (restore) {
+      const target = opener?.isConnected
+        ? opener
+        : document.getElementById("contact-title");
+      target.focus({ preventScroll: true });
+      target.scrollIntoView({ block: "nearest", behavior: "instant" });
+    }
+  }
+  document.addEventListener("click", (event) => {
+    const button = event.target.closest("#inquiry-open");
+    if (button && selectedOfficeId) {
+      event.preventDefault();
+      open(button);
+    }
+  });
+  document
+    .getElementById("inquiry-close")
+    .addEventListener("click", () => close());
+  document
+    .getElementById("inquiry-confirm-close")
+    .addEventListener("click", () => close());
+  dialog.addEventListener("cancel", (event) => {
+    event.preventDefault();
+    close();
+  });
+  dialog.addEventListener("keydown", (event) => {
+    if (event.key !== "Tab") return;
+    const items = [
+      ...dialog.querySelectorAll(
+        'button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),a[href],[tabindex="0"]',
+      ),
+    ].filter((e) => e.getClientRects().length);
+    const first = items[0],
+      last = items[items.length - 1];
+    if (!first) return;
+    if (!items.includes(document.activeElement)) {
+      event.preventDefault();
+      (event.shiftKey ? last : first).focus();
+    } else if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    clearErrors();
+    const invalid = [],
+      name = document.getElementById("inquiry-name"),
+      phone = document.getElementById("inquiry-phone"),
+      email = document.getElementById("inquiry-email");
+    if (!name.value.trim()) invalid.push([name, "Enter a name for this demo."]);
+    const n = phone.value.replace(/\D/g, "");
+    if (n.length < 10 || n.length > 15 || !/^[+()0-9.\s-]+$/.test(phone.value))
+      invalid.push([phone, "Enter a phone number with 10 to 15 digits."]);
+    if (email.value && email.validity.typeMismatch)
+      invalid.push([email, "Enter a valid email address, or leave it blank."]);
+    if (invalid.length) {
+      for (const [input, message] of invalid) {
+        input.setAttribute("aria-invalid", "true");
+        const error = document.getElementById(input.id + "-error");
+        error.textContent = message;
+        error.hidden = false;
+      }
+      errors.innerHTML =
+        "<strong>Please check these fields.</strong><ul>" +
+        invalid
+          .map(
+            ([input, message]) =>
+              '<li><a href="#' + input.id + '">' + esc(message) + "</a></li>",
+          )
+          .join("") +
+        "</ul>";
+      errors.hidden = false;
+      errors.focus();
+      errors.scrollIntoView({ block: "nearest" });
+      return;
+    }
+    form.reset();
+    stamp = "";
+    form.hidden = true;
+    confirmation.hidden = false;
+    confirmation.focus();
+    confirmation.scrollIntoView({ block: "nearest" });
+  });
+  errors.addEventListener("click", (event) => {
+    const a = event.target.closest("a");
+    if (a) {
+      event.preventDefault();
+      document.getElementById(a.hash.slice(1))?.focus();
+    }
+  });
+  document.addEventListener("officechange", () => {
+    stamp = "";
+    if (dialog.open) close(false);
+  });
+  window.addEventListener("pagehide", () => {
+    close(false);
+    form.reset();
+    stamp = "";
+    opener = null;
+    clearErrors();
+    confirmation.hidden = true;
+    form.hidden = false;
+  });
+  const params = new URLSearchParams(location.search),
+    id = params.get("office");
+  if (id) {
+    if (Object.hasOwn(OFFICES, id)) {
+      const z = params.get("zip") || "";
+      if (
+        /^[0-9]{5}$/.test(z) &&
+        (OFFICE_DATA.zipToOfficeIds[z] || []).includes(id)
+      )
+        document.getElementById("zip").value = z;
+      setOffice(id, true);
+    } else
+      document.getElementById("zip-message").textContent =
+        "That office link was not recognized. Please choose an office by city, ZIP or location.";
+  }
 })();

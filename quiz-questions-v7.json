@@ -4,22 +4,10 @@
     "Who are you finding help for?",
     "Answer about the adult who needs care. No names are needed. For two people in one home, answer the remaining questions about the person with greater needs. Each person needs a separate assessment.",
     [
-      [
-        "self",
-        "Myself"
-      ],
-      [
-        "loved",
-        "A family member or friend"
-      ],
-      [
-        "couple",
-        "Two people in the same home, such as a couple"
-      ],
-      [
-        "other",
-        "Someone else"
-      ]
+      ["self", "Myself"],
+      ["loved", "A family member or friend"],
+      ["couple", "Two people in the same home, such as a couple"],
+      ["other", "Someone else"]
     ]
   ],
   [
@@ -27,18 +15,9 @@
     "What everyday help would be useful?",
     "A care plan can combine practical support and hands-on help.",
     [
-      [
-        "companion",
-        "Company, meals or light household tasks"
-      ],
-      [
-        "personal",
-        "Help with bathing, dressing or toileting"
-      ],
-      [
-        "both",
-        "Both kinds of help"
-      ]
+      ["companion", "Company, meals or light household tasks"],
+      ["personal", "Help with bathing, dressing or toileting"],
+      ["both", "Both kinds of help"]
     ]
   ],
   [
@@ -46,18 +25,9 @@
     "What best describes their memory needs?",
     "This guide does not diagnose dementia. You do not need to share medical details.",
     [
-      [
-        "none",
-        "No memory concerns"
-      ],
-      [
-        "concerns",
-        "Some memory changes or concerns"
-      ],
-      [
-        "diagnosed",
-        "A dementia diagnosis has been made"
-      ]
+      ["none", "No memory concerns"],
+      ["concerns", "Some memory changes or concerns"],
+      ["diagnosed", "A dementia diagnosis has been made"]
     ]
   ],
   [
@@ -65,14 +35,8 @@
     "Is this after a hospital stay or surgery?",
     "This can also include recovery after an illness or injury.",
     [
-      [
-        "yes",
-        "Yes"
-      ],
-      [
-        "no",
-        "No"
-      ]
+      ["yes", "Yes"],
+      ["no", "No"]
     ]
   ],
   [
@@ -80,26 +44,11 @@
     "When might help be needed?",
     "Choose all that apply. Overnight or 24-hour care is a schedule, not a separate service.",
     [
-      [
-        "occasional",
-        "A few hours or occasional visits"
-      ],
-      [
-        "regular",
-        "Regular daytime visits"
-      ],
-      [
-        "overnight",
-        "Overnight care"
-      ],
-      [
-        "aroundclock",
-        "24-hour care (day and night)"
-      ],
-      [
-        "respite",
-        "Give our family caregiver a break"
-      ]
+      ["occasional", "A few hours or occasional visits"],
+      ["regular", "Regular daytime visits"],
+      ["overnight", "Overnight care"],
+      ["aroundclock", "24-hour care (day and night)"],
+      ["respite", "Give our family caregiver a break"]
     ]
   ],
   [
@@ -107,18 +56,9 @@
     "Is the person a Veteran or a surviving spouse?",
     "This is only a starting point. Military service alone does not establish benefit eligibility.",
     [
-      [
-        "veteran",
-        "A Veteran"
-      ],
-      [
-        "spouse",
-        "A surviving spouse of a Veteran"
-      ],
-      [
-        "no",
-        "Neither"
-      ]
+      ["veteran", "A Veteran"],
+      ["spouse", "A surviving spouse of a Veteran"],
+      ["no", "Neither"]
     ]
   ],
   [
@@ -126,14 +66,8 @@
     "Do they have long-term care insurance?",
     "This is different from regular health insurance. No policy numbers or documents are needed.",
     [
-      [
-        "yes",
-        "Yes"
-      ],
-      [
-        "no",
-        "No"
-      ]
+      ["yes", "Yes"],
+      ["no", "No"]
     ]
   ],
   [
@@ -141,34 +75,13 @@
     "How are they thinking about paying for care?",
     "No balances, income amounts or financial records are requested.",
     [
-      [
-        "private",
-        "Income, savings or other assets"
-      ],
-      [
-        "family",
-        "Family members will help pay"
-      ],
-      [
-        "insurance",
-        "An existing long-term care insurance policy"
-      ],
-      [
-        "va",
-        "Veterans benefits"
-      ],
-      [
-        "home",
-        "Home equity or selling a home"
-      ],
-      [
-        "waiting",
-        "Waiting for insurance, a home sale or benefits"
-      ],
-      [
-        "options",
-        "Not sure how to pay. I would like to explore options"
-      ]
+      ["private", "Income, savings or other assets"],
+      ["family", "Family members will help pay"],
+      ["insurance", "An existing long-term care insurance policy"],
+      ["va", "Veterans benefits"],
+      ["home", "Home equity or selling a home"],
+      ["waiting", "Waiting for insurance, a home sale or benefits"],
+      ["options", "Not sure how to pay. I would like to explore options"]
     ]
   ]
 ]

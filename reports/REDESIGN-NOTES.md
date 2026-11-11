@@ -1,4 +1,4 @@
-# Modern redesign  -  November 10, 2026 (PST)
+# Modern redesign - November 10, 2026 (PST)
 
 ## Deliverables
 

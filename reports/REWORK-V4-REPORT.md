@@ -1,6 +1,7 @@
-# FirstLight SoCal  -  interactive draft (v4)
+# FirstLight SoCal - interactive draft (v4)
 
 ## Published release
+
 - Public URL: https://firstlight-socal.pages.dev/
 - Existing Pages project: `firstlight-socal`; account `1b316c4a14fed87a4c721863184e0c77` (`gcheung@firstlighthomecare.com`).
 - Deployment: `75a8c277-98e5-4bc0-b65d-92833e5951a6`; completed November 10, 2026, 8:32:07 PM PST.
@@ -11,21 +12,23 @@
 - Only the self-contained HTML is served, at `/` and `/index.html`. The existing Pages advanced-mode routing wrapper returns 404 for every other path. No source directory, helper, screenshot, report, office JSON, backup, or test evidence was uploaded as a public asset. No other project, domain, plan, or account setting changed.
 
 ## 1. Short care guide
+
 The optional guide sits directly before the existing six service descriptions. It is a native, keyboard-operable disclosure, closed initially so the page stays approachable. Seven questions use fieldsets, legends, radio groups, and an explicit “not sure” option:
 
-| Question | Effect on the guide |
-| --- | --- |
-| Who are you finding help for? | Self / family member or friend / someone else / not sure. Context only; does not infer a care level. |
-| What everyday help would be useful? | Company, meals, or light household tasks → Companion care. Bathing, dressing, or toileting → Personal care. Both → both service descriptions. Not sure → no unsupported inference. |
-| Are memory changes a concern? | Yes → Dementia & Alzheimer’s care, with a reason about familiar routines and preferences; explicitly not a diagnosis. |
-| Is this after a hospital stay, surgery, illness, or injury? | Yes → Post-surgery & transitional care, for everyday help while getting back home. |
-| What kind of schedule are you considering? | Occasional / regular daytime / overnight or day-and-night / not sure. Adds a scheduling note, not a seventh service or a promise of availability. Overnight staffing and rest arrangements must be confirmed locally. |
-| Does a family caregiver need time to rest or be away? | Yes → Respite care, explaining a caregiver break with support in place. |
-| Is the person a Veteran or a surviving spouse? | Yes → Veteran care. Benefit options remain conditional on eligibility and office participation. |
+| Question                                                    | Effect on the guide                                                                                                                                                                                                   |
+| ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Who are you finding help for?                               | Self / family member or friend / someone else / not sure. Context only; does not infer a care level.                                                                                                                  |
+| What everyday help would be useful?                         | Company, meals, or light household tasks → Companion care. Bathing, dressing, or toileting → Personal care. Both → both service descriptions. Not sure → no unsupported inference.                                    |
+| Are memory changes a concern?                               | Yes → Dementia & Alzheimer’s care, with a reason about familiar routines and preferences; explicitly not a diagnosis.                                                                                                 |
+| Is this after a hospital stay, surgery, illness, or injury? | Yes → Post-surgery & transitional care, for everyday help while getting back home.                                                                                                                                    |
+| What kind of schedule are you considering?                  | Occasional / regular daytime / overnight or day-and-night / not sure. Adds a scheduling note, not a seventh service or a promise of availability. Overnight staffing and rest arrangements must be confirmed locally. |
+| Does a family caregiver need time to rest or be away?       | Yes → Respite care, explaining a caregiver break with support in place.                                                                                                                                               |
+| Is the person a Veteran or a surviving spouse?              | Yes → Veteran care. Benefit options remain conditional on eligibility and office participation.                                                                                                                       |
 
 Matching services combine in the original six-service order and each includes a plain reason. All-unknown answers do not manufacture a recommendation. The guide does not diagnose, prescribe care, decide benefits, or replace an assessment. Recommendations are cleared if an answer changes. Answers are not transmitted or persistently stored. Validation provides a focused, linked error summary, group-level errors, and an announced result. Reset and page exit clear answers. Copy refers only to the existing service descriptions; no new clinical or price claims were added.
 
 ## 2. FAQ controls and local search
+
 - Expand all / Collapse all apply to the currently matching questions (all 13 when there is no search).
 - Search ranks existing questions with keyword/synonym scoring in the page. No model, server search, external API, or generated answer is involved.
 - Visible badge: **“Placeholder: future AI assistant.”** Supporting copy: **“No AI is connected. This demo matches keywords and similar words in the FAQs on this page. Your search stays here.”**
@@ -34,23 +37,29 @@ Matching services combine in the original six-service order and each includes a 
 - Accessible search label, status announcements, native details/summary, and keyboard controls remain available. FAQ content and pricing wording were not changed this round.
 
 ## 3. Subordinate contact placeholders
+
 The existing selected-office call button remains the real, primary contact action. “Other ways to connect” is an optional disclosure below it, explicitly marked **Placeholders**. Both demos require a selected office and reset when the selected office changes.
 
 ### Booking
-A button-styled anchor says “Preview booking link  -  Placeholder.” Its actual target is an in-page demo notice, not a real Calendly account. The text `calendly.com/placeholder` is only an example of a future link. Clicking opens no account, makes no request, and announces that nothing was booked.
+
+A button-styled anchor says “Preview booking link - Placeholder.” Its actual target is an in-page demo notice, not a real Calendly account. The text `calendly.com/placeholder` is only an example of a future link. Clicking opens no account, makes no request, and announces that nothing was booked.
 
 ### Contact form
+
 Includes name, phone, email, five-digit ZIP, preferred phone/email contact, message, and a required demo acknowledgment checkbox. Name, ZIP, preferred contact, and acknowledgment are required. Phone is required for phone preference; email for email preference. Supplied optional contact values are also validated. Message is optional (500-character maximum).
 
-Clearly labeled **Placeholder** and **demo only** throughout. Visitors are asked to use fictional details and not enter health information. The checkbox acknowledges that no request will be sent; it is not a marketing-consent claim. Accessible validation uses a focused linked error summary and associated inline errors. Successful validation clears fields and shows **“Demo only  -  not sent.”** It does not echo personal values or claim an office received anything. Without JavaScript, both forms fail closed. A Content Security Policy blocks form submissions and application network connections (`form-action 'none'; connect-src 'none'`). No backend, real AI, calendar integration, email, CRM, cookies, or persistent storage was added.
+Clearly labeled **Placeholder** and **demo only** throughout. Visitors are asked to use fictional details and not enter health information. The checkbox acknowledges that no request will be sent; it is not a marketing-consent claim. Accessible validation uses a focused linked error summary and associated inline errors. Successful validation clears fields and shows **“Demo only - not sent.”** It does not echo personal values or claim an office received anything. Without JavaScript, both forms fail closed. A Content Security Policy blocks form submissions and application network connections (`form-action 'none'; connect-src 'none'`). No backend, real AI, calendar integration, email, CRM, cookies, or persistent storage was added.
 
 ## Preserved
+
 All 15 offices, all 225 unique ZIP mappings and overlaps, approved source rules, public contact details/TBDs, consent-only device-local geolocation, verified Instagram/X/LinkedIn links, equal office treatment, existing service/FAQ facts, pricing caveats, and the single selected-office contact path remain unchanged. No new Drive research was needed for this interaction-only revision; the prior source-backed service and FAQ text remains intact.
 
 Exact footer remains:
+
 > Draft – each office is independently owned and operated. Not yet approved by FirstLight Home Care corporate.
 
 ## Tests and review
+
 - Original functional suite: 45/45 passed, including all ZIP mappings and source/footer integrity.
 - Location/social suite: 96/96 passed.
 - Legacy accessibility suite: 42/42 targeted checks, 15 axe states, zero violations.
@@ -67,7 +76,9 @@ Exact footer remains:
 - Fresh live desktop/mobile and expanded-state captures were viewed critically. New sections stack cleanly on mobile; no horizontal clipping, overlapping controls, or focus issues found. Expanded examples use Irvine rather than featuring Montclair.
 
 ## Evidence and screenshots (local only)
+
 All paths below are under `/workspace/socal-landing/`:
+
 - `desktop.png`, `mobile.png`: fresh initial-state full-page captures.
 - `new-sections-desktop.png`, `new-sections-mobile.png`: quiz recommendations, matching FAQ and contact placeholders visible.
 - `quiz-desktop.png`, `quiz-mobile.png`: readable guide detail.
@@ -78,4 +89,5 @@ All paths below are under `/workspace/socal-landing/`:
 - `deployment/preflight-v4.json`: published-content fingerprint and routing scope.
 
 ## Future work intentionally not connected
+
 A real AI assistant, actual calendar account, or sending contact form needs separate implementation and approval. This release is deliberately a safe interactive draft; actual care inquiries still use the verified selected-office phone button.
