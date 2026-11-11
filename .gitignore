@@ -16,6 +16,12 @@ env/
 
 # Test / Local Evidence Artifacts
 tests/evidence/
+/v7-test-results.json
+/live-v7-results.json
+/live-v7-modal-zoom.json
+/programs-v7-*-results.json
+/couples-v7-*-results.json
+/contrast-v7-results.json
 *.png
 *.jpg
 *.jpeg
