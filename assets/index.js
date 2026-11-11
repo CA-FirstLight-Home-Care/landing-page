@@ -939,8 +939,81 @@ function continueWithOffice(id) {
   document.getElementById("lookup-results").innerHTML = "";
   setOffice(id, true);
 }
+const cityInput = document.getElementById("zip"),
+  citySuggestions = document.getElementById("city-suggestions");
+let activeCitySuggestion = -1;
+function closeCitySuggestions() {
+  activeCitySuggestion = -1;
+  citySuggestions.hidden = true;
+  citySuggestions.replaceChildren();
+  cityInput.setAttribute("aria-expanded", "false");
+  cityInput.removeAttribute("aria-activedescendant");
+}
+function selectCitySuggestion(city) {
+  cityInput.value = city;
+  closeCitySuggestions();
+  runLookup();
+}
+function renderCitySuggestions() {
+  const query = cityInput.value.trim().toLocaleLowerCase("en-US");
+  if (!query || /^[0-9]+$/.test(query)) {
+    closeCitySuggestions();
+    return;
+  }
+  const cities = [
+    ...new Map(
+      Object.values(CITY_OFFICES).map((entry) => [entry.city, entry]),
+    ).values(),
+  ];
+  const startsWith = cities.filter((entry) =>
+    entry.city.toLocaleLowerCase("en-US").startsWith(query),
+  );
+  const contains = cities.filter((entry) => {
+    const city = entry.city.toLocaleLowerCase("en-US");
+    return !city.startsWith(query) && city.includes(query);
+  });
+  const matches = [...startsWith, ...contains].slice(0, 8);
+  if (!matches.length) {
+    closeCitySuggestions();
+    return;
+  }
+  citySuggestions.replaceChildren(
+    ...matches.map((entry, index) => {
+      const option = document.createElement("li");
+      option.id = `city-suggestion-${index}`;
+      option.setAttribute("role", "option");
+      option.setAttribute("aria-selected", "false");
+      option.textContent = entry.city;
+      option.addEventListener("mousedown", (event) => event.preventDefault());
+      option.addEventListener("click", () => selectCitySuggestion(entry.city));
+      return option;
+    }),
+  );
+  citySuggestions.hidden = false;
+  cityInput.setAttribute("aria-expanded", "true");
+}
+function moveCitySuggestion(direction) {
+  const options = citySuggestions.querySelectorAll('[role="option"]');
+  if (!options.length) return false;
+  activeCitySuggestion =
+    activeCitySuggestion === -1
+      ? direction > 0
+        ? 0
+        : options.length - 1
+      : (activeCitySuggestion + direction + options.length) % options.length;
+  options.forEach((option, index) => {
+    const active = index === activeCitySuggestion;
+    option.setAttribute("aria-selected", String(active));
+    if (active) {
+      cityInput.setAttribute("aria-activedescendant", option.id);
+      option.scrollIntoView({ block: "nearest" });
+    }
+  });
+  return true;
+}
 function runLookup(event) {
   if (event) event.preventDefault();
+  closeCitySuggestions();
   const input = document.getElementById("zip"),
     message = document.getElementById("zip-message"),
     value = input.value.trim();
@@ -1009,17 +1082,42 @@ document.addEventListener("submit", (event) => {
   runLookup();
 });
 document.getElementById("area-next").addEventListener("click", runLookup);
-document.getElementById("zip").addEventListener("keydown", (event) => {
+cityInput.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowDown" && moveCitySuggestion(1)) {
+    event.preventDefault();
+    return;
+  }
+  if (event.key === "ArrowUp" && moveCitySuggestion(-1)) {
+    event.preventDefault();
+    return;
+  }
+  if (event.key === "Escape" && !citySuggestions.hidden) {
+    event.preventDefault();
+    closeCitySuggestions();
+    return;
+  }
   if (event.key === "Enter") {
     event.preventDefault();
+    const active = citySuggestions.querySelector('[aria-selected="true"]');
+    if (active) {
+      selectCitySuggestion(active.textContent);
+      return;
+    }
     runLookup();
   }
 });
-document.getElementById("zip").addEventListener("input", () => {
+cityInput.addEventListener("input", () => {
   document.getElementById("zip-message").textContent = "";
-  document.getElementById("zip").removeAttribute("aria-invalid");
+  cityInput.removeAttribute("aria-invalid");
   document.getElementById("lookup-results").innerHTML = "";
   clearOffice();
+  renderCitySuggestions();
+});
+cityInput.addEventListener("blur", () => {
+  window.setTimeout(closeCitySuggestions, 120);
+});
+document.addEventListener("click", (event) => {
+  if (!event.target.closest("#zip, #city-suggestions")) closeCitySuggestions();
 });
 document.addEventListener("click", (event) => {
   const a = event.target.closest(".select-office");
@@ -1052,123 +1150,6 @@ function socialProfiles(o) {
     return '<p class="social-unverified micro">Local social profiles have not yet been confirmed for this office.</p>';
   return `<details class="social-profiles"><summary>Office social profiles</summary><p class="micro">Optional links for ${esc(displayOfficeName(o))}. Each opens a new tab.</p><ul class="social-links">${links.map((x) => `<li><a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(displayOfficeName(o))} on ${esc(x.platform)} (opens in a new tab)">${socialIcon(x.platform)}<span>${esc(x.platform)}</span></a></li>`).join("")}</ul></details>`;
 }
-(() => {
-  const button = document.getElementById("find-closest"),
-    status = document.getElementById("location-status"),
-    results = document.getElementById("lookup-results"),
-    zip = document.getElementById("zip");
-  let requestId = 0;
-  function release() {
-    button.disabled = false;
-    button.removeAttribute("aria-busy");
-  }
-  function cancelLocation() {
-    requestId++;
-    release();
-    status.textContent = "";
-  }
-  zip.addEventListener("input", cancelLocation);
-  document
-    .getElementById("area-next")
-    .addEventListener("click", cancelLocation);
-  zip.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") cancelLocation();
-  });
-  document.addEventListener("click", (e) => {
-    if (e.target.closest(".select-office")) cancelLocation();
-  });
-  function distanceKm(a, b, c, d) {
-    const r = Math.PI / 180,
-      x = (c - a) * r,
-      y = (d - b) * r;
-    const h =
-      Math.sin(x / 2) ** 2 +
-      Math.cos(a * r) * Math.cos(c * r) * Math.sin(y / 2) ** 2;
-    return 6371 * 2 * Math.atan2(Math.sqrt(h), Math.sqrt(Math.max(0, 1 - h)));
-  }
-  button.addEventListener("click", () => {
-    const token = ++requestId;
-    clearOffice();
-    results.innerHTML = "";
-    zip.value = "";
-    zip.removeAttribute("aria-invalid");
-    document.getElementById("zip-message").textContent = "";
-    if (!navigator.geolocation) {
-      status.textContent =
-        "Location is not available in this browser. Please enter the ZIP where care is needed.";
-      return;
-    }
-    button.disabled = true;
-    button.setAttribute("aria-busy", "true");
-    status.textContent =
-      "Your browser may ask permission to use your location. ZIP search is always available.";
-    function fail(error) {
-      if (token !== requestId) return;
-      release();
-      const messages = {
-        1: "Location was not shared. Please enter the ZIP where care is needed instead.",
-        2: "Your location could not be found. Please enter the ZIP where care is needed instead.",
-        3: "Finding your location took too long. Please enter the ZIP where care is needed instead.",
-      };
-      status.textContent =
-        messages[error && error.code] ||
-        "Location is unavailable. Please enter the ZIP where care is needed instead.";
-    }
-    try {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          if (token !== requestId) return;
-          const { latitude, longitude } = position.coords;
-          if (
-            !Number.isFinite(latitude) ||
-            !Number.isFinite(longitude) ||
-            Math.abs(latitude) > 90 ||
-            Math.abs(longitude) > 180
-          ) {
-            fail({ code: 2 });
-            return;
-          }
-          release();
-          const ranked = OFFICE_DATA.offices
-            .map((o) => ({
-              office: o,
-              km: distanceKm(
-                latitude,
-                longitude,
-                OFFICE_EXTRAS[o.id].latitude,
-                OFFICE_EXTRAS[o.id].longitude,
-              ),
-            }))
-            .sort((a, b) => a.km - b.km);
-          const nearest = ranked.filter(
-              (x) => Math.abs(x.km - ranked[0].km) < 0.01,
-            ),
-            miles = ranked[0].km / 1.609344;
-          const distance =
-            miles < 1
-              ? "less than 1 mile away"
-              : `about ${Math.round(miles)} miles away`;
-          if (nearest.length === 1) {
-            status.textContent = "";
-            results.innerHTML = "";
-            setOffice(nearest[0].office.id, true);
-            return;
-          }
-          status.textContent =
-            "More than 1 team is near this spot. Enter the ZIP where care is needed.";
-          results.innerHTML = zipPrompt("Your area");
-          results.scrollIntoView({ block: "start" });
-          results.focus({ preventScroll: true });
-        },
-        fail,
-        { enableHighAccuracy: false, timeout: 10000, maximumAge: 60000 },
-      );
-    } catch (error) {
-      fail(error);
-    }
-  });
-})();
-
 // Local, optional guide. Never send, persist, or put care/financial answers in a URL.
 const CARE_QUESTIONS = [
   [

@@ -38,8 +38,10 @@ for (const [path, file] of Object.entries(pages)) {
     assert.doesNotMatch(local, /<style(?:\s|>)/);
     assert.doesNotMatch(local, /<script(?:\s[^>]*)?>\s*[^<\s]/);
     if (file === "index.html") {
-      assert.doesNotMatch(local, /<datalist|city-suggestions/);
-      assert.match(local, /aria-label="Use my location"/);
+      assert.doesNotMatch(local, /<datalist|find-closest|location-status/);
+      assert.match(local, /role="combobox"/);
+      assert.match(local, /id="city-suggestions"/);
+      assert.match(local, /id="city-suggestions"[\s\S]*?role="listbox"/);
       assert.doesNotMatch(local, /id="quiz-next"|id="quiz-skip"|Skip question/);
       assert.match(local, /id="quiz-schedule-done"/);
     }

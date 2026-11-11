@@ -139,54 +139,37 @@
               <div class="area-question" id="question-area">
                 <h3 id="area-title" tabindex="-1">Where should care happen?</h3>
                 <p class="field-hint" id="area-hint">
-                  Enter a city or 5-digit ZIP, or use your location if you
-                  prefer.
+                  Enter a city or 5-digit ZIP. Start typing to see matching
+                  cities.
                 </p>
-                <div class="zip-field-header">
-                  <label class="zip-label" for="zip">City or ZIP</label>
-                  <button
-                    aria-describedby="zip-privacy location-status"
-                    aria-label="Use my location"
-                    class="location-button"
-                    id="find-closest"
-                    title="Use my location"
-                    type="button"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      focusable="false"
-                      viewBox="0 0 24 24"
-                    >
-                      <circle cx="12" cy="12" r="6"></circle>
-                      <circle cx="12" cy="12" r="2"></circle>
-                      <path d="M12 2v4m0 12v4M2 12h4m12 0h4"></path>
-                    </svg>
-                  </button>
-                </div>
+                <label class="zip-label" for="zip">City or ZIP</label>
                 <div class="zip-row">
                   <input
+                    aria-autocomplete="list"
+                    aria-controls="city-suggestions"
                     aria-describedby="zip-privacy zip-message area-hint"
+                    aria-expanded="false"
                     autocomplete="off"
                     disabled=""
                     id="zip"
                     maxlength="100"
                     name="zip"
                     placeholder="City or ZIP"
+                    role="combobox"
                     type="text"
                   />
                 </div>
+                <ul
+                  aria-label="Matching cities"
+                  class="city-suggestions"
+                  hidden=""
+                  id="city-suggestions"
+                  role="listbox"
+                ></ul>
                 <p class="micro privacy" id="zip-privacy">
-                  Your search stays on this page. Location is used only with
-                  your permission and stays on your device.
+                  Your search stays on this page.
                 </p>
                 <p class="message" id="zip-message" role="alert"></p>
-                <p
-                  aria-atomic="true"
-                  aria-live="polite"
-                  class="message location-status"
-                  id="location-status"
-                  role="status"
-                ></p>
                 <div class="area-actions">
                   <button class="button" id="area-next" type="button">
                     Continue <span aria-hidden="true">→</span>
@@ -714,18 +697,6 @@
           </p>
         </div>
         <div class="footer-links"><a href="#main">Back to top ↑</a></div>
-      </div>
-      <div class="wrap">
-        <p class="geo-credit">
-          Approximate office-address coordinates: U.S. Census Geocoder and ©
-          <a
-            aria-label="OpenStreetMap contributors, data attribution (opens in a new tab)"
-            href="https://www.openstreetmap.org/copyright"
-            rel="noopener noreferrer"
-            target="_blank"
-            >OpenStreetMap contributors</a
-          >. Using your location does not confirm service territory.
-        </p>
       </div>
     </footer>
 

@@ -399,20 +399,11 @@ summary {
   margin: 4px 0 18px;
 }
 
-.zip-field-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  max-width: 520px;
-  margin-bottom: 7px;
-}
-
 .zip-label {
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.025em;
-  margin: 0;
+  margin: 0 0 7px;
 }
 
 .zip-row {
@@ -1716,70 +1707,6 @@ summary {
     transform: none;
   }
 }
-.location-button {
-  display: inline-grid;
-  flex: none;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  min-width: 36px;
-  min-height: 36px;
-  padding: 0;
-  border: 1px solid #196642;
-  border-radius: 50%;
-  background: #fff;
-  color: #134d32;
-  cursor: pointer;
-  transition:
-    background 0.18s,
-    transform 0.18s,
-    box-shadow 0.18s;
-}
-
-.location-button svg {
-  width: 18px;
-  height: 18px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.8;
-}
-
-.location-button:hover {
-  background: #eaf4ec;
-  box-shadow: 0 5px 16px rgba(23, 78, 48, 0.062745098);
-}
-
-.location-button:focus-visible {
-  outline: 3px solid #005ec2;
-  outline-offset: 3px;
-}
-
-.location-button:disabled {
-  cursor: wait;
-  opacity: 1;
-  color: #365948;
-  background: #edf3ef;
-}
-
-.location-status:empty {
-  margin: 0;
-  min-height: 0;
-}
-
-.location-status:not(:empty) {
-  margin: 0.8rem 0 0;
-  padding: 0.8rem 1rem;
-  background: #eef5ef;
-  border-radius: 12px;
-  color: #17442c;
-}
-
-.geo-distance {
-  font-size: 0.88rem;
-  color: #365547;
-  margin: 0.2rem 0 1rem;
-}
-
 .social-profiles {
   margin-top: 1.25rem;
   padding-top: 0.5rem;
@@ -1856,25 +1783,7 @@ summary {
   font-size: 0.8rem;
 }
 
-.geo-credit {
-  font-size: 0.75rem;
-  line-height: 1.65;
-  margin-top: 1rem;
-  max-width: 85ch;
-  color: #526459;
-}
-
-.geo-credit a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  color: #174e32;
-  text-underline-offset: 3px;
-}
-
-.geo-credit a:focus-visible,
 .social-links a:focus-visible,
-.location-button:focus-visible,
 .social-profiles summary:focus-visible {
   outline: 3px solid #005ec2;
   outline-offset: 4px;
@@ -1892,15 +1801,11 @@ summary {
   }
 }
 @media (max-width: 520px) {
-  .geo-credit {
-    font-size: 0.72rem;
-  }
   .social-links a {
     padding: 0.55rem 0.65rem;
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .location-button,
   .social-links a {
     transition: none;
   }
@@ -4699,6 +4604,34 @@ body.inquiry-open {
   flex: 1;
   width: 100%;
   min-width: 0;
+}
+
+.city-suggestions {
+  list-style: none;
+  max-width: 520px;
+  margin: 6px 0 0;
+  padding: 6px;
+  border: 1px solid #9cb395;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(24, 60, 41, 0.0941176471);
+}
+
+.city-suggestions [role="option"] {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: #153b29;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.city-suggestions [aria-selected="true"],
+.city-suggestions [role="option"]:hover {
+  background: #e7f3df;
 }
 
 .area-actions {
