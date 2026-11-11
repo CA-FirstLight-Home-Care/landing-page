@@ -139,170 +139,58 @@
               <div class="area-question" id="question-area">
                 <h3 id="area-title" tabindex="-1">Where should care happen?</h3>
                 <p class="field-hint" id="area-hint">
-                  A city or ZIP is enough. If you type a letter, matching cities
-                  show up. Use my location only if you want to.
+                  Enter a city or 5-digit ZIP, or use your location if you
+                  prefer.
                 </p>
-                <label class="zip-label" for="zip">City or ZIP</label>
-                <div class="zip-row">
-                  <input
-                    aria-autocomplete="list"
-                    aria-controls="city-suggestions"
-                    aria-describedby="zip-privacy zip-message area-hint"
-                    autocomplete="off"
-                    disabled=""
-                    id="zip"
-                    list="main-cities"
-                    maxlength="100"
-                    name="zip"
-                    placeholder="City or ZIP"
-                    type="text"
-                  /><datalist id="main-cities">
-                    <option value="Agoura Hills"></option>
-                    <option value="Alta Loma"></option>
-                    <option value="Altadena"></option>
-                    <option value="Arcadia"></option>
-                    <option value="Azusa"></option>
-                    <option value="Beverly Grove"></option>
-                    <option value="Beverly Hills"></option>
-                    <option value="Beverlywood"></option>
-                    <option value="Burbank"></option>
-                    <option value="Calabasas"></option>
-                    <option value="Camarillo"></option>
-                    <option value="Carthay"></option>
-                    <option value="Century City"></option>
-                    <option value="Cheviot Hills"></option>
-                    <option value="Chino"></option>
-                    <option value="Chino Hills"></option>
-                    <option value="Claremont"></option>
-                    <option value="Costa Mesa"></option>
-                    <option value="Culver City"></option>
-                    <option value="Dana Point"></option>
-                    <option value="Del Rey"></option>
-                    <option value="Diamond Bar"></option>
-                    <option value="Duarte"></option>
-                    <option value="El Monte"></option>
-                    <option value="Fairfax District"></option>
-                    <option value="Fallbrook"></option>
-                    <option value="Fillmore"></option>
-                    <option value="Glendale"></option>
-                    <option value="Glendora"></option>
-                    <option value="Glenoak Hills"></option>
-                    <option value="Greater San Gabriel Valley"></option>
-                    <option value="Hancock Park"></option>
-                    <option value="Hemet"></option>
-                    <option value="Irvine"></option>
-                    <option value="La Cañada Flintridge"></option>
-                    <option value="La Crescenta"></option>
-                    <option value="La Habra"></option>
-                    <option value="La Mirada"></option>
-                    <option value="La Verne"></option>
-                    <option value="Ladera Ranch"></option>
-                    <option value="Laguna Niguel"></option>
-                    <option value="Lake Elsinore"></option>
-                    <option value="Lemon Heights"></option>
-                    <option value="Los Angeles"></option>
-                    <option value="Mar Vista"></option>
-                    <option value="Marina del Rey"></option>
-                    <option value="Menifee"></option>
-                    <option value="Miracle Mile"></option>
-                    <option value="Monrovia"></option>
-                    <option value="Montclair"></option>
-                    <option value="Montrose"></option>
-                    <option value="Moorpark"></option>
-                    <option value="Murrieta"></option>
-                    <option value="North Tustin"></option>
-                    <option value="Northwood"></option>
-                    <option value="Ontario"></option>
-                    <option value="Orange"></option>
-                    <option value="Palms"></option>
-                    <option value="Park La Brea"></option>
-                    <option value="Pasadena"></option>
-                    <option value="Pomona"></option>
-                    <option value="Rancho Cucamonga"></option>
-                    <option value="Rancho Mission Viejo"></option>
-                    <option value="Rosemead"></option>
-                    <option value="San Clemente"></option>
-                    <option value="San Dimas"></option>
-                    <option value="San Gabriel"></option>
-                    <option value="San Juan Capistrano"></option>
-                    <option value="San Marino"></option>
-                    <option value="Santa Ana"></option>
-                    <option value="Santa Fe Springs"></option>
-                    <option value="Santa Monica"></option>
-                    <option value="Sierra Madre"></option>
-                    <option value="Simi Valley"></option>
-                    <option value="South Pasadena"></option>
-                    <option value="Temecula"></option>
-                    <option value="Temescal Valley"></option>
-                    <option value="Temple City"></option>
-                    <option value="Thousand Oaks"></option>
-                    <option value="Topanga"></option>
-                    <option value="Tustin"></option>
-                    <option value="Upland"></option>
-                    <option value="Venice"></option>
-                    <option value="Verdugo City"></option>
-                    <option value="Villa Park"></option>
-                    <option value="West Hills"></option>
-                    <option value="West Hollywood"></option>
-                    <option value="West Los Angeles"></option>
-                    <option value="Westlake Village"></option>
-                    <option value="Whittier"></option>
-                    <option value="Wildomar"></option>
-                    <option value="Winchester"></option>
-                    <option value="Woodbridge"></option>
-                    <option value="Woodland Hills"></option>
-                  </datalist>
-                </div>
-                <ul
-                  aria-label="City suggestions"
-                  class="city-suggestions"
-                  hidden=""
-                  id="city-suggestions"
-                ></ul>
-                <p class="micro privacy" id="zip-privacy">
-                  No name, email, or care details. Your search stays in this
-                  page.
-                </p>
-                <p class="message" id="zip-message" role="alert"></p>
-                <div class="area-actions">
-                  <button class="button" id="area-next" type="button">
-                    Next question <span aria-hidden="true">→</span>
-                  </button>
-                </div>
-                <div class="geo-option" hidden="" id="geo-option">
-                  <div class="geo-divider">
-                    <span>or, if care is near you</span>
-                  </div>
+                <div class="zip-field-header">
+                  <label class="zip-label" for="zip">City or ZIP</label>
                   <button
-                    aria-describedby="location-privacy location-help"
+                    aria-describedby="zip-privacy location-status"
+                    aria-label="Use my location"
                     class="location-button"
                     id="find-closest"
+                    title="Use my location"
                     type="button"
                   >
                     <svg
                       aria-hidden="true"
                       focusable="false"
-                      viewbox="0 0 24 24"
+                      viewBox="0 0 24 24"
                     >
                       <circle cx="12" cy="12" r="6"></circle>
                       <circle cx="12" cy="12" r="2"></circle>
-                      <path d="M12 2v4m0 12v4M2 12h4m12 0h4"></path></svg
-                    >Use my location
+                      <path d="M12 2v4m0 12v4M2 12h4m12 0h4"></path>
+                    </svg>
                   </button>
-                  <p class="micro" id="location-privacy">
-                    Only with your permission. This page keeps your location on
-                    your device.
-                  </p>
-                  <p class="micro" id="location-help">
-                    This estimates distance only. It does not confirm coverage.
-                  </p>
-                  <p
-                    aria-atomic="true"
-                    aria-live="polite"
-                    class="message location-status"
-                    id="location-status"
-                    role="status"
-                  ></p>
+                </div>
+                <div class="zip-row">
+                  <input
+                    aria-describedby="zip-privacy zip-message area-hint"
+                    autocomplete="off"
+                    disabled=""
+                    id="zip"
+                    maxlength="100"
+                    name="zip"
+                    placeholder="City or ZIP"
+                    type="text"
+                  />
+                </div>
+                <p class="micro privacy" id="zip-privacy">
+                  Your search stays on this page. Location is used only with
+                  your permission and stays on your device.
+                </p>
+                <p class="message" id="zip-message" role="alert"></p>
+                <p
+                  aria-atomic="true"
+                  aria-live="polite"
+                  class="message location-status"
+                  id="location-status"
+                  role="status"
+                ></p>
+                <div class="area-actions">
+                  <button class="button" id="area-next" type="button">
+                    Continue <span aria-hidden="true">→</span>
+                  </button>
                 </div>
                 <div
                   aria-atomic="true"
@@ -746,17 +634,18 @@
                 </fieldset>
                 <div class="wizard-actions">
                   <button class="quiet-button" id="quiz-back" type="button">
-                    Back</button
-                  ><button class="quiet-button" id="quiz-skip" type="button">
-                    Skip question</button
-                  ><button class="button" id="quiz-next" type="submit">
-                    Next question <span aria-hidden="true">→</span>
+                    Back
+                  </button>
+                  <button
+                    class="button"
+                    disabled=""
+                    hidden=""
+                    id="quiz-schedule-done"
+                    type="button"
+                  >
+                    Done
                   </button>
                 </div>
-                <p class="micro">
-                  No answer is required. “Next” also continues if you leave a
-                  question blank.
-                </p>
               </form>
             </div>
           </div>

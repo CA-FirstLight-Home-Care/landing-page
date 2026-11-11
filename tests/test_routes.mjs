@@ -37,6 +37,12 @@ for (const [path, file] of Object.entries(pages)) {
     );
     assert.doesNotMatch(local, /<style(?:\s|>)/);
     assert.doesNotMatch(local, /<script(?:\s[^>]*)?>\s*[^<\s]/);
+    if (file === "index.html") {
+      assert.doesNotMatch(local, /<datalist|city-suggestions/);
+      assert.match(local, /aria-label="Use my location"/);
+      assert.doesNotMatch(local, /id="quiz-next"|id="quiz-skip"|Skip question/);
+      assert.match(local, /id="quiz-schedule-done"/);
+    }
     assert.match(response.headers.get("Content-Type"), /text\/html/);
     assert.match(
       response.headers.get("Content-Security-Policy"),

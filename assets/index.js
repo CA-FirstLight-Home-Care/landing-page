@@ -941,11 +941,6 @@ function continueWithOffice(id) {
 }
 function runLookup(event) {
   if (event) event.preventDefault();
-  const suggestBox = document.getElementById("city-suggestions");
-  if (suggestBox) {
-    suggestBox.hidden = true;
-    suggestBox.innerHTML = "";
-  }
   const input = document.getElementById("zip"),
     message = document.getElementById("zip-message"),
     value = input.value.trim();
@@ -1020,57 +1015,12 @@ document.getElementById("zip").addEventListener("keydown", (event) => {
     runLookup();
   }
 });
-function suggestCities() {
-  const input = document.getElementById("zip"),
-    box = document.getElementById("city-suggestions"),
-    value = input.value.trim();
-  if (!/[A-Za-z]/.test(value)) {
-    box.hidden = true;
-    box.innerHTML = "";
-    return;
-  }
-  const q = value.toLocaleLowerCase("en-US");
-  const cities = [
-    ...new Map(Object.values(CITY_OFFICES).map((c) => [c.city, c])).values(),
-  ];
-  const ranked = cities
-    .filter((c) => c.city.toLocaleLowerCase("en-US").startsWith(q))
-    .concat(
-      cities.filter((c) => {
-        const name = c.city.toLocaleLowerCase("en-US");
-        return !name.startsWith(q) && name.includes(q);
-      }),
-    )
-    .slice(0, 6);
-  if (!ranked.length) {
-    box.hidden = true;
-    box.innerHTML = "";
-    return;
-  }
-  box.innerHTML = ranked
-    .map(
-      (c) =>
-        `<li><button type="button" data-city="${esc(c.city)}">${esc(c.city)}</button></li>`,
-    )
-    .join("");
-  box.hidden = false;
-}
 document.getElementById("zip").addEventListener("input", () => {
   document.getElementById("zip-message").textContent = "";
   document.getElementById("zip").removeAttribute("aria-invalid");
   document.getElementById("lookup-results").innerHTML = "";
   clearOffice();
-  suggestCities();
 });
-document
-  .getElementById("city-suggestions")
-  .addEventListener("click", (event) => {
-    const button = event.target.closest("[data-city]");
-    if (!button) return;
-    const input = document.getElementById("zip");
-    input.value = button.dataset.city;
-    runLookup();
-  });
 document.addEventListener("click", (event) => {
   const a = event.target.closest(".select-office");
   if (!a) return;
@@ -1108,7 +1058,6 @@ function socialProfiles(o) {
     results = document.getElementById("lookup-results"),
     zip = document.getElementById("zip");
   let requestId = 0;
-  document.getElementById("geo-option").hidden = false;
   function release() {
     button.disabled = false;
     button.removeAttribute("aria-busy");
@@ -1643,11 +1592,11 @@ function renderCareQuestion(focus = false) {
   progress.max = total;
   progress.value = n;
   progress.textContent = n + " of " + total;
-  document.getElementById("quiz-back").textContent = "Back";
-  document.getElementById("quiz-next").innerHTML =
-    (questionIndex === CARE_QUESTIONS.length - 1
-      ? "See my next step"
-      : "Next question") + ' <span aria-hidden="true">→</span>';
+  const scheduleDone = document.getElementById("quiz-schedule-done"),
+    isScheduleQuestion =
+      !askingLocation && CARE_QUESTIONS[questionIndex][0] === "schedule";
+  scheduleDone.hidden = !isScheduleQuestion;
+  scheduleDone.disabled = !careAnswers.schedule?.length;
   if (focus)
     moveCareFocus(
       document.getElementById(
@@ -1766,16 +1715,14 @@ function renderCareSummary() {
     ).join("") +
     '</dl></details><p class="privacy-note">This summary is built on your device. Nothing is saved or sent. Your answers are cleared when you leave this page.</p>';
 }
-function advanceQuestion(skip = false) {
+function advanceQuestion() {
   const key = CARE_QUESTIONS[questionIndex][0],
     field = document.getElementById("question-" + key),
     checked = field.querySelector("input:checked");
-  careAnswers[key] = skip
-    ? "skipped"
-    : key === "schedule"
+  careAnswers[key] =
+    key === "schedule"
       ? Array.from(field.querySelectorAll("input:checked")).map((e) => e.value)
       : checked?.value || "skipped";
-  if (skip) field.querySelectorAll("input").forEach((e) => (e.checked = false));
   if (questionIndex < CARE_QUESTIONS.length - 1) {
     questionIndex++;
     renderCareQuestion(true);
@@ -1785,10 +1732,6 @@ function advanceQuestion(skip = false) {
     goCareStep(2);
   }
 }
-document.getElementById("care-quiz").addEventListener("submit", (event) => {
-  event.preventDefault();
-  if (selectedOfficeId) advanceQuestion();
-});
 document.getElementById("care-quiz").addEventListener("change", (event) => {
   if (!event.target.name?.startsWith("quiz-")) return;
   const key = event.target.name.slice(5);
@@ -1803,14 +1746,29 @@ document.getElementById("care-quiz").addEventListener("change", (event) => {
     else if (event.target.checked)
       document.getElementById("quiz-schedule-unsure").checked = false;
     careAnswers.schedule = all.filter((e) => e.checked).map((e) => e.value);
+    document.getElementById("quiz-schedule-done").disabled =
+      careAnswers.schedule.length === 0;
   } else careAnswers[key] = event.target.value;
   guideCompleted = false;
   contactUnlocked = false;
   updateCareSteps();
 });
-document
-  .getElementById("quiz-skip")
-  .addEventListener("click", () => advanceQuestion(true));
+document.getElementById("care-quiz").addEventListener("click", (event) => {
+  const input = event.target;
+  if (
+    !(input instanceof HTMLInputElement) ||
+    input.type !== "radio" ||
+    !input.name.startsWith("quiz-")
+  )
+    return;
+  queueMicrotask(() => {
+    if (input.checked && !input.closest(".wizard-question").hidden)
+      advanceQuestion();
+  });
+});
+document.getElementById("quiz-schedule-done").addEventListener("click", () => {
+  if (careAnswers.schedule?.length) advanceQuestion();
+});
 document.getElementById("quiz-back").addEventListener("click", () => {
   if (questionIndex === 0) {
     askingLocation = true;
@@ -1842,9 +1800,6 @@ window.addEventListener("pagehide", () => {
   careZip = "";
   document.getElementById("zip").value = "";
   document.getElementById("lookup-results").textContent = "";
-  const suggestBox = document.getElementById("city-suggestions");
-  suggestBox.hidden = true;
-  suggestBox.innerHTML = "";
   window.resetCareFlow();
   renderCareQuestion();
 });

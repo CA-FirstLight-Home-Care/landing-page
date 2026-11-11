@@ -349,12 +349,19 @@ summary {
   color: var(--muted);
   margin: 4px 0 18px;
 }
+.zip-field-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 520px;
+  margin-bottom: 7px;
+}
 .zip-label {
-  display: block;
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.025em;
-  margin: 0 0 7px;
+  margin: 0;
 }
 .zip-row {
   display: flex;
@@ -1516,38 +1523,17 @@ summary {
   }
 }
 
-.geo-option {
-  margin-top: 0.2rem;
-}
-.geo-divider {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  margin: 0.4rem 0 1rem;
-  color: var(--muted);
-  font-size: 0.86rem;
-  font-weight: 600;
-}
-.geo-divider:before,
-.geo-divider:after {
-  content: "";
-  height: 1px;
-  background: #becdc4;
-  flex: 1;
-}
 .location-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  min-height: 48px;
-  padding: 0.75rem 1.15rem;
-  border: 1.5px solid #196642;
-  border-radius: 999px;
+  display: inline-grid;
+  flex: none;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid #196642;
+  border-radius: 50%;
   background: #fff;
   color: #134d32;
-  font: inherit;
-  font-weight: 700;
   cursor: pointer;
   transition:
     background 0.18s,
@@ -1565,18 +1551,15 @@ summary {
   background: #eaf4ec;
   box-shadow: 0 5px 16px #174e3010;
 }
+.location-button:focus-visible {
+  outline: 3px solid #005ec2;
+  outline-offset: 3px;
+}
 .location-button:disabled {
   cursor: wait;
   opacity: 1;
   color: #365948;
   background: #edf3ef;
-}
-.geo-option .micro {
-  margin: 0.65rem 0 0;
-  max-width: 64ch;
-}
-.geo-option #location-help {
-  font-size: 0.8rem;
 }
 .location-status:empty {
   margin: 0;
@@ -1693,12 +1676,6 @@ summary {
   }
 }
 @media (max-width: 520px) {
-  .location-button {
-    width: 100%;
-  }
-  .geo-option #location-help {
-    font-size: 0.8rem;
-  }
   .geo-credit {
     font-size: 0.72rem;
   }
@@ -4178,33 +4155,6 @@ body.inquiry-open {
   flex: 1;
   width: 100%;
   min-width: 0;
-}
-.city-suggestions {
-  list-style: none;
-  margin: 8px 0 0;
-  padding: 6px;
-  border: 1px solid #9cb395;
-  border-radius: 14px;
-  background: #fff;
-  max-width: 520px;
-}
-.city-suggestions button {
-  display: block;
-  width: 100%;
-  text-align: left;
-  background: transparent;
-  border: 0;
-  border-radius: 10px;
-  min-height: 44px;
-  padding: 10px 12px;
-  font: inherit;
-  font-weight: 700;
-  color: #153b29;
-  cursor: pointer;
-}
-.city-suggestions button:hover,
-.city-suggestions button:focus {
-  background: #e7f3df;
 }
 .area-actions {
   margin: 16px 0 8px;
