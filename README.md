@@ -1,5 +1,7 @@
 # FirstLight Home Care: Southern California Landing Site
 
+[![Deploy to GitHub Pages](https://github.com/CA-FirstLight-Home-Care/landing-page/actions/workflows/deploy.yml/badge.svg)](https://github.com/CA-FirstLight-Home-Care/landing-page/actions/workflows/deploy.yml)
+
 Regional landing website for the Southern California Alliance of FirstLight Home Care franchise owners.
 
 - **GitHub Pages URL**: https://ca-firstlight-home-care.github.io/landing-page/
