@@ -1,4 +1,4 @@
-# Guided flow rework — v5
+# Guided flow rework  -  v5
 
 ## Live release
 - Main: https://firstlight-socal.pages.dev/
@@ -11,10 +11,10 @@
 
 ## New flow
 1. Hero with a four-step indicator, one short services-reference link, and privacy explanation.
-2. **Step 1 — Choose your office.** ZIP, consent-only location, or city directory finds candidates; the visitor must explicitly confirm an office. A unique ZIP/location result no longer automatically selects an office. Overlapping ZIPs and shared-address location results are not silently resolved.
-3. **Step 2 — Your needs.** Confirmation scrolls and focuses the step heading. Eleven optional questions appear one at a time, with Back, Next, Skip and “Question N of 11.” Nothing is required. Current and completed steps are keyboard-operable, while unavailable later steps are disabled.
-4. **Step 3 — Your guide.** Finishing the quiz focuses a summary containing the confirmed office, suggested care topics with service-section links, optional program/funding questions with reasons, scheduling caveats, and a review of answers. “Edit my answers” preserves selections; changing an answer invalidates downstream steps until the guide is rebuilt.
-5. **Step 4 — Next step.** One continue button moves focus here. The verified local phone call remains primary. Scheduling and message/contact-form demos are subordinate and explicitly marked placeholders. No account is connected, no booking is made and no form data is sent or persistently stored. The form still validates accessibly, clears values and confirms “Demo only — not sent.”
+2. **Step 1  -  Choose your office.** ZIP, consent-only location, or city directory finds candidates; the visitor must explicitly confirm an office. A unique ZIP/location result no longer automatically selects an office. Overlapping ZIPs and shared-address location results are not silently resolved.
+3. **Step 2  -  Your needs.** Confirmation scrolls and focuses the step heading. Eleven optional questions appear one at a time, with Back, Next, Skip and “Question N of 11.” Nothing is required. Current and completed steps are keyboard-operable, while unavailable later steps are disabled.
+4. **Step 3  -  Your guide.** Finishing the quiz focuses a summary containing the confirmed office, suggested care topics with service-section links, optional program/funding questions with reasons, scheduling caveats, and a review of answers. “Edit my answers” preserves selections; changing an answer invalidates downstream steps until the guide is rebuilt.
+5. **Step 4  -  Next step.** One continue button moves focus here. The verified local phone call remains primary. Scheduling and message/contact-form demos are subordinate and explicitly marked placeholders. No account is connected, no booking is made and no form data is sent or persistently stored. The form still validates accessibly, clears values and confirms “Demo only  -  not sent.”
 6. **FAQ at the bottom**, after next step. Existing answers and pricing wording are unchanged. Expand/collapse matching questions and the local keyword/synonym search remain; the search visibly says it is a future-AI placeholder with no connected AI.
 
 The main page uses progressive disclosure: the active guide/summary/contact stage is shown, rather than repeating three long panels at once. The office section remains available above, and people can return to change offices or answers. All step and question transitions move focus to headings and respect reduced motion.

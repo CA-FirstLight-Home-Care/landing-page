@@ -1,8 +1,8 @@
-> DEPLOYED: https://firstlight-socal.pages.dev/ — November 10, 2026 (PST). See DEPLOYMENT.md for scope and live verification. Only the one-page HTML is served; local notes and evidence are not public. Earlier “not published” statements below describe the original drafting stage.
+> DEPLOYED: https://firstlight-socal.pages.dev/  -  November 10, 2026 (PST). See DEPLOYMENT.md for scope and live verification. Only the one-page HTML is served; local notes and evidence are not public. Earlier “not published” statements below describe the original drafting stage.
 
 > CURRENT VERSION: modern v2 redesign is now `index.html`; the original is preserved as `index-v1.html`. Read `REDESIGN-NOTES.md` for design/accessibility results and use `redesign.py` for visual rebuilds. Legacy `build.py` alone regenerates the old v1 look. All territory/contact/source findings below remain unchanged.
 
-# FirstLight Home Care of Southern California — working draft
+# FirstLight Home Care of Southern California  -  working draft
 
 Built and reviewed November 10, 2026 (PST). **Local draft only. Not published or sent.**
 
@@ -12,20 +12,20 @@ Open `index.html` in a modern browser. It works directly from disk with no serve
 
 ## Files
 
-- `index.html` — one self-contained HTML file; styles, JavaScript, logo, office metadata and ZIP routing are embedded.
-- `desktop.png` — full-page 1440px desktop render with 91710 → Montclair result.
-- `mobile.png` — full-page 390px mobile render with the same lookup.
-- `desktop-top.png`, `mobile-top.png`, `mobile-lookup.png` — readable close-up screenshots.
-- `desktop-initial.png`, `mobile-initial.png` — initial empty-search state.
-- `overlap.png`, `uncovered.png` — overlap and no-match examples.
-- `offices.json` — formatted, easy-to-read/export office data and explicit `zipToOfficeIds` object. The same object is embedded in `index.html` in `<script id="office-data" type="application/json">`.
-- `source-current.xlsx` — fresh read-only download from the supplied Drive file; original named `20260708 CA Zip Codes.xlsx`.
-- `source-audit.json` — every selected source ZIP cell and raw owner/territory, excluded territories, duplicates and overlaps.
-- `verification.json` — source URLs, verification method and all contact-status notes.
-- `test-results.json` — passing automated Chromium tests.
-- `build.py` — repeatable offline build from the workbook and explicit territory allowlist. Python 3 + openpyxl required to rebuild, not to use the page.
-- `test_page.py` — local Playwright/installed-Chrome QA script; reads only this draft. Playwright is installed for this run in `/tmp/socal-playwright`.
-- `research/` — official corporate assets, directory HTML and initial HTTP fetch evidence.
+- `index.html`  -  one self-contained HTML file; styles, JavaScript, logo, office metadata and ZIP routing are embedded.
+- `desktop.png`  -  full-page 1440px desktop render with 91710 → Montclair result.
+- `mobile.png`  -  full-page 390px mobile render with the same lookup.
+- `desktop-top.png`, `mobile-top.png`, `mobile-lookup.png`  -  readable close-up screenshots.
+- `desktop-initial.png`, `mobile-initial.png`  -  initial empty-search state.
+- `overlap.png`, `uncovered.png`  -  overlap and no-match examples.
+- `offices.json`  -  formatted, easy-to-read/export office data and explicit `zipToOfficeIds` object. The same object is embedded in `index.html` in `<script id="office-data" type="application/json">`.
+- `source-current.xlsx`  -  fresh read-only download from the supplied Drive file; original named `20260708 CA Zip Codes.xlsx`.
+- `source-audit.json`  -  every selected source ZIP cell and raw owner/territory, excluded territories, duplicates and overlaps.
+- `verification.json`  -  source URLs, verification method and all contact-status notes.
+- `test-results.json`  -  passing automated Chromium tests.
+- `build.py`  -  repeatable offline build from the workbook and explicit territory allowlist. Python 3 + openpyxl required to rebuild, not to use the page.
+- `test_page.py`  -  local Playwright/installed-Chrome QA script; reads only this draft. Playwright is installed for this run in `/tmp/socal-playwright`.
+- `research/`  -  official corporate assets, directory HTML and initial HTTP fetch evidence.
 
 ## Coverage and exact source tab
 

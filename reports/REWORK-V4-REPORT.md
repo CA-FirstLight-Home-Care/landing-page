@@ -1,4 +1,4 @@
-# FirstLight SoCal — interactive draft (v4)
+# FirstLight SoCal  -  interactive draft (v4)
 
 ## Published release
 - Public URL: https://firstlight-socal.pages.dev/
@@ -37,12 +37,12 @@ Matching services combine in the original six-service order and each includes a 
 The existing selected-office call button remains the real, primary contact action. “Other ways to connect” is an optional disclosure below it, explicitly marked **Placeholders**. Both demos require a selected office and reset when the selected office changes.
 
 ### Booking
-A button-styled anchor says “Preview booking link — Placeholder.” Its actual target is an in-page demo notice, not a real Calendly account. The text `calendly.com/placeholder` is only an example of a future link. Clicking opens no account, makes no request, and announces that nothing was booked.
+A button-styled anchor says “Preview booking link  -  Placeholder.” Its actual target is an in-page demo notice, not a real Calendly account. The text `calendly.com/placeholder` is only an example of a future link. Clicking opens no account, makes no request, and announces that nothing was booked.
 
 ### Contact form
 Includes name, phone, email, five-digit ZIP, preferred phone/email contact, message, and a required demo acknowledgment checkbox. Name, ZIP, preferred contact, and acknowledgment are required. Phone is required for phone preference; email for email preference. Supplied optional contact values are also validated. Message is optional (500-character maximum).
 
-Clearly labeled **Placeholder** and **demo only** throughout. Visitors are asked to use fictional details and not enter health information. The checkbox acknowledges that no request will be sent; it is not a marketing-consent claim. Accessible validation uses a focused linked error summary and associated inline errors. Successful validation clears fields and shows **“Demo only — not sent.”** It does not echo personal values or claim an office received anything. Without JavaScript, both forms fail closed. A Content Security Policy blocks form submissions and application network connections (`form-action 'none'; connect-src 'none'`). No backend, real AI, calendar integration, email, CRM, cookies, or persistent storage was added.
+Clearly labeled **Placeholder** and **demo only** throughout. Visitors are asked to use fictional details and not enter health information. The checkbox acknowledges that no request will be sent; it is not a marketing-consent claim. Accessible validation uses a focused linked error summary and associated inline errors. Successful validation clears fields and shows **“Demo only  -  not sent.”** It does not echo personal values or claim an office received anything. Without JavaScript, both forms fail closed. A Content Security Policy blocks form submissions and application network connections (`form-action 'none'; connect-src 'none'`). No backend, real AI, calendar integration, email, CRM, cookies, or persistent storage was added.
 
 ## Preserved
 All 15 offices, all 225 unique ZIP mappings and overlaps, approved source rules, public contact details/TBDs, consent-only device-local geolocation, verified Instagram/X/LinkedIn links, equal office treatment, existing service/FAQ facts, pricing caveats, and the single selected-office contact path remain unchanged. No new Drive research was needed for this interaction-only revision; the prior source-backed service and FAQ text remains intact.

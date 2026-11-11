@@ -1,24 +1,24 @@
-# One-page care journey — source and editorial record
+# One-page care journey  -  source and editorial record
 
 Reviewed November 10, 2026 (PST). These notes stay local; do not upload them or the reference files. No Drive file was edited or shared. No client records were used.
 
 ## Drive files used
 
-**D1 — Understanding Our Services- Companion Care.docx**  
+**D1  -  Understanding Our Services- Companion Care.docx**  
 https://docs.google.com/document/d/1sD4sS8SCk3MEGRyFFoKV3Z_5nF6v945N/edit
 
 - Conversation, shared activities, meals, light housekeeping/laundry, medication reminders, errands and transportation.
 - Personalized part-time/full-time schedules. These are options, not a promise that every office can staff every schedule.
 - Used for the companion care comparison and its schedule wording. Statistics and promotional outcome claims were not reused.
 
-**D2 — Understanding Our Services- Dementia Care.docx**  
+**D2  -  Understanding Our Services- Dementia Care.docx**  
 https://docs.google.com/document/d/1kTL3IsIKYLOItKcbfmzq68IU7CpEaP9u/edit
 
 - Personalized care accounts for preferences, routine and personality; includes practical and social support and caregiver matching.
 - Part-time, full-time or 24/7 described as options; family respite is also discussed.
 - Used for the dementia comparison. No claim to prevent wandering/falls or treat dementia was copied.
 
-**D3 — About FirstLight Home Care_with Travel Companion Services.docx**  
+**D3  -  About FirstLight Home Care_with Travel Companion Services.docx**  
 https://docs.google.com/document/d/1TlBIPw3tCbF8x-HTMmSSWXnyABZVkLzU/edit
 
 - Non-medical home care helps adults with daily living, including seniors, adults with disabilities and people recovering from surgery/illness/injury.
@@ -26,7 +26,7 @@ https://docs.google.com/document/d/1TlBIPw3tCbF8x-HTMmSSWXnyABZVkLzU/edit
 - Caregivers described as direct employees, not contractors, with screenings/background checks and care training.
 - Used for the main comparison, non-medical boundary and screening FAQ. Template owner/city placeholders were not reused as facts.
 
-**D4 — Non-ICP Client Fit One-Pager — WellSky Intake Card — Montclair**  
+**D4  -  Non-ICP Client Fit One-Pager  -  WellSky Intake Card  -  Montclair**  
 https://docs.google.com/document/d/1d9GXDINfFR3EBUKC4ioDkZwi4gd98AIZLJ5G8QJHLJw/edit
 
 - Minimum-hours and rate-floor paragraphs explicitly mark pricing approved October 29, 2026.
@@ -35,7 +35,7 @@ https://docs.google.com/document/d/1d9GXDINfFR3EBUKC4ioDkZwi4gd98AIZLJ5G8QJHLJw/
 - Initially considered for local-only pricing, then omitted from public numeric pricing after Gary requested equal treatment of all offices. No Montclair rate is currently published.
 - Medical/skilled care exclusion supports non-medical scope. Internal margin targets, triage judgments and draft safety criteria were NOT published.
 
-**D5 — Client Service Agreement - Standard Private Pay** (blank template, not a signed client record)  
+**D5  -  Client Service Agreement - Standard Private Pay** (blank template, not a signed client record)  
 https://drive.google.com/file/d/1lff4GQ4V2Zu2Ohi9BrKB28ZyTK2O-NwA/view
 
 - Page 2: billing rates/schedule, holiday/overtime/live-in or 24-hour/mileage charges refer to local rate sheet.
@@ -43,14 +43,14 @@ https://drive.google.com/file/d/1lff4GQ4V2Zu2Ohi9BrKB28ZyTK2O-NwA/view
 - Page 4, section 12: termination notice is blank/local. No alliance-wide cancellation window, minimum contract period or fees can be sourced.
 - Used for pricing questions to ask, written agreement, continuity/substitution and backup FAQs. Did not expose the agreement itself, legal clauses, blank form or payment fields publicly.
 
-**D6 — Client Intake & Onboarding Checklist**  
+**D6  -  Client Intake & Onboarding Checklist**  
 https://docs.google.com/document/d/1ZFPdHzed06A2Ka2cSfLvvHgCpxvjJSNzAd9bU5A4OVE/edit
 
 - Assessment preparation may include medication list, insurance/LTC information and healthcare decision-maker documents.
 - Agreement specifies schedule, billing and terms; assessment informs care plan and task limits.
 - Used for what to prepare and personalized-plan explanations. No clinical, administrative-system or payment-collection claims copied.
 
-**D7 — Form #286 Telephone Intake Toolkit 4.8.2024**  
+**D7  -  Form #286 Telephone Intake Toolkit 4.8.2024**  
 https://docs.google.com/document/d/1kgnkF2A1CPOTS39EjsAz1kNPz-H9aouP/edit
 
 - Ask where care is needed, typical day, concerns and priorities; discuss rates from local market sheet; arrange in-home visit.
@@ -58,9 +58,9 @@ https://docs.google.com/document/d/1kgnkF2A1CPOTS39EjsAz1kNPz-H9aouP/edit
 
 ## Additional Drive material reviewed, not used as public factual copy
 
-- GUIDE Model FAQs: https://docs.google.com/document/d/1ttKshnpx0lkJayZHo-Rp_3mrfGr-0yoPrA67Ke8kdgI/edit — eligibility/provider enrollment conditional; no alliance-wide GUIDE participation verified. No stipend or eligibility promises published.
-- Networking & Peer Advice Notes: https://docs.google.com/document/d/1SnmVilt0pGW6_kW2AXZBRoRvdt1Y0MIyETjY8exBdR8/edit — Utah peer operations anecdotes, not alliance pricing/service facts.
-- Brochure.pdf: https://drive.google.com/file/d/1Onh2AjNj2Or-ac3hcIiHY1mXkcQnBibI/view — actually North Carolina advance directives; excluded as irrelevant.
+- GUIDE Model FAQs: https://docs.google.com/document/d/1ttKshnpx0lkJayZHo-Rp_3mrfGr-0yoPrA67Ke8kdgI/edit  -  eligibility/provider enrollment conditional; no alliance-wide GUIDE participation verified. No stipend or eligibility promises published.
+- Networking & Peer Advice Notes: https://docs.google.com/document/d/1SnmVilt0pGW6_kW2AXZBRoRvdt1Y0MIyETjY8exBdR8/edit  -  Utah peer operations anecdotes, not alliance pricing/service facts.
+- Brochure.pdf: https://drive.google.com/file/d/1Onh2AjNj2Or-ac3hcIiHY1mXkcQnBibI/view  -  actually North Carolina advance directives; excluded as irrelevant.
 - Searches for pricing returned many software/vendor pricing files and an older rate-sheet title. Those were not treated as current SoCal client pricing.
 - Search also found image-only Telephone Intake Guide and Client Intake Decision Tree; the readable toolkit and checklist above supplied the needed facts instead.
 - Live-in agreement titles explicitly for outside California were not used to set California sleep/rest arrangements.

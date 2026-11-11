@@ -1,4 +1,4 @@
-# Southern California one-page rework — final report
+# Southern California one-page rework  -  final report
 
 Live: https://firstlight-socal.pages.dev/  
 Cloudflare Pages project: `firstlight-socal`; account `1b316c4a14fed87a4c721863184e0c77`, gcheung@firstlighthomecare.com (Gcheung@firstlighthomecare.com's Account).  
@@ -25,14 +25,14 @@ Why: only Montclair has supported numeric pricing. Publishing its rate as an all
 | [Understanding Our Services- Companion Care.docx](https://docs.google.com/document/d/1sD4sS8SCk3MEGRyFFoKV3Z_5nF6v945N/edit) | Companion duties and part-/full-time options |
 | [Understanding Our Services- Dementia Care.docx](https://docs.google.com/document/d/1kTL3IsIKYLOItKcbfmzq68IU7CpEaP9u/edit) | Personalized routines, activities and dementia-support distinction |
 | [About FirstLight Home Care_with Travel Companion Services.docx](https://docs.google.com/document/d/1TlBIPw3tCbF8x-HTMmSSWXnyABZVkLzU/edit) | Non-medical scope, service differences, direct-employee screening/training |
-| [Non-ICP Client Fit One-Pager — WellSky Intake Card — Montclair](https://docs.google.com/document/d/1d9GXDINfFR3EBUKC4ioDkZwi4gd98AIZLJ5G8QJHLJw/edit) | Confirms pricing is Montclair-only; no numeric rate generalized or featured |
+| [Non-ICP Client Fit One-Pager  -  WellSky Intake Card  -  Montclair](https://docs.google.com/document/d/1d9GXDINfFR3EBUKC4ioDkZwi4gd98AIZLJ5G8QJHLJw/edit) | Confirms pricing is Montclair-only; no numeric rate generalized or featured |
 | [Client Service Agreement - Standard Private Pay (BLANK)](https://drive.google.com/file/d/1lff4GQ4V2Zu2Ohi9BrKB28ZyTK2O-NwA/view) | Written/local rate terms; no universal cancellation or coverage guarantee |
 | [Client Intake & Onboarding Checklist](https://docs.google.com/document/d/1ZFPdHzed06A2Ka2cSfLvvHgCpxvjJSNzAd9bU5A4OVE/edit) | Assessment preparation, plan and agreement |
 | [Form #286 Telephone Intake Toolkit 4.8.2024](https://docs.google.com/document/d/1kgnkF2A1CPOTS39EjsAz1kNPz-H9aouP/edit) | First conversation, priorities and local market pricing questions |
 
 Public FirstLight sources: [service overview](https://www.firstlighthomecare.com/home-care-services/), [personal care](https://www.firstlighthomecare.com/home-care-services/personal-care/), [respite](https://www.firstlighthomecare.com/home-care-services/respite-care/), [veteran care](https://www.firstlighthomecare.com/home-care-services/specialty-care/veteran-care/), [recovery care](https://www.firstlighthomecare.com/home-care-services/specialty-care/rehabilitation-recovery-care/), [caregivers](https://www.firstlighthomecare.com/why-us/our-caregivers/). Exact fact/source mapping is in REFERENCE-NOTES-v3.md. No client records, PHI, internal margin targets or draft operational promises were published.
 
-## Verified social links — requested platforms only
+## Verified social links  -  requested platforms only
 
 | Office | Instagram | X | LinkedIn | Verification |
 |---|---|---|---|---|
