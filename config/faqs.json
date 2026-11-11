@@ -1,67 +1,87 @@
 [
   {
-    "id": "faq-1",
-    "question": "What does home care cost?",
-    "answer": "Rates vary by local office, the help needed and the schedule. Care is generally billed by the hour, and a minimum visit length may apply. Ask your local team for a written quote after a free care consultation, including any holiday, overtime, mileage and cancellation charges. There is no single Southern California alliance rate."
+    "category": "Cost, Billing & Payment",
+    "items": [
+      {
+        "id": "faq-1",
+        "question": "What does home care cost?",
+        "answer": "Rates vary by local office, the help needed and the schedule. Care is generally billed by the hour, and a minimum visit length may apply. Ask your local team for a written quote after a free care consultation, including any holiday, overtime, mileage and cancellation charges. There is no single Southern California alliance rate."
+      },
+      {
+        "id": "faq-2",
+        "question": "Is there a minimum number of hours?",
+        "answer": "Minimums are set by each office and may depend on the service or schedule. Ask about the minimum per visit, any weekly commitment, and whether a shorter respite visit is possible. A minimum used by one office does not apply to every office on this page."
+      },
+      {
+        "id": "faq-3",
+        "question": "Does insurance or Medicare pay for care?",
+        "answer": "Private pay is the most common way families pay for non-medical home care. Some services may be covered by long-term care insurance, veteran benefits, public programs or certain Medicare Advantage plans. Coverage, eligibility and participating providers vary. Ask your office to review your options, and confirm approval and any out-of-pocket costs with your insurer or benefit program before care starts. Do not assume a health insurance card means these services are covered."
+      },
+      {
+        "id": "faq-4",
+        "question": "Are there benefits for veterans or surviving spouses?",
+        "answer": "Eligible veterans may have options through VA Home and Community Based Services. Aid & Attendance may help eligible veterans and surviving spouses who need help with daily activities. Not everyone qualifies, and not every office participates in every program. Your local team can discuss available options. The VA or the relevant benefit program determines eligibility and authorization; this page cannot promise approval or a covered number of hours."
+      },
+      {
+        "id": "faq-9",
+        "question": "Do we sign a contract? How do changes or cancellations work?",
+        "answer": "A written client service agreement sets the schedule, rates, billing and other terms. Cancellation notice, possible fees, schedule changes and termination terms must be confirmed with your own office before signing. Do not assume there is no contract, no minimum commitment or free last-minute cancellation. Your local team should explain these terms and provide them in writing before care starts."
+      }
+    ]
   },
   {
-    "id": "faq-2",
-    "question": "Is there a minimum number of hours?",
-    "answer": "Minimums are set by each office and may depend on the service or schedule. Ask about the minimum per visit, any weekly commitment, and whether a shorter respite visit is possible. A minimum used by one office does not apply to every office on this page."
+    "category": "Caregivers & Care Quality",
+    "items": [
+      {
+        "id": "faq-6",
+        "question": "How are caregivers screened and trained?",
+        "answer": "FirstLight describes its caregivers as direct employees, not independent contractors, who undergo screening, background checks and care training. Matches consider experience, availability and personality. Ask your office which checks and training apply to the person supporting you, especially for dementia, mobility or other specific needs."
+      },
+      {
+        "id": "faq-7",
+        "question": "Can we have the same caregiver each time?",
+        "answer": "FirstLight matches caregivers to the client\u2019s needs, schedule and personality. Tell your team what helps you or your loved one feel comfortable, and ask about a regular caregiver or small team. Continuity depends on scheduling and availability. A substitution may sometimes be needed, so ask how changes are handled rather than assuming the same person will cover every visit."
+      },
+      {
+        "id": "faq-8",
+        "question": "What happens if our caregiver is sick or unavailable?",
+        "answer": "Contact the office, which manages scheduling and caregiver substitutions. Ask in advance how it handles a missed shift, how you will be notified and which number to use after hours. Backup arrangements vary by office and schedule; uninterrupted coverage should not be assumed. Agree on a backup plan with your family and the office before care begins."
+      }
+    ]
   },
   {
-    "id": "faq-3",
-    "question": "Does insurance or Medicare pay for care?",
-    "answer": "Private pay is the most common way families pay for non-medical home care. Some services may be covered by long-term care insurance, veteran benefits, public programs or certain Medicare Advantage plans. Coverage, eligibility and participating providers vary. Ask your office to review your options, and confirm approval and any out-of-pocket costs with your insurer or benefit program before care starts. Do not assume a health insurance card means these services are covered."
+    "category": "Services & Care Boundaries",
+    "items": [
+      {
+        "id": "faq-10",
+        "question": "Is this medical care? Can a caregiver manage medications?",
+        "answer": "This page describes non-medical support with everyday living. Medication reminders are different from prescribing, changing doses or providing medical treatment. Nursing, wound care, injections and therapy need an appropriately licensed provider. The local team should explain what is allowed in your care plan and whether another provider is needed. Call 911 for an emergency."
+      },
+      {
+        "id": "faq-12",
+        "question": "Do we need to choose a service before calling?",
+        "answer": "No. The names describe different kinds of help, and a care plan may combine them. You can explain what is happening at home in your own words. Your local team can help you work out the support, schedule and next steps."
+      }
+    ]
   },
   {
-    "id": "faq-4",
-    "question": "Are there benefits for veterans or surviving spouses?",
-    "answer": "Eligible veterans may have options through VA Home and Community Based Services. Aid & Attendance may help eligible veterans and surviving spouses who need help with daily activities. Not everyone qualifies, and not every office participates in every program. Your local team can discuss available options. The VA or the relevant benefit program determines eligibility and authorization; this page cannot promise approval or a covered number of hours."
-  },
-  {
-    "id": "faq-5",
-    "question": "How quickly can care start?",
-    "answer": "The team first listens to what you need, arranges an in-home visit, reviews the care plan and agreement, and confirms a start date and caregiver introduction. Timing depends on the care needed and local availability. Tell the office if a discharge or other date is approaching. There is no same-day or next-day start guarantee on this alliance page."
-  },
-  {
-    "id": "faq-6",
-    "question": "How are caregivers screened and trained?",
-    "answer": "FirstLight describes its caregivers as direct employees, not independent contractors, who undergo screening, background checks and care training. Matches consider experience, availability and personality. Ask your office which checks and training apply to the person supporting you, especially for dementia, mobility or other specific needs."
-  },
-  {
-    "id": "faq-7",
-    "question": "Can we have the same caregiver each time?",
-    "answer": "FirstLight matches caregivers to the client\u2019s needs, schedule and personality. Tell your team what helps you or your loved one feel comfortable, and ask about a regular caregiver or small team. Continuity depends on scheduling and availability. A substitution may sometimes be needed, so ask how changes are handled rather than assuming the same person will cover every visit."
-  },
-  {
-    "id": "faq-8",
-    "question": "What happens if our caregiver is sick or unavailable?",
-    "answer": "Contact the office, which manages scheduling and caregiver substitutions. Ask in advance how it handles a missed shift, how you will be notified and which number to use after hours. Backup arrangements vary by office and schedule; uninterrupted coverage should not be assumed. Agree on a backup plan with your family and the office before care begins."
-  },
-  {
-    "id": "faq-9",
-    "question": "Do we sign a contract? How do changes or cancellations work?",
-    "answer": "A written client service agreement sets the schedule, rates, billing and other terms. Cancellation notice, possible fees, schedule changes and termination terms must be confirmed with your own office before signing. Do not assume there is no contract, no minimum commitment or free last-minute cancellation. Your local team should explain these terms and provide them in writing before care starts."
-  },
-  {
-    "id": "faq-10",
-    "question": "Is this medical care? Can a caregiver manage medications?",
-    "answer": "This page describes non-medical support with everyday living. Medication reminders are different from prescribing, changing doses or providing medical treatment. Nursing, wound care, injections and therapy need an appropriately licensed provider. The local team should explain what is allowed in your care plan and whether another provider is needed. Call 911 for an emergency."
-  },
-  {
-    "id": "faq-11",
-    "question": "What should we have ready for the first conversation?",
-    "answer": "Start with where care is needed, what a usual day looks like, the tasks that are becoming difficult, and when help is needed. Share your priorities and the questions you want answered. For an assessment, the office may ask you to prepare a medication list, relevant insurance or long-term care information, and any healthcare decision-maker documents. Do not enter private health information on this page; there is no intake form here."
-  },
-  {
-    "id": "faq-location",
-    "question": "How does \u201cFind my closest office\u201d use my location?",
-    "answer": "Nothing happens until you press the button and allow your browser to share your location. This page compares it with approximate public office addresses on your device. It does not send your coordinates to an office or store them. Distance is straight-line, not a driving route or a service-territory assignment. Offices that share the nearest address are shown together. Use the ZIP where care is needed to confirm the listed coverage. If you decline or location is unavailable, ZIP search still works."
-  },
-  {
-    "id": "faq-12",
-    "question": "Do we need to choose a service before calling?",
-    "answer": "No. The names describe different kinds of help, and a care plan may combine them. You can explain what is happening at home in your own words. Your local team can help you work out the support, schedule and next steps."
+    "category": "Getting Started & Privacy",
+    "items": [
+      {
+        "id": "faq-5",
+        "question": "How quickly can care start?",
+        "answer": "The team first listens to what you need, arranges an in-home visit, reviews the care plan and agreement, and confirms a start date and caregiver introduction. Timing depends on the care needed and local availability. Tell the office if a discharge or other date is approaching. There is no same-day or next-day start guarantee on this alliance page."
+      },
+      {
+        "id": "faq-11",
+        "question": "What should we have ready for the first conversation?",
+        "answer": "Start with where care is needed, what a usual day looks like, the tasks that are becoming difficult, and when help is needed. Share your priorities and the questions you want answered. For an assessment, the office may ask you to prepare a medication list, relevant insurance or long-term care information, and any healthcare decision-maker documents. Do not enter private health information on this page; there is no intake form here."
+      },
+      {
+        "id": "faq-location",
+        "question": "How does \u201cFind my closest office\u201d use my location?",
+        "answer": "Nothing happens until you press the button and allow your browser to share your location. This page compares it with approximate public office addresses on your device. It does not send your coordinates to an office or store them. Distance is straight-line, not a driving route or a service-territory assignment. Offices that share the nearest address are shown together. Use the ZIP where care is needed to confirm the listed coverage. If you decline or location is unavailable, ZIP search still works."
+      }
+    ]
   }
 ]
