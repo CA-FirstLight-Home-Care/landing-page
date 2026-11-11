@@ -30,7 +30,7 @@ with sync_playwright() as p:
  ok('Local aging guidance without treating it as funding','local-aging' in ids({'pay':'options'}))
  ok('HICAP insurance-review referral','hicap' in ids({'ltc':'yes'}))
  ok('VA pension and actual home-care rules remain distinct','va-pension' in ids({'veteran':'spouse'}) and 'va-home-care' not in ids({'veteran':'spouse','daily':'personal'}) and 'va-home-care' in ids({'veteran':'veteran','daily':'personal'}))
- q.fill('#zip','91710');q.locator('#zip').press('Enter');q.locator('.select-office').click()
+ q.fill('#zip','91710');q.locator('#zip').press('Enter')
  maximum={'who':['loved'],'daily':['both'],'memory':['diagnosed'],'recovery':['yes'],'schedule':['aroundclock','overnight','respite'],'veteran':['veteran'],'ltc':['yes'],'pay':['options']}
  for key,values in maximum.items():
   for value in values:q.check('#quiz-'+key+'-'+value)

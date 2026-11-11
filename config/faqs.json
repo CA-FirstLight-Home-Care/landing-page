@@ -79,8 +79,8 @@
       },
       {
         "id": "faq-location",
-        "question": "How does \u201cFind my closest office\u201d use my location?",
-        "answer": "Nothing happens until you press the button and allow your browser to share your location. This page compares it with approximate public office addresses on your device. It does not send your coordinates to an office or store them. Distance is straight-line, not a driving route or a service-territory assignment. Offices that share the nearest address are shown together. Use the ZIP where care is needed to confirm the listed coverage. If you decline or location is unavailable, ZIP search still works."
+        "question": "How does \u201cUse my location\u201d work?",
+        "answer": "Nothing happens until you press the button and allow your browser to share your location. The guide compares it with approximate public addresses on your device. It does not send your coordinates anywhere or store them. Distance is straight-line, not a driving route or a confirmed service area. If one team is nearest, the guide continues without showing that team. If more than one team is equally near, you\u2019ll be asked for a ZIP. Contact details appear at the last step. If you decline or location is unavailable, city or ZIP search still works."
       }
     ]
   }

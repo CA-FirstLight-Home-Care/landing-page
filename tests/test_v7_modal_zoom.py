@@ -7,7 +7,7 @@ R=Path(__file__).resolve().parent.parent;url=(sys.argv[1].rstrip('/')+'/' if len
 with sync_playwright() as p:
  b=p.chromium.launch(executable_path=os.environ.get('CHROMIUM_EXECUTABLE_PATH') or ('/usr/bin/google-chrome' if Path('/usr/bin/google-chrome').exists() else p.chromium.executable_path),headless=True,args=['--no-sandbox','--disable-dev-shm-usage'])
  q=b.new_page(viewport={'width':720,'height':1000});q.emulate_media(reduced_motion='reduce');q.goto(url)
- q.fill('#zip','91710');q.locator('#zip').press('Enter');q.locator('.select-office').click()
+ q.fill('#zip','91710');q.locator('#zip').press('Enter')
  for key,values in [('who',['loved']),('daily',['personal']),('memory',['diagnosed']),('recovery',['yes']),('schedule',['regular','overnight','respite']),('veteran',['veteran']),('ltc',['yes']),('pay',['options'])]:
   for value in values:q.check('#quiz-'+key+'-'+value)
   q.locator('#quiz-next').click()
