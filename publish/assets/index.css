@@ -730,8 +730,10 @@ summary {
 }
 
 .service-icon {
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
   background: #edf4e8;
   color: var(--green);
   border-radius: 14px;
@@ -1718,8 +1720,10 @@ summary {
   display: inline-grid;
   flex: none;
   place-items: center;
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
   padding: 0;
   border: 1px solid #196642;
   border-radius: 50%;
@@ -1733,8 +1737,8 @@ summary {
 }
 
 .location-button svg {
-  width: 21px;
-  height: 21px;
+  width: 18px;
+  height: 18px;
   fill: none;
   stroke: currentColor;
   stroke-width: 1.8;

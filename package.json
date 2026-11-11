@@ -6,6 +6,7 @@
     "lint": "prettier --check .",
     "build:css": "sass --no-source-map --style=expanded styles:assets && prettier --write 'assets/*.css'",
     "prepare:publish": "npm run build:css && python3 tools/prepare-publish.py && prettier --write publish/_worker.js",
+    "preview": "npm run build:css && python3 tools/preview.py",
     "test:routes": "node tests/test_routes.mjs"
   },
   "devDependencies": {

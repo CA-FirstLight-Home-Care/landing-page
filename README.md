@@ -36,7 +36,7 @@ node tests/test_routes.mjs
 ### 2. Local Preview Server
 
 ```bash
-python3 tools/preview.py 8788
+npm run preview -- 8788
 # Visit http://127.0.0.1:8788
 ```
 
