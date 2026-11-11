@@ -11,7 +11,7 @@ with sync_playwright() as p:
  for key,values in [('who',['loved']),('daily',['personal']),('memory',['diagnosed']),('recovery',['yes']),('schedule',['regular','overnight','respite']),('veteran',['veteran']),('ltc',['yes']),('pay',['options'])]:
   for value in values:q.check('#quiz-'+key+'-'+value)
   q.locator('#quiz-next').click()
- q.locator('#summary-continue').click();q.locator('#inquiry-open').click();q.evaluate('document.documentElement.style.fontSize="200%"')
+ q.locator('#inquiry-open').click();q.evaluate('document.documentElement.style.fontSize="200%"')
  d=q.evaluate("()=>({root:document.documentElement.scrollWidth,client:document.documentElement.clientWidth,bad:[...document.querySelectorAll('dialog[open] *')].filter(e=>{let r=e.getBoundingClientRect();return r.width&&r.height&&(r.left<-.6||r.right>innerWidth+.6)}).map(e=>e.id||e.tagName)})")
  assert d['root']<=d['client'] and not d['bad'],d
  q.add_script_tag(path=str(R/'node_modules/axe-core/axe.min.js'));a=q.evaluate('async()=>await axe.run(document,{runOnly:{type:"tag",values:["wcag2a","wcag2aa","wcag21a","wcag21aa","wcag22aa","best-practice"]}})');assert not a['violations'],a['violations']

@@ -11,7 +11,7 @@
     question: Is there a minimum number of hours?
     answer: Minimums are set by each office and may depend on the service or schedule.
       Ask about the minimum per visit, any weekly commitment, and whether a shorter
-      respite visit is possible. A minimum used by one office does not apply to every
+      respite visit is possible. A minimum used by 1 office does not apply to every
       office on this page.
   - id: faq-3
     question: Does insurance or Medicare pay for care?
@@ -97,7 +97,7 @@
     answer: Nothing happens until you press the button and allow your browser to share
       your location. The guide compares it with approximate public addresses on your
       device. It does not send your coordinates anywhere or store them. Distance is
-      straight-line, not a driving route or a confirmed service area. If one team is
-      nearest, the guide continues without showing that team. If more than one team
+      straight-line, not a driving route or a confirmed service area. If 1 team is
+      nearest, the guide continues without showing that team. If more than 1 team
       is equally near, you’ll be asked for a ZIP. Contact details appear at the last
       step. If you decline or location is unavailable, city or ZIP search still works.

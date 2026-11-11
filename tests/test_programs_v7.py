@@ -51,7 +51,7 @@ with sync_playwright() as p:
   if d['root']>d['client'] or d['bad']:bad.append(w)
  ok('All maximum referrals plus expanded county resources fit every width 320..430',not bad);axe('expanded counties mobile')
  q.set_viewport_size({'width':720,'height':1000});q.evaluate('document.documentElement.style.fontSize="200%"');ok('Maximum referrals and county resources reflow at 200% text',q.evaluate('document.documentElement.scrollWidth<=document.documentElement.clientWidth'));axe('200% maximum results')
- q.evaluate('document.documentElement.style.fontSize=""');q.locator('#summary-continue').click();q.locator('#inquiry-open').click();ok('Inquiry prefill includes new programs without eligibility promise','CMS GUIDE' in q.locator('#inquiry-message').input_value() and 'not an assessment or eligibility decision' in q.locator('#inquiry-message').input_value())
+ q.evaluate('document.documentElement.style.fontSize=""');q.locator('#inquiry-open').click();ok('Inquiry prefill includes new programs without eligibility promise','CMS GUIDE' in q.locator('#inquiry-message').input_value() and 'not an assessment or eligibility decision' in q.locator('#inquiry-message').input_value())
  ok('No application network calls to programs or third parties',all(x.startswith(URL) for x in requests))
  b.close()
 mode='live' if not server else 'local';(R/('programs-v7-'+mode+'-results.json')).write_text(json.dumps({'url':URL,'mode':mode,'passed':len(checks),'checks':checks,'axe':axes,'axeViolations':sum(len(x['violations']) for x in axes)},indent=2)+'\n');print('RESULT',mode,len(checks),'checks, zero axe violations',flush=True)
