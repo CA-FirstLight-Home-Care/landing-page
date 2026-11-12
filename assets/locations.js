@@ -454,9 +454,21 @@ const OFFICE_POINTS = {
   }
   function zipLabels(query) {
     const digits = query.match(/^\d+/)[0];
-    return Object.keys(ZIP_OFFICES)
+    const alliance = Object.keys(ZIP_ROUTING.allianceZips)
       .filter((zip) => zip.startsWith(digits))
-      .sort()
+      .map((zip) => ({ zip, label: zip }));
+    const unlisted = Object.keys(ZIP_ROUTING.unlistedSoCal)
+      .filter(
+        (zip) =>
+          zip.startsWith(digits) &&
+          ZIP_ROUTING.unlistedSoCal[zip].d <= MAX_ASSIGN_MILES,
+      )
+      .map((zip) => ({
+        zip,
+        label: zip + ", " + ZIP_ROUTING.unlistedSoCal[zip].c,
+      }));
+    return [...alliance, ...unlisted]
+      .sort((a, b) => a.zip.localeCompare(b.zip))
       .slice(0, 8);
   }
   function closeSuggestions() {
@@ -466,15 +478,34 @@ const OFFICE_POINTS = {
     input.setAttribute("aria-expanded", "false");
     input.removeAttribute("aria-activedescendant");
   }
+  function directoryLink(zip) {
+    const href = referralHref(zip);
+    const label = /^[0-9]{5}$/.test(String(zip || ""))
+      ? "Find your local FirstLight office"
+      : "Looking for a different area? Check our other directory here.";
+    return (
+      '<a href="' +
+      href +
+      '" target="_blank" rel="noopener noreferrer">' +
+      label +
+      '<span class="sr-only"> (opens in a new tab)</span></a>'
+    );
+  }
+  function showReferral(kind, zip) {
+    const text =
+      kind === "referral"
+        ? "This area is served by another FirstLight office."
+        : "Sorry, this ZIP code isn't in our service area yet.";
+    placeMessage.innerHTML = text + " " + directoryLink(zip);
+    if (kind === "outside") input.setAttribute("aria-invalid", "true");
+    else input.removeAttribute("aria-invalid");
+  }
   function showUnsupported(kind) {
     const text =
       kind === "zip"
         ? "Sorry, this ZIP code isn't in our service area yet."
         : "Sorry, this city isn't in our service area yet.";
-    // #other-directory is a placeholder until a real directory URL is chosen.
-    placeMessage.innerHTML =
-      text +
-      ' <a href="#other-directory">Looking for a different area? Check our other directory here.</a>';
+    placeMessage.innerHTML = text + " " + directoryLink("");
     input.setAttribute("aria-invalid", "true");
   }
   function renderSuggestions() {
@@ -496,9 +527,11 @@ const OFFICE_POINTS = {
         option.id = "location-suggestion-" + index;
         option.setAttribute("role", "option");
         option.setAttribute("aria-selected", "false");
-        option.textContent = label;
+        const text = kind === "zip" ? label.label : label;
+        const value = kind === "zip" ? label.zip : label;
+        option.textContent = text;
         option.addEventListener("mousedown", (event) => event.preventDefault());
-        option.addEventListener("click", () => chooseSuggestion(label));
+        option.addEventListener("click", () => chooseSuggestion(value));
         return option;
       }),
     );
@@ -529,20 +562,29 @@ const OFFICE_POINTS = {
         " offices serve " +
         activeCity.city +
         ". Enter your ZIP code to find yours. We will not choose an office from the city name alone.";
+    const rawZip = input.value.trim();
+    const routed = /^[0-9]{5}$/.test(rawZip) ? routeZip(rawZip) : null;
     let count = 0;
     for (const card of cards) {
       const match = pinnedOffices
         ? pinnedOffices.includes(card.dataset.office)
-        : activeCity
-          ? activeCity.ids.includes(card.dataset.office)
-          : /^[0-9]{5}$/.test(query)
-            ? (ZIP_OFFICES[query] || []).includes(card.dataset.office)
-            : words.every((w) => card.dataset.search.includes(w));
+        : routed && (routed.kind === "alliance" || routed.kind === "overlap")
+          ? routed.ids.includes(card.dataset.office)
+          : routed && routed.kind === "unlisted"
+            ? card.dataset.office === routed.id
+            : routed
+              ? false
+              : activeCity
+                ? activeCity.ids.includes(card.dataset.office)
+                : words.every((w) => card.dataset.search.includes(w));
       card.hidden = !match;
       if (match) count++;
     }
 
-    const ids = /^[0-9]{5}$/.test(query) ? ZIP_OFFICES[query] || [] : [];
+    const ids =
+      routed && (routed.kind === "alliance" || routed.kind === "overlap")
+        ? routed.ids
+        : [];
     notice.hidden = ids.length < 2;
     if (ids.length > 1)
       notice.textContent =
@@ -563,6 +605,17 @@ const OFFICE_POINTS = {
     const count = filter();
     const query = input.value.trim();
     const kind = placeQueryKind(query);
+    if (/^[0-9]{5}$/.test(query)) {
+      const route = routeZip(query);
+      if (route.kind === "referral" || route.kind === "outside") {
+        showReferral(route.kind, query);
+        empty.hidden = true;
+        return;
+      }
+      placeMessage.textContent = "";
+      input.removeAttribute("aria-invalid");
+      return;
+    }
     if (query && kind && !labels.length && count === 0) {
       showUnsupported(kind);
       empty.hidden = true;
@@ -682,11 +735,18 @@ const OFFICE_POINTS = {
               "Your location could not be found. You can type a city or ZIP instead.";
             return;
           }
-          // Reverse geocoding belongs here. A future call can turn latitude
-          // and longitude into a city or ZIP, assign that text to the input,
-          // and then call refresh(). No location request leaves this page.
-          // Until that call exists, the nearest-office match below uses the
+          // Reverse geocoding belongs here. Set reversedZip from latitude and
+          // longitude. refresh() then runs that ZIP through routeZip, the same
+          // path as a typed ZIP. No location request leaves this page today.
+          // Until a ZIP is known, the nearest-office match below uses the
           // coordinates stored with each office.
+          let reversedZip = "";
+          if (/^[0-9]{5}$/.test(reversedZip)) {
+            input.value = reversedZip;
+            pinnedOffices = null;
+            refresh();
+            return;
+          }
           const ranked = Object.entries(OFFICE_POINTS)
             .map(([id, point]) => ({
               id,

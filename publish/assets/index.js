@@ -888,15 +888,22 @@ const phoneHref = (o) => "tel:+1" + o.phone.replace(/\D/g, "");
 const arrow =
   '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>';
 function lookupZip(value) {
-  const zip = String(value).trim();
-  if (!/^[0-9]{5}$/.test(zip)) return { status: "invalid", zip, offices: [] };
-  const ids = OFFICE_DATA.zipToOfficeIds[zip] || [];
-  return {
-    status:
-      ids.length > 1 ? "overlap" : ids.length === 1 ? "covered" : "uncovered",
-    zip,
-    offices: ids.map((id) => OFFICES[id]),
-  };
+  const route = routeZip(value);
+  if (route.kind === "invalid")
+    return { status: "invalid", zip: route.zip, offices: [] };
+  if (
+    route.kind === "alliance" ||
+    route.kind === "overlap" ||
+    route.kind === "unlisted"
+  ) {
+    const ids = route.kind === "unlisted" ? [route.id] : route.ids;
+    return {
+      status: ids.length > 1 ? "overlap" : "covered",
+      zip: route.zip,
+      offices: ids.map((id) => OFFICES[id]),
+    };
+  }
+  return { status: "uncovered", zip: route.zip, offices: [] };
 }
 let selectedOfficeId = null;
 const emptyContact = document.getElementById("contact-panel").innerHTML;
@@ -997,9 +1004,21 @@ function cityMatches(query) {
 }
 function zipMatches(query) {
   const digits = query.match(/^\d+/)[0];
-  return Object.keys(OFFICE_DATA.zipToOfficeIds)
+  const alliance = Object.keys(ZIP_ROUTING.allianceZips)
     .filter((zip) => zip.startsWith(digits))
-    .sort()
+    .map((zip) => ({ zip, label: zip }));
+  const unlisted = Object.keys(ZIP_ROUTING.unlistedSoCal)
+    .filter(
+      (zip) =>
+        zip.startsWith(digits) &&
+        ZIP_ROUTING.unlistedSoCal[zip].d <= MAX_ASSIGN_MILES,
+    )
+    .map((zip) => ({
+      zip,
+      label: zip + ", " + ZIP_ROUTING.unlistedSoCal[zip].c,
+    }));
+  return [...alliance, ...unlisted]
+    .sort((a, b) => a.zip.localeCompare(b.zip))
     .slice(0, 8);
 }
 function selectCitySuggestion(place) {
@@ -1007,37 +1026,70 @@ function selectCitySuggestion(place) {
   closeCitySuggestions();
   runLookup();
 }
+function directoryLink(zip) {
+  const href = referralHref(zip);
+  const label = /^[0-9]{5}$/.test(String(zip || ""))
+    ? "Find your local FirstLight office"
+    : "Looking for a different area? Check our other directory here.";
+  return (
+    '<a href="' +
+    esc(href) +
+    '" target="_blank" rel="noopener noreferrer">' +
+    label +
+    '<span class="sr-only"> (opens in a new tab)</span></a>'
+  );
+}
+function showZipReferral(message, zip, kind) {
+  const text =
+    kind === "referral"
+      ? "This area is served by another FirstLight office."
+      : "Sorry, this ZIP code isn't in our service area yet.";
+  message.innerHTML = esc(text) + " " + directoryLink(zip);
+}
 function renderCitySuggestions() {
   const query = cityInput.value.trim();
   const kind = placeQueryKind(query);
+  const message = document.getElementById("zip-message");
+  if (!kind || !query) {
+    closeCitySuggestions();
+    return [];
+  }
+  if (kind === "zip" && /^[0-9]{5}$/.test(query)) {
+    const route = routeZip(query);
+    if (route.kind === "referral" || route.kind === "outside") {
+      closeCitySuggestions();
+      showZipReferral(message, query, route.kind);
+      if (route.kind === "outside")
+        cityInput.setAttribute("aria-invalid", "true");
+      else cityInput.removeAttribute("aria-invalid");
+      return [];
+    }
+  }
   const matches =
     kind === "zip"
       ? zipMatches(query)
       : kind === "city"
         ? cityMatches(query)
         : [];
-  const message = document.getElementById("zip-message");
-  if (!kind || !query) {
-    closeCitySuggestions();
-    return matches;
-  }
   if (!matches.length) {
     closeCitySuggestions();
     cityInput.setAttribute("aria-invalid", "true");
-    showUnsupportedPlace(message, kind);
+    showUnsupportedPlace(message, kind, query);
     return matches;
   }
   message.textContent = "";
   cityInput.removeAttribute("aria-invalid");
   citySuggestions.replaceChildren(
-    ...matches.map((label, index) => {
+    ...matches.map((item, index) => {
+      const label = kind === "zip" ? item.label : item;
+      const value = kind === "zip" ? item.zip : item;
       const option = document.createElement("li");
       option.id = `city-suggestion-${index}`;
       option.setAttribute("role", "option");
       option.setAttribute("aria-selected", "false");
       option.textContent = label;
       option.addEventListener("mousedown", (event) => event.preventDefault());
-      option.addEventListener("click", () => selectCitySuggestion(label));
+      option.addEventListener("click", () => selectCitySuggestion(value));
       return option;
     }),
   );
@@ -1045,15 +1097,13 @@ function renderCitySuggestions() {
   cityInput.setAttribute("aria-expanded", "true");
   return matches;
 }
-function showUnsupportedPlace(message, kind) {
+function showUnsupportedPlace(message, kind, zip) {
   const text =
     kind === "zip"
       ? "Sorry, this ZIP code isn't in our service area yet."
       : "Sorry, this city isn't in our service area yet.";
-  // #other-directory is a placeholder until a real directory URL is chosen.
   message.innerHTML =
-    esc(text) +
-    ' <a href="#other-directory">Looking for a different area? Check our other directory here.</a>';
+    esc(text) + " " + directoryLink(kind === "zip" ? zip : "");
 }
 function moveCitySuggestion(direction) {
   const options = citySuggestions.querySelectorAll('[role="option"]');
@@ -1092,25 +1142,29 @@ function runLookup(event) {
     return;
   }
   if (kind === "zip" && /^[0-9]{5}$/.test(value)) {
-    const result = lookupZip(value);
-    if (result.status === "covered") {
-      continueWithOffice(result.offices[0].id);
+    const route = routeZip(value);
+    if (route.kind === "alliance") {
+      continueWithOffice(route.ids[0]);
       return;
     }
-    if (result.status === "uncovered") {
-      input.setAttribute("aria-invalid", "true");
-      showUnsupportedPlace(message, "zip");
+    if (route.kind === "overlap") {
+      showLookup(
+        `<div class="fallback"><h3>This ZIP needs a closer look.</h3><p class="overlap-notice">${esc(value)} is listed for more than 1 local team, so it can’t be matched automatically. Search by city instead.</p></div>`,
+      );
       return;
     }
-    showLookup(
-      `<div class="fallback"><h3>This ZIP needs a closer look.</h3><p class="overlap-notice">${esc(value)} is listed for more than 1 local team, so it can’t be matched automatically. Search by city instead.</p></div>`,
-    );
+    if (route.kind === "unlisted") {
+      continueWithOffice(route.id);
+      return;
+    }
+    showZipReferral(message, value, route.kind);
+    if (route.kind === "outside") input.setAttribute("aria-invalid", "true");
     return;
   }
   if (kind === "zip") {
     if (!zipMatches(value).length) {
       input.setAttribute("aria-invalid", "true");
-      showUnsupportedPlace(message, "zip");
+      showUnsupportedPlace(message, "zip", value);
     } else renderCitySuggestions();
     return;
   }
@@ -1127,7 +1181,7 @@ function runLookup(event) {
   if (!ids.length) {
     if (!cityMatches(value).length) {
       input.setAttribute("aria-invalid", "true");
-      showUnsupportedPlace(message, "city");
+      showUnsupportedPlace(message, "city", "");
     } else renderCitySuggestions();
     return;
   }
@@ -1249,11 +1303,18 @@ document.addEventListener("click", (event) => {
             locateError({ code: 2 });
             return;
           }
-          // Reverse geocoding belongs here. A future call can turn latitude
-          // and longitude into a city or ZIP, assign that text to the input,
-          // and then call runLookup(). No location request leaves this page.
-          // Until that call exists, the nearest-office match below uses the
+          // Reverse geocoding belongs here. Set reversedZip to the ZIP from
+          // latitude and longitude. runLookup() then uses the same routing as
+          // a typed ZIP. No location request leaves this page today.
+          // Until a ZIP is known, the nearest-office match below uses the
           // coordinates already stored with each office.
+          let reversedZip = "";
+          if (/^[0-9]{5}$/.test(reversedZip)) {
+            cityInput.value = reversedZip;
+            locateButton.removeAttribute("aria-busy");
+            runLookup();
+            return;
+          }
           const ranked = OFFICE_DATA.offices
             .map((office) => ({
               office,
