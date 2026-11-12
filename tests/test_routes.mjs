@@ -2,6 +2,7 @@ import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
 import assert from "node:assert/strict";
+import vm from "node:vm";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const worker = (await import("../publish/_worker.js")).default;
 let checks = 0;
@@ -66,6 +67,7 @@ const assets = {
   "/assets/locations.css": ["locations.css", /text\/css/],
   "/assets/faqs.css": ["faqs.css", /text\/css/],
   "/assets/index.js": ["index.js", /javascript/],
+  "/assets/zip-routing.js": ["zip-routing.js", /javascript/],
   "/assets/nav.js": ["nav.js", /javascript/],
   "/assets/locations.js": ["locations.js", /javascript/],
   "/assets/faqs.js": ["faqs.js", /javascript/],
@@ -177,7 +179,8 @@ check("Guide autocomplete queries ZIP or city", () => {
   assert.match(guideJs, /aria-activedescendant/);
   assert.match(guideJs, /Sorry, this ZIP code isn't in our service area yet\./);
   assert.match(guideJs, /Sorry, this city isn't in our service area yet\./);
-  assert.match(guideJs, /href="#other-directory"/);
+  assert.match(guideJs, /referralHref/);
+  assert.match(guideJs, /Find your local FirstLight office/);
   assert.match(guideJs, /navigator\.geolocation\.getCurrentPosition/);
   assert.match(guideJs, /PERMISSION|error\.code|messages\[error/);
   assert.match(guideJs, /Reverse geocoding belongs here/);
@@ -200,7 +203,8 @@ check("Locations search uses the same autocomplete", () => {
     /Sorry, this ZIP code isn't in our service area yet\./,
   );
   assert.match(locationJs, /Sorry, this city isn't in our service area yet\./);
-  assert.match(locationJs, /href="#other-directory"/);
+  assert.match(locationJs, /referralHref/);
+  assert.match(locationJs, /Find your local FirstLight office/);
   assert.match(locationJs, /getCurrentPosition/);
 });
 for (const file of ["index.css", "locations.css"]) {
@@ -213,6 +217,63 @@ for (const file of ["index.css", "locations.css"]) {
     assert.match(css, /prefers-reduced-motion: reduce/);
   });
 }
+const routingCode = await readFile(
+  resolve(root, "assets/zip-routing.js"),
+  "utf8",
+);
+const routing = {};
+vm.runInNewContext(routingCode, routing);
+const routeZip = routing.routeZip;
+check("30 mile cutoff splits unlisted ZIPs 507 and 320", () => {
+  const rows = Object.values(routing.ZIP_ROUTING.unlistedSoCal);
+  const assigned = rows.filter((row) => row.d <= routing.MAX_ASSIGN_MILES);
+  const referred = rows.filter((row) => row.d > routing.MAX_ASSIGN_MILES);
+  assert.equal(routing.MAX_ASSIGN_MILES, 30);
+  assert.equal(rows.length, 827);
+  assert.equal(assigned.length, 507);
+  assert.equal(referred.length, 320);
+});
+check("Sample ZIPs follow the sheet order", () => {
+  const office = (zip) => JSON.parse(JSON.stringify(routeZip(zip)));
+  assert.deepEqual(office("91710"), {
+    kind: "alliance",
+    zip: "91710",
+    ids: ["montclair"],
+  });
+  assert.deepEqual(office("91780"), {
+    kind: "alliance",
+    zip: "91780",
+    ids: ["san-gabriel"],
+  });
+  assert.equal(office("92647").kind, "referral");
+  assert.equal(office("92101").kind, "referral");
+  assert.equal(
+    routing.referralHref("92647"),
+    "https://www.firstlighthomecare.com/locations/?loc=92647",
+  );
+  const near = office("91756");
+  assert.equal(near.kind, "unlisted");
+  assert.deepEqual(JSON.parse(JSON.stringify(near.ids)), [
+    "san-gabriel",
+    "glendale",
+    "pasadena",
+  ]);
+  assert.ok(near.ids.includes(near.id));
+  assert.equal(office("91756").id, near.id);
+  const corona = office("92882");
+  assert.equal(corona.kind, "unlisted");
+  assert.deepEqual(JSON.parse(JSON.stringify(corona.ids)), [
+    "irvine",
+    "chino-hills",
+    "montclair",
+  ]);
+  assert.ok(corona.ids.includes(corona.id));
+  assert.equal(office("94103").kind, "referral");
+  assert.equal(office("10001").kind, "outside");
+  const far = office("91901");
+  assert.equal(far.kind, "outside");
+  assert.ok(routing.ZIP_ROUTING.unlistedSoCal["91901"].d > 30);
+});
 console.log(
   `RESULT ${checks} offline routing checks passed. No network calls were made.`,
 );
