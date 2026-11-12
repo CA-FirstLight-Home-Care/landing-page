@@ -1,6 +1,8 @@
 # Node / Dependencies
 node_modules/
 .npm/
+coverage/
+.nyc_output/
 
 # Python / Virtual Environment
 __pycache__/

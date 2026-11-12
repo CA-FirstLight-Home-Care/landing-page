@@ -20,6 +20,12 @@ ASSETS = {
     "assets/faqs.css": "text/css; charset=utf-8",
     "assets/index.js": "text/javascript; charset=utf-8",
     "assets/zip-routing.js": "text/javascript; charset=utf-8",
+    "assets/lib/routing.js": "text/javascript; charset=utf-8",
+    "assets/lib/places.js": "text/javascript; charset=utf-8",
+    "assets/lib/nearest.js": "text/javascript; charset=utf-8",
+    "assets/lib/format.js": "text/javascript; charset=utf-8",
+    "assets/lib/quiz.js": "text/javascript; charset=utf-8",
+    "assets/lib/map.js": "text/javascript; charset=utf-8",
     "assets/nav.js": "text/javascript; charset=utf-8",
     "assets/locations.js": "text/javascript; charset=utf-8",
     "assets/faqs.js": "text/javascript; charset=utf-8",
@@ -48,7 +54,9 @@ if missing_assets:
 publish_assets = OUT / "assets"
 publish_assets.mkdir(exist_ok=True)
 unexpected_assets = [
-    path.name for path in publish_assets.iterdir() if f"assets/{path.name}" not in ASSETS
+    path.relative_to(publish_assets.parent).as_posix()
+    for path in publish_assets.rglob("*")
+    if path.is_file() and path.relative_to(publish_assets.parent).as_posix() not in ASSETS
 ]
 if unexpected_assets:
     raise SystemExit(

@@ -1,3 +1,18 @@
+import {
+  distanceKm,
+  geolocationErrorMessage,
+  rankByDistance,
+  tiedNearest,
+} from "./lib/nearest.js";
+import { matchCities, matchZips, placeQueryKind } from "./lib/places.js";
+import {
+  MAX_ASSIGN_MILES,
+  ZIP_ROUTING,
+  referralHref,
+  routeZip,
+} from "./zip-routing.js";
+import { directoryLinkHtml } from "./lib/format.js";
+
 const CITY_OFFICES = {
   burbank: { city: "Burbank", ids: ["burbank"] },
   "los angeles": { city: "Los Angeles", ids: ["burbank", "glendale"] },
@@ -414,6 +429,7 @@ const OFFICE_POINTS = {
     longitude: -118.594229818015,
   },
 };
+globalThis.OFFICE_POINTS = OFFICE_POINTS;
 (() => {
   const input = document.getElementById("location-search"),
     clear = document.getElementById("location-search-clear"),
@@ -431,45 +447,11 @@ const OFFICE_POINTS = {
   let activeCity = null;
   let activeSuggestion = -1;
   let locateToken = 0;
-  function placeQueryKind(value) {
-    if (/[A-Za-z]/.test(value)) return "city";
-    if (/^\d+/.test(value)) return "zip";
-    return "";
-  }
   function cityLabels(query) {
-    const needle = query.toLocaleLowerCase("en-US");
-    const cities = [
-      ...new Map(
-        Object.values(CITY_OFFICES).map((entry) => [entry.city, entry]),
-      ).values(),
-    ];
-    const startsWith = cities.filter((entry) =>
-      entry.city.toLocaleLowerCase("en-US").startsWith(needle),
-    );
-    const contains = cities.filter((entry) => {
-      const city = entry.city.toLocaleLowerCase("en-US");
-      return !city.startsWith(needle) && city.includes(needle);
-    });
-    return [...startsWith, ...contains].slice(0, 8).map((entry) => entry.city);
+    return matchCities(query, CITY_OFFICES);
   }
   function zipLabels(query) {
-    const digits = query.match(/^\d+/)[0];
-    const alliance = Object.keys(ZIP_ROUTING.allianceZips)
-      .filter((zip) => zip.startsWith(digits))
-      .map((zip) => ({ zip, label: zip }));
-    const unlisted = Object.keys(ZIP_ROUTING.unlistedSoCal)
-      .filter(
-        (zip) =>
-          zip.startsWith(digits) &&
-          ZIP_ROUTING.unlistedSoCal[zip].d <= MAX_ASSIGN_MILES,
-      )
-      .map((zip) => ({
-        zip,
-        label: zip + ", " + ZIP_ROUTING.unlistedSoCal[zip].c,
-      }));
-    return [...alliance, ...unlisted]
-      .sort((a, b) => a.zip.localeCompare(b.zip))
-      .slice(0, 8);
+    return matchZips(query, ZIP_ROUTING, MAX_ASSIGN_MILES);
   }
   function closeSuggestions() {
     activeSuggestion = -1;
@@ -479,17 +461,7 @@ const OFFICE_POINTS = {
     input.removeAttribute("aria-activedescendant");
   }
   function directoryLink(zip) {
-    const href = referralHref(zip);
-    const label = /^[0-9]{5}$/.test(String(zip || ""))
-      ? "Find your local FirstLight office"
-      : "Looking for a different area? Check our other directory here.";
-    return (
-      '<a href="' +
-      href +
-      '" target="_blank" rel="noopener noreferrer">' +
-      label +
-      '<span class="sr-only"> (opens in a new tab)</span></a>'
-    );
+    return directoryLinkHtml(zip, referralHref(zip));
   }
   function showReferral(kind, zip) {
     const text =
@@ -696,15 +668,6 @@ const OFFICE_POINTS = {
     locateToken += 1;
     locateButton.removeAttribute("aria-busy");
   }
-  function distanceKm(lat1, lon1, lat2, lon2) {
-    const r = Math.PI / 180;
-    const x = (lat2 - lat1) * r;
-    const y = (lon2 - lon1) * r;
-    const h =
-      Math.sin(x / 2) ** 2 +
-      Math.cos(lat1 * r) * Math.cos(lat2 * r) * Math.sin(y / 2) ** 2;
-    return 6371 * 2 * Math.atan2(Math.sqrt(h), Math.sqrt(Math.max(0, 1 - h)));
-  }
   input.addEventListener("input", stopLocating);
   locateButton.addEventListener("click", () => {
     const token = ++locateToken;
@@ -747,8 +710,8 @@ const OFFICE_POINTS = {
             refresh();
             return;
           }
-          const ranked = Object.entries(OFFICE_POINTS)
-            .map(([id, point]) => ({
+          const ranked = rankByDistance(
+            Object.entries(OFFICE_POINTS).map(([id, point]) => ({
               id,
               city: point.city,
               km: distanceKm(
@@ -757,17 +720,14 @@ const OFFICE_POINTS = {
                 point.latitude,
                 point.longitude,
               ),
-            }))
-            .filter((item) => Number.isFinite(item.km))
-            .sort((a, b) => a.km - b.km);
+            })),
+          );
           if (!ranked.length) {
             placeMessage.textContent =
               "Your location could not be found. You can type a city or ZIP instead.";
             return;
           }
-          const nearest = ranked.filter(
-            (item) => Math.abs(item.km - ranked[0].km) < 0.05,
-          );
+          const nearest = tiedNearest(ranked);
           if (nearest.length === 1) {
             input.value = nearest[0].city;
             pinnedOffices = null;
@@ -785,14 +745,7 @@ const OFFICE_POINTS = {
         (error) => {
           if (token !== locateToken) return;
           locateButton.removeAttribute("aria-busy");
-          const messages = {
-            1: "Location permission was denied. You can type a city or ZIP instead.",
-            2: "Your location could not be found. You can type a city or ZIP instead.",
-            3: "Finding your location took too long. You can type a city or ZIP instead.",
-          };
-          placeMessage.textContent =
-            messages[error && error.code] ||
-            "This browser cannot share your location. You can type a city or ZIP instead.";
+          placeMessage.textContent = geolocationErrorMessage(error);
         },
         { enableHighAccuracy: false, timeout: 10000, maximumAge: 0 },
       );

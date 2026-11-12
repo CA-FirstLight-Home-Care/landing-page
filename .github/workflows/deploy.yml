@@ -37,9 +37,11 @@ jobs:
           npm ci
           npm run build:css
 
-      - name: Verify lint and offline routes
+      - name: Verify lint, unit tests, and offline routes
         run: |
           npm run lint
+          npm test
+          node tools/coverage-badge.js
           node tests/test_routes.mjs
 
       - name: Prepare site directory
@@ -47,6 +49,8 @@ jobs:
           mkdir -p _site
           cp index.html services.html locations.html faqs.html _site/
           cp -R assets _site/assets
+          mkdir -p _site/badges
+          cp badges/coverage.json badges/coverage.svg _site/badges/
           # Copy .nojekyll so Jekyll does not ignore files
           touch _site/.nojekyll
 
