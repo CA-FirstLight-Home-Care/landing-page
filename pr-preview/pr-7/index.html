@@ -1,0 +1,899 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="form-action 'none'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'"
+      http-equiv="Content-Security-Policy"
+    />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="noindex,nofollow" name="robots" />
+    <meta
+      content="Enter a city or ZIP, answer a short care guide, and prepare for a local conversation. Private, optional questions and no eligibility decisions."
+      name="description"
+    />
+    <title>FirstLight Home Care | Southern California Care Guide</title>
+    <link href="assets/index.css" rel="stylesheet" />
+  </head>
+  <body class="guided">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="header">
+      <div class="wrap header-inner">
+        <a
+          aria-label="FirstLight Home Care: Southern California"
+          class="brand"
+          href="#main"
+          ><img
+            alt="FirstLight Home Care"
+            height="136"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeQAAACICAMAAAABMWheAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAALlUExURQAAAOzIIKDAKxN2PiAgIP/FIcnXJ5u+Kgp0OCEhIf/EIlGWMiAgIM3aJ//CJarGKVGWMwJwOSQfIM/aJ//DJK/JKo63LlKXMwRxOyQgICAgICQcICAcIMbWJ5O5LP/CI1KYMgVxPCIeIP/DJM7ZKLvQKZu+LGijMAFwOiMdIEiSMzaINc3aKJO7LSIgIP/DJLLKKV2dMgFwOyIeINTdJ//DJo64LiIeIP/CJMfWKK7IKjyMNBx7OABwPCIeIF2eMs3ZJyIeIP/DI6bEK4u2LghyOyIeIDWHNv/EJc/bJ8DSKJO6LSWANxZ6OgBwPf/CJYCxL1icMwBwOyIeILDKKqHCK//DJv/DJMbVKARxPCMeIABwOzCGNnisMFGYM9XeJ//DJMnXKLzRKKvHK5K6LQBwPCMfICiBN//DJb3QKH6wMEWRNANxPCIfIJq+LNXeJ//EJf/CJcvYJ8HTKLbNKanGKp/ALI23LnqtL06WNBd4OQFwOyIfICmDNzqLNdTdJ//DJcnYKMTVKbrPKavIK5q+LIi1LnmsL2qlMlSYMhp7OAJwPCMfIFabMtXeJ9DbJ//DJcvYKMXVKMTUKcHTKL3RKbrPKbfOKbXMKrPLKrHKKq/JKqzIKs+0KanGK6fFK6TEK6HCLKDBK57ALJu/LJi9LZe8LJW8LZO7LZK6LY+4LYy3Loq2Loe1LoWzLoOyL4CxMICvLn2wMHquMHytLnmtMHasMXeqLnOrMXGpMXKnL2+oMW6nMW2nMGqmMm2lL2mmMWqjL2ijMWWkMmajMmOiMmWhMGGhM1+gMmKeMF6fM1ueM12dMFmdM1qaMVebM1OZNFaYMVOZM1CYNFCYNE6XNFCVMUyWNEmUNUyTMkaSNUiRMkORNUOOM0CPNTyNNj2LMzmMNjeJNTOINy+GNzKFNCyFNyqENyqDNyaBOCd/NSKAOB99OBx8ORl6ORV4OhF2Og51OwpzOwVwPARwOwBwPCMfIIGz4/YAAAD1dFJOUwAQEBAQHx8fHx8gICAvMDAwMDA/QEBAQEBAQEBAT09QUFBQYGBgYGBgYGJmb29vcHBxcHB/f39/gICAgYCAgI2Pj5CQkJCQnJ+fn5+fn5+goKGgoKKir6+vr6+wtrm9v7+/v7+/v7/Hz8/Pz8/P19/f397f39/e39/f39/f4OTv7+/v7+/v7+/v7+/v7/z///////7///////////////////////////////////////////////////////7///7///7///////////////////7+///////////////////////////////////////////+31HHXQAAIolJREFUeNrs179rGmEcx/FPcilcU+kggZom0KZdIhlCIqVDYksDph2ChbpJEBevDhF0bNTg2njD/UtZBCEEzkEIYhBbg4h1u5v73C8Pk+DgPf7g4XkNnhw805vv9+5Az7YAjnWpCDjWXQ4C4NgmDAbnfGEzbmvwr38IjmmRfr93KYJj2Xm/1+v9BMcwsd8juvzdi2WHPUOXjzLLikbibqezA45VAaNxhyjyzyhmnZLG96Rxu30Ajk2itatJ4/YFH2VGnRiJzcitFn8qs0ns3juJW81f4CaVzFmewbNgvFDIxDZBzelwjO+azcYrcBPKKRbPkf0FWQoFP0l6zAc6djp/SWKncSMBbs6RN2XJZ8cu0Kn8otixGzeNxre3Mxrl/VT+LCpioSx9SObS31bnHNlXiLt/JdBwYq1qwmpc/4wZEM80Uxi0BcIBTGg1q5jezzby0trRyImYMb6SLGfIZV3fgHc79hg7c1yv/xbgxQ9tnDwsKc0WAEXCdrSsadt4wppiyY45nlVsa7OL/HI3WXpwQo4BkII4jhtXCZ6JRXuOncQ1Vd2bfuSA5kiBmi1zO0we+Y3iSM4q8lHp8Qm/vmFFDhl9j2V4dvHHmGN3jOuqepOYfuSwNgRqwpq3yEeKo+QxsqcTr/XnRuT4F/kdgKAOr74+WNUqaXx9vTz1yBFtSFiYyN+VoXlG9ut+M3ImBiIkw6MDd1UbjWs19YY0ru5NPfL+yI0FibyrONLzjLyih8x17Zd9AOKS18Zm4jt3VRuNq9VKYuqRhbJmCy9O5CXFsTvPyJAk98XLpwcpNHZXdc1pXLlaphC5nHpKFKOjnBcWJrI7ymnMNfK6/pH8+LASXEG8QKdxw2qsWqu6QhpfvaUQOYqx9vMakRJBT/g/e/ceE9WVxwH8d2e6w820QNkZ6OwfiIRHSVcDnbUEbKeyo5MFbdBmfZEGHdRJsDsRQRFctpWsRdPSVaGADwiovHyBrYpvaesjurpNTa3ZbtNso21qm9raOrh/7+/cx5wZ7uHCMO/EbzZrKWqTfvo7v995TOsvMuQJf9MXc+FFhpdRWcgTf8T+7JcxEsvG8lJN6vjixx9+OCv4yKBNtZhNABGFDPqUvGw9QJiRURlb8lNP/eFv7/7OP2PFVI1LtWh8/mxtcJFpIgiZJvzI8NSf/4d59+UnAmP8H7pzEtox1vHZs6c0j5HDiYx54rfYlf3LVNGYTlyy8YeC8amkx8hhRvY//JvUmO6chHZ8lhgPTX+MHO3IT76paMd0qUbiEycWPEaOduQ/KXZOkvEF0fiDD2ojApnn+YhB5ozZhfZKjN1uzTbqvaNKpucCgKz1+XZRuVSTqfpjLOPTp06dQOOjW4KNrDWJSQA5CSYxIMZkcypvIk3mYmedeIjiKLGl8kDCm6QUy4doJpoEH5ARUkwcjI4R7wNV8hs2GZdmLRd+Xb3dagSPxBmlyL9ripFGD4zwvi7W3odc//Jqx0NofPTo4EBMkJFNipvGOs9zT16+b+YBI7M3PvKOY/xzVIc6MrvaC8E7aeSi2Wdk7gUkpFmbpihgdvJAGZMJfMtfBGPmzkkwRuIjh+PDimxGTopM2cOCrLcrIdSROcDIxDTWySPbUsGnPCcTYx3Lh1zkBIQYI7FgfOjQlNAj0z9hUV5EInuYkNMQy0fksf7JsE8a2Wn2bbHeKBnTw2okvkDLeHDg8OFDBzPDh4zGNHSmYuS1ECCn4de+I+vZC7x1ksi8y7cx9kV5qqa741FLNRIf7A8XMsLxnkjUmJHi4COneNRhdgoO0nEp1spxkOuBQ2NmjJNDznI1+lTIb6Ox5yHXRc+dk2zc1xc2ZBv+AU0jkKTSrx1mE8/zCaYsi6MxBMi0IhfHefw8N1KaUQh42ZVD4Q6J216YZ/UczO2TQy5xuUy+FLLX1fE/5TIW2/EgMd5y8EBfX09uuJAtWbJnSTEGMJTdpgWPJKT6v09WR6ZaaeznYGv1jF2vXVriK7M5acmnqNyk9sl1LpcDJp6NiqX6Atk5bRXbMSnjmv6+3p7usFVyqvijwwTuZKm8IgkuslG2iRvrPZidQWZdK/5AQfVu5ezJIPMuly+l/NwYO6etW6Wl+tCBVcR4f/iWayWng/6OIUa2j7mCcvW0yyoqWflC3ygjF04GOZUgT/wNzTJcqunOCYnldlw6KBof7JvX0929b2/YtlCCqBk8I++eTKFG1ktfV4IyebSUFWSMkrXTv7zvyBaXa8TlssHEosUy9m7H8u54weAR3B1jO+6dTYy7Ev1GbqxjpHg8ZAHUBp5JoHvmkCLT7VOayqu/eo6JbB3j+Vj9ZJAdLszISBZMKFPpaz3BmE7VC7aQMibtePr+fV1dnfH+IrPjUEVmP+4z0e1UiJGXSF/rgZFy2q6VyJUceCdO/s5kkJ3E2PWwMQEmklmEmLbjrbWy8UDNHCxjNO7uzsQ67uyAcCCzkUzhqWTqWK76FD+NhZymLHzK6Suy1iXk4a/vTEh5mWQsT9WlW907pylk54QT14ZMJO5YHUbkRi2wl2tzqJFVPxmVp4LMaOJ+ICe4Rojxw19/eccE4+ft0VfHpdJBJh5WN5Cpet++NZmdHe17loYFmT2x8XQZjxbkbFCkcvLIqbhYi8gPfn4JxotG8TygdMFRaarOnUd2Tnu7Vmai8e6cMCIrLlzcdxNOPgKRUxjI+oAim4W5C40R+adXtKCep9HY4+qYtOPcGrxzIofVqzKFqbpzYcaePbt2JQbpExS2CSArJG10JMsKPTL7l9CpzKgkK4eAItvEuYsU8s/3779hAtU8g2U86iBzy5Qj4lTdoGkQJq6ZGbt37dwMEJ59MsbJ+rmU2caHDlk+8ODUPrHOKckKA4tcMkKMBeSf7v/4w/ev8KrIjOcBc+YQ456e7viVxLg9J2PXzralYUR+DRQpeeQZp5kP6XTN3ifH0apVkGUHFtmBHdkT+bs3XoSx86z0kqt2q8edU9KqPrJz2p+T00lGruSMnW2tGWFEtoEiWul71DmLDwWyVdmUFVcXVgaZMbDITtcItuSHvzwQke999+03bz43NrLcjreW0nvFVTENOHHt27tI09GB7Tgxo621RRdGZDMow1NlOcV88JGNdNvLLmSMnkEWF1jkOmzJtJB/QONv7twZk3mqe6qunbOF3DkJ7Tgzkxh3VcPKdmzH8RmtLWUQRuRUYETLmNlt2iAj01uIeolNec+8hEkWWORGae6ihXz3ztdff7WRzZxEDzJrp9SIzwN6exo0s8lBZocmB43bNBktLenhRDYBM3yJQrmODzIybpPY98nGtbSQg4/s8m7JIvJ/v/ryi43PsLZQZz1e62WSiUtoxzM11V2d7e3Jmp3YjiGjuQoiEBmZbXUK5aAi01LG2I30p9kVrziCiiwVMrZkslp//60b+fbnrz6pfPtDyth9kJmbWdPXK7TjmHhyADIbVrS1roP05qKwIvMwdhJsTu8BLLjI9ImX9EI+Ly/Puhjh5cyHkCBj5EL+8ft7pCV/jchfIPLNt2fB6LhfZIqHXDEbBOOulZCD7XgF5JB2nN6ki1hkDG/2rGdLMJHpgs0OGocEeQRL2XvuQmQs5H/fvvnpP25sHF3Mtd6v9eZpZu7fS9pxIqzc2bYZdC3vIXIZRDIyJosyO4OLrK5shdAgM1uyhPzJjetXnwev0PsIYeTqXhMzpRrvnNrXa3Sb21pjoQyX6nRDpCN7no/zwUYGfT3Dlzbp0EzXbOTPP0Pka1cul3oV85wPagcHBo4gcb/QjvdWx8SsxHa8ayYkt7ZMg/ymfDBA5CODg949BxlZb1chDg1yHVmtPXdQdxD5S4KMlXwdkYdrPZWfPVpTs6pGMO5BY9w5VcfDTHJYrYOC5rlgaJoGEA3IJtqUg4pMN8T1tKArC7M5gNAhO0fk8y5syfdwuCZzF1mtsZJxtb5ycfj8GY8lO4a043m582qwjLtJO+7oeCsZ4te3ta4ATVUVQEVydCBDnQqyJWDI1DgbgIszkugpcIiQHR7DtYwstORbNwnyZYJ8MhfcEV9ybchMWrRBuHMSl2rd3JYWA8Q2cVBgiBJkZ2iQC1n74SAgG0ElxSMy8n0crgVkOnddu3p5+MK5MyeHqPI8Ytzb07Nhdkziomo03oWHXPkA05qr8P+SwRAbJcj0pFuJXBwwZP0OKRBk5DRQiUVApjuou6ORzxPkY27lzEMH+kg7xjJeFA+JC9fvamtrbS0A0FUhdTIAFx3I/CMpJgayM2DIKfQXBQfZ7u4GKslyjTCH61sS8kfD506fPH7sfVlZ09AntWO8V1yZAZA4d11LS3MZB9wM0Tc6kItZ/45dsyyvDfjZNRck5CWKy0xGEkZcbGRxuL6ELVlAPjpd3kSRnZO7Ha/P0AHEFlQ1VeGPuuhBNjMf/dHPTAUcebE+OMjzd0ygKWtdTGS6g7ogIg8OJIGQJLmMifFOXKrn6oA4L8cfIhVZO/pr+uiLZ77dbUxQQdazwrGRs3fIWVuYbYzT0wQGmf4F1urVBpARNvJno5G3xIAQ8SVXBxILxi3NzWXpgIlg5NS6ErPJLW2yND4ao2TpN4pTTeRDzLaS1yiyWtJUBi926ssL0/R+Ixs9/ilKMerjUtKsdmV/LmEi3xYq+SpdrnF//DoImS0s1e27RWI0bmraXpGOxJGLnCWWp9NRUlzipJDKCYv1747xCxkHI9UU6v1E5uon8iF080Mm8q3PJOQLbuTDc4AksavzrerVS2fmJGZgpuXn588oKioqSI54ZGWcWsVvGmhkPdqoxsr5hQzWiSCbFO9CaE++isv1OWnwEp7sAclbZHdMngesXpqfbuBATCRXsplt7FAO0Y5AIqsr02bqF7K+fgLI0MjsyeKB1yWhJw8dPybeLtaI67UwcbXJS/Wm5UtnJMdykYxsYRE3Mh/8NQYaGbj54yiXc/4gQ/ZEkIu9kO94VzJBppV8MBcwiVI7fk8w3r6NpKLAEF3IjRYtsJJQF2hk647xYvULGfImgJzFrmS8n5B78pCMfKBBAwCazZJxk2i8qWiaDgIYW50Ym4/IjjoxSmTbaGGHGYnZ0ZpFZsVGOq5SLSlj9eRy+eYpzyOFS/BP0+gV//1kX5BBP7/ea2zPBkW0jezpWrxOJtM1reR+oZRXEGMsY2GtnhYLkZ8Ek9lSXOzAlBRbshLG+9mplmISizmVB79CL6Gsiu+kVXqUsr8xZucVYqx5aSl6YMWh8mbg0kfeyEIp50jtuGyGMHZpYjMKVucDO4Zp+XOFLFw4c2ZmYrwGJplUiMaUS8WVAspwVnftQdBjYl1QeFXyECIPEuQDvaSUdbhUVxUkc+gbnzN3NfbmvzOMdUUFpMjTy5qbW1rbdu7a097RuXdfd8OqVdOTfKdOyIIozAvq1weL6QfLg55GuZLvMW+hxEoeHCCV3N8AmLkZHGgS0ZechqBxmaInx+oApm3aVoHO5LK5tdWN3NPbf/DQ4S0Lcn2SznJCFEZPW7TK9zEpEPRY5EomyHe9kC99NEyuGk8IyDh59TfEAEB8zsL1uFEWxi8sasVgzQG33IC6Fdu3N1UVGUCXsZ4gd4rIBxB54Oj7x4ZKZz0DE4tlxAJRmEI6WLFjp7N5sKN958EDGZk8GhCf/+BG+Zr0MkQar7esyp2SlAkA5OMwwoRNenM+Bx7RQSzWMAeGbQVIXbS9qam5ed3cRMhYichdEvLhIwT5+MnT54dLn396/H7icNXxEIWRpq7FMFasoUOGl/AT6D9Jz3/ukrf1EjKehlyUN8qvL5iDT7v6e8nolYjEgvGolZoDXToYDGBYDlCwrUIHMIMg42q9fmFi/EIBubdfRh46eebc8MUrVze+OlULY4fHxyvRWchx4z79yQsdMpay12tNekMhT15bXy+tEZtyb08SgEYkxpU6GcCtbKiIhfR0SC4AbtMM4Cq2bZsBYKhqfk+Yu3ZXL8zM2bC/B5EPHT4ySJBPnzk/fPnKtRuffHpz2fPslVubKnyAug6iMSkMQnYlGyEUpax2oXzutNyUcbzu750NAOtE4wIODEUysq5iE8DydEgnP2xLxgV7+/YqHehWt4jDdUdHZ/WiRWuEuWsAkY8j8gVEvn7jk5u3bn/x5VfLXvz9M1pPYJPZQT50if+LytEashmzNbsncxCCaP/Kfv9zXXr/4z69RuQ1ALC0FYnLYsFQhoyCMEDFtqWg+3975x8bZX3H8S/1SXH2COwcQikwd2DJQXFlx0r4kRsVLEPA0LVkeJE6oDsEYQkKlLqjRH6J7NJGBKF1CogVRIRFxZhgm6YtsYEYSAtxMUQikA0iTmecf+/9+Xyf732ep3dcKWjlaXgDl/v1PL3w6vvz6/u9O5g3r/pe/FufqebXICOjt5q4c+fLu2tRW1O0XrOm4q1Dh985QikZTm5q+fjkqdPtZz8F5M8vXLx0ed2SJUtmz5kz58/L/wa84OtdIyeC8e+7qr6fVD2iwSl28vFgs9WeXkunXJ+BhLvjpQ0jVeZCsiopb6oaX12dp0ZWj8eVqSoT0+w+fda/iIz8TKbK37iLIe/d+/r++vqDhw7puotTcuvHJxGtOzTkLy5d/teVq19e++o/X3/z7beATPKskdUI+fTM9NX3CNUzesz5rkaU10jK7SYpk5XtTpmycn+lHkCkzpyJzQLMOBN+7ochdj/1BENeT7aumanyuOraMVFlrqpFl7zHdMmckt9H3YWUrCGf+/SfxPiigfz1N//9FnBhYyL9qPKmfiFjy7ThfKXdYvVA7ZW0otxO8foExWtqov5x1J5s1udi1tGvz8TnMLkGY6qtXhyZ+XRNzXoy8HiU1YjXU2tqavIUhl2ounYuyswohZEZ8pvcJSNaS93FkD8zkK9ehZEZshZKa0+2T1AfWaNKxxjVd09pcIq3NXK8bnTE68Nvo/SiySYQA2M/DtUostVMLFbMR7Sunqlm1sDEwygf35u5AYxRdW3MV5OI8T6prSklH29sREpG3XX2nB2tL13+N4wskFn/86xeTVD+bXI+Tsw0X/2hf+zgNBW2jEMA+TO7U6Y1Co7XvAWIszKcnEmIq0cqaCrK7GF5L0J56gniOx+e7tOH7nguM48q65d3764t7Ttw9b7XeRIi0bqhkesuZ0ruXZAvOr+e7R7X1/0BsWF8rQchqyVUefE4xP3m1SZY+QO2MlEuvw85WRHj8TzG3kmbcjfQolQ/kAXkhTDxvWoh0vH2pRmLyMi1qLpW5/b9y/433mAjo4GCkXW0ppTcfg6Q7WitIX+Dusv7jNnKInwPJ32j4ohfy9fDCOOegnzXus7x+gw1US28Y5OyMu3LHZtbMYsgV2vGpTTdzHyGVimeUyPhXkDG5UI1cTvl46l4azpX1iit5/UtECNryM1IySZaS92ljWwgL3/Uw5qNNeP0Wjn70R9cadfL717nhIwdm4mhl7Hy9OHlhw4R5OrqqcyYdgJNnUiTkZfmq/nw80y1FB7ekHEvECMf508C4zpdda3JHbsZI03dJFO0hpE5Wp9NGa256PLo0LrrbXyyV7OHBcpIyu59XvweZbuLWlZQjnitIT+toGn8Tpl8vVSRlwE7b1+ontkOjVQbgBj5uP9SwxgZedZ9FQ4jN5ho3cHRWrpkhuztFjnN5wyk/bSBnqF85bJ7HqKtTBtzn1+wgLMyb7/mBnkSv5Fi0iperdjZb9iOl/C5MKALXy9SjxDiXbtWDbMZU/t0oGL4LDIyRpo8CWk5ASNLtHaPQuBj77bIDo1YebsgFsrmM/l4tAnIZr1xwbJj7+uJSIHeE6DG8lspVpXi7TLAvFE9sgNapHABE2c8QIxRVy+eZnxM7dOh6dOdRm6DkRGtpYG68uWX19jIIKy/yqgXaESym7Gv7ydALJQlXmN+rbuo1uata3kXEFs5V7H67ttHlEspZPOHH28kPy9VO1n5GbsIMWxcunrPXp516aqrInctZ+SPMNLkJtmurQmyM1p/R072dkIW9fnlQ3960gw5V/7xIfRTP6nums1W5p0DyMraylu3NnKBzZTv04zX4I3o+Jg2mLmurrZ2d/4w2Pnlnasy4WBokVpKiKmuLjU+BmNaf5q77BgbuUVn5KRo/bWdkj26ipxG90Dq9tBknl+zlU2BTbNNtjJRzlCkWeZ9ykjMhLk/hW3k4Exc7IYyptWBMUL1nk2LiTEgM2ME67Vzxcg00nSOu0wDRT5+TN3Rj6YB60zpZT5wgN7deJzbqHePblGksdg+AMpk5j2EeZPaVAs/717VH0F6d21tXf5AcvFrFKo3b2Yf8xLjUW6fnt/a0MRGlrLLXVt/5/3u6XbXXTM6WZlXHEGZAvYCDtZb8ElehBmUYWak5oGvkJ/rVg2sqyMLv7I4YxMYc1kNH795gGP1O0cBGcHaGPm0zsiyOIGyy26gvLsu4RkNqmLIVGDzMoXdRhHlAgWV06KjMTNxzi/9O/wMRwM2LAwTZyyGiykdc6x+C5BtI4Px8UYY+aSsJIOxu0mGk3+j7ujH1pgqbWVdexHlhgamTHVX7uHDmjISMzCDc//VMDQc/Vou/Evak5+/17Yx11zCmJefWvWWEMnInSchva3ouj2VNfm8tFEmYGPNkR6qwEyEFqS0mfF9UJsGkp/3AHQuAd4DEy/uy4gRqm3GR3RCBmOpusTI9kjzK3tu/Qd1Rz2EuRITbDPcbMFIBJQpJeNb3fSyIzDXM+Z58/bBz6R8vtwHoclixNw7CWMkZFpixBwERtY9ssnIYuTl3ZuCWD6fuqOb1einMNzUlNFHEeVRgE+N1JHD2swa89g1HLahaXy5H6m4YJqO1HaoFsZNTfasC4wlI3P/BCNjpOkqrEPRaEQ5VRKNFiqHAiWx76FYJKhIclznA/1RKMfcKow6FFYpNLQwEovFY9FIeGin84aUQznRFTHSimjhUNfTRIXq9lbW7yoN5ZZGUM6CkVFjA7MO2Rrz2Deg/aR5fEk3y4fXHzjAiHU6thk32KtPeqCJvV3YpenOyMxYmIKfcgpIo3IriJtGMSfmKN3DSOVMUFAed6hEJenBuDwcV6KYvi0Kfu96BfLDRFF122vAuDLqo0C5qXEBsFONzbMvxkycN0+vJzFa/KuHhWHi4QcRqNnGXHIxY96haRiLkTVjjK0JsjDuErKFR52aoBJiRmH3gVDRjUH2rXA+vEIeGMJ35KSGDIU8Cpk0aFxx2daW1uZRMDLV2LxYATNrzOUV8DOqMKic+UIHDxaUg7BGzIw/AGNTWLuCNQ+7jJGFcdeQLUYRDfiUL5uDtlC2cEOOFDwRB+QV2Ua+zoxjfOKg3+fLDoSjAsmGF+kEOcdSll8HFV/iefFsI7/yjjIGjYORjx//EJg5ZBs3z4KdOXAfPFBxEHxhYcTpioK3OVJzqMYMhOtq2oXLCbmDGZ+/4AjWPLb+68/VDUMuJI7ZBkyJ02P+78Vy8t/uOFc0jcGsGNk3JZoYHsCJLDfknylWhEOFvGzPqrhRU+aVR+3mw8vIz3A0/SHRDQAugIsJsQnVqLnYx1RY81aBRPt0JWFk8XHXkIPE2GHCIod3A4Bh4rUch3tuBPIEYuzg6CaazVHZDVnCR6wXQM5qbdQNM5nZxrylgsK2Bq0vILCfvoURo+LiUM39sW6euOiSYC3t07PCuGvIMYmOYsCAYoXhqRgfKtTjIeGRDrJPfnlECa9GrLgcKpBZZPJeALmYiuyGjzRlwgzOWxC1ydBAzX+hd6AjW+ZqF8PGH8DGDbrmopG1FF2JWRdPrcH4xiEHkiqmoBQ5oBEu4ngt54nQ44GuIdNxweviD3JetlJCjvYKyFnUMLc2NaBjFsxrj8LQcLTREdJRaC4H6mO2jRN1tTC255nGyJiBdANyxDayCB4z6TIKnNnOeB0HHr8E2jSQJUIkKch45bwpnBz1PuRxaJixS5fnIgYzcSZDE2qCzdfornfnUi5mxA0I1VxygXE7YrVhjIQsLfIcMO4G5Lirt0lw95sHc8BccjSBs8T7aSD7rt/0RPXxcl43ZD/R9z7kSoxFaLmiGYORjwgzc36fQIsYMPTe89gEwgUXJpmtsDEzPpOSMYL1FKW6A9nPpaxbYRNoLf6fL5F4jatR+b1ICzkgqJLxc7iXPCCQ7cYr5vM85NE8/KKQzZiPI2jbnMnRItzkML3sQ7iYI3XLCYRq9rGpuUzRBcYEedtgdT3I8RKnTNkzRGKvy1Uh86DScVWitS6MBHIsbGQph0LXTclFTE6ft6gzZN+EuKR8ftlhI29N1mnESZjbGDOCNqI2cybS0HvHAFfz5TC9DLmYk3GrjZjnXMJYEvLyu9X1ICeLIQeFRbIJA4xD4nWQ06yUTAxZBEiisPg0OVmXmCtxKwEZiuEeKB5I+bJzlIc0iL4U7IXiF2BmxtzUCDujoQJoJi3CbfYw4jRcTJG67RTb2DC+4Gb8sIJuHfIQAznMT5J4HeHbzM/fBWQ5SCRnz5HfA4FsK4aI4H3IZdhFUDlAZSEz25hbG0GxAXEbpJk104WYcBN+C1rIxdrGpuRy+FiPM58drNJBjgedincBOcRQyXMSry16rjlGxppBI6sz5EDa8oDPF3VAjtN5reu+bC+F6yx8iaP+tt1RlacoNX98gjiDJAwNATaroQE3QJ9mH5SL2wgxKq522NieczkZX3tYqupuFF5BBuhWyPBZQY9JvOZoLeWvFF7dapNjrgYsbgnkIXEpuTxeeM04fx6MNe/iT05pNzNn5Ge4FlhFzUjEFKfFxWc67FAtsZoK6yVi425X1yUp+PhNnSWh10RrJT1UGsihFGW75HV5TshReAV4ENoLIGdd+LwqS26VcaFt+7mFSTc3NzW3NDe3wMA24DZ0TVxvEWIJ1XbvBB9vQ+N0c5At18Kue6xoMVsTr3W0lt66yxYq9UMRRz1exM8RyIruKOwFkEd/cWGAcuj+ytOfMOe2NuA8wZ6mC7pGgDlMa8TtGnEiVCcYI1LfLGRcYZIiMfcQ42ieM4sHpYdKDVlWKa1UTbJbQCuQuZALeR9y1cUxyq1RZaeJMxu6jVDjLwlXT2rAIHwahA1iCdXIx1euzkbfdPOQw4w0qS420VTuskpk2shE0kNmXuGU0dqtsBOyj4ovv9chj7k0OUVTVXwanAGadNLWKfDVgDlOnz1rEBsb097MK9seBuJbgezv3J08mFjpK2LDmngdjOGfszJLD5mfFPcpkewyEIFpXCDbPynm8zjkJUuut6cTAxJGLWLAHKZBWBCDMadjLCBvm4JAfWuQVcS9JDg0rqOytMUmC/P9MhLrCrIV4xOnWoByj8lzBDLEedrbkAevE+Ml2fkFGPY0s7bhtoMvPNxhCAtiDtVcUd8yZERI2TtnFUoEVcAacRTc5ggZeKeFDFNC8Qm+xLZNOzkIdxltCmQO84Wehjz7VyqN7i+uPHvGqL0DBgZfAAZhMrEL8eNjYOJbgSzIQBkPl4SD4Yhr4x4BEBjsQSmqIoaIzMSDSQsdrGhJOFwSxZkt+bHuZU0DWX7pQilG7iHlDd09pcuZ5+SyjnMdiM6sTzVgY2KDeN0MIXzLkEEZN0TxkPhVKl2m73McHbuB3ZohOrHIz/V6MKknDxjI8gsV93t2t6aacoObOsueMngBWAgDcdXjM8Zwm/0DQla+klgCcZEl000ZTEqqTLBNCzn5xLCkz7UbRIhGE5AlAsQsz0LuhgYMGje5uKyssvI8VFVV9dTjMyaPvh98b0rZwSDxEgU63REIR6LRSFHAchDS82K54XeeLmjZV0RDUv7kUBFCbREfLC9DFITs81vy4nCypNMH1E+p/wMgYTzw8/O7yAAAAABJRU5ErkJggg=="
+            width="484"
+          /><span class="region">Southern<br />California</span></a
+        >
+        <div class="nav-toggle-wrap">
+          <input
+            aria-controls="site-nav"
+            class="nav-toggle-input"
+            id="nav-toggle"
+            type="checkbox"
+          />
+          <label class="nav-toggle" for="nav-toggle">
+            <span aria-hidden="true" class="nav-toggle-icon"></span>
+            <span class="when-closed">Menu</span>
+            <span class="when-open">Close</span>
+          </label>
+        </div>
+        <nav aria-label="Main navigation" class="nav" id="site-nav">
+          <a aria-current="page" data-go-step="1" href="#guided-flow"
+            >Start the guide</a
+          ><a href="locations.html">About us</a
+          ><a href="services.html">Services</a><a href="faqs.html">FAQs</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section aria-labelledby="page-title" class="hero">
+        <div aria-hidden="true" class="hero-art"></div>
+        <div class="wrap">
+          <div class="hero-copy">
+            <p class="eyebrow">FirstLight Home Care: Southern California</p>
+            <h1 id="page-title">
+              Good care starts<br /><span class="underlined"
+                >with your local team.</span
+              >
+            </h1>
+            <div class="about-summary">
+              <p class="intro">
+                We are the Southern California Alliance of FirstLight Home Care
+                franchise owners. Each office is locally owned and operated by
+                people who live and work in the communities they serve.
+              </p>
+              <br />
+              <p>
+                We provide compassionate, non-medical home care for older
+                adults, people recovering from illness or surgery, and families
+                seeking dependable support. From companion visits and personal
+                care to dementia support and family caregiver respite, our local
+                teams help people live safely, comfortably and independently at
+                home.
+              </p>
+            </div>
+          </div>
+          <p class="hero-services-link">
+            <a
+              class="text-link"
+              href="services.html"
+              rel="noopener noreferrer"
+              target="_blank"
+              >See what services we are offering
+              <span class="sr-only">(opens in a new tab)</span
+              ><span aria-hidden="true">↗</span></a
+            >
+          </p>
+        </div>
+      </section>
+      <section aria-label="Care guide" class="guided-flow" id="guided-flow">
+        <div class="wrap flow-navigation">
+          <nav aria-label="Care guide steps" class="step-nav">
+            <ol>
+              <li>
+                <button aria-current="step" data-go-step="1" type="button">
+                  <span class="step-number">1</span><span>Your needs</span>
+                </button>
+              </li>
+              <li>
+                <button data-go-step="2" disabled="" type="button">
+                  <span class="step-number">2</span><span>Next step</span>
+                </button>
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <div
+          aria-labelledby="quiz-title"
+          class="flow-stage question-stage step-panel"
+          id="care-questions"
+          role="region"
+        >
+          <div class="wrap stage-wrap">
+            <div class="stage-heading">
+              <p class="eyebrow">Step 1 · Your needs</p>
+              <h2 id="quiz-title" tabindex="-1">
+                Let’s start mapping out your care needs.
+              </h2>
+              <p class="quiz-intro">
+                This short, 2-minute questionnaire helps us understand your
+                needs and preferences for our future conversations. It is
+                completely private - your answers never leave this page, nothing
+                is stored or sent, and everything clears when you exit. There is
+                no obligation to continue, and you can stop at any time.
+              </p>
+            </div>
+            <div class="wizard-card">
+              <div class="question-progress">
+                <p
+                  aria-atomic="true"
+                  aria-live="polite"
+                  id="question-count"
+                  role="status"
+                >
+                  Question 1 of 9
+                </p>
+                <progress
+                  aria-label="Question progress"
+                  id="question-progress"
+                  max="9"
+                  value="1"
+                >
+                  1 of 9
+                </progress>
+                <div
+                  aria-hidden="true"
+                  class="question-dots"
+                  id="question-dots"
+                ></div>
+              </div>
+              <div class="area-question" id="question-area">
+                <h3 id="area-title" tabindex="-1">Where should care happen?</h3>
+                <p class="field-hint" id="area-hint">
+                  Enter a city or 5-digit ZIP. Start typing to see matching
+                  cities or ZIP codes.
+                </p>
+                <label class="zip-label" for="zip">City or ZIP</label>
+                <div class="zip-row">
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="city-suggestions"
+                    aria-describedby="zip-privacy zip-message area-hint"
+                    aria-expanded="false"
+                    autocomplete="off"
+                    disabled=""
+                    id="zip"
+                    maxlength="100"
+                    name="zip"
+                    placeholder="City or ZIP"
+                    role="combobox"
+                    type="text"
+                  />
+                  <button
+                    aria-label="Use my location"
+                    class="locate-button"
+                    id="locate-button"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="locate-icon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle cx="12" cy="12" r="4"></circle>
+                      <path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path>
+                    </svg>
+                    <svg
+                      aria-hidden="true"
+                      class="locate-spinner"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M12 3a9 9 0 1 1-6.36 2.64"></path>
+                    </svg>
+                  </button>
+                </div>
+                <ul
+                  aria-label="Matching places"
+                  class="city-suggestions"
+                  hidden=""
+                  id="city-suggestions"
+                  role="listbox"
+                ></ul>
+                <p class="micro privacy" id="zip-privacy">
+                  Your search stays on this page.
+                </p>
+                <p
+                  aria-atomic="true"
+                  aria-live="polite"
+                  class="message"
+                  id="zip-message"
+                  role="status"
+                ></p>
+                <div class="area-actions">
+                  <button class="button" id="area-next" type="button">
+                    Continue <span aria-hidden="true">→</span>
+                  </button>
+                </div>
+                <div
+                  aria-atomic="true"
+                  aria-live="polite"
+                  class="lookup-results"
+                  id="lookup-results"
+                  tabindex="-1"
+                ></div>
+              </div>
+              <form autocomplete="off" hidden="" id="care-quiz" novalidate="">
+                <fieldset
+                  aria-describedby="quiz-who-hint"
+                  class="wizard-question"
+                  disabled=""
+                  id="question-who"
+                >
+                  <legend>
+                    <h3 id="question-title-who" tabindex="-1">
+                      Who are you finding help for?
+                    </h3>
+                  </legend>
+                  <p class="field-hint" id="quiz-who-hint">
+                    Answer about the adult who needs care. No names are needed.
+                    For 2 people in 1 home, answer the remaining questions about
+                    the person with greater needs. Each person needs a separate
+                    assessment.
+                  </p>
+                  <div class="choice-grid">
+                    <label class="choice" for="quiz-who-self"
+                      ><input
+                        id="quiz-who-self"
+                        name="quiz-who"
+                        type="radio"
+                        value="self"
+                      /><span>Myself</span></label
+                    ><label class="choice" for="quiz-who-loved"
+                      ><input
+                        id="quiz-who-loved"
+                        name="quiz-who"
+                        type="radio"
+                        value="loved"
+                      /><span>A family member or friend</span></label
+                    ><label class="choice" for="quiz-who-couple"
+                      ><input
+                        id="quiz-who-couple"
+                        name="quiz-who"
+                        type="radio"
+                        value="couple"
+                      /><span
+                        >2 people in the same home, such as a couple</span
+                      ></label
+                    ><label class="choice" for="quiz-who-other"
+                      ><input
+                        id="quiz-who-other"
+                        name="quiz-who"
+                        type="radio"
+                        value="other"
+                      /><span>Someone else</span></label
+                    ><label class="choice" for="quiz-who-unsure"
+                      ><input
+                        id="quiz-who-unsure"
+                        name="quiz-who"
+                        type="radio"
+                        value="unsure"
+                      /><span>Not sure / prefer not to say</span></label
+                    >
+                  </div>
+                </fieldset>
+                <fieldset
+                  aria-describedby="quiz-daily-hint"
+                  class="wizard-question"
+                  disabled=""
+                  hidden=""
+                  id="question-daily"
+                >
+                  <legend>
+                    <h3 id="question-title-daily" tabindex="-1">
+                      What everyday help would be useful?
+                    </h3>
+                  </legend>
+                  <p class="field-hint" id="quiz-daily-hint">
+                    A care plan can combine practical support and hands-on help.
+                  </p>
+                  <div class="choice-grid">
+                    <label class="choice" for="quiz-daily-companion"
+                      ><input
+                        id="quiz-daily-companion"
+                        name="quiz-daily"
+                        type="radio"
+                        value="companion"
+                      /><span
+                        >Company, meals or light household tasks</span
+                      ></label
+                    ><label class="choice" for="quiz-daily-personal"
+                      ><input
+                        id="quiz-daily-personal"
+                        name="quiz-daily"
+                        type="radio"
+                        value="personal"
+                      /><span
+                        >Help with bathing, dressing or toileting</span
+                      ></label
+                    ><label class="choice" for="quiz-daily-both"
+                      ><input
+                        id="quiz-daily-both"
+                        name="quiz-daily"
+                        type="radio"
+                        value="both"
+                      /><span>Both kinds of help</span></label
+                    ><label class="choice" for="quiz-daily-unsure"
+                      ><input
+                        id="quiz-daily-unsure"
+                        name="quiz-daily"
+                        type="radio"
+                        value="unsure"
+                      /><span>Not sure / prefer not to say</span></label
+                    >
+                  </div>
+                </fieldset>
+                <fieldset
+                  aria-describedby="quiz-memory-hint"
+                  class="wizard-question"
+                  disabled=""
+                  hidden=""
+                  id="question-memory"
+                >
+                  <legend>
+                    <h3 id="question-title-memory" tabindex="-1">
+                      What best describes their memory needs?
+                    </h3>
+                  </legend>
+                  <p class="field-hint" id="quiz-memory-hint">
+                    This guide does not diagnose dementia. You do not need to
+                    share medical details.
+                  </p>
+                  <div class="choice-grid">
+                    <label class="choice" for="quiz-memory-none"
+                      ><input
+                        id="quiz-memory-none"
+                        name="quiz-memory"
+                        type="radio"
+                        value="none"
+                      /><span>No memory concerns</span></label
+                    ><label class="choice" for="quiz-memory-concerns"
+                      ><input
+                        id="quiz-memory-concerns"
+                        name="quiz-memory"
+                        type="radio"
+                        value="concerns"
+                      /><span>Some memory changes or concerns</span></label
+                    ><label class="choice" for="quiz-memory-diagnosed"
+                      ><input
+                        id="quiz-memory-diagnosed"
+                        name="quiz-memory"
+                        type="radio"
+                        value="diagnosed"
+                      /><span>A dementia diagnosis has been made</span></label
+                    ><label class="choice" for="quiz-memory-unsure"
+                      ><input
+                        id="quiz-memory-unsure"
+                        name="quiz-memory"
+                        type="radio"
+                        value="unsure"
+                      /><span>Not sure / prefer not to say</span></label
+                    >
+                  </div>
+                </fieldset>
+                <fieldset
+                  aria-describedby="quiz-recovery-hint"
+                  class="wizard-question"
+                  disabled=""
+                  hidden=""
+                  id="question-recovery"
+                >
+                  <legend>
+                    <h3 id="question-title-recovery" tabindex="-1">
+                      Is this after a hospital stay or surgery?
+                    </h3>
+                  </legend>
+                  <p class="field-hint" id="quiz-recovery-hint">
+                    This can also include recovery after an illness or injury.
+                  </p>
+                  <div class="choice-grid">
+                    <label class="choice" for="quiz-recovery-yes"
+                      ><input
+                        id="quiz-recovery-yes"
+                        name="quiz-recovery"
+                        type="radio"
+                        value="yes"
+                      /><span>Yes</span></label
+                    ><label class="choice" for="quiz-recovery-no"
+                      ><input
+                        id="quiz-recovery-no"
+                        name="quiz-recovery"
+                        type="radio"
+                        value="no"
+                      /><span>No</span></label
+                    ><label class="choice" for="quiz-recovery-unsure"
+                      ><input
+                        id="quiz-recovery-unsure"
+                        name="quiz-recovery"
+                        type="radio"
+                        value="unsure"
+                      /><span>Not sure / prefer not to say</span></label
+                    >
+                  </div>
+                </fieldset>
+                <fieldset
+                  aria-describedby="quiz-schedule-hint"
+                  class="wizard-question"
+                  disabled=""
+                  hidden=""
+                  id="question-schedule"
+                >
+                  <legend>
+                    <h3 id="question-title-schedule" tabindex="-1">
+                      When might help be needed?
+                    </h3>
+                  </legend>
+                  <p class="field-hint" id="quiz-schedule-hint">
+                    Choose all that apply. Overnight or 24-hour care is a
+                    schedule, not a separate service.
+                  </p>
+                  <div class="choice-grid">
+                    <label class="choice" for="quiz-schedule-occasional"
+                      ><input
+                        id="quiz-schedule-occasional"
+                        name="quiz-schedule"
+                        type="checkbox"
+                        value="occasional"
+                      /><span>A few hours or occasional visits</span></label
+                    ><label class="choice" for="quiz-schedule-regular"
+                      ><input
+                        id="quiz-schedule-regular"
+                        name="quiz-schedule"
+                        type="checkbox"
+                        value="regular"
+                      /><span>Regular daytime visits</span></label
+                    ><label class="choice" for="quiz-schedule-overnight"
+                      ><input
+                        id="quiz-schedule-overnight"
+                        name="quiz-schedule"
+                        type="checkbox"
+                        value="overnight"
+                      /><span>Overnight care</span></label
+                    ><label class="choice" for="quiz-schedule-aroundclock"
+                      ><input
+                        id="quiz-schedule-aroundclock"
+                        name="quiz-schedule"
+                        type="checkbox"
+                        value="aroundclock"
+                      /><span>24-hour care (day and night)</span></label
+                    ><label class="choice" for="quiz-schedule-respite"
+                      ><input
+                        id="quiz-schedule-respite"
+                        name="quiz-schedule"
+                        type="checkbox"
+                        value="respite"
+                      /><span>Give our family caregiver a break</span></label
+                    ><label class="choice" for="quiz-schedule-unsure"
+                      ><input
+                        id="quiz-schedule-unsure"
+                        name="quiz-schedule"
+                        type="checkbox"
+                        value="unsure"
+                      /><span>Not sure / prefer not to say</span></label
+                    >
+                  </div>
+                </fieldset>
+                <fieldset
+                  aria-describedby="quiz-veteran-hint"
+                  class="wizard-question"
+                  disabled=""
+                  hidden=""
+                  id="question-veteran"
+                >
+                  <legend>
+                    <h3 id="question-title-veteran" tabindex="-1">
+                      Is the person a Veteran or a surviving spouse?
+                    </h3>
+                  </legend>
+                  <p class="field-hint" id="quiz-veteran-hint">
+                    This is only a starting point. Military service alone does
+                    not establish benefit eligibility.
+                  </p>
+                  <div class="choice-grid">
+                    <label class="choice" for="quiz-veteran-veteran"
+                      ><input
+                        id="quiz-veteran-veteran"
+                        name="quiz-veteran"
+                        type="radio"
+                        value="veteran"
+                      /><span>A Veteran</span></label
+                    ><label class="choice" for="quiz-veteran-spouse"
+                      ><input
+                        id="quiz-veteran-spouse"
+                        name="quiz-veteran"
+                        type="radio"
+                        value="spouse"
+                      /><span>A surviving spouse of a Veteran</span></label
+                    ><label class="choice" for="quiz-veteran-no"
+                      ><input
+                        id="quiz-veteran-no"
+                        name="quiz-veteran"
+                        type="radio"
+                        value="no"
+                      /><span>Neither</span></label
+                    ><label class="choice" for="quiz-veteran-unsure"
+                      ><input
+                        id="quiz-veteran-unsure"
+                        name="quiz-veteran"
+                        type="radio"
+                        value="unsure"
+                      /><span>Not sure / prefer not to say</span></label
+                    >
+                  </div>
+                </fieldset>
+                <fieldset
+                  aria-describedby="quiz-ltc-hint"
+                  class="wizard-question"
+                  disabled=""
+                  hidden=""
+                  id="question-ltc"
+                >
+                  <legend>
+                    <h3 id="question-title-ltc" tabindex="-1">
+                      Do they have long-term care insurance?
+                    </h3>
+                  </legend>
+                  <p class="field-hint" id="quiz-ltc-hint">
+                    This is different from regular health insurance. No policy
+                    numbers or documents are needed.
+                  </p>
+                  <div class="choice-grid">
+                    <label class="choice" for="quiz-ltc-yes"
+                      ><input
+                        id="quiz-ltc-yes"
+                        name="quiz-ltc"
+                        type="radio"
+                        value="yes"
+                      /><span>Yes</span></label
+                    ><label class="choice" for="quiz-ltc-no"
+                      ><input
+                        id="quiz-ltc-no"
+                        name="quiz-ltc"
+                        type="radio"
+                        value="no"
+                      /><span>No</span></label
+                    ><label class="choice" for="quiz-ltc-unsure"
+                      ><input
+                        id="quiz-ltc-unsure"
+                        name="quiz-ltc"
+                        type="radio"
+                        value="unsure"
+                      /><span>Not sure / prefer not to say</span></label
+                    >
+                  </div>
+                </fieldset>
+                <fieldset
+                  aria-describedby="quiz-pay-hint"
+                  class="wizard-question"
+                  disabled=""
+                  hidden=""
+                  id="question-pay"
+                >
+                  <legend>
+                    <h3 id="question-title-pay" tabindex="-1">
+                      How are they thinking about paying for care?
+                    </h3>
+                  </legend>
+                  <p class="field-hint" id="quiz-pay-hint">
+                    No balances, income amounts or financial records are
+                    requested.
+                  </p>
+                  <div class="choice-grid">
+                    <label class="choice" for="quiz-pay-private"
+                      ><input
+                        id="quiz-pay-private"
+                        name="quiz-pay"
+                        type="radio"
+                        value="private"
+                      /><span>Income, savings or other assets</span></label
+                    ><label class="choice" for="quiz-pay-family"
+                      ><input
+                        id="quiz-pay-family"
+                        name="quiz-pay"
+                        type="radio"
+                        value="family"
+                      /><span>Family members will help pay</span></label
+                    ><label class="choice" for="quiz-pay-insurance"
+                      ><input
+                        id="quiz-pay-insurance"
+                        name="quiz-pay"
+                        type="radio"
+                        value="insurance"
+                      /><span
+                        >An existing long-term care insurance policy</span
+                      ></label
+                    ><label class="choice" for="quiz-pay-va"
+                      ><input
+                        id="quiz-pay-va"
+                        name="quiz-pay"
+                        type="radio"
+                        value="va"
+                      /><span>Veterans benefits</span></label
+                    ><label class="choice" for="quiz-pay-home"
+                      ><input
+                        id="quiz-pay-home"
+                        name="quiz-pay"
+                        type="radio"
+                        value="home"
+                      /><span>Home equity or selling a home</span></label
+                    ><label class="choice" for="quiz-pay-waiting"
+                      ><input
+                        id="quiz-pay-waiting"
+                        name="quiz-pay"
+                        type="radio"
+                        value="waiting"
+                      /><span
+                        >Waiting for insurance, a home sale or benefits</span
+                      ></label
+                    ><label class="choice" for="quiz-pay-options"
+                      ><input
+                        id="quiz-pay-options"
+                        name="quiz-pay"
+                        type="radio"
+                        value="options"
+                      /><span
+                        >Not sure how to pay. I would like to explore
+                        options</span
+                      ></label
+                    ><label class="choice" for="quiz-pay-unsure"
+                      ><input
+                        id="quiz-pay-unsure"
+                        name="quiz-pay"
+                        type="radio"
+                        value="unsure"
+                      /><span>Not sure / prefer not to say</span></label
+                    >
+                  </div>
+                </fieldset>
+                <div class="wizard-actions">
+                  <button class="quiet-button" id="quiz-back" type="button">
+                    Back
+                  </button>
+                  <button
+                    class="button"
+                    disabled=""
+                    hidden=""
+                    id="quiz-schedule-done"
+                    type="button"
+                  >
+                    Done
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="summary-title"
+          class="flow-stage summary-stage step-panel"
+          hidden=""
+          id="care-summary"
+          role="region"
+        >
+          <div class="wrap stage-wrap">
+            <div class="stage-heading">
+              <p class="eyebrow">Step 2 · Your next step</p>
+              <h2 id="summary-title" tabindex="-1">Your care results.</h2>
+              <p>
+                This is a place to start, not a verdict. Nothing has been sent.
+                When you feel ready, your local team can talk it through with
+                you.
+              </p>
+            </div>
+            <div id="care-summary-content"></div>
+            <div class="summary-actions">
+              <button class="quiet-button" id="edit-answers" type="button">
+                Edit my answers
+              </button>
+            </div>
+            <div class="next-step-block">
+              <h3 id="contact-title" tabindex="-1">
+                Talk with your local team.
+              </h3>
+              <p>
+                Call when you want someone to listen, or leave an inquiry and
+                they can follow up. There is no wrong time to ask for help.
+              </p>
+              <div
+                aria-atomic="true"
+                aria-live="polite"
+                class="contact-box step-four-card"
+                id="contact-panel"
+              >
+                <p>
+                  Your team’s contact details appear here after your area is
+                  matched.
+                </p>
+              </div>
+              <p class="contact-safety">
+                This page cannot accept care requests. The Call button opens
+                your phone app. For a medical emergency, call 911.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="wrap footer-row">
+        <div>
+          <p class="disclaimer">
+            Draft. Each office is independently owned and operated. Not yet
+            approved by FirstLight Home Care corporate.
+          </p>
+          <p>
+            A proposed Southern California alliance page. Office details and ZIP
+            assignments require final owner confirmation before launch.
+          </p>
+        </div>
+        <div class="footer-links"><a href="#main">Back to top ↑</a></div>
+      </div>
+    </footer>
+
+    <div
+      aria-label="Contact this office"
+      class="mobile-action-bar"
+      hidden
+      id="mobile-action-bar"
+      role="region"
+    >
+      <a class="button" hidden id="mobile-call">Call</a>
+      <button
+        aria-controls="inquiry-dialog"
+        aria-haspopup="dialog"
+        class="button mobile-inquiry"
+        id="mobile-inquiry"
+        type="button"
+      >
+        Inquiry
+      </button>
+    </div>
+    <dialog
+      aria-describedby="inquiry-placeholder"
+      aria-labelledby="inquiry-title"
+      aria-modal="true"
+      id="inquiry-dialog"
+    >
+      <div class="inquiry-header">
+        <button
+          aria-label="Close inquiry dialog"
+          class="quiet-button"
+          id="inquiry-close"
+          type="button"
+        >
+          Close <span aria-hidden="true">×</span>
+        </button>
+        <h2 id="inquiry-title" tabindex="-1">Try an inquiry.</h2>
+        <p class="placeholder-tag">Placeholder only</p>
+      </div>
+      <p class="demo-warning" id="inquiry-placeholder">
+        Nothing is sent to an office. Use fictional details only. This is a
+        preview, not a request for care.
+      </p>
+      <form autocomplete="off" id="inquiry-form" novalidate="">
+        <div
+          class="validation-summary"
+          hidden=""
+          id="inquiry-errors"
+          role="alert"
+          tabindex="-1"
+        ></div>
+        <div class="inquiry-fields">
+          <div class="inquiry-field">
+            <label for="inquiry-name">Name (required)</label
+            ><input
+              aria-describedby="inquiry-name-error"
+              id="inquiry-name"
+              maxlength="100"
+              name="name"
+              required=""
+            />
+            <p class="field-error" hidden="" id="inquiry-name-error"></p>
+          </div>
+          <div class="inquiry-field">
+            <label for="inquiry-phone">Phone (required)</label
+            ><input
+              aria-describedby="inquiry-phone-error"
+              id="inquiry-phone"
+              inputmode="tel"
+              maxlength="30"
+              name="phone"
+              required=""
+              type="tel"
+            />
+            <p class="field-error" hidden="" id="inquiry-phone-error"></p>
+          </div>
+          <div class="inquiry-field">
+            <label for="inquiry-email">Email (optional)</label
+            ><input
+              aria-describedby="inquiry-email-error"
+              id="inquiry-email"
+              maxlength="254"
+              name="email"
+              type="email"
+            />
+            <p class="field-error" hidden="" id="inquiry-email-error"></p>
+          </div>
+          <div class="inquiry-field">
+            <label for="inquiry-time">Best time to contact (optional)</label
+            ><input
+              id="inquiry-time"
+              maxlength="100"
+              name="best-time"
+              placeholder="For example, weekday afternoons"
+            />
+          </div>
+          <div class="inquiry-field inquiry-wide">
+            <label for="inquiry-relationship"
+              >Relationship to the person needing care (optional)</label
+            ><select id="inquiry-relationship" name="relationship">
+              <option value="">Choose if you would like</option>
+              <option value="self">I need care</option>
+              <option value="partner">Spouse or partner</option>
+              <option value="child">Adult child</option>
+              <option value="family">Other family member</option>
+              <option value="friend">Friend</option>
+              <option value="other">Other</option>
+              <option value="unsure">Prefer not to say</option>
+            </select>
+          </div>
+          <div class="inquiry-field">
+            <label for="inquiry-office">Chosen office</label
+            ><input id="inquiry-office" name="office" readonly="" />
+          </div>
+          <div class="inquiry-field">
+            <label for="inquiry-zip">Care ZIP</label
+            ><input id="inquiry-zip" name="zip" readonly="" />
+          </div>
+          <div class="inquiry-field inquiry-wide">
+            <label for="inquiry-message">Message or notes (optional)</label
+            ><textarea
+              aria-describedby="inquiry-message-help"
+              id="inquiry-message"
+              maxlength="5000"
+              name="message"
+              rows="8"
+            ></textarea>
+            <p class="field-hint" id="inquiry-message-help">
+              Filled from your care results. You can edit it. Nothing is stored
+              or sent.
+            </p>
+          </div>
+        </div>
+        <button class="button inquiry-submit" type="submit">
+          Try demo submission
+        </button>
+      </form>
+      <div hidden="" id="inquiry-confirmation" role="status" tabindex="-1">
+        <h3>Demo complete. Nothing was sent.</h3>
+        <p>
+          No inquiry, appointment or request for care was created. Close this
+          preview and use the Call button to reach your office.
+        </p>
+        <button class="button" id="inquiry-confirm-close" type="button">
+          Close preview
+        </button>
+      </div>
+    </dialog>
+    <script src="assets/nav.js"></script>
+    <script src="assets/index.js" type="module"></script>
+  </body>
+</html>
