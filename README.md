@@ -1,11 +1,11 @@
 # FirstLight Home Care: Southern California Landing Site
 
-[![Deploy to GitHub Pages](https://github.com/CA-FirstLight-Home-Care/landing-page/actions/workflows/deploy.yml/badge.svg)](https://github.com/CA-FirstLight-Home-Care/landing-page/actions/workflows/deploy.yml)
+[![Deploy to GitHub Pages](https://github.com/firstlight-socal/landing-page/actions/workflows/deploy.yml/badge.svg)](https://github.com/firstlight-socal/landing-page/actions/workflows/deploy.yml)
 [![coverage](https://img.shields.io/endpoint?url=https://firstlight-socal.github.io/landing-page/badges/coverage.json)](https://github.com/firstlight-socal/landing-page/actions/workflows/test.yml)
 
 Regional landing website for the Southern California Alliance of FirstLight Home Care franchise owners.
 
-- **GitHub Pages URL**: https://ca-firstlight-home-care.github.io/landing-page/
+- **GitHub Pages URL**: https://firstlight-socal.github.io/landing-page/
 - **Cloudflare Pages URL (alternative)**: https://firstlight-socal.pages.dev/
 - **Routes & Pages**:
   - `index.html`: Hero, who we are / what we do, and four-step guided flow (office selection, care quiz, results, and inquiry modal).
@@ -61,7 +61,7 @@ npm run preview -- 8788
 ### GitHub Pages (Active)
 
 Deployment to GitHub Pages is fully automated via GitHub Actions (`.github/workflows/deploy.yml`) on every push to the default `main` branch.
-GitHub Pages is served at: **https://ca-firstlight-home-care.github.io/landing-page/**
+GitHub Pages is served at: **https://firstlight-socal.github.io/landing-page/**
 
 ### Cloudflare Pages (Alternative)
 
