@@ -1,4 +1,5 @@
 @use "tokens" as *;
+@use "mobile";
 
 /*
 Copyright 2019 The Manrope Project Authors (https://github.com/sharanda/manrope)
@@ -751,9 +752,11 @@ summary {
 .faq-category:first-of-type {
   margin-top: 8px;
 }
-.faq-category h3 {
+.faq-category h2 {
   font-size: 1.15rem;
   font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.045em;
   color: var(--deep);
   margin: 0;
 }
@@ -4190,3 +4193,5 @@ body.inquiry-open {
   margin-top: 18px;
   min-height: 48px;
 }
+
+@include mobile.phone;

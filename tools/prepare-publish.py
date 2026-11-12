@@ -19,6 +19,7 @@ ASSETS = {
     "assets/locations.css": "text/css; charset=utf-8",
     "assets/faqs.css": "text/css; charset=utf-8",
     "assets/index.js": "text/javascript; charset=utf-8",
+    "assets/nav.js": "text/javascript; charset=utf-8",
     "assets/locations.js": "text/javascript; charset=utf-8",
     "assets/faqs.js": "text/javascript; charset=utf-8",
     "assets/manrope-subset.woff": "font/woff",

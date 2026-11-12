@@ -1,4 +1,5 @@
 @use "tokens" as *;
+@use "mobile";
 
 /*
 Copyright 2019 The Manrope Project Authors (https://github.com/sharanda/manrope)
@@ -4114,3 +4115,5 @@ body.inquiry-open {
   color: #40594a;
   border-top-color: #c5d4c0;
 }
+
+@include mobile.phone;
