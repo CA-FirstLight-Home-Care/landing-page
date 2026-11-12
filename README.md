@@ -1,7 +1,7 @@
 # FirstLight Home Care: Southern California Landing Site
 
 [![Deploy to GitHub Pages](https://github.com/CA-FirstLight-Home-Care/landing-page/actions/workflows/deploy.yml/badge.svg)](https://github.com/CA-FirstLight-Home-Care/landing-page/actions/workflows/deploy.yml)
-[![coverage](https://img.shields.io/endpoint?url=https://ca-firstlight-home-care.github.io/landing-page/badges/coverage.json)](https://github.com/CA-FirstLight-Home-Care/landing-page/actions/workflows/test.yml)
+[![coverage](https://img.shields.io/endpoint?url=https://firstlight-socal.github.io/landing-page/badges/coverage.json)](https://github.com/firstlight-socal/landing-page/actions/workflows/test.yml)
 
 Regional landing website for the Southern California Alliance of FirstLight Home Care franchise owners.
 
@@ -38,7 +38,7 @@ npm test
 
 `npm test` runs the unit tests with c8 and writes `coverage/coverage-summary.json`. Pure helpers live in `assets/lib/` (ZIP routing, autocomplete, distance, quiz scoring, formatting, and the service area map). `npm run test:routes` still checks the published pages. `npm run test:all` runs both.
 
-The coverage badge is built by `node tools/coverage-badge.js` during the GitHub Pages deploy. After that deploy, the badge JSON is at `https://ca-firstlight-home-care.github.io/landing-page/badges/coverage.json`. shields.io reads that file, so the badge needs no account and no secret. The same files are also committed under `badges/` for the raw GitHub URL `https://raw.githubusercontent.com/CA-FirstLight-Home-Care/landing-page/main/badges/coverage.json`.
+The coverage badge is built by `node tools/coverage-badge.js` during the GitHub Pages deploy. After that deploy, the badge JSON is at `https://firstlight-socal.github.io/landing-page/badges/coverage.json`. shields.io reads that file, so the badge needs no account and no secret. The same files are also committed under `badges/` for the raw GitHub URL `https://raw.githubusercontent.com/firstlight-socal/landing-page/main/badges/coverage.json`.
 
 ### 2. Testing Routes Locally
 
