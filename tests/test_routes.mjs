@@ -66,6 +66,7 @@ const assets = {
   "/assets/locations.css": ["locations.css", /text\/css/],
   "/assets/faqs.css": ["faqs.css", /text\/css/],
   "/assets/index.js": ["index.js", /javascript/],
+  "/assets/nav.js": ["nav.js", /javascript/],
   "/assets/locations.js": ["locations.js", /javascript/],
   "/assets/faqs.js": ["faqs.js", /javascript/],
   "/assets/manrope-subset.woff": ["manrope-subset.woff", /font\/woff/],
@@ -120,6 +121,50 @@ for (const method of ["POST", "PUT", "DELETE"]) {
     new Request("https://example.test/", { method }),
   );
   check("Method rejected " + method, () => assert.equal(response.status, 405));
+}
+for (const file of [
+  "index.html",
+  "services.html",
+  "locations.html",
+  "faqs.html",
+]) {
+  const local = await readFile(resolve(root, file), "utf8");
+  check("Mobile menu markup " + file, () => {
+    assert.match(local, /class="nav-toggle-input"/);
+    assert.match(local, /id="site-nav"/);
+    assert.match(local, /src="assets\/nav\.js"/);
+    assert.match(local, /class="when-closed">Menu</);
+    assert.match(local, /class="when-open">Close</);
+    assert.doesNotMatch(local, /[—–]/);
+  });
+}
+const guide = await readFile(resolve(root, "index.html"), "utf8");
+check("Mobile action bar and quiz dots", () => {
+  assert.match(
+    guide,
+    /class="mobile-action-bar"[\s\S]*?hidden[\s\S]*?id="mobile-action-bar"/,
+  );
+  assert.match(guide, /id="mobile-call"/);
+  assert.match(guide, /id="mobile-inquiry"/);
+  assert.match(guide, /id="question-dots"/);
+});
+const guideScript = await readFile(resolve(root, "assets/index.js"), "utf8");
+check("Mobile bar follows the chosen office", () => {
+  assert.match(guideScript, /function syncMobileBar/);
+  assert.match(guideScript, /#inquiry-open, #mobile-inquiry/);
+  assert.match(guideScript, /question-dots/);
+  assert.doesNotMatch(guideScript, /[—–]/);
+});
+for (const file of ["index.css", "services.css", "locations.css", "faqs.css"]) {
+  const css = await readFile(resolve(root, "assets", file), "utf8");
+  check("Mobile type, targets, and menu rules " + file, () => {
+    assert.match(css, /@media \(max-width: 700px\)/);
+    assert.match(css, /font-size: 18px/);
+    assert.match(css, /\.nav-toggle \{/);
+    assert.match(css, /min-height: 52px/);
+    assert.match(css, /prefers-reduced-motion: reduce/);
+    assert.doesNotMatch(css, /[—–]/);
+  });
 }
 console.log(
   `RESULT ${checks} offline routing checks passed. No network calls were made.`,

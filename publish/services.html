@@ -31,7 +31,20 @@
             width="484"
           /><span class="region">Southern<br />California</span></a
         >
-        <nav aria-label="Main navigation" class="nav">
+        <div class="nav-toggle-wrap">
+          <input
+            aria-controls="site-nav"
+            class="nav-toggle-input"
+            id="nav-toggle"
+            type="checkbox"
+          />
+          <label class="nav-toggle" for="nav-toggle">
+            <span aria-hidden="true" class="nav-toggle-icon"></span>
+            <span class="when-closed">Menu</span>
+            <span class="when-open">Close</span>
+          </label>
+        </div>
+        <nav aria-label="Main navigation" class="nav" id="site-nav">
           <a data-go-step="1" href="index.html#guided-flow">Start the guide</a
           ><a href="locations.html">About us</a
           ><a aria-current="page" href="services.html">Services</a
@@ -537,5 +550,6 @@
         </p>
       </div>
     </footer>
+    <script src="assets/nav.js"></script>
   </body>
 </html>

@@ -1,4 +1,5 @@
 @use "tokens" as *;
+@use "mobile";
 
 /*
 Copyright 2019 The Manrope Project Authors (https://github.com/sharanda/manrope)
@@ -4152,3 +4153,5 @@ body.inquiry-open {
   font-size: clamp(1.7rem, 3vw, 2.3rem);
   margin: 4px 0 12px;
 }
+
+@include mobile.phone;

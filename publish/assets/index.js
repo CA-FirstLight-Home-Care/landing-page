@@ -900,6 +900,32 @@ function lookupZip(value) {
 }
 let selectedOfficeId = null;
 const emptyContact = document.getElementById("contact-panel").innerHTML;
+function syncMobileBar() {
+  const bar = document.getElementById("mobile-action-bar");
+  if (!bar) return;
+  const call = document.getElementById("mobile-call");
+  const office = selectedOfficeId ? OFFICES[selectedOfficeId] : null;
+  if (!office) {
+    bar.hidden = true;
+    document.body.classList.remove("office-ready");
+    return;
+  }
+  if (call) {
+    if (office.phone) {
+      call.href = phoneHref(office);
+      call.hidden = false;
+      call.setAttribute(
+        "aria-label",
+        "Call " + displayOfficeName(office) + " at " + office.phone,
+      );
+    } else {
+      call.hidden = true;
+      call.removeAttribute("href");
+    }
+  }
+  bar.hidden = false;
+  document.body.classList.add("office-ready");
+}
 function setOffice(id, moveFocus = false) {
   const o = OFFICES[id];
   if (!o) return;
@@ -907,12 +933,14 @@ function setOffice(id, moveFocus = false) {
   document.getElementById("contact-panel").innerHTML =
     `<h3>${esc(displayOfficeName(o))}</h3><p class="office-service-areas">Serving ${esc(o.areas.join(", "))}.</p><div class="contact-card-actions">${o.phone ? `<a class="button consultation" href="${phoneHref(o)}">Call ${esc(o.phone)}</a>` : ""}<button class="button inquiry-trigger" id="inquiry-open" type="button" aria-haspopup="dialog" aria-controls="inquiry-dialog">Submit an inquiry</button></div><p class="micro">Inquiry placeholder. Nothing is sent.</p>`;
   document.dispatchEvent(new Event("officechange"));
+  syncMobileBar();
   if (moveFocus) window.startCareQuestions();
 }
 function clearOffice() {
   selectedOfficeId = null;
   document.getElementById("contact-panel").innerHTML = emptyContact;
   document.dispatchEvent(new Event("officechange"));
+  syncMobileBar();
   if (window.resetCareFlow) window.resetCareFlow();
 }
 function resultCard(o) {
@@ -1573,6 +1601,21 @@ function renderCareQuestion(focus = false) {
   progress.max = total;
   progress.value = n;
   progress.textContent = n + " of " + total;
+  const dots = document.getElementById("question-dots");
+  if (dots) {
+    if (dots.childElementCount !== total) {
+      dots.replaceChildren();
+      for (let i = 0; i < total; i += 1) {
+        const dot = document.createElement("span");
+        dot.className = "question-dot";
+        dots.append(dot);
+      }
+    }
+    [...dots.children].forEach((dot, i) => {
+      dot.classList.toggle("is-done", i < n - 1);
+      dot.classList.toggle("is-current", i === n - 1);
+    });
+  }
   const scheduleDone = document.getElementById("quiz-schedule-done"),
     isScheduleQuestion =
       !askingLocation && CARE_QUESTIONS[questionIndex][0] === "schedule";
@@ -1778,6 +1821,7 @@ window.addEventListener("pagehide", () => {
   questionIndex = 0;
   askingLocation = true;
   selectedOfficeId = null;
+  syncMobileBar();
   careZip = "";
   document.getElementById("zip").value = "";
   document.getElementById("lookup-results").textContent = "";
@@ -1863,7 +1907,7 @@ updateCareSteps();
     }
   }
   document.addEventListener("click", (event) => {
-    const button = event.target.closest("#inquiry-open");
+    const button = event.target.closest("#inquiry-open, #mobile-inquiry");
     if (button && selectedOfficeId) {
       event.preventDefault();
       open(button);
