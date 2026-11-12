@@ -2,7 +2,6 @@ import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
 import assert from "node:assert/strict";
-import vm from "node:vm";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const worker = (await import("../publish/_worker.js")).default;
 let checks = 0;
@@ -68,6 +67,12 @@ const assets = {
   "/assets/faqs.css": ["faqs.css", /text\/css/],
   "/assets/index.js": ["index.js", /javascript/],
   "/assets/zip-routing.js": ["zip-routing.js", /javascript/],
+  "/assets/lib/routing.js": ["lib/routing.js", /javascript/],
+  "/assets/lib/places.js": ["lib/places.js", /javascript/],
+  "/assets/lib/nearest.js": ["lib/nearest.js", /javascript/],
+  "/assets/lib/format.js": ["lib/format.js", /javascript/],
+  "/assets/lib/quiz.js": ["lib/quiz.js", /javascript/],
+  "/assets/lib/map.js": ["lib/map.js", /javascript/],
   "/assets/nav.js": ["nav.js", /javascript/],
   "/assets/locations.js": ["locations.js", /javascript/],
   "/assets/faqs.js": ["faqs.js", /javascript/],
@@ -179,16 +184,16 @@ const locationJs = await readFile(resolve(root, "assets/locations.js"), "utf8");
 const guideHtml = await readFile(resolve(root, "index.html"), "utf8");
 const locationHtml = await readFile(resolve(root, "locations.html"), "utf8");
 check("Guide autocomplete queries ZIP or city", () => {
-  assert.match(guideJs, /function placeQueryKind/);
+  assert.match(guideJs, /placeQueryKind/);
   assert.match(guideJs, /function zipMatches/);
   assert.match(guideJs, /function cityMatches/);
   assert.match(guideJs, /aria-activedescendant/);
   assert.match(guideJs, /Sorry, this ZIP code isn't in our service area yet\./);
   assert.match(guideJs, /Sorry, this city isn't in our service area yet\./);
   assert.match(guideJs, /referralHref/);
-  assert.match(guideJs, /Find your local FirstLight office/);
+  assert.match(guideJs, /directoryLinkHtml/);
   assert.match(guideJs, /navigator\.geolocation\.getCurrentPosition/);
-  assert.match(guideJs, /PERMISSION|error\.code|messages\[error/);
+  assert.match(guideJs, /geolocationErrorMessage/);
   assert.match(guideJs, /Reverse geocoding belongs here/);
   assert.doesNotMatch(guideJs, /nationalDirectory\(/);
 });
@@ -210,7 +215,7 @@ check("Locations search uses the same autocomplete", () => {
   );
   assert.match(locationJs, /Sorry, this city isn't in our service area yet\./);
   assert.match(locationJs, /referralHref/);
-  assert.match(locationJs, /Find your local FirstLight office/);
+  assert.match(locationJs, /directoryLinkHtml/);
   assert.match(locationJs, /getCurrentPosition/);
 });
 for (const file of ["index.css", "locations.css"]) {
@@ -223,12 +228,7 @@ for (const file of ["index.css", "locations.css"]) {
     assert.match(css, /prefers-reduced-motion: reduce/);
   });
 }
-const routingCode = await readFile(
-  resolve(root, "assets/zip-routing.js"),
-  "utf8",
-);
-const routing = {};
-vm.runInNewContext(routingCode, routing);
+const routing = await import("../assets/zip-routing.js");
 const routeZip = routing.routeZip;
 check("30 mile cutoff splits unlisted ZIPs 507 and 320", () => {
   const rows = Object.values(routing.ZIP_ROUTING.unlistedSoCal);
@@ -335,7 +335,7 @@ check("Service map does not ask for location", () => {
   assert.match(mapJs, /scrollWheelZoom: false/);
   assert.match(mapJs, /OpenStreetMap/);
   assert.match(mapJs, /tile\.openstreetmap\.fr/);
-  assert.match(mapJs, /Start the care guide/);
+  assert.match(mapJs, /popupHtml/);
   assert.doesNotMatch(mapJs, /getCurrentPosition|navigator\.geolocation/);
   assert.doesNotMatch(mapJs, /[—–]/);
   assert.doesNotMatch(locationHtml, /[—–]/);

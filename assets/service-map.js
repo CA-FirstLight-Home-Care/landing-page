@@ -1,3 +1,5 @@
+import { placeReadyAreas, popupHtml, popupWidth } from "./lib/map.js";
+
 // Service area map for the locations page.
 // This file does not ask for the visitor's location. The locate button on
 // the search field is separate, and it runs only after a click.
@@ -5,24 +7,6 @@
 // free, and needs no API key. CARTO's public raster tiles now draw an
 // "API key required" watermark. The volunteer tile.openstreetmap.org server
 // blocks app use under its tile policy, so this page does not call it.
-
-const AREA_COLORS = {
-  burbank: "#0e7a57",
-  "chino-hills": "#1d4e89",
-  glendale: "#b45309",
-  irvine: "#0f766e",
-  "marina-del-rey": "#6d28d9",
-  montclair: "#9a3412",
-  pasadena: "#3f6212",
-  "rancho-cucamonga": "#9f1239",
-  "san-clemente": "#0369a1",
-  "san-gabriel": "#a16207",
-  "simi-valley": "#4338ca",
-  temecula: "#be185d",
-  "west-hollywood": "#0f4c5c",
-  whittier: "#4d7c0f",
-  "woodland-hills": "#7c2d12",
-};
 
 (() => {
   const mapEl = document.getElementById("service-map");
@@ -50,28 +34,6 @@ const AREA_COLORS = {
       phoneHref: phoneLink ? phoneLink.getAttribute("href") : "",
       areas: card.querySelector(".location-areas").textContent.trim(),
     };
-  }
-
-  function escapeHtml(value) {
-    return String(value)
-      .replaceAll("&", "&amp;")
-      .replaceAll("<", "&lt;")
-      .replaceAll(">", "&gt;")
-      .replaceAll('"', "&quot;");
-  }
-
-  function popupHtml(record) {
-    const phone = record.phoneHref
-      ? `<p><a href="${escapeHtml(record.phoneHref)}">${escapeHtml(record.phone)}</a></p>`
-      : "";
-    return (
-      `<div class="area-popup">` +
-      `<h3>${escapeHtml(record.name)}</h3>` +
-      phone +
-      `<p>${escapeHtml(record.areas)}</p>` +
-      `<a class="area-popup-start" href="index.html?office=${encodeURIComponent(record.id)}">Start the care guide</a>` +
-      `</div>`
-    );
   }
 
   function setMoving(on) {
@@ -144,13 +106,17 @@ const AREA_COLORS = {
       event.tile.alt = "";
     });
 
-    const slots = new Map();
-    let bounds = null;
+    const ready = [];
     for (const feature of SERVICE_AREAS.features) {
       const id = feature.properties.id;
       const record = officeRecord(id);
-      if (!record || !OFFICE_POINTS[id]) continue;
-      const color = AREA_COLORS[id] || "#046a38";
+      const point = globalThis.OFFICE_POINTS[id];
+      if (!record || !point) continue;
+      ready.push({ feature, id, record, point });
+    }
+    let bounds = null;
+    for (const placed of placeReadyAreas(ready)) {
+      const { feature, id, record, point, color, anchor } = placed;
       const layer = Leaflet.geoJSON(feature, {
         style: {
           color,
@@ -181,10 +147,6 @@ const AREA_COLORS = {
       });
       layer.on("click", () => openOffice(id));
 
-      const point = OFFICE_POINTS[id];
-      const key = point.latitude.toFixed(3) + "," + point.longitude.toFixed(3);
-      const slot = slots.get(key) || 0;
-      slots.set(key, slot + 1);
       const marker = Leaflet.marker([point.latitude, point.longitude], {
         // Pins sit on top of each other at a regional zoom, so they are visual.
         // The legend buttons and the area shapes are the keyboard controls.
@@ -195,13 +157,13 @@ const AREA_COLORS = {
           className: "area-marker",
           html: `<span style="background:${color}"></span>`,
           iconSize: [22, 22],
-          iconAnchor: [11 - slot * 16, 11],
+          iconAnchor: anchor,
         }),
       });
-      const popupWidth = Math.max(150, Math.min(240, mapEl.clientWidth - 134));
+      const width = popupWidth(mapEl.clientWidth);
       marker.bindPopup(popupHtml(record), {
-        maxWidth: popupWidth,
-        minWidth: Math.min(160, popupWidth),
+        maxWidth: width,
+        minWidth: Math.min(160, width),
         autoPan: true,
         keepInView: true,
         autoPanPaddingTopLeft: [64, 12],

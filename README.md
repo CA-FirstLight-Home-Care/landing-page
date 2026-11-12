@@ -1,10 +1,11 @@
 # FirstLight Home Care: Southern California Landing Site
 
-[![Deploy to GitHub Pages](https://github.com/CA-FirstLight-Home-Care/landing-page/actions/workflows/deploy.yml/badge.svg)](https://github.com/CA-FirstLight-Home-Care/landing-page/actions/workflows/deploy.yml)
+[![Deploy to GitHub Pages](https://github.com/firstlight-socal/landing-page/actions/workflows/deploy.yml/badge.svg)](https://github.com/firstlight-socal/landing-page/actions/workflows/deploy.yml)
+[![coverage](https://img.shields.io/endpoint?url=https://firstlight-socal.github.io/landing-page/badges/coverage.json)](https://github.com/firstlight-socal/landing-page/actions/workflows/test.yml)
 
 Regional landing website for the Southern California Alliance of FirstLight Home Care franchise owners.
 
-- **GitHub Pages URL**: https://ca-firstlight-home-care.github.io/landing-page/
+- **GitHub Pages URL**: https://firstlight-socal.github.io/landing-page/
 - **Cloudflare Pages URL (alternative)**: https://firstlight-socal.pages.dev/
 - **Routes & Pages**:
   - `index.html`: Hero, who we are / what we do, and four-step guided flow (office selection, care quiz, results, and inquiry modal).
@@ -28,14 +29,25 @@ Regional landing website for the Southern California Alliance of FirstLight Home
 npm run lint
 ```
 
-### 1. Testing Routes Locally
+### 1. Unit tests and coverage
+
+```bash
+npm install
+npm test
+```
+
+`npm test` runs the unit tests with c8 and writes `coverage/coverage-summary.json`. Pure helpers live in `assets/lib/` (ZIP routing, autocomplete, distance, quiz scoring, formatting, and the service area map). `npm run test:routes` still checks the published pages. `npm run test:all` runs both.
+
+The coverage badge is built by `node tools/coverage-badge.js` during the GitHub Pages deploy. After that deploy, the badge JSON is at `https://firstlight-socal.github.io/landing-page/badges/coverage.json`. shields.io reads that file, so the badge needs no account and no secret. The same files are also committed under `badges/` for the raw GitHub URL `https://raw.githubusercontent.com/firstlight-socal/landing-page/main/badges/coverage.json`.
+
+### 2. Testing Routes Locally
 
 ```bash
 npm install
 node tests/test_routes.mjs
 ```
 
-### 2. Local Preview Server
+### 3. Local Preview Server
 
 ```bash
 npm run preview -- 8788
@@ -49,7 +61,7 @@ npm run preview -- 8788
 ### GitHub Pages (Active)
 
 Deployment to GitHub Pages is fully automated via GitHub Actions (`.github/workflows/deploy.yml`) on every push to the default `main` branch.
-GitHub Pages is served at: **https://ca-firstlight-home-care.github.io/landing-page/**
+GitHub Pages is served at: **https://firstlight-socal.github.io/landing-page/**
 
 ### Cloudflare Pages (Alternative)
 
