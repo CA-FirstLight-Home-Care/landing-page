@@ -71,6 +71,12 @@ const assets = {
   "/assets/nav.js": ["nav.js", /javascript/],
   "/assets/locations.js": ["locations.js", /javascript/],
   "/assets/faqs.js": ["faqs.js", /javascript/],
+  "/assets/leaflet.min.css": ["leaflet.min.css", /text\/css/],
+  "/assets/leaflet.min.js": ["leaflet.min.js", /javascript/],
+  "/assets/service-map.css": ["service-map.css", /text\/css/],
+  "/assets/service-map.js": ["service-map.js", /javascript/],
+  "/assets/service-areas.js": ["service-areas.js", /javascript/],
+  "/assets/service-areas.geojson": ["service-areas.geojson", /geo\+json/],
   "/assets/manrope-subset.woff": ["manrope-subset.woff", /font\/woff/],
 };
 for (const [path, [file, contentType]] of Object.entries(assets)) {
@@ -273,6 +279,66 @@ check("Sample ZIPs follow the sheet order", () => {
   const far = office("91901");
   assert.equal(far.kind, "outside");
   assert.ok(routing.ZIP_ROUTING.unlistedSoCal["91901"].d > 30);
+});
+const areaText = await readFile(
+  resolve(root, "assets/service-areas.geojson"),
+  "utf8",
+);
+const areaBytes = Buffer.byteLength(areaText);
+const areas = JSON.parse(areaText);
+const mapJs = await readFile(resolve(root, "assets/service-map.js"), "utf8");
+const areaLoader = await readFile(
+  resolve(root, "assets/service-areas.js"),
+  "utf8",
+);
+check("Service area GeoJSON stays under 300 KB", () => {
+  assert.ok(areaBytes < 300 * 1024, areaBytes + " bytes");
+  assert.equal(areas.features.length, 15);
+  assert.equal(areaLoader.includes(areaText.trim()), true);
+});
+check("Service areas are alliance ZIPs only", () => {
+  const alliance = new Set(Object.keys(routing.ZIP_ROUTING.allianceZips));
+  const seen = new Set();
+  const ids = [];
+  for (const feature of areas.features) {
+    ids.push(feature.properties.id);
+    for (const zip of feature.properties.zips) {
+      assert.equal(alliance.has(zip), true, zip);
+      assert.equal(
+        routing.ZIP_ROUTING.allianceZips[zip].includes(feature.properties.id),
+        true,
+      );
+      seen.add(zip);
+    }
+    for (const zip of feature.properties.missingZips) {
+      assert.equal(alliance.has(zip), true, zip);
+      seen.add(zip);
+    }
+  }
+  assert.deepEqual(
+    ids,
+    JSON.parse(JSON.stringify(routing.ZIP_ROUTING.offices)),
+  );
+  assert.equal(seen.size, alliance.size);
+  for (const zip of routing.ZIP_ROUTING.nonAllianceZips) {
+    assert.equal(seen.has(zip), false);
+  }
+  const unlisted = Object.keys(routing.ZIP_ROUTING.unlistedSoCal).find(
+    (zip) => !alliance.has(zip),
+  );
+  assert.equal(seen.has(unlisted), false);
+});
+check("Service map does not ask for location", () => {
+  assert.match(locationHtml, /id="service-map"/);
+  assert.match(locationHtml, /Office website under construction/);
+  assert.match(locationHtml, /\(840\) 200-9868/);
+  assert.match(mapJs, /scrollWheelZoom: false/);
+  assert.match(mapJs, /OpenStreetMap/);
+  assert.match(mapJs, /tile\.openstreetmap\.fr/);
+  assert.match(mapJs, /Start the care guide/);
+  assert.doesNotMatch(mapJs, /getCurrentPosition|navigator\.geolocation/);
+  assert.doesNotMatch(mapJs, /[—–]/);
+  assert.doesNotMatch(locationHtml, /[—–]/);
 });
 console.log(
   `RESULT ${checks} offline routing checks passed. No network calls were made.`,

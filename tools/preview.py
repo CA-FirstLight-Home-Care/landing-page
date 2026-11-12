@@ -22,6 +22,17 @@ ASSETS = {
     "/assets/index.js": ("assets/index.js", "text/javascript; charset=utf-8"),
     "/assets/locations.js": ("assets/locations.js", "text/javascript; charset=utf-8"),
     "/assets/faqs.js": ("assets/faqs.js", "text/javascript; charset=utf-8"),
+    "/assets/zip-routing.js": ("assets/zip-routing.js", "text/javascript; charset=utf-8"),
+    "/assets/nav.js": ("assets/nav.js", "text/javascript; charset=utf-8"),
+    "/assets/leaflet.min.css": ("assets/leaflet.min.css", "text/css; charset=utf-8"),
+    "/assets/leaflet.min.js": ("assets/leaflet.min.js", "text/javascript; charset=utf-8"),
+    "/assets/service-map.css": ("assets/service-map.css", "text/css; charset=utf-8"),
+    "/assets/service-map.js": ("assets/service-map.js", "text/javascript; charset=utf-8"),
+    "/assets/service-areas.js": ("assets/service-areas.js", "text/javascript; charset=utf-8"),
+    "/assets/service-areas.geojson": (
+        "assets/service-areas.geojson",
+        "application/geo+json; charset=utf-8",
+    ),
     "/assets/manrope-subset.woff": ("assets/manrope-subset.woff", "font/woff"),
 }
 SECURITY_POLICY = (

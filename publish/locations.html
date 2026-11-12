@@ -78,7 +78,8 @@
           <h2 class="who-teams">Local teams</h2>
           <p>
             15 participating teams, listed alphabetically. Search by city or
-            ZIP, then call a team or visit its website.
+            ZIP, or choose a team on the service area map, then call that team
+            or visit its website.
           </p>
           <div class="locations-filter" hidden="">
             <label for="location-search">Search by city or ZIP</label>
@@ -188,6 +189,44 @@
               role="status"
             ></p>
           </div>
+        </div>
+      </section>
+      <section
+        aria-labelledby="service-map-heading"
+        class="service-map-section"
+        id="service-areas"
+      >
+        <div class="wrap">
+          <h2 class="service-map-title" id="service-map-heading">
+            Service areas
+          </h2>
+          <p class="service-map-note">
+            Each color is one local team. The shapes follow the alliance ZIP
+            codes that have a census boundary. The list under the map has the
+            same teams, with phone numbers and cities.
+          </p>
+          <button
+            aria-controls="service-map"
+            aria-pressed="false"
+            class="service-map-activate"
+            id="service-map-activate"
+            type="button"
+          >
+            Tap to move the map
+          </button>
+          <div class="service-map-frame">
+            <div
+              aria-label="Map of local team service areas. The office list below has the same teams."
+              class="service-map"
+              id="service-map"
+              role="region"
+            ></div>
+          </div>
+          <p class="service-map-scroll-note" id="service-map-status">
+            Tap a color to see that team. Use the button before you drag the
+            map, so the rest of the page can still scroll.
+          </p>
+          <ul class="service-map-legend" hidden="" id="service-map-legend"></ul>
         </div>
       </section>
       <section aria-label="Participating offices" class="locations-list">
@@ -961,5 +1000,6 @@
     <script src="assets/zip-routing.js"></script>
     <script src="assets/nav.js"></script>
     <script src="assets/locations.js"></script>
+    <script src="assets/service-map.js"></script>
   </body>
 </html>
