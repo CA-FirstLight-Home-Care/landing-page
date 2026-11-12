@@ -23,6 +23,12 @@ ASSETS = {
     "assets/nav.js": "text/javascript; charset=utf-8",
     "assets/locations.js": "text/javascript; charset=utf-8",
     "assets/faqs.js": "text/javascript; charset=utf-8",
+    "assets/leaflet.min.css": "text/css; charset=utf-8",
+    "assets/leaflet.min.js": "text/javascript; charset=utf-8",
+    "assets/service-map.css": "text/css; charset=utf-8",
+    "assets/service-map.js": "text/javascript; charset=utf-8",
+    "assets/service-areas.js": "text/javascript; charset=utf-8",
+    "assets/service-areas.geojson": "application/geo+json; charset=utf-8",
     "assets/manrope-subset.woff": "font/woff",
 }
 
