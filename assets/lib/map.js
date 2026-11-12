@@ -49,3 +49,70 @@ export function popupHtml(record) {
     `</div>`
   );
 }
+
+const SERVICE_AREAS_MARKER = "const SERVICE_AREAS = ";
+
+export function parseServiceAreas(source) {
+  if (source && typeof source === "object") {
+    if (
+      source.type !== "FeatureCollection" ||
+      !Array.isArray(source.features)
+    ) {
+      return null;
+    }
+    return source;
+  }
+  const text = String(source || "");
+  const start = text.indexOf(SERVICE_AREAS_MARKER);
+  if (start < 0) return null;
+  let json = text.slice(start + SERVICE_AREAS_MARKER.length).trim();
+  if (json.endsWith(";")) json = json.slice(0, -1);
+  try {
+    const data = JSON.parse(json);
+    if (
+      !data ||
+      data.type !== "FeatureCollection" ||
+      !Array.isArray(data.features)
+    ) {
+      return null;
+    }
+    return data;
+  } catch {
+    return null;
+  }
+}
+
+export function serviceAreaStats(source) {
+  const data = parseServiceAreas(source);
+  const features = data ? data.features : [];
+  const drawn = new Set();
+  const missing = new Set();
+  const ids = [];
+  for (const feature of features) {
+    const props = (feature && feature.properties) || {};
+    ids.push(props.id);
+    for (const zip of props.zips || []) drawn.add(zip);
+    for (const zip of props.missingZips || []) missing.add(zip);
+  }
+  return { ids, drawn, missing };
+}
+
+export function placeReadyAreas(ready) {
+  const slots = new Map();
+  const placed = [];
+  for (const item of ready || []) {
+    const key = coordinateKey(item.point.latitude, item.point.longitude);
+    const slot = slots.get(key) || 0;
+    slots.set(key, slot + 1);
+    placed.push({
+      feature: item.feature,
+      id: item.id,
+      record: item.record,
+      point: item.point,
+      color: areaColor(item.id),
+      slot,
+      anchor: markerIconAnchor(slot),
+    });
+  }
+  return placed;
+}

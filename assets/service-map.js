@@ -1,10 +1,4 @@
-import {
-  areaColor,
-  coordinateKey,
-  markerIconAnchor,
-  popupHtml,
-  popupWidth,
-} from "./lib/map.js";
+import { placeReadyAreas, popupHtml, popupWidth } from "./lib/map.js";
 
 // Service area map for the locations page.
 // This file does not ask for the visitor's location. The locate button on
@@ -112,13 +106,17 @@ import {
       event.tile.alt = "";
     });
 
-    const slots = new Map();
-    let bounds = null;
+    const ready = [];
     for (const feature of SERVICE_AREAS.features) {
       const id = feature.properties.id;
       const record = officeRecord(id);
-      if (!record || !globalThis.OFFICE_POINTS[id]) continue;
-      const color = areaColor(id);
+      const point = globalThis.OFFICE_POINTS[id];
+      if (!record || !point) continue;
+      ready.push({ feature, id, record, point });
+    }
+    let bounds = null;
+    for (const placed of placeReadyAreas(ready)) {
+      const { feature, id, record, point, color, anchor } = placed;
       const layer = Leaflet.geoJSON(feature, {
         style: {
           color,
@@ -149,10 +147,6 @@ import {
       });
       layer.on("click", () => openOffice(id));
 
-      const point = globalThis.OFFICE_POINTS[id];
-      const key = coordinateKey(point.latitude, point.longitude);
-      const slot = slots.get(key) || 0;
-      slots.set(key, slot + 1);
       const marker = Leaflet.marker([point.latitude, point.longitude], {
         // Pins sit on top of each other at a regional zoom, so they are visual.
         // The legend buttons and the area shapes are the keyboard controls.
@@ -163,7 +157,7 @@ import {
           className: "area-marker",
           html: `<span style="background:${color}"></span>`,
           iconSize: [22, 22],
-          iconAnchor: markerIconAnchor(slot),
+          iconAnchor: anchor,
         }),
       });
       const width = popupWidth(mapEl.clientWidth);
