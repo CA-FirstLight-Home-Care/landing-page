@@ -60,8 +60,19 @@ npm run preview -- 8788
 
 ### GitHub Pages (Active)
 
-Deployment to GitHub Pages is fully automated via GitHub Actions (`.github/workflows/deploy.yml`) on every push to the default `main` branch.
-GitHub Pages is served at: **https://firstlight-socal.github.io/landing-page/**
+A push to `main` builds the site and publishes that build to the root of the `gh-pages` branch (`.github/workflows/deploy.yml`). The public site is **https://firstlight-socal.github.io/landing-page/** once Pages is set to deploy from `gh-pages` at `/ (root)`.
+
+The production publish includes `badges/coverage.json`, so the coverage badge stays at `https://firstlight-socal.github.io/landing-page/badges/coverage.json`. That publish cleans the branch root and keeps `pr-preview/`. A preview deploy writes only under `pr-preview/pr-<number>/`.
+
+### Pull request previews
+
+A pull request opened from this repository gets a temporary copy of the site at:
+
+`https://firstlight-socal.github.io/landing-page/pr-preview/pr-<number>/`
+
+`.github/workflows/preview.yml` publishes that folder when the pull request is opened, reopened, or updated, and removes it when the pull request is closed. The workflow leaves a sticky comment with the link. Fork pull requests are skipped, because GitHub does not give those workflows permission to publish.
+
+Each page already sends `noindex`. `robots.txt` also disallows `/pr-preview/` and `/landing-page/pr-preview/`, so a preview is not offered to search engines. Page, stylesheet, script, font, GeoJSON, and Leaflet links are relative, so the same files work at the site root and under a preview folder.
 
 ### Cloudflare Pages (Alternative)
 

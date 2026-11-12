@@ -1,4 +1,5 @@
 import { readFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
 import assert from "node:assert/strict";
@@ -339,6 +340,166 @@ check("Service map does not ask for location", () => {
   assert.doesNotMatch(mapJs, /getCurrentPosition|navigator\.geolocation/);
   assert.doesNotMatch(mapJs, /[—–]/);
   assert.doesNotMatch(locationHtml, /[—–]/);
+});
+
+const previewDir =
+  "https://firstlight-socal.github.io/landing-page/pr-preview/pr-1/";
+const previewPrefix = "/landing-page/pr-preview/pr-1/";
+
+function previewFile(url) {
+  const pathname = new URL(url).pathname;
+  assert.equal(pathname.startsWith(previewPrefix), true, url);
+  return decodeURIComponent(pathname.slice(previewPrefix.length));
+}
+
+function assertLocal(url) {
+  const relative = previewFile(url);
+  assert.equal(
+    existsSync(resolve(root, relative)),
+    true,
+    relative + " from " + url,
+  );
+}
+
+function pageRefs(html) {
+  return [...html.matchAll(/\s(?:href|src)="([^"]+)"/g)].map(
+    (match) => match[1],
+  );
+}
+
+function isExternal(value) {
+  return (
+    value.startsWith("#") ||
+    value.startsWith("data:") ||
+    value.startsWith("tel:") ||
+    value.startsWith("mailto:") ||
+    value.startsWith("http:") ||
+    value.startsWith("https:") ||
+    value.startsWith("//")
+  );
+}
+
+const sitePages = [
+  "index.html",
+  "services.html",
+  "locations.html",
+  "faqs.html",
+];
+for (const file of sitePages) {
+  const html = await readFile(resolve(root, file), "utf8");
+  check("Preview subpath links in " + file, () => {
+    assert.match(html, /<meta content="noindex,nofollow" name="robots" \/>/);
+    assert.doesNotMatch(html, /\/landing-page\//);
+    const pageUrl = new URL(file, previewDir);
+    for (const value of pageRefs(html)) {
+      assert.equal(value.startsWith("/"), false, file + " " + value);
+      if (isExternal(value)) continue;
+      assertLocal(new URL(value, pageUrl));
+    }
+  });
+}
+
+const styleFiles = [
+  "assets/index.css",
+  "assets/services.css",
+  "assets/locations.css",
+  "assets/faqs.css",
+  "assets/service-map.css",
+];
+for (const file of styleFiles) {
+  const css = await readFile(resolve(root, file), "utf8");
+  check("Preview subpath assets in " + file, () => {
+    assert.doesNotMatch(css, /\/landing-page\//);
+    const cssUrl = new URL(file, previewDir);
+    for (const match of css.matchAll(/url\((['"]?)([^'")]+)\1\)/g)) {
+      const value = match[2];
+      assert.equal(value.startsWith("/"), false, file + " " + value);
+      if (isExternal(value) || value.startsWith("#")) continue;
+      assertLocal(new URL(value, cssUrl));
+    }
+  });
+}
+
+const scriptFiles = [];
+async function collectScripts(directory, prefix) {
+  const { readdir } = await import("node:fs/promises");
+  for (const entry of await readdir(directory, { withFileTypes: true })) {
+    const relative = prefix + entry.name;
+    if (entry.isDirectory()) {
+      await collectScripts(resolve(directory, entry.name), relative + "/");
+    } else if (entry.name.endsWith(".js") && entry.name !== "leaflet.min.js") {
+      scriptFiles.push(relative);
+    }
+  }
+}
+await collectScripts(resolve(root, "assets"), "assets/");
+for (const file of scriptFiles) {
+  const source = await readFile(resolve(root, file), "utf8");
+  check("Preview subpath modules in " + file, () => {
+    assert.doesNotMatch(source, /\/landing-page\//);
+    const scriptUrl = new URL(file, previewDir);
+    for (const match of source.matchAll(
+      /(?:from|import)\s*(?:\(\s*)?["']([^"']+)["']/g,
+    )) {
+      const specifier = match[1];
+      assert.equal(specifier.startsWith("."), true, file + " " + specifier);
+      assertLocal(new URL(specifier, scriptUrl));
+    }
+  });
+}
+const leafletCss = await readFile(
+  resolve(root, "assets/leaflet.min.css"),
+  "utf8",
+);
+check("Leaflet image urls stay beside the stylesheet", () => {
+  assert.doesNotMatch(leafletCss, /\/landing-page\//);
+  const urls = [...leafletCss.matchAll(/url\((['"]?)([^'")]+)\1\)/g)]
+    .map((match) => match[2])
+    .filter((value) => !value.startsWith("#"));
+  assert.deepEqual(urls.sort(), [
+    "images/layers-2x.png",
+    "images/layers.png",
+    "images/marker-icon.png",
+  ]);
+  const pageUrl = new URL("locations.html", previewDir);
+  for (const match of mapJs.matchAll(/load(?:Style|Script)\("([^"]+)"\)/g)) {
+    const value = match[1];
+    assert.equal(value.startsWith("/"), false, value);
+    assertLocal(new URL(value, pageUrl));
+  }
+});
+const robots = await readFile(resolve(root, "robots.txt"), "utf8");
+const deployWorkflow = await readFile(
+  resolve(root, ".github/workflows/deploy.yml"),
+  "utf8",
+);
+const previewWorkflow = await readFile(
+  resolve(root, ".github/workflows/preview.yml"),
+  "utf8",
+);
+check("Previews are disallowed and deploys keep each other's files", () => {
+  assert.match(robots, /^Disallow: \/pr-preview\/$/m);
+  assert.match(robots, /^Disallow: \/landing-page\/pr-preview\/$/m);
+  assert.match(deployWorkflow, /group: pages-v2/);
+  assert.match(deployWorkflow, /node tools\/coverage-badge\.js/);
+  assert.match(
+    deployWorkflow,
+    /cp badges\/coverage\.json badges\/coverage\.svg/,
+  );
+  assert.match(deployWorkflow, /JamesIves\/github-pages-deploy-action@v4/);
+  assert.match(deployWorkflow, /clean-exclude: pr-preview\//);
+  assert.match(deployWorkflow, /force: false/);
+  assert.doesNotMatch(deployWorkflow, /actions\/deploy-pages/);
+  assert.match(previewWorkflow, /group: pages-v2/);
+  assert.match(previewWorkflow, /rossjrw\/pr-preview-action@v1/);
+  assert.match(previewWorkflow, /umbrella-dir: pr-preview/);
+  assert.match(previewWorkflow, /opened/);
+  assert.match(previewWorkflow, /reopened/);
+  assert.match(previewWorkflow, /synchronize/);
+  assert.match(previewWorkflow, /closed/);
+  assert.match(previewWorkflow, /head\.repo\.full_name == github\.repository/);
+  assert.match(previewWorkflow, /PR preview skipped/);
+  assert.match(previewWorkflow, /comment: true/);
 });
 console.log(
   `RESULT ${checks} offline routing checks passed. No network calls were made.`,

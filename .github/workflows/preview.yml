@@ -1,0 +1,87 @@
+name: Deploy PR preview
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+
+permissions:
+  contents: write
+  pull-requests: write
+
+# Same group as production so a preview push and a main push cannot
+# overwrite each other on gh-pages.
+concurrency:
+  group: pages-v2
+  cancel-in-progress: false
+
+jobs:
+  preview:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        if: github.event.action != 'closed'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Set up Node.js
+        if: github.event.action != 'closed'
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies and build styles
+        if: github.event.action != 'closed'
+        run: |
+          npm ci
+          npm run build:css
+
+      - name: Verify lint, unit tests, and offline routes
+        if: github.event.action != 'closed'
+        run: |
+          npm run lint
+          npm test
+          node tools/coverage-badge.js
+          node tests/test_routes.mjs
+
+      - name: Prepare site directory
+        if: github.event.action != 'closed'
+        run: |
+          mkdir -p _site
+          cp index.html services.html locations.html faqs.html _site/
+          cp -R assets _site/assets
+          mkdir -p _site/badges
+          cp badges/coverage.json badges/coverage.svg _site/badges/
+          cp robots.txt _site/robots.txt
+          touch _site/.nojekyll
+
+      - name: Deploy or remove the preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: _site
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+          pages-base-url: firstlight-socal.github.io/landing-page
+          action: auto
+          comment: true
+
+  skip-fork:
+    if: github.event.pull_request.head.repo.full_name != github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Skip preview for a fork pull request
+        run: |
+          echo "::notice title=PR preview skipped::Pull requests from forks cannot publish a temporary GitHub Page. This token is read-only for fork workflows, so no preview was deployed and the production site was left as it is."
+          {
+            echo "### PR preview skipped"
+            echo ""
+            echo "This pull request comes from a fork. GitHub does not grant write permission on fork workflows, so a temporary page was not published. Closing this pull request will not change the production site."
+          } >> "$GITHUB_STEP_SUMMARY"

@@ -7,9 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages-v2
@@ -51,24 +49,16 @@ jobs:
           cp -R assets _site/assets
           mkdir -p _site/badges
           cp badges/coverage.json badges/coverage.svg _site/badges/
+          cp robots.txt _site/robots.txt
           # Copy .nojekyll so Jekyll does not ignore files
           touch _site/.nojekyll
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Publish the production site
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          path: "_site"
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          folder: _site
+          branch: gh-pages
+          clean: true
+          clean-exclude: pr-preview/
+          force: false
+          commit-message: Publish production site
