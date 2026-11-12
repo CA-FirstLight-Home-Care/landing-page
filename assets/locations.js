@@ -345,10 +345,82 @@ const ZIP_OFFICES = {
   93094: ["simi-valley"],
   93099: ["simi-valley"],
 };
+const OFFICE_POINTS = {
+  burbank: { city: "Burbank", latitude: 34.1526952, longitude: -118.2545802 },
+  "chino-hills": {
+    city: "Chino Hills",
+    latitude: 33.998530636966,
+    longitude: -117.835669785771,
+  },
+  glendale: { city: "Glendale", latitude: 34.1526952, longitude: -118.2545802 },
+  irvine: {
+    city: "Irvine",
+    latitude: 33.685401562787,
+    longitude: -117.854637244791,
+  },
+  "marina-del-rey": {
+    city: "Marina del Rey",
+    latitude: 34.004781960048,
+    longitude: -118.420533312205,
+  },
+  montclair: {
+    city: "Montclair",
+    latitude: 34.002809662445,
+    longitude: -117.721704541492,
+  },
+  pasadena: {
+    city: "Pasadena",
+    latitude: 34.12649869219,
+    longitude: -118.051557789705,
+  },
+  "rancho-cucamonga": {
+    city: "Rancho Cucamonga",
+    latitude: 34.098166160904,
+    longitude: -117.594704760959,
+  },
+  "san-clemente": {
+    city: "San Clemente",
+    latitude: 33.493906926548,
+    longitude: -117.662745489939,
+  },
+  "san-gabriel": {
+    city: "San Gabriel",
+    latitude: 34.12649869219,
+    longitude: -118.051557789705,
+  },
+  "simi-valley": {
+    city: "Simi Valley",
+    latitude: 34.284039722323,
+    longitude: -118.778917020277,
+  },
+  temecula: {
+    city: "Temecula",
+    latitude: 33.503253833958,
+    longitude: -117.166589226428,
+  },
+  "west-hollywood": {
+    city: "West Hollywood",
+    latitude: 34.052026374304,
+    longitude: -118.376062806873,
+  },
+  whittier: {
+    city: "Whittier",
+    latitude: 33.969242350063,
+    longitude: -118.032727291698,
+  },
+  "woodland-hills": {
+    city: "Woodland Hills",
+    latitude: 34.173351278311,
+    longitude: -118.594229818015,
+  },
+};
 (() => {
   const input = document.getElementById("location-search"),
     clear = document.getElementById("location-search-clear"),
     status = document.getElementById("locations-count"),
+    placeMessage = document.getElementById("location-place-message"),
+    suggestions = document.getElementById("location-suggestions"),
+    locateButton = document.getElementById("location-locate"),
     empty = document.querySelector(".locations-empty"),
     cards = Array.from(document.querySelectorAll(".location-card")),
     prompt = document.getElementById("city-ambiguity"),
@@ -357,6 +429,92 @@ const ZIP_OFFICES = {
     zipError = document.getElementById("city-zip-error"),
     notice = document.getElementById("zip-office-notice");
   let activeCity = null;
+  let activeSuggestion = -1;
+  let locateToken = 0;
+  function placeQueryKind(value) {
+    if (/[A-Za-z]/.test(value)) return "city";
+    if (/^\d+/.test(value)) return "zip";
+    return "";
+  }
+  function cityLabels(query) {
+    const needle = query.toLocaleLowerCase("en-US");
+    const cities = [
+      ...new Map(
+        Object.values(CITY_OFFICES).map((entry) => [entry.city, entry]),
+      ).values(),
+    ];
+    const startsWith = cities.filter((entry) =>
+      entry.city.toLocaleLowerCase("en-US").startsWith(needle),
+    );
+    const contains = cities.filter((entry) => {
+      const city = entry.city.toLocaleLowerCase("en-US");
+      return !city.startsWith(needle) && city.includes(needle);
+    });
+    return [...startsWith, ...contains].slice(0, 8).map((entry) => entry.city);
+  }
+  function zipLabels(query) {
+    const digits = query.match(/^\d+/)[0];
+    return Object.keys(ZIP_OFFICES)
+      .filter((zip) => zip.startsWith(digits))
+      .sort()
+      .slice(0, 8);
+  }
+  function closeSuggestions() {
+    activeSuggestion = -1;
+    suggestions.hidden = true;
+    suggestions.replaceChildren();
+    input.setAttribute("aria-expanded", "false");
+    input.removeAttribute("aria-activedescendant");
+  }
+  function showUnsupported(kind) {
+    const text =
+      kind === "zip"
+        ? "Sorry, this ZIP code isn't in our service area yet."
+        : "Sorry, this city isn't in our service area yet.";
+    // #other-directory is a placeholder until a real directory URL is chosen.
+    placeMessage.innerHTML =
+      text +
+      ' <a href="#other-directory">Looking for a different area? Check our other directory here.</a>';
+    input.setAttribute("aria-invalid", "true");
+  }
+  function renderSuggestions() {
+    const query = input.value.trim();
+    const kind = placeQueryKind(query);
+    const labels =
+      kind === "zip"
+        ? zipLabels(query)
+        : kind === "city"
+          ? cityLabels(query)
+          : [];
+    if (!query || !kind || !labels.length) {
+      closeSuggestions();
+      return labels;
+    }
+    suggestions.replaceChildren(
+      ...labels.map((label, index) => {
+        const option = document.createElement("li");
+        option.id = "location-suggestion-" + index;
+        option.setAttribute("role", "option");
+        option.setAttribute("aria-selected", "false");
+        option.textContent = label;
+        option.addEventListener("mousedown", (event) => event.preventDefault());
+        option.addEventListener("click", () => chooseSuggestion(label));
+        return option;
+      }),
+    );
+    suggestions.hidden = false;
+    input.setAttribute("aria-expanded", "true");
+    return labels;
+  }
+  function chooseSuggestion(label) {
+    input.value = label;
+    pinnedOffices = null;
+    closeSuggestions();
+    placeMessage.textContent = "";
+    input.removeAttribute("aria-invalid");
+    filter();
+  }
+  let pinnedOffices = null;
   function filter() {
     const query = input.value.trim().toLocaleLowerCase("en-US"),
       words = query.split(/\s+/).filter(Boolean),
@@ -373,11 +531,13 @@ const ZIP_OFFICES = {
         ". Enter your ZIP code to find yours. We will not choose an office from the city name alone.";
     let count = 0;
     for (const card of cards) {
-      const match = activeCity
-        ? activeCity.ids.includes(card.dataset.office)
-        : /^[0-9]{5}$/.test(query)
-          ? (ZIP_OFFICES[query] || []).includes(card.dataset.office)
-          : words.every((w) => card.dataset.search.includes(w));
+      const match = pinnedOffices
+        ? pinnedOffices.includes(card.dataset.office)
+        : activeCity
+          ? activeCity.ids.includes(card.dataset.office)
+          : /^[0-9]{5}$/.test(query)
+            ? (ZIP_OFFICES[query] || []).includes(card.dataset.office)
+            : words.every((w) => card.dataset.search.includes(w));
       card.hidden = !match;
       if (match) count++;
     }
@@ -389,29 +549,199 @@ const ZIP_OFFICES = {
         "This ZIP is listed under " +
         ids.length +
         " offices in the source coverage sheet. We will not choose 1. Confirm the right office with 1 of the listed teams below.";
-    status.textContent = query
-      ? count + " of 15 offices match your search."
-      : "15 participating offices";
+    status.textContent =
+      query || pinnedOffices
+        ? count + " of 15 offices match your search."
+        : "15 participating offices";
     clear.hidden = !query;
     empty.hidden = count !== 0;
+    return count;
+  }
+  function refresh() {
+    pinnedOffices = null;
+    const labels = renderSuggestions();
+    const count = filter();
+    const query = input.value.trim();
+    const kind = placeQueryKind(query);
+    if (query && kind && !labels.length && count === 0) {
+      showUnsupported(kind);
+      empty.hidden = true;
+      return;
+    }
+    placeMessage.textContent = "";
+    input.removeAttribute("aria-invalid");
+  }
+  function moveSuggestion(direction) {
+    const options = suggestions.querySelectorAll('[role="option"]');
+    if (!options.length) return false;
+    activeSuggestion =
+      activeSuggestion === -1
+        ? direction > 0
+          ? 0
+          : options.length - 1
+        : (activeSuggestion + direction + options.length) % options.length;
+    options.forEach((option, index) => {
+      const active = index === activeSuggestion;
+      option.setAttribute("aria-selected", String(active));
+      if (active) {
+        input.setAttribute("aria-activedescendant", option.id);
+        option.scrollIntoView({ block: "nearest" });
+      }
+    });
+    return true;
   }
   function reset() {
     input.value = "";
     zipInput.value = "";
+    pinnedOffices = null;
+    placeMessage.textContent = "";
+    input.removeAttribute("aria-invalid");
+    closeSuggestions();
     filter();
     input.focus();
   }
-  input.addEventListener("input", filter);
+  input.addEventListener("input", refresh);
   input.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && input.value) {
+    if (event.key === "ArrowDown" && moveSuggestion(1)) {
       event.preventDefault();
-      reset();
-    } else if (event.key === "Enter" && activeCity) {
+      return;
+    }
+    if (event.key === "ArrowUp" && moveSuggestion(-1)) {
       event.preventDefault();
-      zipInput.focus();
+      return;
+    }
+    if (event.key === "Escape") {
+      if (!suggestions.hidden) {
+        event.preventDefault();
+        closeSuggestions();
+        return;
+      }
+      if (input.value) {
+        event.preventDefault();
+        reset();
+      }
+      return;
+    }
+    if (event.key === "Enter") {
+      const active = suggestions.querySelector('[aria-selected="true"]');
+      if (active) {
+        event.preventDefault();
+        chooseSuggestion(active.textContent);
+        return;
+      }
+      if (activeCity) {
+        event.preventDefault();
+        zipInput.focus();
+      }
     }
   });
+  input.addEventListener("blur", () => {
+    window.setTimeout(closeSuggestions, 120);
+  });
   clear.addEventListener("click", reset);
+  function stopLocating() {
+    locateToken += 1;
+    locateButton.removeAttribute("aria-busy");
+  }
+  function distanceKm(lat1, lon1, lat2, lon2) {
+    const r = Math.PI / 180;
+    const x = (lat2 - lat1) * r;
+    const y = (lon2 - lon1) * r;
+    const h =
+      Math.sin(x / 2) ** 2 +
+      Math.cos(lat1 * r) * Math.cos(lat2 * r) * Math.sin(y / 2) ** 2;
+    return 6371 * 2 * Math.atan2(Math.sqrt(h), Math.sqrt(Math.max(0, 1 - h)));
+  }
+  input.addEventListener("input", stopLocating);
+  locateButton.addEventListener("click", () => {
+    const token = ++locateToken;
+    closeSuggestions();
+    if (!navigator.geolocation) {
+      locateButton.removeAttribute("aria-busy");
+      placeMessage.textContent =
+        "This browser cannot share your location. You can type a city or ZIP instead.";
+      return;
+    }
+    locateButton.setAttribute("aria-busy", "true");
+    placeMessage.textContent = "Finding your location.";
+    input.removeAttribute("aria-invalid");
+    try {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          if (token !== locateToken) return;
+          locateButton.removeAttribute("aria-busy");
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+          if (
+            !Number.isFinite(latitude) ||
+            !Number.isFinite(longitude) ||
+            Math.abs(latitude) > 90 ||
+            Math.abs(longitude) > 180
+          ) {
+            placeMessage.textContent =
+              "Your location could not be found. You can type a city or ZIP instead.";
+            return;
+          }
+          // Reverse geocoding belongs here. A future call can turn latitude
+          // and longitude into a city or ZIP, assign that text to the input,
+          // and then call refresh(). No location request leaves this page.
+          // Until that call exists, the nearest-office match below uses the
+          // coordinates stored with each office.
+          const ranked = Object.entries(OFFICE_POINTS)
+            .map(([id, point]) => ({
+              id,
+              city: point.city,
+              km: distanceKm(
+                latitude,
+                longitude,
+                point.latitude,
+                point.longitude,
+              ),
+            }))
+            .filter((item) => Number.isFinite(item.km))
+            .sort((a, b) => a.km - b.km);
+          if (!ranked.length) {
+            placeMessage.textContent =
+              "Your location could not be found. You can type a city or ZIP instead.";
+            return;
+          }
+          const nearest = ranked.filter(
+            (item) => Math.abs(item.km - ranked[0].km) < 0.05,
+          );
+          if (nearest.length === 1) {
+            input.value = nearest[0].city;
+            pinnedOffices = null;
+            placeMessage.textContent = "";
+            closeSuggestions();
+            filter();
+            return;
+          }
+          pinnedOffices = nearest.map((item) => item.id);
+          input.value = "";
+          placeMessage.textContent =
+            "More than 1 team is near this spot. Enter the ZIP where care is needed.";
+          filter();
+        },
+        (error) => {
+          if (token !== locateToken) return;
+          locateButton.removeAttribute("aria-busy");
+          const messages = {
+            1: "Location permission was denied. You can type a city or ZIP instead.",
+            2: "Your location could not be found. You can type a city or ZIP instead.",
+            3: "Finding your location took too long. You can type a city or ZIP instead.",
+          };
+          placeMessage.textContent =
+            messages[error && error.code] ||
+            "This browser cannot share your location. You can type a city or ZIP instead.";
+        },
+        { enableHighAccuracy: false, timeout: 10000, maximumAge: 0 },
+      );
+    } catch {
+      locateButton.removeAttribute("aria-busy");
+      placeMessage.textContent =
+        "This browser cannot share your location. You can type a city or ZIP instead.";
+    }
+  });
 
   document
     .getElementById("city-zip-form")
@@ -426,6 +756,10 @@ const ZIP_OFFICES = {
         return;
       }
       input.value = z;
+      pinnedOffices = null;
+      placeMessage.textContent = "";
+      input.removeAttribute("aria-invalid");
+      closeSuggestions();
       filter();
       status.focus();
       input.focus();
@@ -434,6 +768,10 @@ const ZIP_OFFICES = {
   window.addEventListener("pagehide", () => {
     input.value = "";
     zipInput.value = "";
+    pinnedOffices = null;
+    placeMessage.textContent = "";
+    closeSuggestions();
+    locateButton.removeAttribute("aria-busy");
     filter();
   });
 })();

@@ -83,15 +83,45 @@
           <div class="locations-filter" hidden="">
             <label for="location-search">Search by city or ZIP</label>
             <div class="location-search-row">
-              <input
-                aria-describedby="locations-count"
-                autocomplete="off"
-                id="location-search"
-                list="known-cities"
-                maxlength="100"
-                placeholder="Try Pasadena or 91710"
-                type="search"
-              /><button
+              <div class="location-search-field">
+                <input
+                  aria-autocomplete="list"
+                  aria-controls="location-suggestions"
+                  aria-describedby="locations-count location-place-message"
+                  aria-expanded="false"
+                  autocomplete="off"
+                  id="location-search"
+                  maxlength="100"
+                  placeholder="Try Pasadena or 91710"
+                  role="combobox"
+                  type="text"
+                />
+                <button
+                  aria-label="Use my location"
+                  class="locate-button"
+                  id="location-locate"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="locate-icon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path>
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    class="locate-spinner"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 3a9 9 0 1 1-6.36 2.64"></path>
+                  </svg>
+                </button>
+              </div>
+              <button
                 class="quiet-button"
                 hidden=""
                 id="location-search-clear"
@@ -100,6 +130,20 @@
                 Clear search
               </button>
             </div>
+            <ul
+              aria-label="Matching places"
+              class="city-suggestions location-suggestions"
+              hidden=""
+              id="location-suggestions"
+              role="listbox"
+            ></ul>
+            <p
+              aria-atomic="true"
+              aria-live="polite"
+              class="message"
+              id="location-place-message"
+              role="status"
+            ></p>
             <p
               aria-atomic="true"
               aria-live="polite"
@@ -143,102 +187,6 @@
               id="zip-office-notice"
               role="status"
             ></p>
-            <datalist id="known-cities">
-              <option value="Agoura Hills"></option>
-              <option value="Alta Loma"></option>
-              <option value="Altadena"></option>
-              <option value="Arcadia"></option>
-              <option value="Azusa"></option>
-              <option value="Beverly Grove"></option>
-              <option value="Beverly Hills"></option>
-              <option value="Beverlywood"></option>
-              <option value="Burbank"></option>
-              <option value="Calabasas"></option>
-              <option value="Camarillo"></option>
-              <option value="Carthay"></option>
-              <option value="Century City"></option>
-              <option value="Cheviot Hills"></option>
-              <option value="Chino"></option>
-              <option value="Chino Hills"></option>
-              <option value="Claremont"></option>
-              <option value="Costa Mesa"></option>
-              <option value="Culver City"></option>
-              <option value="Dana Point"></option>
-              <option value="Del Rey"></option>
-              <option value="Diamond Bar"></option>
-              <option value="Duarte"></option>
-              <option value="El Monte"></option>
-              <option value="Fairfax District"></option>
-              <option value="Fallbrook"></option>
-              <option value="Fillmore"></option>
-              <option value="Glendale"></option>
-              <option value="Glendora"></option>
-              <option value="Glenoak Hills"></option>
-              <option value="Greater San Gabriel Valley"></option>
-              <option value="Hancock Park"></option>
-              <option value="Hemet"></option>
-              <option value="Irvine"></option>
-              <option value="La Cañada Flintridge"></option>
-              <option value="La Crescenta"></option>
-              <option value="La Habra"></option>
-              <option value="La Mirada"></option>
-              <option value="La Verne"></option>
-              <option value="Ladera Ranch"></option>
-              <option value="Laguna Niguel"></option>
-              <option value="Lake Elsinore"></option>
-              <option value="Lemon Heights"></option>
-              <option value="Los Angeles"></option>
-              <option value="Mar Vista"></option>
-              <option value="Marina del Rey"></option>
-              <option value="Menifee"></option>
-              <option value="Miracle Mile"></option>
-              <option value="Monrovia"></option>
-              <option value="Montclair"></option>
-              <option value="Montrose"></option>
-              <option value="Moorpark"></option>
-              <option value="Murrieta"></option>
-              <option value="North Tustin"></option>
-              <option value="Northwood"></option>
-              <option value="Ontario"></option>
-              <option value="Orange"></option>
-              <option value="Palms"></option>
-              <option value="Park La Brea"></option>
-              <option value="Pasadena"></option>
-              <option value="Pomona"></option>
-              <option value="Rancho Cucamonga"></option>
-              <option value="Rancho Mission Viejo"></option>
-              <option value="Rosemead"></option>
-              <option value="San Clemente"></option>
-              <option value="San Dimas"></option>
-              <option value="San Gabriel"></option>
-              <option value="San Juan Capistrano"></option>
-              <option value="San Marino"></option>
-              <option value="Santa Ana"></option>
-              <option value="Santa Fe Springs"></option>
-              <option value="Santa Monica"></option>
-              <option value="Sierra Madre"></option>
-              <option value="Simi Valley"></option>
-              <option value="South Pasadena"></option>
-              <option value="Temecula"></option>
-              <option value="Temescal Valley"></option>
-              <option value="Temple City"></option>
-              <option value="Thousand Oaks"></option>
-              <option value="Topanga"></option>
-              <option value="Tustin"></option>
-              <option value="Upland"></option>
-              <option value="Venice"></option>
-              <option value="Verdugo City"></option>
-              <option value="Villa Park"></option>
-              <option value="West Hills"></option>
-              <option value="West Hollywood"></option>
-              <option value="West Los Angeles"></option>
-              <option value="Westlake Village"></option>
-              <option value="Whittier"></option>
-              <option value="Wildomar"></option>
-              <option value="Winchester"></option>
-              <option value="Woodbridge"></option>
-              <option value="Woodland Hills"></option>
-            </datalist>
           </div>
         </div>
       </section>

@@ -166,6 +166,53 @@ for (const file of ["index.css", "services.css", "locations.css", "faqs.css"]) {
     assert.doesNotMatch(css, /[—–]/);
   });
 }
+const guideJs = await readFile(resolve(root, "assets/index.js"), "utf8");
+const locationJs = await readFile(resolve(root, "assets/locations.js"), "utf8");
+const guideHtml = await readFile(resolve(root, "index.html"), "utf8");
+const locationHtml = await readFile(resolve(root, "locations.html"), "utf8");
+check("Guide autocomplete queries ZIP or city", () => {
+  assert.match(guideJs, /function placeQueryKind/);
+  assert.match(guideJs, /function zipMatches/);
+  assert.match(guideJs, /function cityMatches/);
+  assert.match(guideJs, /aria-activedescendant/);
+  assert.match(guideJs, /Sorry, this ZIP code isn't in our service area yet\./);
+  assert.match(guideJs, /Sorry, this city isn't in our service area yet\./);
+  assert.match(guideJs, /href="#other-directory"/);
+  assert.match(guideJs, /navigator\.geolocation\.getCurrentPosition/);
+  assert.match(guideJs, /PERMISSION|error\.code|messages\[error/);
+  assert.match(guideJs, /Reverse geocoding belongs here/);
+  assert.doesNotMatch(guideJs, /nationalDirectory\(/);
+});
+check("Guide locate control is in the field", () => {
+  assert.match(guideHtml, /id="locate-button"/);
+  assert.match(guideHtml, /aria-label="Use my location"/);
+  assert.match(guideHtml, /class="locate-spinner"/);
+  assert.match(guideHtml, /role="combobox"/);
+  assert.doesNotMatch(guideHtml, /<datalist|find-closest|location-status/);
+});
+check("Locations search uses the same autocomplete", () => {
+  assert.match(locationHtml, /id="location-locate"/);
+  assert.match(locationHtml, /id="location-suggestions"/);
+  assert.match(locationHtml, /role="combobox"/);
+  assert.doesNotMatch(locationHtml, /<datalist/);
+  assert.match(
+    locationJs,
+    /Sorry, this ZIP code isn't in our service area yet\./,
+  );
+  assert.match(locationJs, /Sorry, this city isn't in our service area yet\./);
+  assert.match(locationJs, /href="#other-directory"/);
+  assert.match(locationJs, /getCurrentPosition/);
+});
+for (const file of ["index.css", "locations.css"]) {
+  const css = await readFile(resolve(root, "assets", file), "utf8");
+  check("Locate button styles " + file, () => {
+    assert.match(css, /\.locate-button \{/);
+    assert.match(css, /min-width: 48px/);
+    assert.match(css, /min-height: 48px/);
+    assert.match(css, /@keyframes locate-spin/);
+    assert.match(css, /prefers-reduced-motion: reduce/);
+  });
+}
 console.log(
   `RESULT ${checks} offline routing checks passed. No network calls were made.`,
 );
