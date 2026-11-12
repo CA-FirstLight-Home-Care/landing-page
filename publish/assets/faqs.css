@@ -4778,6 +4778,80 @@ body.inquiry-open {
   display: none;
 }
 
+.locate-button {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #103f2b;
+  color: #fff;
+  cursor: pointer;
+}
+
+.locate-button:hover {
+  background: #082e20;
+}
+
+.locate-button svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+}
+
+.locate-spinner {
+  display: none;
+}
+
+.locate-button[aria-busy="true"] .locate-icon {
+  display: none;
+}
+
+.locate-button[aria-busy="true"] .locate-spinner {
+  display: block;
+  animation: locate-spin 0.8s linear infinite;
+}
+
+.location-search-field {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  min-width: 0;
+  border: 1px solid #668368;
+  border-radius: 13px;
+  background: #f7faf3;
+  padding-right: 4px;
+}
+
+.location-search-field input {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.place-link {
+  font-weight: 750;
+}
+
+@keyframes locate-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .locate-spinner {
+    animation: none;
+  }
+}
 @media (min-width: 701px) {
   .nav-toggle-wrap,
   .nav-toggle-input {
@@ -5100,8 +5174,19 @@ body.inquiry-open {
     min-height: 52px;
   }
   .area-question .zip-row,
-  .city-suggestions {
+  .city-suggestions,
+  .location-suggestions {
     max-width: none;
+  }
+  .zip-row,
+  .area-question .zip-row {
+    display: flex;
+    grid-template-columns: none;
+  }
+  .location-search-row input,
+  .location-search-field input {
+    flex-basis: auto;
+    font-size: 18px;
   }
   .city-suggestions [role="option"] {
     padding: 12px 14px;

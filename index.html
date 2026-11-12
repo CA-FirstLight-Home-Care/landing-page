@@ -158,7 +158,7 @@
                 <h3 id="area-title" tabindex="-1">Where should care happen?</h3>
                 <p class="field-hint" id="area-hint">
                   Enter a city or 5-digit ZIP. Start typing to see matching
-                  cities.
+                  cities or ZIP codes.
                 </p>
                 <label class="zip-label" for="zip">City or ZIP</label>
                 <div class="zip-row">
@@ -176,9 +176,33 @@
                     role="combobox"
                     type="text"
                   />
+                  <button
+                    aria-label="Use my location"
+                    class="locate-button"
+                    id="locate-button"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="locate-icon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle cx="12" cy="12" r="4"></circle>
+                      <path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path>
+                    </svg>
+                    <svg
+                      aria-hidden="true"
+                      class="locate-spinner"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M12 3a9 9 0 1 1-6.36 2.64"></path>
+                    </svg>
+                  </button>
                 </div>
                 <ul
-                  aria-label="Matching cities"
+                  aria-label="Matching places"
                   class="city-suggestions"
                   hidden=""
                   id="city-suggestions"
@@ -187,7 +211,13 @@
                 <p class="micro privacy" id="zip-privacy">
                   Your search stays on this page.
                 </p>
-                <p class="message" id="zip-message" role="alert"></p>
+                <p
+                  aria-atomic="true"
+                  aria-live="polite"
+                  class="message"
+                  id="zip-message"
+                  role="status"
+                ></p>
                 <div class="area-actions">
                   <button class="button" id="area-next" type="button">
                     Continue <span aria-hidden="true">→</span>

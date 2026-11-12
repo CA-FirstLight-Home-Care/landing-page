@@ -946,9 +946,6 @@ function clearOffice() {
 function resultCard(o) {
   return `<article class="result-office"><h3>${esc(displayOfficeName(o))}</h3><p class="areas">Serving ${esc(o.areas.join(", "))}.</p>${o.phone ? `<a class="office-direct-phone" href="${phoneHref(o)}">${esc(o.phone)}<span class="sr-only">, call ${esc(displayOfficeName(o))}</span></a>` : ""}<a class="button select-office" data-office="${esc(o.id)}" href="#care-questions">Confirm this office ${arrow}</a></article>`;
 }
-function nationalDirectory(place) {
-  return `<div class="fallback"><h3>Outside this service area.</h3><p>${esc(place)} is not part of the Southern California areas covered here. FirstLight care may still be available.</p><a class="button" href="${esc(OFFICE_DATA.nationalFinderUrl)}">Use FirstLight’s national location directory ${arrow}</a></div>`;
-}
 function zipPrompt(city) {
   return `<div class="city-ambiguity"><p class="overlap-notice">${esc(city)} is served by more than 1 local team. Enter the ZIP where care is needed and we’ll continue.</p><form id="main-city-zip-form" novalidate><label for="main-city-zip">ZIP where care is needed</label><div class="city-zip-row"><input id="main-city-zip" inputmode="numeric" maxlength="5" autocomplete="postal-code" aria-describedby="main-city-zip-error"><button class="button" type="submit">Continue</button></div><p id="main-city-zip-error" class="field-error" role="alert"></p></form></div>`;
 }
@@ -977,48 +974,86 @@ function closeCitySuggestions() {
   cityInput.setAttribute("aria-expanded", "false");
   cityInput.removeAttribute("aria-activedescendant");
 }
-function selectCitySuggestion(city) {
-  cityInput.value = city;
-  closeCitySuggestions();
-  runLookup();
+function placeQueryKind(value) {
+  if (/[A-Za-z]/.test(value)) return "city";
+  if (/^\d+/.test(value)) return "zip";
+  return "";
 }
-function renderCitySuggestions() {
-  const query = cityInput.value.trim().toLocaleLowerCase("en-US");
-  if (!query || /^[0-9]+$/.test(query)) {
-    closeCitySuggestions();
-    return;
-  }
+function cityMatches(query) {
+  const needle = query.toLocaleLowerCase("en-US");
   const cities = [
     ...new Map(
       Object.values(CITY_OFFICES).map((entry) => [entry.city, entry]),
     ).values(),
   ];
   const startsWith = cities.filter((entry) =>
-    entry.city.toLocaleLowerCase("en-US").startsWith(query),
+    entry.city.toLocaleLowerCase("en-US").startsWith(needle),
   );
   const contains = cities.filter((entry) => {
     const city = entry.city.toLocaleLowerCase("en-US");
-    return !city.startsWith(query) && city.includes(query);
+    return !city.startsWith(needle) && city.includes(needle);
   });
-  const matches = [...startsWith, ...contains].slice(0, 8);
+  return [...startsWith, ...contains].slice(0, 8).map((entry) => entry.city);
+}
+function zipMatches(query) {
+  const digits = query.match(/^\d+/)[0];
+  return Object.keys(OFFICE_DATA.zipToOfficeIds)
+    .filter((zip) => zip.startsWith(digits))
+    .sort()
+    .slice(0, 8);
+}
+function selectCitySuggestion(place) {
+  cityInput.value = place;
+  closeCitySuggestions();
+  runLookup();
+}
+function renderCitySuggestions() {
+  const query = cityInput.value.trim();
+  const kind = placeQueryKind(query);
+  const matches =
+    kind === "zip"
+      ? zipMatches(query)
+      : kind === "city"
+        ? cityMatches(query)
+        : [];
+  const message = document.getElementById("zip-message");
+  if (!kind || !query) {
+    closeCitySuggestions();
+    return matches;
+  }
   if (!matches.length) {
     closeCitySuggestions();
-    return;
+    cityInput.setAttribute("aria-invalid", "true");
+    showUnsupportedPlace(message, kind);
+    return matches;
   }
+  message.textContent = "";
+  cityInput.removeAttribute("aria-invalid");
   citySuggestions.replaceChildren(
-    ...matches.map((entry, index) => {
+    ...matches.map((label, index) => {
       const option = document.createElement("li");
       option.id = `city-suggestion-${index}`;
       option.setAttribute("role", "option");
       option.setAttribute("aria-selected", "false");
-      option.textContent = entry.city;
+      option.textContent = label;
       option.addEventListener("mousedown", (event) => event.preventDefault());
-      option.addEventListener("click", () => selectCitySuggestion(entry.city));
+      option.addEventListener("click", () => selectCitySuggestion(label));
       return option;
     }),
   );
   citySuggestions.hidden = false;
   cityInput.setAttribute("aria-expanded", "true");
+  return matches;
+}
+function showUnsupportedPlace(message, kind) {
+  const text =
+    kind === "zip"
+      ? "Sorry, this ZIP code isn't in our service area yet."
+      : "Sorry, this city isn't in our service area yet.";
+  // #other-directory is a placeholder until a real directory URL is chosen.
+  message.innerHTML =
+    esc(text) +
+    ' <a href="#other-directory">Looking for a different area? Check our other directory here.</a>';
 }
 function moveCitySuggestion(direction) {
   const options = citySuggestions.querySelectorAll('[role="option"]');
@@ -1044,23 +1079,39 @@ function runLookup(event) {
   closeCitySuggestions();
   const input = document.getElementById("zip"),
     message = document.getElementById("zip-message"),
-    value = input.value.trim();
+    value = input.value.trim(),
+    kind = placeQueryKind(value);
   message.textContent = "";
   input.removeAttribute("aria-invalid");
+  document.getElementById("lookup-results").innerHTML = "";
   clearOffice();
-  if (/^[0-9]{5}$/.test(value)) {
+  if (!value) {
+    input.setAttribute("aria-invalid", "true");
+    message.textContent = "Enter a city we serve or a 5-digit ZIP code.";
+    input.focus();
+    return;
+  }
+  if (kind === "zip" && /^[0-9]{5}$/.test(value)) {
     const result = lookupZip(value);
     if (result.status === "covered") {
       continueWithOffice(result.offices[0].id);
       return;
     }
     if (result.status === "uncovered") {
-      showLookup(nationalDirectory(value));
+      input.setAttribute("aria-invalid", "true");
+      showUnsupportedPlace(message, "zip");
       return;
     }
     showLookup(
-      `<div class="fallback"><h3>This ZIP needs a closer look.</h3><p class="overlap-notice">${esc(value)} is listed for more than 1 local team, so it can’t be matched automatically. Search by city, or use the national directory.</p><a class="button" href="${esc(OFFICE_DATA.nationalFinderUrl)}">Use FirstLight’s national location directory ${arrow}</a></div>`,
+      `<div class="fallback"><h3>This ZIP needs a closer look.</h3><p class="overlap-notice">${esc(value)} is listed for more than 1 local team, so it can’t be matched automatically. Search by city instead.</p></div>`,
     );
+    return;
+  }
+  if (kind === "zip") {
+    if (!zipMatches(value).length) {
+      input.setAttribute("aria-invalid", "true");
+      showUnsupportedPlace(message, "zip");
+    } else renderCitySuggestions();
     return;
   }
   const query = value.toLocaleLowerCase("en-US"),
@@ -1073,18 +1124,11 @@ function runLookup(event) {
             c.city.toLocaleLowerCase("en-US").includes(query),
         );
   const ids = [...new Set(matches.flatMap((c) => c.ids))];
-  if (!value) {
-    document.getElementById("lookup-results").innerHTML = "";
-    input.setAttribute("aria-invalid", "true");
-    message.textContent = "Enter a city we serve or a 5-digit ZIP code.";
-    input.focus();
-    return;
-  }
   if (!ids.length) {
-    input.setAttribute("aria-invalid", "true");
-    message.textContent =
-      "That city or ZIP is not part of the areas served here.";
-    showLookup(nationalDirectory(value));
+    if (!cityMatches(value).length) {
+      input.setAttribute("aria-invalid", "true");
+      showUnsupportedPlace(message, "city");
+    } else renderCitySuggestions();
     return;
   }
   const city = exact?.city || value;
@@ -1145,8 +1189,113 @@ cityInput.addEventListener("blur", () => {
   window.setTimeout(closeCitySuggestions, 120);
 });
 document.addEventListener("click", (event) => {
-  if (!event.target.closest("#zip, #city-suggestions")) closeCitySuggestions();
+  if (!event.target.closest("#zip, #city-suggestions, #locate-button"))
+    closeCitySuggestions();
 });
+(() => {
+  const locateButton = document.getElementById("locate-button");
+  const locateMessage = document.getElementById("zip-message");
+  let locateToken = 0;
+  function distanceKm(lat1, lon1, lat2, lon2) {
+    const r = Math.PI / 180;
+    const x = (lat2 - lat1) * r;
+    const y = (lon2 - lon1) * r;
+    const h =
+      Math.sin(x / 2) ** 2 +
+      Math.cos(lat1 * r) * Math.cos(lat2 * r) * Math.sin(y / 2) ** 2;
+    return 6371 * 2 * Math.atan2(Math.sqrt(h), Math.sqrt(Math.max(0, 1 - h)));
+  }
+  function stopLocating() {
+    locateToken += 1;
+    locateButton.removeAttribute("aria-busy");
+  }
+  function locateError(error) {
+    const messages = {
+      1: "Location permission was denied. You can type a city or ZIP instead.",
+      2: "Your location could not be found. You can type a city or ZIP instead.",
+      3: "Finding your location took too long. You can type a city or ZIP instead.",
+    };
+    locateMessage.textContent =
+      messages[error && error.code] ||
+      "This browser cannot share your location. You can type a city or ZIP instead.";
+  }
+  cityInput.addEventListener("input", stopLocating);
+  locateButton.addEventListener("click", () => {
+    const token = ++locateToken;
+    closeCitySuggestions();
+    clearOffice();
+    document.getElementById("lookup-results").innerHTML = "";
+    cityInput.removeAttribute("aria-invalid");
+    if (!navigator.geolocation) {
+      locateButton.removeAttribute("aria-busy");
+      locateError({ code: 0 });
+      return;
+    }
+    locateButton.setAttribute("aria-busy", "true");
+    locateMessage.textContent = "Finding your location.";
+    try {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          if (token !== locateToken) return;
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+          locateButton.removeAttribute("aria-busy");
+          if (
+            !Number.isFinite(latitude) ||
+            !Number.isFinite(longitude) ||
+            Math.abs(latitude) > 90 ||
+            Math.abs(longitude) > 180
+          ) {
+            locateError({ code: 2 });
+            return;
+          }
+          // Reverse geocoding belongs here. A future call can turn latitude
+          // and longitude into a city or ZIP, assign that text to the input,
+          // and then call runLookup(). No location request leaves this page.
+          // Until that call exists, the nearest-office match below uses the
+          // coordinates already stored with each office.
+          const ranked = OFFICE_DATA.offices
+            .map((office) => ({
+              office,
+              km: distanceKm(
+                latitude,
+                longitude,
+                OFFICE_EXTRAS[office.id].latitude,
+                OFFICE_EXTRAS[office.id].longitude,
+              ),
+            }))
+            .filter((item) => Number.isFinite(item.km))
+            .sort((a, b) => a.km - b.km);
+          if (!ranked.length) {
+            locateError({ code: 2 });
+            return;
+          }
+          const nearest = ranked.filter(
+            (item) => Math.abs(item.km - ranked[0].km) < 0.05,
+          );
+          locateMessage.textContent = "";
+          if (nearest.length === 1) {
+            cityInput.value = "";
+            continueWithOffice(nearest[0].office.id);
+            return;
+          }
+          locateMessage.textContent =
+            "More than 1 team is near this spot. Enter the ZIP where care is needed.";
+          showLookup(zipPrompt("Your area"));
+        },
+        (error) => {
+          if (token !== locateToken) return;
+          locateButton.removeAttribute("aria-busy");
+          locateError(error);
+        },
+        { enableHighAccuracy: false, timeout: 10000, maximumAge: 0 },
+      );
+    } catch {
+      locateButton.removeAttribute("aria-busy");
+      locateError({ code: 0 });
+    }
+  });
+})();
 document.addEventListener("click", (event) => {
   const a = event.target.closest(".select-office");
   if (!a) return;
